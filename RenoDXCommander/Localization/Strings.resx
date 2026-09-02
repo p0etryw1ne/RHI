@@ -449,4 +449,36 @@ Place your .dll files in:</value></data>
   <data name="About_ViewPatchNotes" xml:space="preserve"><value>View recent patch notes</value></data>
   <data name="About_Motd" xml:space="preserve"><value>MOTD</value></data>
   <data name="About_ShowMotd" xml:space="preserve"><value>Show message of the day</value></data>
+  <data name="Status_Ready" xml:space="preserve"><value>Ready</value></data>
+  <data name="DP_Hide" xml:space="preserve"><value>Hide</value></data>
+  <data name="DP_Show" xml:space="preserve"><value>Show</value></data>
+  <data name="Common_Applied" xml:space="preserve"><value>Applied!</value></data>
+  <data name="Common_Saved" xml:space="preserve"><value>Saved!</value></data>
+  <data name="Status_CheckingComponents" xml:space="preserve"><value>Checking components...</value></data>
+  <data name="Status_CheckingAppVersion" xml:space="preserve"><value>Checking app version...</value></data>
+  <data name="Status_FilterNameRequired" xml:space="preserve"><value>Please enter a filter name.</value></data>
+  <data name="Status_UpdatingReshade" xml:space="preserve"><value>Updating ReShade...</value></data>
+  <data name="Status_UpdatingRenodx" xml:space="preserve"><value>Updating RenoDX...</value></data>
+  <data name="Status_UpdatingRelimiter" xml:space="preserve"><value>Updating ReLimiter...</value></data>
+  <data name="Status_UpdatingDc" xml:space="preserve"><value>Updating Display Commander...</value></data>
+  <data name="Status_UpdatingOptiscaler" xml:space="preserve"><value>Updating OptiScaler...</value></data>
+  <data name="Status_UpdatingReframework" xml:space="preserve"><value>Updating RE Framework...</value></data>
+  <data name="Status_UpdatingDxvk" xml:space="preserve"><value>Updating DXVK...</value></data>
+  <data name="Status_UpdatingLuma" xml:space="preserve"><value>Updating Luma...</value></data>
+  <data name="Status_UpdatingDofFix" xml:space="preserve"><value>Updating DOF Fix...</value></data>
+  <data name="Status_ResettingGlobal" xml:space="preserve"><value>Resetting global settings...</value></data>
+  <data name="DP_ExpandAll" xml:space="preserve"><value>Expand All</value></data>
+  <data name="Status_Installing" xml:space="preserve"><value>Installing…</value></data>
+  <data name="Status_UpdateAvailable" xml:space="preserve"><value>Update</value></data>
+  <data name="Status_Installed" xml:space="preserve"><value>Installed</value></data>
+  <data name="Status_Unknown" xml:space="preserve"><value>Unknown</value></data>
+  <data name="Status_Vulkan" xml:space="preserve"><value>Vulkan</value></data>
+  <data name="Status_DirectX" xml:space="preserve"><value>DirectX</value></data>
+  <data name="DP_LaunchShort" xml:space="preserve"><value>Launch</value></data>
+  <data name="DP_LaunchExecutable" xml:space="preserve"><value>Launch executable</value></data>
+  <data name="DP_LaunchExecutableWithExe" xml:space="preserve"><value>Launch executable  —  {0}</value></data>
+  <data name="Status_NotInstalled" xml:space="preserve"><value>Not Installed</value></data>
+  <data name="Status_Install" xml:space="preserve"><value>Install</value></data>
+  <data name="Status_Uninstall" xml:space="preserve"><value>Uninstall</value></data>
+  <data name="Status_Reinstall" xml:space="preserve"><value>↺ Reinstall</value></data>
 </root>

@@ -1,7 +1,8 @@
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.UI.Xaml;
 using RenoDXCommander.Models;
 
+using RenoDXCommander.Localization;
 namespace RenoDXCommander.ViewModels;
 
 // DXVK status, install state, and computed properties
@@ -96,10 +97,10 @@ public partial class GameCardViewModel
     public Visibility DxvkDeleteVisibility   => DxvkStatus == GameStatus.Installed || DxvkStatus == GameStatus.UpdateAvailable
         ? Visibility.Visible : Visibility.Collapsed;
 
-    public string DxvkStatusText => DxvkIsInstalling ? "Installing…"
+    public string DxvkStatusText => DxvkIsInstalling ? Localizer.Get("Status_Installing")
         : DxvkStatus == GameStatus.UpdateAvailable ? "Update"
-        : DxvkStatus == GameStatus.Installed ? (DxvkInstalledVersion ?? "Installed")
-        : "Ready";
+        : DxvkStatus == GameStatus.Installed ? (DxvkInstalledVersion ?? Localizer.Get("Status_Installed"))
+        : Localizer.Get("Status_Ready");
     public string DxvkStatusColor => DxvkIsInstalling ? "#D4A856"
         : DxvkStatus == GameStatus.UpdateAvailable ? "#B898E8"
         : DxvkStatus == GameStatus.Installed ? "#5ECB7D"

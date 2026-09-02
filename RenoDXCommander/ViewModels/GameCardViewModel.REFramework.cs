@@ -1,6 +1,7 @@
-using Microsoft.UI.Xaml;
+﻿using Microsoft.UI.Xaml;
 using RenoDXCommander.Models;
 
+using RenoDXCommander.Localization;
 namespace RenoDXCommander.ViewModels;
 
 // RE Framework status, install state, and computed properties
@@ -26,10 +27,10 @@ public partial class GameCardViewModel
     public Visibility RefMessageVisibility  => string.IsNullOrEmpty(RefActionMessage) ? Visibility.Collapsed : Visibility.Visible;
     public Visibility RefDeleteVisibility   => RefStatus == GameStatus.Installed || RefStatus == GameStatus.UpdateAvailable ? Visibility.Visible : Visibility.Collapsed;
 
-    public string RefStatusText => RefIsInstalling ? "Installing…"
+    public string RefStatusText => RefIsInstalling ? Localizer.Get("Status_Installing")
         : RefStatus == GameStatus.UpdateAvailable ? "Update"
-        : RefStatus == GameStatus.Installed ? (RefInstalledVersion ?? "Installed")
-        : "Ready";
+        : RefStatus == GameStatus.Installed ? (RefInstalledVersion ?? Localizer.Get("Status_Installed"))
+        : Localizer.Get("Status_Ready");
     public string RefStatusColor => RefIsInstalling ? "#D4A856"
         : RefStatus == GameStatus.UpdateAvailable ? "#B898E8"
         : RefStatus == GameStatus.Installed ? "#5ECB7D"

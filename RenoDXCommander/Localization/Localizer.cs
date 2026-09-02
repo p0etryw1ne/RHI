@@ -45,14 +45,19 @@ public sealed class Localizer : INotifyPropertyChanged
     /// (affects any subsequent ResourceManager lookups) and notifies
     /// every <c>[Key]</c> binding to refresh.
     /// </summary>
+    private static readonly object _sync = new();
+
     public CultureInfo Culture
     {
-        get => _culture;
+        get { lock (_sync) return _culture; }
         set
         {
             if (value is null) return;
-            if (_culture.Name == value.Name) return;
-            _culture = value;
+            lock (_sync)
+            {
+                if (_culture.Name == value.Name) return;
+                _culture = value;
+            }
             CultureInfo.CurrentUICulture = value;
             // WPF indexer bindings watch for "Item[]" property changes.
             OnIndexerChanged();

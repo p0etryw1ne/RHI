@@ -288,45 +288,45 @@
   <data name="DP_Drv_ReBAR_Auto" xml:space="preserve"><value>自动（默认）</value></data>
   <data name="Common_Off" xml:space="preserve"><value>关</value></data>
   <data name="Common_On" xml:space="preserve"><value>开</value></data>
-  <data name="Filter_Placeholder" xml:space="preserve"><value>Filter games...</value></data>
-  <data name="DP_SaveSearchFilter" xml:space="preserve"><value>Save current search as a custom filter</value></data>
-  <data name="DP_ManualAddGame" xml:space="preserve"><value>Manually add a game</value></data>
-  <data name="DP_LaunchGame" xml:space="preserve"><value>Launch this game</value></data>
-  <data name="DP_OpenNexus" xml:space="preserve"><value>Open Nexus Mods page</value></data>
+  <data name="Filter_Placeholder" xml:space="preserve"><value>筛选游戏...</value></data>
+  <data name="DP_SaveSearchFilter" xml:space="preserve"><value>将当前搜索保存为自定义筛选</value></data>
+  <data name="DP_ManualAddGame" xml:space="preserve"><value>手动添加游戏</value></data>
+  <data name="DP_LaunchGame" xml:space="preserve"><value>启动此游戏</value></data>
+  <data name="DP_OpenNexus" xml:space="preserve"><value>打开 Nexus Mods 页面</value></data>
   <data name="DP_Nexus" xml:space="preserve"><value>Nexus</value></data>
-  <data name="DP_OpenPcgw" xml:space="preserve"><value>Open PCGamingWiki page</value></data>
+  <data name="DP_OpenPcgw" xml:space="preserve"><value>打开 PCGamingWiki 页面</value></data>
   <data name="DP_Pcgw" xml:space="preserve"><value>PCGW</value></data>
-  <data name="DP_OpenUwFix" xml:space="preserve"><value>Open ultrawide fix page</value></data>
+  <data name="DP_OpenUwFix" xml:space="preserve"><value>打开超宽修复页面</value></data>
   <data name="DP_UwFix" xml:space="preserve"><value>UW Fix</value></data>
-  <data name="DP_OpenUltraPlus" xml:space="preserve"><value>Open Ultra+ page for this game</value></data>
+  <data name="DP_OpenUltraPlus" xml:space="preserve"><value>打开此游戏的 Ultra+ 页面</value></data>
   <data name="DP_UltraPlus" xml:space="preserve"><value>Ultra+</value></data>
-  <data name="DP_ToggleFavourite" xml:space="preserve"><value>Toggle favourite</value></data>
-  <data name="DP_OpenConfigFolder" xml:space="preserve"><value>Open game config folder in Explorer</value></data>
-  <data name="DP_Config" xml:space="preserve"><value>Config</value></data>
-  <data name="DP_OpenGameFolder" xml:space="preserve"><value>Open game folder in Explorer</value></data>
-  <data name="DP_Components" xml:space="preserve"><value>Components</value></data>
-  <data name="Common_Info" xml:space="preserve"><value>Info</value></data>
-  <data name="DP_RemoveRef" xml:space="preserve"><value>Remove RE Framework</value></data>
-  <data name="DP_ReShadeSettings" xml:space="preserve"><value>ReShade Settings</value></data>
-  <data name="DP_RemoveReShade" xml:space="preserve"><value>Remove ReShade</value></data>
-  <data name="DP_RenoDxSettings" xml:space="preserve"><value>RenoDX Settings</value></data>
-  <data name="DP_RemoveRenoDx" xml:space="preserve"><value>Remove RenoDX mod</value></data>
-  <data name="DP_LumaSettings" xml:space="preserve"><value>Luma Settings</value></data>
-  <data name="DP_RemoveLuma" xml:space="preserve"><value>Remove Luma mod</value></data>
-  <data name="DP_DofFixSettings" xml:space="preserve"><value>DOF Fix Settings</value></data>
-  <data name="DP_RemoveDofFix" xml:space="preserve"><value>Remove DOF Fix</value></data>
+  <data name="DP_ToggleFavourite" xml:space="preserve"><value>切换收藏</value></data>
+  <data name="DP_OpenConfigFolder" xml:space="preserve"><value>在资源管理器中打开游戏配置文件夹</value></data>
+  <data name="DP_Config" xml:space="preserve"><value>配置</value></data>
+  <data name="DP_OpenGameFolder" xml:space="preserve"><value>在资源管理器中打开游戏文件夹</value></data>
+  <data name="DP_Components" xml:space="preserve"><value>组件</value></data>
+  <data name="Common_Info" xml:space="preserve"><value>信息</value></data>
+  <data name="DP_RemoveRef" xml:space="preserve"><value>移除 RE Framework</value></data>
+  <data name="DP_ReShadeSettings" xml:space="preserve"><value>ReShade 设置</value></data>
+  <data name="DP_RemoveReShade" xml:space="preserve"><value>移除 ReShade</value></data>
+  <data name="DP_RenoDxSettings" xml:space="preserve"><value>RenoDX 设置</value></data>
+  <data name="DP_RemoveRenoDx" xml:space="preserve"><value>移除 RenoDX 模组</value></data>
+  <data name="DP_LumaSettings" xml:space="preserve"><value>Luma 设置</value></data>
+  <data name="DP_RemoveLuma" xml:space="preserve"><value>移除 Luma 模组</value></data>
+  <data name="DP_DofFixSettings" xml:space="preserve"><value>DOF Fix 设置</value></data>
+  <data name="DP_RemoveDofFix" xml:space="preserve"><value>移除 DOF Fix</value></data>
   <data name="Settings_ReLimiter" xml:space="preserve"><value>ReLimiter</value></data>
-  <data name="DP_ReLimiterSettings" xml:space="preserve"><value>ReLimiter Settings</value></data>
-  <data name="DP_RemoveReLimiter" xml:space="preserve"><value>Remove ReLimiter</value></data>
-  <data name="DP_DcSettings" xml:space="preserve"><value>Display Commander Settings</value></data>
-  <data name="DP_RemoveDc" xml:space="preserve"><value>Remove Display Commander</value></data>
+  <data name="DP_ReLimiterSettings" xml:space="preserve"><value>ReLimiter 设置</value></data>
+  <data name="DP_RemoveReLimiter" xml:space="preserve"><value>移除 ReLimiter</value></data>
+  <data name="DP_DcSettings" xml:space="preserve"><value>Display Commander 设置</value></data>
+  <data name="DP_RemoveDc" xml:space="preserve"><value>移除 Display Commander</value></data>
   <data name="Settings_OptiScaler" xml:space="preserve"><value>OptiScaler</value></data>
-  <data name="DP_OptiScalerSettings" xml:space="preserve"><value>OptiScaler Settings</value></data>
-  <data name="DP_RemoveOptiScaler" xml:space="preserve"><value>Remove OptiScaler</value></data>
-  <data name="DP_DxvkSettings" xml:space="preserve"><value>DXVK Settings</value></data>
-  <data name="DP_RemoveDxvk" xml:space="preserve"><value>Remove DXVK</value></data>
-  <data name="DP_NoRenoDxMod" xml:space="preserve"><value>No RenoDX mod available for this game</value></data>
-  <data name="Settings_ComponentUpdates" xml:space="preserve"><value>Component Updates</value></data>
+  <data name="DP_OptiScalerSettings" xml:space="preserve"><value>OptiScaler 设置</value></data>
+  <data name="DP_RemoveOptiScaler" xml:space="preserve"><value>移除 OptiScaler</value></data>
+  <data name="DP_DxvkSettings" xml:space="preserve"><value>DXVK 设置</value></data>
+  <data name="DP_RemoveDxvk" xml:space="preserve"><value>移除 DXVK</value></data>
+  <data name="DP_NoRenoDxMod" xml:space="preserve"><value>此游戏没有可用的 RenoDX 模组</value></data>
+  <data name="Settings_ComponentUpdates" xml:space="preserve"><value>组件更新</value></data>
   <data name="Settings_CheckForUpdates" xml:space="preserve"><value>Check For Updates</value></data>
   <data name="Settings_CheckForUpdatesTip" xml:space="preserve"><value>Check all components and the app for available updates</value></data>
   <data name="Settings_AutomaticUpdates" xml:space="preserve"><value>Automatic Updates</value></data>
@@ -415,7 +415,7 @@
   <data name="Settings_UpdateDeployment" xml:space="preserve"><value>Update &amp;amp; Deployment</value></data>
   <data name="Settings_GlobalUpdateChecks" xml:space="preserve"><value>Global Update Checks</value></data>
   <data name="Settings_MassIniDeployment" xml:space="preserve"><value>Mass INI Deployment</value></data>
-  <data name="Settings_UpdateInclusion" xml:space="preserve"><value>Update Inclusion</value></data>
+  <data name="Settings_UpdateInclusion" xml:space="preserve"><value>更新包含</value></data>
   <data name="Settings_MassPresetInstall" xml:space="preserve"><value>Mass Preset Install</value></data>
   <data name="Settings_SystemMaintenance" xml:space="preserve"><value>System &amp;amp; Maintenance</value></data>
   <data name="Settings_FullRefresh" xml:space="preserve"><value>Full Refresh</value></data>
@@ -432,13 +432,45 @@
   <data name="Settings_CustomFolder" xml:space="preserve"><value>Custom Folder</value></data>
   <data name="Settings_LogsFolder" xml:space="preserve"><value>Logs Folder</value></data>
   <data name="Settings_CopyLogs" xml:space="preserve"><value>Copy Logs</value></data>
-  <data name="About_WhatRhiManages" xml:space="preserve"><value>What RHI manages</value></data>
-  <data name="About_SinglePlayerOnly" xml:space="preserve"><value>Single-player only</value></data>
-  <data name="About_Credits" xml:space="preserve"><value>Credits &amp;amp; Acknowledgements</value></data>
-  <data name="Menu_Links2" xml:space="preserve"><value>Links</value></data>
-  <data name="Faq_QuickStartGuide" xml:space="preserve"><value>Quick Start Guide</value></data>
-  <data name="About_PatchNotes" xml:space="preserve"><value>Patch Notes</value></data>
-  <data name="About_ViewPatchNotes" xml:space="preserve"><value>View recent patch notes</value></data>
-  <data name="About_Motd" xml:space="preserve"><value>MOTD</value></data>
-  <data name="About_ShowMotd" xml:space="preserve"><value>Show message of the day</value></data>
+  <data name="About_WhatRhiManages" xml:space="preserve"><value>RHI 管理的内容</value></data>
+  <data name="About_SinglePlayerOnly" xml:space="preserve"><value>仅限单机</value></data>
+  <data name="About_Credits" xml:space="preserve"><value>鸣谢与致谢</value></data>
+  <data name="Menu_Links2" xml:space="preserve"><value>链接</value></data>
+  <data name="Faq_QuickStartGuide" xml:space="preserve"><value>快速入门指南</value></data>
+  <data name="About_PatchNotes" xml:space="preserve"><value>更新日志</value></data>
+  <data name="About_ViewPatchNotes" xml:space="preserve"><value>查看最近的更新日志</value></data>
+  <data name="About_Motd" xml:space="preserve"><value>每日提示</value></data>
+  <data name="About_ShowMotd" xml:space="preserve"><value>显示每日提示</value></data>
+  <data name="Status_Ready" xml:space="preserve"><value>就绪</value></data>
+  <data name="DP_Hide" xml:space="preserve"><value>隐藏</value></data>
+  <data name="DP_Show" xml:space="preserve"><value>显示</value></data>
+  <data name="Common_Applied" xml:space="preserve"><value>已应用！</value></data>
+  <data name="Common_Saved" xml:space="preserve"><value>已保存！</value></data>
+  <data name="Status_CheckingComponents" xml:space="preserve"><value>正在检查组件...</value></data>
+  <data name="Status_CheckingAppVersion" xml:space="preserve"><value>正在检查应用版本...</value></data>
+  <data name="Status_FilterNameRequired" xml:space="preserve"><value>请输入筛选名称。</value></data>
+  <data name="Status_UpdatingReshade" xml:space="preserve"><value>正在更新 ReShade...</value></data>
+  <data name="Status_UpdatingRenodx" xml:space="preserve"><value>正在更新 RenoDX...</value></data>
+  <data name="Status_UpdatingRelimiter" xml:space="preserve"><value>正在更新 ReLimiter...</value></data>
+  <data name="Status_UpdatingDc" xml:space="preserve"><value>正在更新 Display Commander...</value></data>
+  <data name="Status_UpdatingOptiscaler" xml:space="preserve"><value>正在更新 OptiScaler...</value></data>
+  <data name="Status_UpdatingReframework" xml:space="preserve"><value>正在更新 RE Framework...</value></data>
+  <data name="Status_UpdatingDxvk" xml:space="preserve"><value>正在更新 DXVK...</value></data>
+  <data name="Status_UpdatingLuma" xml:space="preserve"><value>正在更新 Luma...</value></data>
+  <data name="Status_UpdatingDofFix" xml:space="preserve"><value>正在更新 DOF Fix...</value></data>
+  <data name="Status_ResettingGlobal" xml:space="preserve"><value>正在重置全局设置...</value></data>
+  <data name="DP_ExpandAll" xml:space="preserve"><value>全部展开</value></data>
+  <data name="Status_Installing" xml:space="preserve"><value>安装中...</value></data>
+  <data name="Status_UpdateAvailable" xml:space="preserve"><value>有更新</value></data>
+  <data name="Status_Installed" xml:space="preserve"><value>已安装</value></data>
+  <data name="Status_Unknown" xml:space="preserve"><value>未知</value></data>
+  <data name="Status_Vulkan" xml:space="preserve"><value>Vulkan</value></data>
+  <data name="Status_DirectX" xml:space="preserve"><value>DirectX</value></data>
+  <data name="DP_LaunchShort" xml:space="preserve"><value>启动</value></data>
+  <data name="DP_LaunchExecutable" xml:space="preserve"><value>启动可执行文件</value></data>
+  <data name="DP_LaunchExecutableWithExe" xml:space="preserve"><value>启动可执行文件  —  {0}</value></data>
+  <data name="Status_NotInstalled" xml:space="preserve"><value>未安装</value></data>
+  <data name="Status_Install" xml:space="preserve"><value>安装</value></data>
+  <data name="Status_Uninstall" xml:space="preserve"><value>卸载</value></data>
+  <data name="Status_Reinstall" xml:space="preserve"><value>↺ 重装</value></data>
 </root>

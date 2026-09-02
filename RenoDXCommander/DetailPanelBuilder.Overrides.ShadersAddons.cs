@@ -1,4 +1,4 @@
-// DetailPanelBuilder.Overrides.ShadersAddons.cs — Shaders, Addons, Launch, and Reset Overrides sections.
+﻿// DetailPanelBuilder.Overrides.ShadersAddons.cs — Shaders, Addons, Launch, and Reset Overrides sections.
 
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -277,8 +277,8 @@ public partial class DetailPanelBuilder
                     : null));
 
         var headerText = string.IsNullOrEmpty(effectiveExe)
-            ? "Launch executable"
-            : $"Launch executable  —  {effectiveExe}";
+            ? Localizer.Get("DP_LaunchExecutable")
+            : Localizer.Format("DP_LaunchExecutableWithExe", effectiveExe);
         launchExeHeaderPanel.Children.Add(new TextBlock
         {
             Text = headerText,

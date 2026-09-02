@@ -1,7 +1,8 @@
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.UI.Xaml;
 using RenoDXCommander.Models;
 
+using RenoDXCommander.Localization;
 namespace RenoDXCommander.ViewModels;
 
 // Luma status, install state, and computed properties
@@ -41,11 +42,11 @@ public partial class GameCardViewModel
         : "⬇  Install Luma";
 
     // Component table: Luma short status/action (consistent with RS/DC/RDX)
-    public string LumaStatusText => IsLumaInstalling ? "Installing…"
+    public string LumaStatusText => IsLumaInstalling ? Localizer.Get("Status_Installing")
         : LumaStatus == GameStatus.UpdateAvailable ? "Update"
         : LumaStatus == GameStatus.Installed
             ? (LumaRecord?.InstalledBuildNumber > 0 ? $"Build {LumaRecord.InstalledBuildNumber}" : "Installed")
-        : "Ready";
+        : Localizer.Get("Status_Ready");
     public string LumaStatusColor => IsLumaInstalling ? "#D4A856"
         : LumaStatus == GameStatus.UpdateAvailable ? "#B898E8"
         : LumaStatus == GameStatus.Installed       ? "#5ECB7D"

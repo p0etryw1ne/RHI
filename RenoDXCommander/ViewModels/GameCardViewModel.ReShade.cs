@@ -1,8 +1,9 @@
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.UI.Xaml;
 using RenoDXCommander.Models;
 using RenoDXCommander.Services;
 
+using RenoDXCommander.Localization;
 namespace RenoDXCommander.ViewModels;
 
 // ReShade status, install state, and computed properties
@@ -58,10 +59,10 @@ public partial class GameCardViewModel
                                                ? Visibility.Visible : Visibility.Collapsed;
 
     // Component table: RS short status text + short action labels
-    public string RsStatusText => RsIsInstalling ? "Installing…"
-        : RsStatus == GameStatus.UpdateAvailable ? (RsInstalledVersion ?? "Update")
-        : RsStatus == GameStatus.Installed       ? (RsInstalledVersion ?? "Installed")
-        : "Ready";
+    public string RsStatusText => RsIsInstalling ? Localizer.Get("Status_Installing")
+        : RsStatus == GameStatus.UpdateAvailable ? (RsInstalledVersion ?? Localizer.Get("Status_UpdateAvailable"))
+        : RsStatus == GameStatus.Installed       ? (RsInstalledVersion ?? Localizer.Get("Status_Installed"))
+        : Localizer.Get("Status_Ready");
     public string RsStatusColor => RsIsInstalling ? "#D4A856"
         : RsStatus == GameStatus.UpdateAvailable ? "#B898E8"
         : RsStatus == GameStatus.Installed       ? "#5ECB7D"

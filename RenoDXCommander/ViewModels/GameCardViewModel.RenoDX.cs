@@ -1,7 +1,8 @@
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.UI.Xaml;
 using RenoDXCommander.Models;
 
+using RenoDXCommander.Localization;
 namespace RenoDXCommander.ViewModels;
 
 // RenoDX status, install state, and computed properties
@@ -105,16 +106,16 @@ public partial class GameCardViewModel
     public string ChevronBorderThickness => ReinstallRowVisibility == Visibility.Visible ? "1,1,0,1" : "1";
 
     // ── Component table: RDX short status text + short action labels ─────────────
-    public string RdxStatusText => IsInstalling ? "Installing…"
-        : Status == GameStatus.UpdateAvailable ? (RdxInstalledVersion ?? "Update")
-        : Status == GameStatus.Installed       ? (RdxInstalledVersion ?? "Installed")
-        : Mod?.SnapshotUrl != null             ? "Ready" : "—";
+    public string RdxStatusText => IsInstalling ? Localizer.Get("Status_Installing")
+        : Status == GameStatus.UpdateAvailable ? (RdxInstalledVersion ?? Localizer.Get("Status_UpdateAvailable"))
+        : Status == GameStatus.Installed       ? (RdxInstalledVersion ?? Localizer.Get("Status_Installed"))
+        : Mod?.SnapshotUrl != null             ? Localizer.Get("Status_Ready") : "—";
     public string RdxStatusColor => IsInstalling ? "#D4A856"
         : Status == GameStatus.UpdateAvailable ? "#B898E8"
         : Status == GameStatus.Installed       ? "#5ECB7D"
         : Mod?.SnapshotUrl != null             ? "#A0AABB" : "#404858";
     public string RdxShortAction => IsInstalling ? "…"
-        : Status == GameStatus.UpdateAvailable ? "⬆ Update"
+        : Status == GameStatus.UpdateAvailable ? "⬆ " + Localizer.Get("Status_UpdateAvailable")
         : Status == GameStatus.Installed       ? "↺ Reinstall"
         : "⬇ Install";
 

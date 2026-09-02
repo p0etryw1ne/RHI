@@ -1,4 +1,4 @@
-// MainWindow.Events.Components.cs — Per-component cog button (⚙️) dialog handlers (RS, RDX, UL, DC, OS, DXVK).
+﻿// MainWindow.Events.Components.cs — Per-component cog button (⚙️) dialog handlers (RS, RDX, UL, DC, OS, DXVK).
 
 using System;
 using System.IO;
@@ -10,6 +10,7 @@ using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media;
 using RenoDXCommander.Models;
 using RenoDXCommander.Services;
+using RenoDXCommander.Localization;
 using RenoDXCommander.ViewModels;
 
 namespace RenoDXCommander;
@@ -206,7 +207,7 @@ public sealed partial class MainWindow
         };
         ToolTipService.SetToolTip(hotkeyBox, "Click here then press your desired key. Written to all reshade*.ini files for this game.");
 
-        hotkeyBox.GotFocus += (s, ev) => hotkeyBox.Text = "Press a key...";
+        hotkeyBox.GotFocus += (s, ev) => hotkeyBox.Text = Localizer.Get("Settings_PressKeyPlaceholder");
         hotkeyBox.KeyDown += (s, ev) =>
         {
             var vk = (int)ev.Key;
@@ -243,7 +244,7 @@ public sealed partial class MainWindow
                     .ToList();
                 foreach (var file in iniFiles)
                     AuxInstallService.ApplyOverlayHotkey(file, hotkeyString);
-                applyKeyBtn.Content = "Applied!";
+                applyKeyBtn.Content = Localizer.Get("Common_Applied");
                 _crashReporter.Log($"[RsCogButton_Click] Applied overlay key '{hotkeyString}' to {iniFiles.Count} ini file(s) for '{card.GameName}'");
             }
             catch (Exception ex) { card.RsActionMessage = $"❌ {ex.Message}"; }
@@ -295,7 +296,7 @@ public sealed partial class MainWindow
         };
         ToolTipService.SetToolTip(screenshotHotkeyBox, "Click here then press your desired key. Written to all reshade*.ini files for this game.");
 
-        screenshotHotkeyBox.GotFocus += (s, ev) => screenshotHotkeyBox.Text = "Press a key...";
+        screenshotHotkeyBox.GotFocus += (s, ev) => screenshotHotkeyBox.Text = Localizer.Get("Settings_PressKeyPlaceholder");
         screenshotHotkeyBox.KeyDown += (s, ev) =>
         {
             var vk2 = (int)ev.Key;
@@ -331,7 +332,7 @@ public sealed partial class MainWindow
                     .ToList();
                 foreach (var file in iniFiles2)
                     AuxInstallService.ApplyScreenshotHotkey(file, screenshotHotkeyString);
-                applyScreenshotKeyBtn.Content = "Applied!";
+                applyScreenshotKeyBtn.Content = Localizer.Get("Common_Applied");
                 _crashReporter.Log($"[RsCogButton_Click] Applied screenshot key '{screenshotHotkeyString}' to {iniFiles2.Count} ini file(s) for '{card.GameName}'");
             }
             catch (Exception ex) { card.RsActionMessage = $"❌ {ex.Message}"; }
@@ -1412,7 +1413,7 @@ public sealed partial class MainWindow
                     new JsonSerializerOptions { WriteIndented = true }));
                 setDefaultBtn.IsEnabled = true;
                 ToolTipService.SetToolTip(setDefaultBtn, "Apply your saved default preset to the sliders");
-                saveDefaultBtn.Content = "Saved!";
+                saveDefaultBtn.Content = Localizer.Get("Common_Saved");
             }
             catch (Exception ex) { CrashReporter.Log($"[RtxHdrConfigButton_Click] Failed to save defaults — {ex.Message}"); }
         };

@@ -1,9 +1,10 @@
-// DetailPanelBuilder.Components.cs — Component row updates, property-changed handling, and message color logic.
+﻿// DetailPanelBuilder.Components.cs — Component row updates, property-changed handling, and message color logic.
 
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using RenoDXCommander.Models;
 using RenoDXCommander.Services;
+using RenoDXCommander.Localization;
 using RenoDXCommander.ViewModels;
 
 namespace RenoDXCommander;
@@ -158,7 +159,7 @@ public partial class DetailPanelBuilder
                 }
                 else
                 {
-                    _window.DetailRsStatus.Text = "Ready";
+                    _window.DetailRsStatus.Text = Localizer.Get("Status_Ready");
                     _window.DetailRsStatus.Foreground = UIFactory.GetBrush("#A0AABB");
                     _window.DetailRsStatus.TextDecorations = Windows.UI.Text.TextDecorations.None;
                 }

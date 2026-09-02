@@ -1,7 +1,8 @@
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.UI.Xaml;
 using RenoDXCommander.Models;
 
+using RenoDXCommander.Localization;
 namespace RenoDXCommander.ViewModels;
 
 // DOF Fix status, install state, and computed properties
@@ -39,10 +40,10 @@ public partial class GameCardViewModel
     public Visibility DofFixDeleteVisibility   => DofFixStatus == GameStatus.Installed || DofFixStatus == GameStatus.UpdateAvailable
         ? Visibility.Visible : Visibility.Collapsed;
 
-    public string DofFixStatusText => DofFixIsInstalling ? "Installing…"
+    public string DofFixStatusText => DofFixIsInstalling ? Localizer.Get("Status_Installing")
         : DofFixStatus == GameStatus.UpdateAvailable ? "Update"
-        : DofFixStatus == GameStatus.Installed ? (DofFixInstalledVersion ?? "Installed")
-        : "Ready";
+        : DofFixStatus == GameStatus.Installed ? (DofFixInstalledVersion ?? Localizer.Get("Status_Installed"))
+        : Localizer.Get("Status_Ready");
     public string DofFixStatusColor => DofFixIsInstalling ? "#D4A856"
         : DofFixStatus == GameStatus.UpdateAvailable ? "#B898E8"
         : DofFixStatus == GameStatus.Installed ? "#5ECB7D"

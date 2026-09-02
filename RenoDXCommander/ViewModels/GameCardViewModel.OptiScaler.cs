@@ -1,7 +1,8 @@
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.UI.Xaml;
 using RenoDXCommander.Models;
 
+using RenoDXCommander.Localization;
 namespace RenoDXCommander.ViewModels;
 
 // OptiScaler status, install state, and computed properties
@@ -39,10 +40,10 @@ public partial class GameCardViewModel
     public Visibility OsDeleteVisibility   => OsStatus == GameStatus.Installed
         || OsStatus == GameStatus.UpdateAvailable ? Visibility.Visible : Visibility.Collapsed;
 
-    public string OsStatusText => OsIsInstalling ? "Installing…"
+    public string OsStatusText => OsIsInstalling ? Localizer.Get("Status_Installing")
         : OsStatus == GameStatus.UpdateAvailable ? "Update"
-        : OsStatus == GameStatus.Installed ? (OsInstalledVersion ?? "Installed")
-        : "Ready";
+        : OsStatus == GameStatus.Installed ? (OsInstalledVersion ?? Localizer.Get("Status_Installed"))
+        : Localizer.Get("Status_Ready");
     public string OsStatusColor => OsIsInstalling ? "#D4A856"
         : OsStatus == GameStatus.UpdateAvailable ? "#B898E8"
         : OsStatus == GameStatus.Installed ? "#5ECB7D"

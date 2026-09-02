@@ -1,4 +1,4 @@
-// MainWindow.xaml.cs — Constructor, field declarations, window lifecycle,
+﻿// MainWindow.xaml.cs — Constructor, field declarations, window lifecycle,
 // addon file handling, and game list selection.
 
 using Microsoft.UI;
@@ -88,7 +88,30 @@ public sealed partial class MainWindow : Window
         App.Services.GetRequiredService<CustomReShadeHashService>().EnsureInitialized(); // seed hash file on first run
         App.Services.GetRequiredService<IOptiScalerService>().SeedUserInis(); // seed OptiScaler INIs if missing
         Title = Localizer.Instance["AppTitle"];
+        // WinUI 3 VisualTreeHelper does not descend into collapsed/unloaded
+        // panels at construction time, so a first pass here only hits the
+        // initially visible surface. Re-run on first activation.
         Loc.ApplyTo(Content);
+        // Re-run i18n a few times after activation: detail-panel sections are
+        // built asynchronously and replaced over time, so a single pass misses
+        // them. Retry on activation + a short delay covers the rebuild window.
+        this.Activated += (_, _) =>
+        {
+            Loc.ApplyTo(Content);
+            DispatcherQueue.TryEnqueue(() => Loc.ApplyTo(Content));
+        };
+
+        // Detail-panel sections are rebuilt asynchronously after the first scan;
+        // retry i18n a few times on a delay so late-created elements also get
+        // translated. Cheap: ApplyTo only touches elements tagged with loc:Loc.*.
+        Task.Run(async () =>
+        {
+            foreach (var ms in new[] { 1000, 2500, 5000 })
+            {
+                await Task.Delay(ms);
+                try { DispatcherQueue.TryEnqueue(() => Loc.ApplyTo(Content)); } catch { }
+            }
+        });
         // Fire-and-forget: check/download shader packs in the background
         // When CacheAllShaders is off, skip the bulk download — packs will be fetched on demand.
         Task shaderTask;

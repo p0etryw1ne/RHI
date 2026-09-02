@@ -1,9 +1,10 @@
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media;
 using RenoDXCommander.Models;
 using RenoDXCommander.Services;
+using RenoDXCommander.Localization;
 
 namespace RenoDXCommander;
 
@@ -129,7 +130,7 @@ public static class ShaderPopupHelper
                         eb.Content = "▶";
                 }
                 allExpanded = false;
-                expandAllBtn.Content = "Expand All";
+                expandAllBtn.Content = Localizer.Get("DP_ExpandAll");
             }
             finally { profileLoading = false; }
         };

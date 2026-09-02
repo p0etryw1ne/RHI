@@ -1,4 +1,4 @@
-// MainWindow.Skeleton.cs — Skeleton loading screen creation, animation, and cleanup.
+﻿// MainWindow.Skeleton.cs — Skeleton loading screen creation, animation, and cleanup.
 
 using Microsoft.UI;
 using Microsoft.UI.Xaml;
@@ -7,6 +7,7 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Shapes;
 using RenoDXCommander.Models;
+using RenoDXCommander.Localization;
 using Windows.UI;
 
 namespace RenoDXCommander;
@@ -610,7 +611,7 @@ public sealed partial class MainWindow
         // "Components" header text (real TextBlock, not skeleton — matches real layout)
         tableContent.Children.Add(new TextBlock
         {
-            Text = "Components",
+            Text = Localizer.Get("DP_Components"),
             FontSize = 13,
             FontWeight = Microsoft.UI.Text.FontWeights.SemiBold,
             Foreground = new SolidColorBrush(ColorHelper.FromArgb(0xFF, 0xE8, 0xEC, 0xF2)),

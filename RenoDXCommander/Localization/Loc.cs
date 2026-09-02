@@ -161,7 +161,13 @@ public static class Loc
     private static void RefreshAll()
     {
         foreach (var entry in _entries)
-            ApplyToElement(entry);
+        {
+            try
+            {
+                ApplyToElement(entry);
+            }
+            catch { /* one bad element must not break the whole tree */ }
+        }
     }
 
     private static void ApplyToElement(Entry entry)

@@ -1,9 +1,10 @@
-// UpdateInclusionHelper.cs — Shared Update Inclusion dialog logic used by both
+﻿// UpdateInclusionHelper.cs — Shared Update Inclusion dialog logic used by both
 // DetailPanelBuilder and OverridesFlyoutBuilder.
 
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using RenoDXCommander.Services;
+using RenoDXCommander.Localization;
 using RenoDXCommander.ViewModels;
 
 namespace RenoDXCommander;
@@ -87,7 +88,7 @@ public static class UpdateInclusionHelper
 
         var button = new Button
         {
-            Content = "Update Inclusion",
+            Content = Localizer.Get("Settings_UpdateInclusion"),
             Background = UIFactory.Brush(ResourceKeys.AccentBlueBgBrush),
             Foreground = UIFactory.Brush(ResourceKeys.AccentBlueBrush),
             BorderBrush = UIFactory.Brush(ResourceKeys.AccentBlueBorderBrush),

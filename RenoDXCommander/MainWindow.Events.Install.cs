@@ -1,4 +1,4 @@
-// MainWindow.Events.Install.cs — Update All, DXVK, DOF Fix, engine badge, game launch, and scroll restore handlers.
+﻿// MainWindow.Events.Install.cs — Update All, DXVK, DOF Fix, engine badge, game launch, and scroll restore handlers.
 
 using System.Diagnostics;
 using Microsoft.UI;
@@ -8,6 +8,7 @@ using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media;
 using RenoDXCommander.Models;
 using RenoDXCommander.Services;
+using RenoDXCommander.Localization;
 using RenoDXCommander.ViewModels;
 
 namespace RenoDXCommander;
@@ -52,39 +53,39 @@ public sealed partial class MainWindow
         {
             if (!ViewModel.Settings.GlobalSkipRsUpdates)
             {
-                statusText.Text = "Updating ReShade...";
+                statusText.Text = Localizer.Get("Status_UpdatingReshade");
                 await ViewModel.UpdateAllReShadeAsync();
             }
             if (!ViewModel.Settings.GlobalSkipRdxUpdates)
             {
-                statusText.Text = "Updating RenoDX...";
+                statusText.Text = Localizer.Get("Status_UpdatingRenodx");
                 await ViewModel.UpdateAllRenoDxAsync();
             }
             if (!ViewModel.Settings.GlobalSkipUlUpdates)
             {
-                statusText.Text = "Updating ReLimiter...";
+                statusText.Text = Localizer.Get("Status_UpdatingRelimiter");
                 await ViewModel.UpdateAllUlAsync();
             }
             if (!ViewModel.Settings.GlobalSkipDcUpdates)
             {
-                statusText.Text = "Updating Display Commander...";
+                statusText.Text = Localizer.Get("Status_UpdatingDc");
                 await ViewModel.UpdateAllDcAsync();
             }
             if (!ViewModel.Settings.GlobalSkipOsUpdates)
             {
-                statusText.Text = "Updating OptiScaler...";
+                statusText.Text = Localizer.Get("Status_UpdatingOptiscaler");
                 await ViewModel.UpdateAllOsAsync();
             }
             if (!ViewModel.Settings.GlobalSkipRefUpdates)
             {
-                statusText.Text = "Updating RE Framework...";
+                statusText.Text = Localizer.Get("Status_UpdatingReframework");
                 await ViewModel.UpdateAllRefAsync();
             }
-            statusText.Text = "Updating DXVK...";
+            statusText.Text = Localizer.Get("Status_UpdatingDxvk");
             await ViewModel.UpdateAllDxvkAsync();
-            statusText.Text = "Updating Luma...";
+            statusText.Text = Localizer.Get("Status_UpdatingLuma");
             await ViewModel.UpdateAllLumaAsync();
-            statusText.Text = "Updating DOF Fix...";
+            statusText.Text = Localizer.Get("Status_UpdatingDofFix");
             await ViewModel.UpdateAllDofFixAsync();
         }
         catch (Exception ex)

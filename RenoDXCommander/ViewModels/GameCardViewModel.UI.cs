@@ -1,8 +1,9 @@
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.UI.Xaml;
 using RenoDXCommander.Models;
 using RenoDXCommander.Services;
 
+using RenoDXCommander.Localization;
 namespace RenoDXCommander.ViewModels;
 
 // UI state: IsSelected, CardHighlighted, ComponentExpanded, sidebar props, visibility, display

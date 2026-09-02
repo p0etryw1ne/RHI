@@ -1,6 +1,7 @@
-using Microsoft.UI.Xaml;
+﻿using Microsoft.UI.Xaml;
 using RenoDXCommander.Models;
 
+using RenoDXCommander.Localization;
 namespace RenoDXCommander.ViewModels;
 
 // ReLimiter status, install state, and computed properties
@@ -26,10 +27,10 @@ public partial class GameCardViewModel
     public Visibility UlMessageVisibility  => string.IsNullOrEmpty(UlActionMessage) ? Visibility.Collapsed : Visibility.Visible;
     public Visibility UlDeleteVisibility   => UlStatus == GameStatus.Installed || UlStatus == GameStatus.UpdateAvailable ? Visibility.Visible : Visibility.Collapsed;
 
-    public string UlStatusText => UlIsInstalling ? "Installing…"
+    public string UlStatusText => UlIsInstalling ? Localizer.Get("Status_Installing")
         : UlStatus == GameStatus.UpdateAvailable ? "Update"
-        : UlStatus == GameStatus.Installed ? (UlInstalledVersion ?? "Installed")
-        : "Ready";
+        : UlStatus == GameStatus.Installed ? (UlInstalledVersion ?? Localizer.Get("Status_Installed"))
+        : Localizer.Get("Status_Ready");
     public string UlStatusColor => UlIsInstalling ? "#D4A856"
         : UlStatus == GameStatus.UpdateAvailable ? "#B898E8"
         : UlStatus == GameStatus.Installed ? "#5ECB7D"

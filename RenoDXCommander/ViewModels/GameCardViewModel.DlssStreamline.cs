@@ -1,6 +1,7 @@
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using RenoDXCommander.Services;
 
+using RenoDXCommander.Localization;
 namespace RenoDXCommander.ViewModels;
 
 // DLSS & Streamline detection state stored per-game card
@@ -120,7 +121,7 @@ public partial class GameCardViewModel
             }
 
             // Fallback: read from interposer path (normal versioned installs)
-            if (string.IsNullOrEmpty(versionFromPath) || versionFromPath == "Unknown")
+            if (string.IsNullOrEmpty(versionFromPath) || versionFromPath == Localizer.Get("Status_Unknown"))
             {
                 if (DlssDetection.StreamlineInterposerPath != null)
                     versionFromPath = DlssStreamlineService.FormatVersion(service.GetFileVersion(DlssDetection.StreamlineInterposerPath));
@@ -128,7 +129,7 @@ public partial class GameCardViewModel
 
             // If the interposer is older than another DLL in the same folder
             // (e.g. 2.12.128 interposer in a 2.12.129 release), use the highest-versioned DLL.
-            if (!string.IsNullOrEmpty(versionFromPath) && versionFromPath != "Unknown" && folder != null)
+            if (!string.IsNullOrEmpty(versionFromPath) && versionFromPath != Localizer.Get("Status_Unknown") && folder != null)
             {
                 foreach (var knownDll in DlssStreamlineService.KnownStreamlineDlls)
                 {
@@ -136,7 +137,7 @@ public partial class GameCardViewModel
                     var candidatePath = System.IO.Path.Combine(folder, knownDll);
                     if (!System.IO.File.Exists(candidatePath)) continue;
                     var candidateVersion = DlssStreamlineService.FormatVersion(service.GetFileVersion(candidatePath));
-                    if (!string.IsNullOrEmpty(candidateVersion) && candidateVersion != "Unknown"
+                    if (!string.IsNullOrEmpty(candidateVersion) && candidateVersion != Localizer.Get("Status_Unknown")
                         && System.Version.TryParse(candidateVersion, out var cv)
                         && System.Version.TryParse(versionFromPath, out var iv) && cv > iv)
                     {
@@ -147,7 +148,7 @@ public partial class GameCardViewModel
             }
 
             // Last resort: try sl.common.dll even without custom marker
-            if ((string.IsNullOrEmpty(versionFromPath) || versionFromPath == "Unknown") && folder != null)
+            if ((string.IsNullOrEmpty(versionFromPath) || versionFromPath == Localizer.Get("Status_Unknown")) && folder != null)
             {
                 var commonPath = System.IO.Path.Combine(folder, "sl.common.dll");
                 if (System.IO.File.Exists(commonPath))

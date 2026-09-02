@@ -11,6 +11,7 @@ namespace RenoDXCommander.Tests;
 /// <c>Strings.zh-CN.resx</c> satellite, and that <see cref="Localizer.Culture"/>
 /// switches the active language on demand.
 /// </summary>
+[Collection("Localizer")]
 public class LocalizerTests
 {
     [Fact]
@@ -71,6 +72,9 @@ public class LocalizerTests
         var original = Localizer.Instance.Culture;
         try
         {
+            // Switch away first so the Culture setter actually fires (it no-ops
+            // when the target culture name already matches the active one).
+            Localizer.Instance.Culture = new CultureInfo("en-US");
             var raised = new List<string>();
             Localizer.Instance.PropertyChanged += (s, e) => raised.Add(e.PropertyName ?? "");
 

@@ -1,4 +1,4 @@
-// DetailPanelBuilder.Overrides.cs — Main overrides panel (DLL names, Bitness, API).
+﻿// DetailPanelBuilder.Overrides.cs — Main overrides panel (DLL names, Bitness, API).
 
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -575,7 +575,7 @@ public partial class DetailPanelBuilder
         resetWikiRow.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
 
         // Restyle reset button to blue accent
-        resetBtn.Content = "Reset";
+        resetBtn.Content = Localizer.Get("Common_Reset");
         resetBtn.FontSize = 12;
         resetBtn.Height = 32;
         resetBtn.HorizontalAlignment = HorizontalAlignment.Stretch;
