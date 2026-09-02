@@ -212,4 +212,85 @@ Continue?</value></data>
   <data name="Faq_LinksRenoDxDiscord" xml:space="preserve"><value>RenoDX Discord (mod development)</value></data>
   <data name="Faq_LinksRenoDxWiki" xml:space="preserve"><value>Browse the RenoDX Mod Wiki</value></data>
   <data name="Faq_LinksRhiGitHub" xml:space="preserve"><value>RHI GitHub — Report issues or request features</value></data>
+  <data name="DP_Over_GameOverridesTitle" xml:space="preserve"><value>Game Overrides</value></data>
+  <data name="DP_Over_GameNameHeader" xml:space="preserve"><value>Game name (editable)</value></data>
+  <data name="DP_Over_WikiModNameHeader" xml:space="preserve"><value>Wiki mod name</value></data>
+  <data name="DP_Over_WikiModNamePlaceholder" xml:space="preserve"><value>Exact wiki name</value></data>
+  <data name="DP_Over_Reset" xml:space="preserve"><value>Reset</value></data>
+  <data name="DP_Over_DllNamingHeader" xml:space="preserve"><value>DLL naming overrides</value></data>
+  <data name="DP_Over_ReshadeDllPlaceholder" xml:space="preserve"><value>Select ReShade DLL name</value></data>
+  <data name="DP_Over_DcDllPlaceholder" xml:space="preserve"><value>Select DC DLL name</value></data>
+  <data name="DP_Over_OptiScalerDllPlaceholder" xml:space="preserve"><value>Select OptiScaler DLL name</value></data>
+  <data name="DP_Over_Bitness" xml:space="preserve"><value>Bitness</value></data>
+  <data name="DP_Over_GraphicsApi" xml:space="preserve"><value>Graphics API</value></data>
+  <data name="DP_Dlss_Version" xml:space="preserve"><value>Version</value></data>
+  <data name="DP_Dlss_Preset" xml:space="preserve"><value>Preset</value></data>
+  <data name="DP_Dlss_RenderScale" xml:space="preserve"><value>Render Scale</value></data>
+  <data name="DP_Dlss_RenderScalePlaceholder" xml:space="preserve"><value>33-100</value></data>
+  <data name="DP_Drv_VSync" xml:space="preserve"><value>VSync</value></data>
+  <data name="DP_Drv_VSyncMode" xml:space="preserve"><value>Mode</value></data>
+  <data name="DP_Drv_VSyncTearControl" xml:space="preserve"><value>Tear Control</value></data>
+  <data name="DP_Drv_LowLatency" xml:space="preserve"><value>Low Latency</value></data>
+  <data name="DP_Drv_SmoothMotion" xml:space="preserve"><value>Smooth Motion</value></data>
+  <data name="DP_Drv_SmoothMotionEnable" xml:space="preserve"><value>Enable</value></data>
+  <data name="DP_Drv_SmoothMotionApis" xml:space="preserve"><value>Allowed APIs</value></data>
+  <data name="DP_Drv_SmoothMotionFlipPacing" xml:space="preserve"><value>Flip Pacing</value></data>
+  <data name="DP_Drv_Other" xml:space="preserve"><value>Other</value></data>
+  <data name="DP_Drv_PowerMode" xml:space="preserve"><value>Power Mode</value></data>
+  <data name="DP_Drv_GSync" xml:space="preserve"><value>G-Sync</value></data>
+  <data name="DP_Drv_RestoreDefaults" xml:space="preserve"><value>Restore Defaults</value></data>
+  <data name="DP_Drv_RestoreDriverSettingsTitle" xml:space="preserve"><value>Restore driver settings?</value></data>
+  <data name="DP_Drv_RestoreDriverSettingsConfirm" xml:space="preserve"><value>Restore</value></data>
+  <data name="DP_Drv_ReBAR" xml:space="preserve"><value>ReBAR</value></data>
+  <data name="DP_Drv_ReBAREnable" xml:space="preserve"><value>Enable</value></data>
+  <data name="DP_Drv_ReBARMode" xml:space="preserve"><value>Mode</value></data>
+  <data name="DP_Drv_ReBARSizeLimit" xml:space="preserve"><value>Size Limit</value></data>
+  <data name="DP_Drv_RestoreDriverSettingsTip" xml:space="preserve"><value>Restore this game's NVIDIA driver profile to factory defaults. Removes all custom settings (presets, render scale, MFG, driver overrides). This action is irreversible.</value></data>
+  <data name="DP_Drv_RestoreDriverSettingsBody" xml:space="preserve"><value>This will restore driver settings for {0} back to the factory default and restore DLSS/Streamline DLLs to their original versions. This action is irreversible.</value></data>
+  <data name="DP_Dxvk_Dxvk" xml:space="preserve"><value>DXVK</value></data>
+  <data name="DP_Dxvk_LiliumPreset" xml:space="preserve"><value>Lilium HDR Preset</value></data>
+  <data name="DP_Dxvk_ChangeInstallFolder" xml:space="preserve"><value>Change install folder</value></data>
+  <data name="DP_Dxvk_ResetRemoveGame" xml:space="preserve"><value>Reset / Remove game</value></data>
+  <data name="DP_Dxvk_ResetOverrides" xml:space="preserve"><value>Reset Overrides</value></data>
+  <data name="DP_Dxvk_CopyReport" xml:space="preserve"><value>Copy Report</value></data>
+  <data name="DP_Nv_Header" xml:space="preserve"><value>Nvidia Profile Overrides</value></data>
+  <data name="DP_Nv_MultiFrameGen" xml:space="preserve"><value>Multi Frame Gen</value></data>
+  <data name="DP_Nv_Preset" xml:space="preserve"><value>Preset</value></data>
+  <data name="DP_Nv_DeployDll" xml:space="preserve"><value>Deploy DLL</value></data>
+  <data name="DP_Nv_Downloading" xml:space="preserve"><value>Downloading...</value></data>
+  <data name="DP_Nv_NotInCustomDlss" xml:space="preserve"><value>Not in Custom/DLSS</value></data>
+  <data name="DP_Nv_NotAvailable" xml:space="preserve"><value>Not available</value></data>
+  <data name="DP_Nv_RestoreDlssSl" xml:space="preserve"><value>Restore DLSS/SL</value></data>
+  <data name="DP_Nv_QuickApply" xml:space="preserve"><value>Quick Apply</value></data>
+  <data name="DP_Rs_Channel" xml:space="preserve"><value>ReShade Channel</value></data>
+  <data name="DP_Rs_OlderReShadeWarning" xml:space="preserve"><value>⚠ Older ReShade versions may not support newer addons.
+The game will be excluded from automatic ReShade updates.</value></data>
+  <data name="DP_Rs_SelectLegacyVersionTitle" xml:space="preserve"><value>Select Legacy ReShade Version</value></data>
+  <data name="DP_Rs_Confirm" xml:space="preserve"><value>Confirm</value></data>
+  <data name="DP_Rs_NoCustomDllsFound" xml:space="preserve"><value>No custom ReShade DLLs found.
+
+Place your .dll files in:</value></data>
+  <data name="DP_Rs_CustomReShadeNotFoundTitle" xml:space="preserve"><value>Custom ReShade Not Found</value></data>
+  <data name="DP_Rs_SelectCustomReShadeTitle" xml:space="preserve"><value>Select Custom ReShade</value></data>
+  <data name="DP_Rs_Deploy" xml:space="preserve"><value>Deploy</value></data>
+  <data name="DP_Rs_VulkanChannelBody" xml:space="preserve"><value>Vulkan games share a global ReShade layer.
+
+</value></data>
+  <data name="DP_Rs_ApplyToAllVulkan" xml:space="preserve"><value>Apply to All Vulkan Games</value></data>
+  <data name="DP_Rs_GlobalUpdateInclusion" xml:space="preserve"><value>Global update inclusion</value></data>
+  <data name="DP_Sh_ShadersAndAddons" xml:space="preserve"><value>Shaders and Addons</value></data>
+  <data name="DP_Sh_Shaders" xml:space="preserve"><value>Shaders</value></data>
+  <data name="DP_Sh_SelectAddonsTitle" xml:space="preserve"><value>Select Addons</value></data>
+  <data name="DP_Sh_AddonServiceNotWired" xml:space="preserve"><value>Addon service is not yet wired. Complete Task 9.1 to enable addon selection.</value></data>
+  <data name="DP_Sh_Addons" xml:space="preserve"><value>Addons</value></data>
+  <data name="DP_Sh_SelectReShadePreset" xml:space="preserve"><value>Select ReShade Preset</value></data>
+  <data name="DP_Sh_InstallShadersTitle" xml:space="preserve"><value>Install Shaders?</value></data>
+  <data name="DP_Sh_InstallShadersBody" xml:space="preserve"><value>Also install the required shaders and textures?</value></data>
+  <data name="Common_Yes" xml:space="preserve"><value>Yes</value></data>
+  <data name="Common_No" xml:space="preserve"><value>No</value></data>
+  <data name="DP_Sh_ExePathPlaceholder" xml:space="preserve"><value>Auto-detect (or paste path)</value></data>
+  <data name="DP_Sh_LaunchArgsPlaceholder" xml:space="preserve"><value>Launch arguments</value></data>
+  <data name="Common_Browse" xml:space="preserve"><value>Browse</value></data>
+  <data name="DP_Sh_ResetOverrides" xml:space="preserve"><value>Reset Overrides</value></data>
+  <data name="DP_Sh_SelectGameExeTitle" xml:space="preserve"><value>Select Game Executable</value></data>
 </root>

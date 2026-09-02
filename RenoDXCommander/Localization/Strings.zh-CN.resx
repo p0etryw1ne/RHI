@@ -204,4 +204,85 @@
   <data name="Faq_LinksRenoDxDiscord" xml:space="preserve"><value>RenoDX Discord（模组开发）</value></data>
   <data name="Faq_LinksRenoDxWiki" xml:space="preserve"><value>浏览 RenoDX 模组 Wiki</value></data>
   <data name="Faq_LinksRhiGitHub" xml:space="preserve"><value>RHI GitHub — 报告问题或请求功能</value></data>
+  <data name="DP_Over_GameOverridesTitle" xml:space="preserve"><value>游戏覆盖设置</value></data>
+  <data name="DP_Over_GameNameHeader" xml:space="preserve"><value>游戏名称（可编辑）</value></data>
+  <data name="DP_Over_WikiModNameHeader" xml:space="preserve"><value>Wiki 模组名称</value></data>
+  <data name="DP_Over_WikiModNamePlaceholder" xml:space="preserve"><value>Wiki 上的确切名称</value></data>
+  <data name="DP_Over_Reset" xml:space="preserve"><value>重置</value></data>
+  <data name="DP_Over_DllNamingHeader" xml:space="preserve"><value>DLL 命名覆盖</value></data>
+  <data name="DP_Over_ReshadeDllPlaceholder" xml:space="preserve"><value>选择 ReShade DLL 名称</value></data>
+  <data name="DP_Over_DcDllPlaceholder" xml:space="preserve"><value>选择 DC DLL 名称</value></data>
+  <data name="DP_Over_OptiScalerDllPlaceholder" xml:space="preserve"><value>选择 OptiScaler DLL 名称</value></data>
+  <data name="DP_Over_Bitness" xml:space="preserve"><value>位数</value></data>
+  <data name="DP_Over_GraphicsApi" xml:space="preserve"><value>图形 API</value></data>
+  <data name="DP_Dlss_Version" xml:space="preserve"><value>版本</value></data>
+  <data name="DP_Dlss_Preset" xml:space="preserve"><value>预设</value></data>
+  <data name="DP_Dlss_RenderScale" xml:space="preserve"><value>渲染缩放</value></data>
+  <data name="DP_Dlss_RenderScalePlaceholder" xml:space="preserve"><value>33-100</value></data>
+  <data name="DP_Drv_VSync" xml:space="preserve"><value>垂直同步</value></data>
+  <data name="DP_Drv_VSyncMode" xml:space="preserve"><value>模式</value></data>
+  <data name="DP_Drv_VSyncTearControl" xml:space="preserve"><value>撕裂控制</value></data>
+  <data name="DP_Drv_LowLatency" xml:space="preserve"><value>低延迟</value></data>
+  <data name="DP_Drv_SmoothMotion" xml:space="preserve"><value>Smooth Motion</value></data>
+  <data name="DP_Drv_SmoothMotionEnable" xml:space="preserve"><value>启用</value></data>
+  <data name="DP_Drv_SmoothMotionApis" xml:space="preserve"><value>允许的 API</value></data>
+  <data name="DP_Drv_SmoothMotionFlipPacing" xml:space="preserve"><value>翻转节奏</value></data>
+  <data name="DP_Drv_Other" xml:space="preserve"><value>其他</value></data>
+  <data name="DP_Drv_PowerMode" xml:space="preserve"><value>电源模式</value></data>
+  <data name="DP_Drv_GSync" xml:space="preserve"><value>G-Sync</value></data>
+  <data name="DP_Drv_RestoreDefaults" xml:space="preserve"><value>恢复默认设置</value></data>
+  <data name="DP_Drv_RestoreDriverSettingsTitle" xml:space="preserve"><value>恢复驱动设置？</value></data>
+  <data name="DP_Drv_RestoreDriverSettingsConfirm" xml:space="preserve"><value>恢复</value></data>
+  <data name="DP_Drv_ReBAR" xml:space="preserve"><value>ReBAR</value></data>
+  <data name="DP_Drv_ReBAREnable" xml:space="preserve"><value>启用</value></data>
+  <data name="DP_Drv_ReBARMode" xml:space="preserve"><value>模式</value></data>
+  <data name="DP_Drv_ReBARSizeLimit" xml:space="preserve"><value>大小限制</value></data>
+  <data name="DP_Drv_RestoreDriverSettingsTip" xml:space="preserve"><value>将此游戏的 NVIDIA 驱动配置恢复出厂设置。删除所有自定义设置（预设、渲染缩放、MFG、驱动覆盖）。此操作不可撤销。</value></data>
+  <data name="DP_Drv_RestoreDriverSettingsBody" xml:space="preserve"><value>即将把 {0} 的驱动设置恢复为出厂默认值，并把 DLSS/Streamline DLL 恢复为原始版本。此操作不可撤销。</value></data>
+  <data name="DP_Dxvk_Dxvk" xml:space="preserve"><value>DXVK</value></data>
+  <data name="DP_Dxvk_LiliumPreset" xml:space="preserve"><value>Lilium HDR 预设</value></data>
+  <data name="DP_Dxvk_ChangeInstallFolder" xml:space="preserve"><value>更改安装目录</value></data>
+  <data name="DP_Dxvk_ResetRemoveGame" xml:space="preserve"><value>重置 / 移除游戏</value></data>
+  <data name="DP_Dxvk_ResetOverrides" xml:space="preserve"><value>重置覆盖</value></data>
+  <data name="DP_Dxvk_CopyReport" xml:space="preserve"><value>复制报告</value></data>
+  <data name="DP_Nv_Header" xml:space="preserve"><value>Nvidia 驱动配置覆盖</value></data>
+  <data name="DP_Nv_MultiFrameGen" xml:space="preserve"><value>多帧生成</value></data>
+  <data name="DP_Nv_Preset" xml:space="preserve"><value>预设</value></data>
+  <data name="DP_Nv_DeployDll" xml:space="preserve"><value>部署 DLL</value></data>
+  <data name="DP_Nv_Downloading" xml:space="preserve"><value>下载中...</value></data>
+  <data name="DP_Nv_NotInCustomDlss" xml:space="preserve"><value>不在 Custom/DLSS 中</value></data>
+  <data name="DP_Nv_NotAvailable" xml:space="preserve"><value>不可用</value></data>
+  <data name="DP_Nv_RestoreDlssSl" xml:space="preserve"><value>恢复 DLSS/SL</value></data>
+  <data name="DP_Nv_QuickApply" xml:space="preserve"><value>快速应用</value></data>
+  <data name="DP_Rs_Channel" xml:space="preserve"><value>ReShade 通道</value></data>
+  <data name="DP_Rs_OlderReShadeWarning" xml:space="preserve"><value>⚠ 较旧版本的 ReShade 可能不支持新附加组件。
+游戏将被排除在自动 ReShade 更新之外。</value></data>
+  <data name="DP_Rs_SelectLegacyVersionTitle" xml:space="preserve"><value>选择旧版 ReShade 版本</value></data>
+  <data name="DP_Rs_Confirm" xml:space="preserve"><value>确认</value></data>
+  <data name="DP_Rs_NoCustomDllsFound" xml:space="preserve"><value>未找到自定义 ReShade DLL。
+
+请将 .dll 文件放在：</value></data>
+  <data name="DP_Rs_CustomReShadeNotFoundTitle" xml:space="preserve"><value>未找到自定义 ReShade</value></data>
+  <data name="DP_Rs_SelectCustomReShadeTitle" xml:space="preserve"><value>选择自定义 ReShade</value></data>
+  <data name="DP_Rs_Deploy" xml:space="preserve"><value>部署</value></data>
+  <data name="DP_Rs_VulkanChannelBody" xml:space="preserve"><value>Vulkan 游戏共享一个全局 ReShade 层。
+
+</value></data>
+  <data name="DP_Rs_ApplyToAllVulkan" xml:space="preserve"><value>应用到所有 Vulkan 游戏</value></data>
+  <data name="DP_Rs_GlobalUpdateInclusion" xml:space="preserve"><value>全局更新包含</value></data>
+  <data name="DP_Sh_ShadersAndAddons" xml:space="preserve"><value>着色器与附加组件</value></data>
+  <data name="DP_Sh_Shaders" xml:space="preserve"><value>着色器</value></data>
+  <data name="DP_Sh_SelectAddonsTitle" xml:space="preserve"><value>选择附加组件</value></data>
+  <data name="DP_Sh_AddonServiceNotWired" xml:space="preserve"><value>附加组件服务尚未接入。完成任务 9.1 以启用附加组件选择。</value></data>
+  <data name="DP_Sh_Addons" xml:space="preserve"><value>附加组件</value></data>
+  <data name="DP_Sh_SelectReShadePreset" xml:space="preserve"><value>选择 ReShade 预设</value></data>
+  <data name="DP_Sh_InstallShadersTitle" xml:space="preserve"><value>安装着色器？</value></data>
+  <data name="DP_Sh_InstallShadersBody" xml:space="preserve"><value>同时安装所需的着色器和纹理吗？</value></data>
+  <data name="Common_Yes" xml:space="preserve"><value>是</value></data>
+  <data name="Common_No" xml:space="preserve"><value>否</value></data>
+  <data name="DP_Sh_ExePathPlaceholder" xml:space="preserve"><value>自动检测（或粘贴路径）</value></data>
+  <data name="DP_Sh_LaunchArgsPlaceholder" xml:space="preserve"><value>启动参数</value></data>
+  <data name="Common_Browse" xml:space="preserve"><value>浏览</value></data>
+  <data name="DP_Sh_ResetOverrides" xml:space="preserve"><value>重置覆盖</value></data>
+  <data name="DP_Sh_SelectGameExeTitle" xml:space="preserve"><value>选择游戏可执行文件</value></data>
 </root>

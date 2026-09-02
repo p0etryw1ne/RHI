@@ -1,10 +1,11 @@
-﻿// DetailPanelBuilder.Overrides.RsChannel.cs — ReShade Channel Override + Update Inclusion + Middle Row Grid.
+// DetailPanelBuilder.Overrides.RsChannel.cs — ReShade Channel Override + Update Inclusion + Middle Row Grid.
 
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using RenoDXCommander.Models;
 using RenoDXCommander.Services;
 using RenoDXCommander.ViewModels;
+using RenoDXCommander.Localization;
 
 namespace RenoDXCommander;
 
@@ -23,7 +24,7 @@ public partial class DetailPanelBuilder
 
         var channelLabel = new TextBlock
         {
-            Text = "ReShade Channel",
+            Text = Localizer.Get("DP_Rs_Channel"),
             FontSize = 12,
             Foreground = UIFactory.Brush(ResourceKeys.TextPrimaryBrush),
         };
@@ -117,7 +118,7 @@ public partial class DetailPanelBuilder
                 var pickerContent = new StackPanel { Spacing = 12 };
                 pickerContent.Children.Add(new TextBlock
                 {
-                    Text = "⚠ Older ReShade versions may not support newer addons.\nThe game will be excluded from automatic ReShade updates.",
+                    Text = Localizer.Get("DP_Rs_OlderReShadeWarning"),
                     TextWrapping = TextWrapping.Wrap,
                     Foreground = UIFactory.Brush(ResourceKeys.TextSecondaryBrush),
                     FontSize = 12,
@@ -126,10 +127,10 @@ public partial class DetailPanelBuilder
 
                 var pickerDialog = new ContentDialog
                 {
-                    Title = "Select Legacy ReShade Version",
+                    Title = Localizer.Get("DP_Rs_SelectLegacyVersionTitle"),
                     Content = new ScrollViewer { Content = pickerContent, MaxHeight = 400 },
-                    PrimaryButtonText = "Confirm",
-                    CloseButtonText = "Cancel",
+                    PrimaryButtonText = Localizer.Get("DP_Rs_Confirm"),
+                    CloseButtonText = Localizer.Get("Common_Cancel"),
                     XamlRoot = _window.Content.XamlRoot,
                     RequestedTheme = ElementTheme.Dark,
                 };
@@ -226,14 +227,14 @@ public partial class DetailPanelBuilder
                     var warnContent = new StackPanel { Spacing = 8 };
                     warnContent.Children.Add(new TextBlock
                     {
-                        Text = "No custom ReShade DLLs found.\n\nPlace your .dll files in:",
+                        Text = Localizer.Get("DP_Rs_NoCustomDllsFound"),
                         TextWrapping = TextWrapping.Wrap,
                     });
                     warnContent.Children.Add(linkBtn);
 
                     var warnDialog = new ContentDialog
                     {
-                        Title = "Custom ReShade Not Found",
+                        Title = Localizer.Get("DP_Rs_CustomReShadeNotFoundTitle"),
                         Content = warnContent,
                         CloseButtonText = "OK",
                         XamlRoot = _window.Content.XamlRoot,
@@ -286,9 +287,9 @@ public partial class DetailPanelBuilder
 
                 var pickerDialog = new ContentDialog
                 {
-                    Title = "Select Custom ReShade",
-                    PrimaryButtonText = "Deploy",
-                    CloseButtonText = "Cancel",
+                    Title = Localizer.Get("DP_Rs_SelectCustomReShadeTitle"),
+                    PrimaryButtonText = Localizer.Get("DP_Rs_Deploy"),
+                    CloseButtonText = Localizer.Get("Common_Cancel"),
                     DefaultButton = ContentDialogButton.Primary,
                     XamlRoot = _window.Content.XamlRoot,
                     RequestedTheme = ElementTheme.Dark,
@@ -324,10 +325,10 @@ public partial class DetailPanelBuilder
                     var vDialog = new ContentDialog
                     {
                         Title = "Vulkan ReShade Channel Override",
-                        Content = "Vulkan games share a global ReShade layer.\n\n" +
+                        Content = Localizer.Get("DP_Rs_VulkanChannelBody") +
                             "Changing the channel for this game will change it for ALL Vulkan games.",
-                        PrimaryButtonText = "Apply to All Vulkan Games",
-                        CloseButtonText = "Cancel",
+                        PrimaryButtonText = Localizer.Get("DP_Rs_ApplyToAllVulkan"),
+                        CloseButtonText = Localizer.Get("Common_Cancel"),
                         XamlRoot = _window.Content.XamlRoot,
                         RequestedTheme = ElementTheme.Dark,
                     };
@@ -443,10 +444,10 @@ public partial class DetailPanelBuilder
                     var dialog = new ContentDialog
                     {
                         Title = "Vulkan ReShade Channel Override",
-                        Content = "Vulkan games share a global ReShade layer.\n\n" +
+                        Content = Localizer.Get("DP_Rs_VulkanChannelBody") +
                             "Changing the channel for this game will change it for ALL Vulkan games.",
-                        PrimaryButtonText = "Apply to All Vulkan Games",
-                        CloseButtonText = "Cancel",
+                        PrimaryButtonText = Localizer.Get("DP_Rs_ApplyToAllVulkan"),
+                        CloseButtonText = Localizer.Get("Common_Cancel"),
                         XamlRoot = _window.Content.XamlRoot,
                         RequestedTheme = ElementTheme.Dark,
                     };
@@ -560,7 +561,7 @@ public partial class DetailPanelBuilder
         var globalUpdateColumn = new StackPanel { Spacing = 0 };
         globalUpdateColumn.Children.Add(new TextBlock
         {
-            Text = "Global update inclusion",
+            Text = Localizer.Get("DP_Rs_GlobalUpdateInclusion"),
             FontSize = 12,
             Foreground = UIFactory.Brush(ResourceKeys.TextPrimaryBrush),
             Margin = new Thickness(0, 0, 0, 8),

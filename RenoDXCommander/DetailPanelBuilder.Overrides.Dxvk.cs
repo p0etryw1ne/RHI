@@ -1,10 +1,11 @@
-﻿// DetailPanelBuilder.Overrides.Dxvk.cs — DXVK section + Management section.
+// DetailPanelBuilder.Overrides.Dxvk.cs — DXVK section + Management section.
 
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using RenoDXCommander.Models;
 using RenoDXCommander.Services;
 using RenoDXCommander.ViewModels;
+using RenoDXCommander.Localization;
 
 namespace RenoDXCommander;
 
@@ -151,7 +152,7 @@ public partial class DetailPanelBuilder
             var dxvkColumn = new StackPanel { Spacing = 6 };
             dxvkColumn.Children.Add(new TextBlock
             {
-                Text = "DXVK",
+                Text = Localizer.Get("DP_Dxvk_Dxvk"),
                 FontSize = 12,
                 Foreground = UIFactory.Brush(ResourceKeys.TextPrimaryBrush),
                 Margin = new Thickness(0, 0, 0, 4),
@@ -193,7 +194,7 @@ public partial class DetailPanelBuilder
                 var liliumPresetCol = new StackPanel { Spacing = 6 };
                 liliumPresetCol.Children.Add(new TextBlock
                 {
-                    Text = "Lilium HDR Preset",
+                    Text = Localizer.Get("DP_Dxvk_LiliumPreset"),
                     FontSize = 12,
                     Foreground = UIFactory.Brush(ResourceKeys.TextPrimaryBrush),
                     Margin = new Thickness(0, 0, 0, 4),
@@ -266,7 +267,7 @@ public partial class DetailPanelBuilder
 
         var changeFolderBtn = new Button
         {
-            Content = "Change install folder",
+            Content = Localizer.Get("DP_Dxvk_ChangeInstallFolder"),
             FontSize = 11,
             Height = 32,
             HorizontalAlignment = HorizontalAlignment.Stretch,
@@ -288,7 +289,7 @@ public partial class DetailPanelBuilder
 
         var removeGameBtn = new Button
         {
-            Content = "Reset / Remove game",
+            Content = Localizer.Get("DP_Dxvk_ResetRemoveGame"),
             FontSize = 11,
             Height = 32,
             HorizontalAlignment = HorizontalAlignment.Stretch,
@@ -310,7 +311,7 @@ public partial class DetailPanelBuilder
 
         var mgmtResetOverridesBtn = new Button
         {
-            Content = "Reset Overrides",
+            Content = Localizer.Get("DP_Dxvk_ResetOverrides"),
             FontSize = 11,
             Height = 32,
             HorizontalAlignment = HorizontalAlignment.Stretch,
@@ -335,7 +336,7 @@ public partial class DetailPanelBuilder
 
         var reportBtn = new Button
         {
-            Content = "Copy Report",
+            Content = Localizer.Get("DP_Dxvk_CopyReport"),
             FontSize = 11,
             Height = 32,
             HorizontalAlignment = HorizontalAlignment.Stretch,
