@@ -139,4 +139,69 @@
   <data name="Settings_ReShadeChannelChangedContent" xml:space="preserve"><value>ReShade 构建通道已更改为 {0}。</value></data>
   <data name="Settings_NexusConnected" xml:space="preserve"><value>已连接为 {0}（{1}）</value></data>
   <data name="Detail_Favourite" xml:space="preserve"><value>收藏</value></data>
+
+  <data name="Faq_WelcomeTitle" xml:space="preserve"><value>欢迎使用 RHI</value></data>
+  <data name="Faq_WelcomeBody" xml:space="preserve"><value>RHI 会自动检测您的游戏，让您可以一键安装 HDR 模组、着色器、帧率限制器，并管理 NVIDIA 驱动设置 —— 所有功能集中在一处。以下是入门指南。</value></data>
+  <data name="Faq_SelectGameTitle" xml:space="preserve"><value>选择游戏</value></data>
+  <data name="Faq_SelectGameBody" xml:space="preserve"><value>您的游戏显示在左侧侧边栏中。点击任意游戏即可查看详情和可用操作。使用筛选标签（全部游戏、已安装、Unreal 等）和搜索框查找特定游戏。</value></data>
+  <data name="Faq_SelectGameTip" xml:space="preserve"><value>提示：双击游戏可直接启动。将游戏的 .exe 文件拖放到 RHI 即可添加未自动识别的游戏。</value></data>
+  <data name="Faq_InstallReshadeTitle" xml:space="preserve"><value>安装 ReShade</value></data>
+  <data name="Faq_InstallReshadeBody" xml:space="preserve"><value>ReShade 是 RenoDX HDR 模组运行的前提。在游戏详情面板中点击&quot;安装 ReShade&quot;，RHI 会自动下载并安装包含完整附加组件支持的正确版本。</value></data>
+  <data name="Faq_InstallReshadeTip" xml:space="preserve"><value>ReShade 版本可在每个游戏的覆盖部分单独更改 —— 选择 Stable、Nightly、Legacy 或自定义 ReShade DLL。\nVulkan 游戏：如 Doom Eternal 等 Vulkan 游戏需要管理员权限，RHI 会在需要时提示提权。\n将 ReShade 预设文件（.ini）拖放到游戏上即可自动安装。</value></data>
+  <data name="Faq_RenoDxTitle" xml:space="preserve"><value>RenoDX</value></data>
+  <data name="Faq_RenoDxBody" xml:space="preserve"><value>RenoDX 是 RHI 的主要 HDR 模组框架。每个游戏的 RenoDX 行显示了可用内容：\n\n• 命名模组 —— RenoDX Wiki 上由社区制作的、针对特定游戏的 HDR 模组。\n• UE-Extended —— 适用于没有命名模组的 Unreal Engine 游戏。通过通用 UE 附加组件提供原生 HDR 输出。\n• Unity 附加组件 —— 同理适用于 Unity Engine 游戏，为没有命名模组的 Unity 游戏提供 HDR 输出。\n• RTX HDR —— 如果没有可用的模组，可以通过 RenoDX 旁的 ⚙ 齿轮启用 NVIDIA 驱动层的 SDR 转 HDR 功能。</value></data>
+  <data name="Faq_RenoDxTip" xml:space="preserve"><value>RenoDX 旁的齿轮图标打开高级设置：峰值亮度、UE-Extended 开关和 RTX HDR 配置。\nEngine.ini 设置（仅 Unreal Engine 游戏）：切换写入游戏 Engine.ini 的 HDR 键和 LUT 更新频率，以获得准确的 HDR 渲染效果。\n对于 Wiki 上没有的游戏，可将 RenoDX Discord 中的 .addon64 文件直接拖放到 RHI 中的游戏上。</value></data>
+  <data name="Faq_LumaTitle" xml:space="preserve"><value>Luma</value></data>
+  <data name="Faq_LumaBody" xml:space="preserve"><value>Luma 是由 Pumbo（HDR Den）开发的替代模组框架。根据游戏不同，Luma 模组可能提供 HDR、DLAA（深度学习抗锯齿）、游戏特定的渲染修复，或以上组合 — 点击信息按钮查看每个模组的详情。\n\n• 已完成模组 —— 针对支持游戏的命名 Luma 模组，显示在 Luma 行。\n• 通用 Luma —— 适用于所有 DX11 Unreal Engine 游戏。RHI 会自动安装并应用 Luma Wiki 上列出的游戏特定 Engine.ini 调整和启动参数。\n\n您可以在同一游戏上同时安装 RenoDX 和 Luma — 但不保证在每个游戏中都能一起工作。RHI 会在您首次尝试同时安装两者时提醒您。</value></data>
+  <data name="Faq_LumaTip" xml:space="preserve"><value>Luma 依赖 ReShade — 在安装 ReShade 前将呈灰色不可用。\nLuma ⚙ 齿轮可切换需要的 TAA Engine.ini 设置。\n如果游戏需要特定启动参数（如 -dx11），RHI 会在安装时自动设置，卸载时自动移除。启动参数仅在通过 RHI 启动游戏时生效。\n查看 Luma 行的信息按钮获取游戏特定说明 — 已完成模组通常会说明模组添加的功能或游戏内需要的设置。</value></data>
+  <data name="Faq_ShadersTitle" xml:space="preserve"><value>选择着色器（可选）</value></data>
+  <data name="Faq_ShadersBody" xml:space="preserve"><value>点击工具栏的&quot;着色器/附加组件&quot;按钮，然后选择&quot;全局着色器&quot;来选择着色器包。默认选择 Lilium 的 HDR 着色器包。这些设置适用于所有已安装 ReShade 的游戏。\n\n展开任何着色器包以选择单独的着色器文件 — 仅选择部分文件时，着色器包会显示短横线。使用右侧的配置文件面板可保存、加载、重命名和分享命名的着色器选择。将配置文件导出为 zip 即可通过 Discord 分享。</value></data>
+  <data name="Faq_ShadersTip" xml:space="preserve"><value>提示：可在每个游戏详情卡（已安装 ReShade 时）的&quot;着色器&quot;按钮中单独设置着色器。\n提示：使用&quot;全部展开&quot; / &quot;全部折叠&quot;可以一次性浏览所有着色器包。&quot;全部取消选择&quot;清空当前选择。导出功能会将您选择的着色器复制为 zip 到剪贴板 — 直接粘贴到 Discord 即可分享。</value></data>
+  <data name="Faq_DofFixTitle" xml:space="preserve"><value>DOF Fix（推荐用于 UE5）</value></data>
+  <data name="Faq_DofFixBody" xml:space="preserve"><value>DOF Fix 将 Unreal Engine 5.7 的景深渲染修复回移植到运行 UE 5.0–5.6 的游戏上。在游戏详情面板的&quot;推荐&quot;区域中，支持的游戏会显示此项。建议与 RenoDX 一起安装以获得最佳效果。</value></data>
+  <data name="Faq_DofFixTip" xml:space="preserve"><value>DOF Fix 仅在符合条件的 UE 5.0–5.6 游戏上显示 — 不会出现在 UE4 或 UE 5.7+ 的游戏中。\n安装和卸载与其他组件一致。</value></data>
+  <data name="Faq_FrameLimitersTitle" xml:space="preserve"><value>帧率限制器（可选）</value></data>
+  <data name="Faq_FrameLimitersBody" xml:space="preserve"><value>ReLimiter 和 Display Commander 是 ReShade 附加组件，可为 VRR 显示器提供精确的帧率限制。从游戏详情面板安装即可。推荐 ReLimiter，因为它由 RHI 同一团队开发。在设置中、每个游戏的齿轮图标下，或直接在游戏中设置目标 FPS。</value></data>
+  <data name="Faq_FrameLimitersTip" xml:space="preserve"><value>VRR 上限预设（按刷新率，在最大值下方预留余量以保证 VRR 平滑）：\n• 60Hz → 59 FPS\n• 120Hz → 116 FPS\n• 144Hz → 138 FPS\n• 165Hz → 157 FPS\n• 240Hz → 224 FPS\n• 360Hz → 324 FPS\n这些值已在 RHI 的 FPS 下拉菜单中预配置。</value></data>
+  <data name="Faq_DlssTitle" xml:space="preserve"><value>更新 DLSS / Streamline（可选）</value></data>
+  <data name="Faq_DlssBody" xml:space="preserve"><value>游戏含有 DLSS 或 Streamline DLL 时，详情面板会有专门区域显示版本信息。点击即可更新到最新版本。建议使用最新版本以获得最佳性能和质量。RHI 会自动备份原文件，您可以随时还原。</value></data>
+  <data name="Faq_DlssTip" xml:space="preserve"><value>当新的 DLSS 或 Streamline 版本发布时，会自动出现在 RHI 中。在设置中配置默认的 DLSS 预设。每个游戏的预设可在详情面板的 DLSS 区域单独更改。</value></data>
+  <data name="Faq_OptiScalerTitle" xml:space="preserve"><value>OptiScaler（可选）</value></data>
+  <data name="Faq_OptiScalerBody" xml:space="preserve"><value>OptiScaler 可将 DLSS/XeSS 替换为其他上采样器（FSR、XeSS、Intel Arc），或在任意 GPU 上添加/补丁帧生成功能。在游戏详情面板上，若游戏支持 OptiScaler 即可安装。\n\nOptiScaler 行的 ⚙ 齿轮可打开每个游戏的设置。Nightly 构建通道包含以下选项：\n• Streamline/DLSS Enabler — 将 Streamline 和 DLSS Enabler 部署到游戏目录以支持 DLSS 帧生成。\n• Frame Generation — 设置 FG Input、FG Output、FG Nvngx Override 和 HUD Fix。\n• Additional Settings — DLSS SR/RR 预设、渲染缩放和 flip metering。\n• Presets — 跨游戏保存和应用命名的设置预设。\n• Engine.ini 设置（Unreal Engine 游戏）— 膨胀运动矢量、FSR 崩溃修复、FSR-FG 交换链、上采样器插件。</value></data>
+  <data name="Faq_OptiScalerTip" xml:space="preserve"><value>在齿轮中可切换每个游戏的 Stable 和 Nightly 通道 — Nightly 会增加帧生成和额外设置。\nOptiScaler 可与 ReShade 共存。若两者同时安装时崩溃，可使用游戏覆盖面板中的 DLL 命名覆盖功能将 ReShade 重命名为其他 DLL 名称。\nGPU 类型和 DLSS 输入设置（仅 AMD/Intel）需在安装前的设置 → OptiScaler 设置中配置。\n齿轮中的&quot;部署 OptiScaler.ini&quot;按钮会重新部署您配置好的 INI 模板到游戏目录。</value></data>
+  <data name="Faq_SettingsOverviewTitle" xml:space="preserve"><value>设置</value></data>
+  <data name="Faq_SettingsOverviewBody" xml:space="preserve"><value>点击工具栏的&quot;设置&quot;按钮，配置所有游戏的默认选项：</value></data>
+  <data name="Faq_SettingsOverviewItem1" xml:space="preserve"><value>ReLimiter FPS：默认帧率目标</value></data>
+  <data name="Faq_SettingsOverviewItem2" xml:space="preserve"><value>DLSS 预设：默认上采样预设</value></data>
+  <data name="Faq_SettingsOverviewItem3" xml:space="preserve"><value>NVIDIA 驱动设置：VSync、低延迟、电源模式</value></data>
+  <data name="Faq_SettingsOverviewItem4" xml:space="preserve"><value>峰值亮度：显示器的 HDR 峰值亮度</value></data>
+  <data name="Faq_SettingsOverviewItem5" xml:space="preserve"><value>ReShade 快捷键：自定义覆盖层和截图按键</value></data>
+  <data name="Faq_NvidiaDriverSettingsTitle" xml:space="preserve"><value>NVIDIA 驱动设置</value></data>
+  <data name="Faq_NvidiaDriverSettingsBody" xml:space="preserve"><value>RHI 可以管理每个游戏的 NVIDIA 驱动配置。这些设置在每个游戏详情面板中直接可用：</value></data>
+  <data name="Faq_NvidiaDriverSettingsItem1" xml:space="preserve"><value>VSync：开启、关闭或自适应（Fast Sync）</value></data>
+  <data name="Faq_NvidiaDriverSettingsItem2" xml:space="preserve"><value>低延迟模式：Ultra、开启或关闭</value></data>
+  <data name="Faq_NvidiaDriverSettingsItem3" xml:space="preserve"><value>Smooth Motion：多帧生成（仅每个游戏）</value></data>
+  <data name="Faq_NvidiaDriverSettingsItem4" xml:space="preserve"><value>ReBAR：可变 BAR（需要管理员权限）</value></data>
+  <data name="Faq_NvidiaDriverSettingsTip" xml:space="preserve"><value>VSync、低延迟和电源模式的全局默认值在&quot;设置&quot;中配置。每个游戏的覆盖项直接在游戏详情面板中设置。</value></data>
+  <data name="Faq_VulkanGamesTitle" xml:space="preserve"><value>Vulkan 游戏</value></data>
+  <data name="Faq_VulkanGamesBody" xml:space="preserve"><value>Vulkan 游戏（带&quot;Vulkan&quot;徽标）使用一个全局 ReShade 层，安装在 C:\\ProgramData\\ReShade。这需要管理员权限。在 Vulkan 游戏上安装 ReShade 时，RHI 会提示提权。</value></data>
+  <data name="Faq_VulkanGamesTip" xml:space="preserve"><value>所有 Vulkan 游戏共享同一个 ReShade 安装。在一个 Vulkan 游戏上更新 ReShade 会更新所有游戏。\n每个游戏的 RenoDX 附加组件和着色器仍然分别安装到各自的游戏目录。</value></data>
+  <data name="Faq_AddingGamesTitle" xml:space="preserve"><value>手动添加游戏</value></data>
+  <data name="Faq_AddingGamesBody" xml:space="preserve"><value>如果游戏未被自动识别，将其 .exe 文件直接拖放到 RHI 窗口即可。RHI 会将其添加到您的库并检测其引擎类型。</value></data>
+  <data name="Faq_AddingGamesTip" xml:space="preserve"><value>您也可以将 RenoDX Discord 中的 .addon64 文件拖放到任意游戏上，以安装 Wiki 上还没有的模组。</value></data>
+  <data name="Faq_UpdatingEverythingTitle" xml:space="preserve"><value>更新全部内容</value></data>
+  <data name="Faq_UpdatingEverythingBody" xml:space="preserve"><value>点击工具栏的&quot;全部更新&quot;按钮，一次性更新所有游戏中已安装的组件。包括 ReShade、RenoDX 模组、ReLimiter、Display Commander 等。</value></data>
+  <data name="Faq_UpdatingEverythingTip" xml:space="preserve"><value>有可用更新的游戏在侧边栏显示绿点。可在&quot;设置&quot;中配置&quot;全部更新&quot;包含的组件。</value></data>
+  <data name="Faq_TroubleshootingTitle" xml:space="preserve"><value>故障排查：完全刷新</value></data>
+  <data name="Faq_TroubleshootingBody" xml:space="preserve"><value>如果游戏缺失、安装位置变更，或 DLSS/Streamline 文件有增减，请在&quot;设置&quot;中使用&quot;完全刷新&quot;从零开始重新扫描整个游戏库。</value></data>
+  <data name="Faq_TroubleshootingTip" xml:space="preserve"><value>完全刷新会清空缓存的游戏列表并重新检测所有内容。当普通的刷新按钮无法检测到变化时使用。</value></data>
+  <data name="Faq_SystemTrayTitle" xml:space="preserve"><value>系统托盘</value></data>
+  <data name="Faq_SystemTrayBody" xml:space="preserve"><value>RHI 可以最小化到系统托盘，而不是关闭。右键单击托盘图标可快速启动最近玩过的游戏，无需打开主窗口。</value></data>
+  <data name="Faq_SystemTrayTip" xml:space="preserve"><value>在&quot;设置&quot;中启用&quot;关闭到系统托盘&quot;，让 RHI 在后台保持运行。托盘图标提供对最近玩过游戏的快速访问。RHI 在运行时每 4 小时自动检查更新，确保所有内容保持最新。</value></data>
+  <data name="Faq_NeedMoreHelpTitle" xml:space="preserve"><value>需要更多帮助？</value></data>
+  <data name="Faq_NeedMoreHelpBody" xml:space="preserve"><value>在 Discord 上可获得支持 — 加入社区获取帮助、模组更新和讨论。</value></data>
+  <data name="Faq_LinksUltraPlusDiscord" xml:space="preserve"><value>加入 Ultra+ Discord（主社区）</value></data>
+  <data name="Faq_LinksRenoDxDiscord" xml:space="preserve"><value>RenoDX Discord（模组开发）</value></data>
+  <data name="Faq_LinksRenoDxWiki" xml:space="preserve"><value>浏览 RenoDX 模组 Wiki</value></data>
+  <data name="Faq_LinksRhiGitHub" xml:space="preserve"><value>RHI GitHub — 报告问题或请求功能</value></data>
 </root>
