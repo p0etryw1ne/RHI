@@ -1,4 +1,4 @@
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Globalization;
 using System.Resources;
 
@@ -118,10 +118,13 @@ public sealed class Localizer : INotifyPropertyChanged
     /// </summary>
     public static void InitializeStartupCulture()
     {
+        // RHI zh-CN fork: default to Simplified Chinese so the localized UI shows
+        // on any system, regardless of the OS display language. A user who set a
+        // language preference earlier (Settings) wins; otherwise we use zh-CN.
         var ui = CultureInfo.CurrentUICulture;
         var target = ui.Name.StartsWith("zh", StringComparison.OrdinalIgnoreCase)
             ? ui
-            : CultureInfo.InvariantCulture;
+            : new CultureInfo("zh-CN");
 
         CultureInfo.CurrentUICulture = target;
         Instance._culture = target;

@@ -1,4 +1,4 @@
-using System.Globalization;
+﻿using System.Globalization;
 using RenoDXCommander.Localization;
 using Xunit;
 
@@ -104,14 +104,16 @@ public class LocalizerTests
     }
 
     [Fact]
-    public void InitializeStartupCulture_Picks_Invariant_For_Non_Chinese_Systems()
+    public void InitializeStartupCulture_Picks_Zh_For_Non_Chinese_Systems()
     {
+        // The zh-CN fork always defaults to Simplified Chinese so the
+        // localized UI shows on any system, regardless of OS display language.
         var saved = CultureInfo.CurrentUICulture;
         try
         {
             CultureInfo.CurrentUICulture = new CultureInfo("en-US");
             Localizer.InitializeStartupCulture();
-            Assert.Equal(CultureInfo.InvariantCulture, Localizer.Instance.Culture);
+            Assert.Equal("zh-CN", Localizer.Instance.Culture.Name);
         }
         finally
         {
