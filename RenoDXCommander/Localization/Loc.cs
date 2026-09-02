@@ -134,9 +134,29 @@ public static class Loc
         // Recurse into children. Works for both FrameworkElement descendants
         // and Microsoft.UI.Xaml.FrameworkElement (which has .Children access
         // through VisualTreeHelper).
-        var count = VisualTreeHelper.GetChildrenCount(node);
-        for (int i = 0; i < count; i++)
-            Collect(VisualTreeHelper.GetChild(node, i));
+        // WinUI 3 VisualTreeHelper is unreliable for panels that were created
+        // collapsed: it reports 0 children even once the panel becomes visible.
+        // Walk the logical-ish tree instead (Panel.Children / ContentControl /
+        // ScrollViewer / ItemsControl), falling back to VisualTreeHelper.
+        switch (node)
+        {
+            case Panel panel:
+                foreach (var child in panel.Children)
+                    Collect(child);
+                break;
+            case ContentControl cc:
+                if (cc.Content is DependencyObject c1) Collect(c1);
+                break;
+            case ItemsControl items:
+                foreach (var item in items.Items)
+                    if (item is DependencyObject i1) Collect(i1);
+                break;
+            default:
+                var count = VisualTreeHelper.GetChildrenCount(node);
+                for (int i = 0; i < count; i++)
+                    Collect(VisualTreeHelper.GetChild(node, i));
+                break;
+        }
     }
 
     private static void AttachToLocalizer()

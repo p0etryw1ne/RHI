@@ -1,4 +1,4 @@
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using RenoDXCommander.Models;
@@ -46,6 +46,14 @@ public class SettingsHandler
         _window.GameViewPanel.Visibility = Visibility.Collapsed;
         _window.SettingsPanel.Visibility = Visibility.Visible;
         _window.LoadingPanel.Visibility = Visibility.Collapsed;
+        // Collapsed panels are skipped by VisualTreeHelper, so re-apply i18n now
+        // that the settings page is actually visible (labels/buttons/combos).
+        // Visibility changes are applied on the next layout pass, so the visual
+        // tree still reports an empty SettingsPanel right after the assignment.
+        // Queue the i18n pass on the dispatcher to run after layout.
+        _window.DispatcherQueue.TryEnqueue(() => Loc.ApplyTo(_window.SettingsPanel));
+        _window.DispatcherQueue.TryEnqueue(() => Loc.ApplyTo(_window.SettingsPanel));
+        Loc.ApplyTo(_window.Content);
         // Sync toggle state with ViewModel
         _window.CustomShadersCombo.SelectedIndex = ViewModel.Settings.GlobalShadersOff ? 0 : (ViewModel.Settings.UseCustomShaders ? 2 : 1);
         _window.AboutVersionText.Text = Localizer.Format("About_VersionStatus", CrashReporter.AppVersion);
