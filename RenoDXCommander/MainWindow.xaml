@@ -6,6 +6,7 @@
     xmlns:vm="using:RenoDXCommander.ViewModels"
     xmlns:converters="using:RenoDXCommander.Converters"
     xmlns:controls="using:RenoDXCommander.Controls"
+    xmlns:loc="using:RenoDXCommander.Localization"
     Title="RHI">
     <Grid RequestedTheme="Dark" Background="{StaticResource SurfaceBaseBrush}" AllowDrop="True" DragOver="Grid_DragOver" Drop="Grid_Drop">
         <Grid.Resources>
@@ -36,52 +37,52 @@
                     </Border>
                     <StackPanel VerticalAlignment="Center">
                         <TextBlock FontSize="15" FontWeight="Bold">
-                            <Run Text="RHI" Foreground="{StaticResource AccentTealBrush}"/>
+                            <Run Text="RHI" loc:Loc.Key="AppTitle" Foreground="{StaticResource AccentTealBrush}"/>
                         </TextBlock>
-                        <TextBlock Text="Simplified PC Gaming" FontSize="10" Foreground="{StaticResource AccentTealDimBrush}"/>
+                        <TextBlock Text="Simplified PC Gaming" loc:Loc.Key="AppSubtitle" FontSize="10" Foreground="{StaticResource AccentTealDimBrush}"/>
                     </StackPanel>
                 </StackPanel>
 
                 <!-- Action buttons -->
                 <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
-                    <Button x:Name="NewModsBtn" Content="New Mods Available"
+                    <Button x:Name="NewModsBtn" Content="New Mods Available" loc:Loc.Key="Toolbar_NewModsAvailable"
                             Click="NewModsButton_Click"
                             Visibility="{x:Bind ViewModel.NewWikiModsButtonVisibility, Mode=OneWay}"
                             Background="{StaticResource SurfaceInputBrush}" Foreground="{StaticResource AccentGreenBrush}"
                             BorderBrush="{StaticResource AccentGreenBorderBrush}" BorderThickness="1"
                             CornerRadius="8" Padding="12,7" FontSize="12"
-                            ToolTipService.ToolTip="New RenoDX mods have been added to the wiki"/>
-                    <Button x:Name="FaqBtn" Content="Quick Start"
+                            ToolTipService.ToolTip="New RenoDX mods have been added to the wiki" loc:Loc.ToolTipKey="Tip_NewMods"/>
+                    <Button x:Name="FaqBtn" Content="Quick Start" loc:Loc.Key="Toolbar_QuickStart"
                             Click="FaqButton_Click"
                             Background="{StaticResource SurfaceInputBrush}" Foreground="{StaticResource AccentTealBrush}"
                             BorderBrush="{StaticResource AccentTealBorderBrush}" BorderThickness="1"
                             CornerRadius="8" Padding="12,7" FontSize="12"
-                            ToolTipService.ToolTip="Quick Start Guide"/>
+                            ToolTipService.ToolTip="Quick Start Guide" loc:Loc.ToolTipKey="Tip_QuickStart"/>
 
                     <Border Width="1" Height="20" Background="{StaticResource BorderSubtleBrush}" Margin="4,0"/>
 
-                    <Button x:Name="RefreshBtn" Content="Refresh"
+                    <Button x:Name="RefreshBtn" Content="Refresh" loc:Loc.Key="Toolbar_Refresh"
                             Click="RefreshButton_Click"
                             Background="{StaticResource SurfaceInputBrush}" Foreground="{StaticResource AccentTealBrush}"
                             BorderBrush="{StaticResource AccentTealBorderBrush}" BorderThickness="1"
                             CornerRadius="8" Padding="12,7" FontSize="12"
-                            ToolTipService.ToolTip="Rescan game library and fetch latest mod info"/>
-                    <Button x:Name="ShadersAddonsBtn" Content="Shaders/Addons"
+                            ToolTipService.ToolTip="Rescan game library and fetch latest mod info" loc:Loc.ToolTipKey="Tip_Refresh"/>
+                    <Button x:Name="ShadersAddonsBtn" Content="Shaders/Addons" loc:Loc.Key="Toolbar_ShadersAddons"
                             Background="{StaticResource SurfaceInputBrush}" Foreground="{StaticResource AccentTealBrush}"
                             BorderBrush="{StaticResource AccentTealBorderBrush}" BorderThickness="1"
                             CornerRadius="8" Padding="12,7" FontSize="12"
-                            ToolTipService.ToolTip="Manage global shaders and ReShade addons">
+                            ToolTipService.ToolTip="Manage global shaders and ReShade addons" loc:Loc.ToolTipKey="Tip_ShadersAddons">
                         <Button.Flyout>
                             <MenuFlyout Placement="Bottom">
-                                <MenuFlyoutItem x:Name="ChooseShadersItem" Text="Global Shaders" Click="ChooseShadersButton_Click"/>
-                                <MenuFlyoutItem x:Name="ReShadeAddonsItem" Text="ReShade Addons" Click="ReShadeAddonsButton_Click"/>
+                                <MenuFlyoutItem x:Name="ChooseShadersItem" Text="Global Shaders" loc:Loc.Key="Menu_GlobalShaders" Click="ChooseShadersButton_Click"/>
+                                <MenuFlyoutItem x:Name="ReShadeAddonsItem" Text="ReShade Addons" loc:Loc.Key="Menu_ReShadeAddons" Click="ReShadeAddonsButton_Click"/>
                             </MenuFlyout>
                         </Button.Flyout>
                     </Button>
 
                     <Border Width="1" Height="20" Background="{StaticResource BorderSubtleBrush}" Margin="4,0"/>
 
-                    <Button x:Name="UpdateBtn" Content="Update All"
+                    <Button x:Name="UpdateBtn" Content="Update All" loc:Loc.Key="Toolbar_UpdateAll"
                             Click="UpdateAllButton_Click"
                             Background="{StaticResource SurfaceInputBrush}"
                             Foreground="{StaticResource TextTertiaryBrush}"
@@ -92,31 +93,31 @@
 
                     <Border Width="1" Height="20" Background="{StaticResource BorderSubtleBrush}" Margin="4,0"/>
 
-                    <Button x:Name="LinksBtn" Content="Links"
+                    <Button x:Name="LinksBtn" Content="Links" loc:Loc.Key="Toolbar_Links"
                             Background="{StaticResource SurfaceInputBrush}" Foreground="{StaticResource AccentTealBrush}"
                             BorderBrush="{StaticResource AccentTealBorderBrush}" BorderThickness="1"
                             CornerRadius="8" Padding="12,7" FontSize="12"
-                            ToolTipService.ToolTip="Useful links and resources">
+                            ToolTipService.ToolTip="Useful links and resources" loc:Loc.ToolTipKey="Tip_Links">
                         <Button.Flyout>
                             <MenuFlyout Placement="Bottom">
-                                <MenuFlyoutItem Text="RenoDX Wiki" Click="LinkRenoDxWiki_Click"/>
-                                <MenuFlyoutItem Text="Luma Wiki" Click="LinkLumaWiki_Click"/>
-                                <MenuFlyoutItem Text="RHI GitHub" Click="LinkRhiGithub_Click"/>
-                                <MenuFlyoutItem Text="ReLimiter GitHub" Click="LinkReLimiterGithub_Click"/>
+                                <MenuFlyoutItem Text="RenoDX Wiki" loc:Loc.Key="Menu_RenoDxWiki" Click="LinkRenoDxWiki_Click"/>
+                                <MenuFlyoutItem Text="Luma Wiki" loc:Loc.Key="Menu_LumaWiki" Click="LinkLumaWiki_Click"/>
+                                <MenuFlyoutItem Text="RHI GitHub" loc:Loc.Key="Menu_RhiGithub" Click="LinkRhiGithub_Click"/>
+                                <MenuFlyoutItem Text="ReLimiter GitHub" loc:Loc.Key="Menu_ReLimiterGithub" Click="LinkReLimiterGithub_Click"/>
                             </MenuFlyout>
                         </Button.Flyout>
                     </Button>
-                    <Button x:Name="SupportBtn" Content="Help"
+                    <Button x:Name="SupportBtn" Content="Help" loc:Loc.Key="Toolbar_Help"
                             Background="{StaticResource SurfaceInputBrush}" Foreground="{StaticResource AccentTealBrush}"
                             BorderBrush="{StaticResource AccentTealBorderBrush}" BorderThickness="1"
                             CornerRadius="8" Padding="12,7" FontSize="12"
-                            ToolTipService.ToolTip="Support and help resources">
+                            ToolTipService.ToolTip="Support and help resources" loc:Loc.ToolTipKey="Tip_Help">
                         <Button.Flyout>
                             <MenuFlyout Placement="Bottom">
-                                <MenuFlyoutItem Text="Discord" Click="SupportDiscord_Click"/>
-                                <MenuFlyoutItem Text="Guide" Click="SupportGuide_Click"/>
-                                <MenuFlyoutItem Text="Ko-fi" Click="SupportKofi_Click"/>
-                                <MenuFlyoutItem Text="About" Click="AboutButton_Click"/>
+                                <MenuFlyoutItem Text="Discord" loc:Loc.Key="Menu_Discord" Click="SupportDiscord_Click"/>
+                                <MenuFlyoutItem Text="Guide" loc:Loc.Key="Menu_Guide" Click="SupportGuide_Click"/>
+                                <MenuFlyoutItem Text="Ko-fi" loc:Loc.Key="Menu_Kofi" Click="SupportKofi_Click"/>
+                                <MenuFlyoutItem Text="About" loc:Loc.Key="Menu_About" Click="AboutButton_Click"/>
                             </MenuFlyout>
                         </Button.Flyout>
                     </Button>
@@ -128,13 +129,13 @@
                             Background="{StaticResource SurfaceInputBrush}" Foreground="{StaticResource AccentTealBrush}"
                             BorderBrush="{StaticResource AccentTealBorderBrush}" BorderThickness="1"
                             CornerRadius="8" Padding="12,7" FontSize="12"
-                            ToolTipService.ToolTip="Toggle between Detail and Simple view"/>
-                    <Button x:Name="SettingsBtn" Content="Settings"
+                            ToolTipService.ToolTip="Toggle between Detail and Simple view" loc:Loc.ToolTipKey="Tip_Layout"/>
+                    <Button x:Name="SettingsBtn" Content="Settings" loc:Loc.Key="Toolbar_Settings"
                             Click="SettingsButton_Click" IsEnabled="False"
                             Background="{StaticResource SurfaceInputBrush}" Foreground="{StaticResource AccentTealBrush}"
                             BorderBrush="{StaticResource AccentTealBorderBrush}" BorderThickness="1"
                             CornerRadius="8" Padding="12,7" FontSize="12"
-                            ToolTipService.ToolTip="Open settings"/>
+                            ToolTipService.ToolTip="Open settings" loc:Loc.ToolTipKey="Tip_Settings"/>
                 </StackPanel>
             </Grid>
         </Border>
@@ -147,7 +148,7 @@
                         Spacing="16" Visibility="Collapsed" Canvas.ZIndex="10">
                 <ProgressRing x:Name="LoadingRing" IsActive="True" Width="48" Height="48"
                               Foreground="{StaticResource AccentBlueBrush}"/>
-                <TextBlock x:Name="LoadingTitle" Text="Loading..." FontSize="16"
+                <TextBlock x:Name="LoadingTitle" Text="Loading..." loc:Loc.Key="Status_Loading" FontSize="16"
                            Foreground="{StaticResource ChipTextBrush}" HorizontalAlignment="Center"/>
                 <TextBlock x:Name="LoadingSubtitle" Text="" FontSize="12"
                            Foreground="{StaticResource TextDisabledBrush}" HorizontalAlignment="Center"/>
@@ -218,41 +219,41 @@
                                 BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="0,0,0,1">
                             <StackPanel Spacing="4">
                                 <StackPanel Orientation="Horizontal" Spacing="4">
-                                    <Button x:Name="FilterDetected" Content="All Games" Tag="Detected"
+                                    <Button x:Name="FilterDetected" Content="All Games" loc:Loc.Key="Filter_AllGames" Tag="Detected"
                                             Click="Filter_Click"
                                             Background="{StaticResource ChipActiveBrush}" Foreground="White"
                                             BorderThickness="0" CornerRadius="7" Padding="10,5" FontSize="11"/>
-                                    <Button x:Name="FilterInstalled" Content="Installed" Tag="Installed"
+                                    <Button x:Name="FilterInstalled" Content="Installed" loc:Loc.Key="Filter_Installed" Tag="Installed"
                                             Click="Filter_Click"
                                             Background="{StaticResource ChipDefaultBrush}" Foreground="{StaticResource ChipTextBrush}"
                                             BorderThickness="0" CornerRadius="7" Padding="10,5" FontSize="11"/>
-                                    <Button x:Name="FilterFavourites" Content="Favourites" Tag="Favourites"
+                                    <Button x:Name="FilterFavourites" Content="Favourites" loc:Loc.Key="Filter_Favourites" Tag="Favourites"
                                             Click="Filter_Click"
                                             Background="{StaticResource ChipDefaultBrush}" Foreground="{StaticResource ChipTextBrush}"
                                             BorderThickness="0" CornerRadius="7" Padding="10,5" FontSize="11"/>
-                                    <Button x:Name="FilterHidden" Content="Hidden" Tag="Hidden"
+                                    <Button x:Name="FilterHidden" Content="Hidden" loc:Loc.Key="Filter_Hidden" Tag="Hidden"
                                             Click="Filter_Click"
                                             Background="{StaticResource ChipDefaultBrush}" Foreground="{StaticResource ChipTextBrush}"
                                             BorderThickness="0" CornerRadius="7" Padding="10,5" FontSize="11"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Spacing="4">
-                                    <Button x:Name="FilterUnreal" Content="Unreal" Tag="Unreal"
+                                    <Button x:Name="FilterUnreal" Content="Unreal" loc:Loc.Key="Filter_Unreal" Tag="Unreal"
                                             Click="Filter_Click"
                                             Background="{StaticResource ChipDefaultBrush}" Foreground="{StaticResource ChipTextBrush}"
                                             BorderThickness="0" CornerRadius="7" Padding="10,5" FontSize="11"/>
-                                    <Button x:Name="FilterUnity" Content="Unity" Tag="Unity"
+                                    <Button x:Name="FilterUnity" Content="Unity" loc:Loc.Key="Filter_Unity" Tag="Unity"
                                             Click="Filter_Click"
                                             Background="{StaticResource ChipDefaultBrush}" Foreground="{StaticResource ChipTextBrush}"
                                             BorderThickness="0" CornerRadius="7" Padding="10,5" FontSize="11"/>
-                                    <Button x:Name="FilterOther" Content="Other" Tag="Other"
+                                    <Button x:Name="FilterOther" Content="Other" loc:Loc.Key="Filter_Other" Tag="Other"
                                             Click="Filter_Click"
                                             Background="{StaticResource ChipDefaultBrush}" Foreground="{StaticResource ChipTextBrush}"
                                             BorderThickness="0" CornerRadius="7" Padding="10,5" FontSize="11"/>
-                                    <Button x:Name="FilterRenoDX" Content="RenoDX" Tag="RenoDX"
+                                    <Button x:Name="FilterRenoDX" Content="RenoDX" loc:Loc.Key="Filter_RenoDX" Tag="RenoDX"
                                             Click="Filter_Click"
                                             Background="{StaticResource ChipDefaultBrush}" Foreground="{StaticResource ChipTextBrush}"
                                             BorderThickness="0" CornerRadius="7" Padding="10,5" FontSize="11"/>
-                                    <Button x:Name="FilterLuma" Content="Luma" Tag="Luma"
+                                    <Button x:Name="FilterLuma" Content="Luma" loc:Loc.Key="Filter_Luma" Tag="Luma"
                                             Click="Filter_Click"
                                             Background="{StaticResource ChipDefaultBrush}" Foreground="{StaticResource ChipTextBrush}"
                                             BorderThickness="0" CornerRadius="7" Padding="10,5" FontSize="11"/>
@@ -2668,7 +2669,7 @@
                                     <Image Source="icon.ico" Width="48" Height="48"/>
                                     <StackPanel VerticalAlignment="Center" Spacing="4">
                                         <TextBlock FontSize="20" FontWeight="Bold">
-                                            <Run Text="RHI" Foreground="{StaticResource AccentTealBrush}"/>
+                                            <Run Text="RHI" loc:Loc.Key="AppTitle" Foreground="{StaticResource AccentTealBrush}"/>
                                         </TextBlock>
                                         <TextBlock x:Name="AboutVersionText" x:FieldModifier="internal" FontSize="12" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                     </StackPanel>

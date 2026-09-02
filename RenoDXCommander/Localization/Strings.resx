@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e4e4</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e4e4</value></resheader>
+
+  <data name="AppTitle" xml:space="preserve"><value>RHI</value><comment>Window title. Brand name, kept as-is across locales.</comment></data>
+  <data name="AppSubtitle" xml:space="preserve"><value>Simplified PC Gaming</value><comment>Subtitle shown beneath the brand mark in the toolbar.</comment></data>
+
+  <data name="Toolbar_NewModsAvailable" xml:space="preserve"><value>New Mods Available</value></data>
+  <data name="Toolbar_Refresh" xml:space="preserve"><value>Refresh</value></data>
+  <data name="Toolbar_ShadersAddons" xml:space="preserve"><value>Shaders/Addons</value></data>
+  <data name="Toolbar_UpdateAll" xml:space="preserve"><value>Update All</value></data>
+  <data name="Toolbar_Links" xml:space="preserve"><value>Links</value></data>
+  <data name="Toolbar_Help" xml:space="preserve"><value>Help</value></data>
+  <data name="Toolbar_LayoutToggle" xml:space="preserve"><value>Layout</value></data>
+  <data name="Toolbar_QuickStart" xml:space="preserve"><value>Quick Start</value></data>
+
+  <data name="Menu_GlobalShaders" xml:space="preserve"><value>Global Shaders</value></data>
+  <data name="Menu_ReShadeAddons" xml:space="preserve"><value>ReShade Addons</value></data>
+  <data name="Menu_RenoDxWiki" xml:space="preserve"><value>RenoDX Wiki</value></data>
+  <data name="Menu_LumaWiki" xml:space="preserve"><value>Luma Wiki</value></data>
+  <data name="Menu_RhiGithub" xml:space="preserve"><value>RHI GitHub</value></data>
+  <data name="Menu_ReLimiterGithub" xml:space="preserve"><value>ReLimiter GitHub</value></data>
+  <data name="Menu_Discord" xml:space="preserve"><value>Discord</value></data>
+  <data name="Menu_Guide" xml:space="preserve"><value>Guide</value></data>
+  <data name="Menu_Kofi" xml:space="preserve"><value>Ko-fi</value></data>
+  <data name="Menu_About" xml:space="preserve"><value>About</value></data>
+
+  <data name="Tip_NewMods" xml:space="preserve"><value>New RenoDX mods have been added to the wiki</value></data>
+  <data name="Tip_QuickStart" xml:space="preserve"><value>Quick Start Guide</value></data>
+  <data name="Tip_Refresh" xml:space="preserve"><value>Rescan game library and fetch latest mod info</value></data>
+  <data name="Tip_ShadersAddons" xml:space="preserve"><value>Manage global shaders and ReShade addons</value></data>
+  <data name="Tip_Links" xml:space="preserve"><value>Useful links and resources</value></data>
+  <data name="Tip_Help" xml:space="preserve"><value>Support and help resources</value></data>
+  <data name="Toolbar_Settings" xml:space="preserve"><value>Settings</value></data>
+  <data name="Tip_Layout" xml:space="preserve"><value>Toggle between Detail and Simple view</value></data>
+  <data name="Tip_Settings" xml:space="preserve"><value>Open settings</value></data>
+  <data name="Status_Loading" xml:space="preserve"><value>Loading...</value></data>
+  <data name="Filter_AllGames" xml:space="preserve"><value>All Games</value></data>
+  <data name="Filter_Installed" xml:space="preserve"><value>Installed</value></data>
+  <data name="Filter_Favourites" xml:space="preserve"><value>Favourites</value></data>
+  <data name="Filter_Hidden" xml:space="preserve"><value>Hidden</value></data>
+  <data name="Filter_Unreal" xml:space="preserve"><value>Unreal</value></data>
+  <data name="Filter_Unity" xml:space="preserve"><value>Unity</value></data>
+  <data name="Filter_Other" xml:space="preserve"><value>Other</value></data>
+  <data name="Filter_RenoDX" xml:space="preserve"><value>RenoDX</value></data>
+  <data name="Filter_Luma" xml:space="preserve"><value>Luma</value></data>
+  <data name="Common_Close" xml:space="preserve"><value>Close</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="Common_Ok" xml:space="preserve"><value>OK</value></data>
+  <data name="Common_DontShowAgain" xml:space="preserve"><value>Don't show again</value></data>
+  <data name="Dialog_RtxHdrExplanation" xml:space="preserve"><value>RTX HDR uses NVIDIA's driver-level HDR injection to upgrade SDR games to HDR. </value></data>
+  <data name="Dialog_SupportedBadgeDlssFsr" xml:space="preserve"><value>✅ DLSS / FSR</value></data>
+  <data name="Dialog_SupportedBadgeHdr" xml:space="preserve"><value>✅ HDR</value></data>
+  <data name="Dialog_AdminRequiredTitle" xml:space="preserve"><value>Administrator Privileges Required</value></data>
+  <data name="Dialog_VulkanReshadePath" xml:space="preserve"><value>Installing the Vulkan ReShade layer requires writing to C:\ProgramData\ReShade\ </value></data>
+  <data name="Dialog_EnableAdminMode" xml:space="preserve"><value>Enable Admin Mode</value></data>
+  <data name="Dialog_RestartAsAdmin" xml:space="preserve"><value>Restart as Admin</value></data>
+  <data name="Dialog_DownloadFailed" xml:space="preserve"><value>❌ Download failed. Please try again later or download manually from GitHub.</value></data>
+  <data name="Dialog_MotdTitle" xml:space="preserve"><value>📢 Message from RHI</value></data>
+  <data name="Settings_ScreenshotsHotkeysTitle" xml:space="preserve"><value>Screenshots &amp; Hotkeys</value></data>
+  <data name="Settings_PeakNitsTitle" xml:space="preserve"><value>Peak Nits</value></data>
+  <data name="Settings_PeakNitsNotConfigured" xml:space="preserve"><value>Peak nits is not configured or is disabled.</value></data>
+  <data name="Settings_AdminModeTitle" xml:space="preserve"><value>Admin Mode</value></data>
+  <data name="Settings_LogsCopiedTitle" xml:space="preserve"><value>Logs Copied</value></data>
+  <data name="Settings_LogsCopiedContent" xml:space="preserve"><value>All session logs have been archived and copied to your clipboard. Paste directly into Discord to share.</value></data>
+  <data name="Settings_PurgeStagingTitle" xml:space="preserve"><value>Warning Purge Staging Files</value></data>
+  <data name="Settings_PurgeStagingContent" xml:space="preserve"><value>This will delete cached DLSS, Streamline, and component staging files to free disk space.
+
+Shaders, installed RenoDX addons, and version metadata are preserved.
+
+These files will be re-downloaded automatically when needed.
+
+Continue?</value></data>
+  <data name="Settings_Purge" xml:space="preserve"><value>Purge</value></data>
+  <data name="Settings_CachePurgedTitle" xml:space="preserve"><value>Cache Purged</value></data>
+  <data name="Settings_PurgeFailedTitle" xml:space="preserve"><value>Purge Failed</value></data>
+  <data name="Settings_ReShadeUiHotkeyTitle" xml:space="preserve"><value>ReShade UI Hotkey</value></data>
+  <data name="Settings_ReShadeHotkeysTitle" xml:space="preserve"><value>ReShade Hotkeys</value></data>
+  <data name="Settings_ReShadeScreenshotHotkeyTitle" xml:space="preserve"><value>ReShade Screenshot Hotkey</value></data>
+  <data name="Settings_ReLimiterSettingsTitle" xml:space="preserve"><value>ReLimiter Settings</value></data>
+  <data name="Settings_CustomFpsPrompt" xml:space="preserve"><value>Enter a custom FPS value (20-1000):</value></data>
+  <data name="Settings_CustomFpsPlaceholder" xml:space="preserve"><value>e.g. 165</value></data>
+  <data name="Settings_CustomFpsTitle" xml:space="preserve"><value>Custom Target FPS</value></data>
+  <data name="Settings_Set" xml:space="preserve"><value>Set</value></data>
+  <data name="Settings_GlobalUpdateInclusionPrompt" xml:space="preserve"><value>Include components in Update All globally:</value></data>
+  <data name="Settings_GlobalUpdateInclusionTitle" xml:space="preserve"><value>Global Update Inclusion</value></data>
+  <data name="Settings_Save" xml:space="preserve"><value>Save</value></data>
+  <data name="Settings_OptiScalerHotkeyTitle" xml:space="preserve"><value>OptiScaler Hotkey</value></data>
+  <data name="Settings_DxvkVariantChangedTitle" xml:space="preserve"><value>DXVK Variant Changed</value></data>
+  <data name="Settings_ReShadeChannelChangedTitle" xml:space="preserve"><value>ReShade Build Channel Changed</value></data>
+  <data name="Settings_NexusReconnect" xml:space="preserve"><value>Re-connect</value></data>
+  <data name="Settings_NotConnected" xml:space="preserve"><value>Not connected</value></data>
+  <data name="Settings_NexusConnect" xml:space="preserve"><value>Connect</value></data>
+  <data name="Settings_NexusModsTitle" xml:space="preserve"><value>Nexus Mods</value></data>
+  <data name="Settings_NexusModsNoApiKey" xml:space="preserve"><value>Please paste your API key first. You can find it at nexusmods.com - Settings - API Keys.</value></data>
+  <data name="Settings_Validating" xml:space="preserve"><value>Validating...</value></data>
+  <data name="Settings_InvalidApiKey" xml:space="preserve"><value>Invalid API key or network error.</value></data>
+  <data name="Settings_NxmProtocolHandlerTitle" xml:space="preserve"><value>NXM Protocol Handler</value></data>
+  <data name="Settings_NxmHandlerConflict" xml:space="preserve"><value>Another application (e.g. Vortex or MO2) is already registered as the nxm:// handler. Registering RHI will replace it. Continue?</value></data>
+  <data name="Settings_RegisterRhi" xml:space="preserve"><value>Register RHI</value></data>
+  <data name="Settings_NxmRegistrationFailedTitle" xml:space="preserve"><value>NXM Registration Failed</value></data>
+  <data name="Settings_NxmRegisterFailed" xml:space="preserve"><value>Could not register the nxm:// handler: {0}</value></data>
+  <data name="About_VersionStatus" xml:space="preserve"><value>v{0}  -  Simplified PC Gaming by RankFTW</value></data>
+  <data name="Settings_ReshadeIniApplied" xml:space="preserve"><value>Screenshot path, ReShade hotkeys, and effect list style applied to {0} reshade.ini file(s).</value></data>
+  <data name="Settings_PeakNitsApplied" xml:space="preserve"><value>Applied peak nits ({0}) to {1} reshade.ini file(s).</value></data>
+  <data name="Settings_PurgeResult" xml:space="preserve"><value>Deleted {0} files, freed {1} of disk space.</value></data>
+  <data name="Common_AnErrorOccurred" xml:space="preserve"><value>An error occurred: {0}</value></data>
+  <data name="Settings_ReshadeIniUpdatedShort" xml:space="preserve"><value>Updated {0} reshade.ini file(s).</value></data>
+  <data name="Settings_RelimiterIniUpdated" xml:space="preserve"><value>Updated {0} relimiter.ini file(s).</value></data>
+  <data name="Common_LabelColon" xml:space="preserve"><value>{0}: </value></data>
+  <data name="Settings_OptiScalerIniUpdated" xml:space="preserve"><value>Updated {0} OptiScaler.ini file(s).</value></data>
+  <data name="Settings_DxvkVariantChangedContent" xml:space="preserve"><value>DXVK variant changed to {0}.</value></data>
+  <data name="Settings_ReShadeChannelChangedContent" xml:space="preserve"><value>ReShade build channel changed to {0}.
+
+</value></data>
+  <data name="Settings_NexusConnected" xml:space="preserve"><value>Connected as {0} ({1})</value></data>
+  <data name="Detail_Favourite" xml:space="preserve"><value>Favourite</value></data>
+</root>

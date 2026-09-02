@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e4e4</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e4e4</value></resheader>
+
+  <data name="AppTitle" xml:space="preserve"><value>RHI</value><comment>Window title. Brand name, kept as-is across locales.</comment></data>
+  <data name="AppSubtitle" xml:space="preserve"><value>简化的 PC 游戏 HDR 管理</value></data>
+
+  <data name="Toolbar_NewModsAvailable" xml:space="preserve"><value>有新模组可用</value></data>
+  <data name="Toolbar_Refresh" xml:space="preserve"><value>刷新</value></data>
+  <data name="Toolbar_ShadersAddons" xml:space="preserve"><value>着色器/附加组件</value></data>
+  <data name="Toolbar_UpdateAll" xml:space="preserve"><value>全部更新</value></data>
+  <data name="Toolbar_Links" xml:space="preserve"><value>链接</value></data>
+  <data name="Toolbar_Help" xml:space="preserve"><value>帮助</value></data>
+  <data name="Toolbar_LayoutToggle" xml:space="preserve"><value>布局</value></data>
+  <data name="Toolbar_QuickStart" xml:space="preserve"><value>快速入门</value></data>
+
+  <data name="Menu_GlobalShaders" xml:space="preserve"><value>全局着色器</value></data>
+  <data name="Menu_ReShadeAddons" xml:space="preserve"><value>ReShade 附加组件</value></data>
+  <data name="Menu_RenoDxWiki" xml:space="preserve"><value>RenoDX Wiki</value></data>
+  <data name="Menu_LumaWiki" xml:space="preserve"><value>Luma Wiki</value></data>
+  <data name="Menu_RhiGithub" xml:space="preserve"><value>RHI GitHub</value></data>
+  <data name="Menu_ReLimiterGithub" xml:space="preserve"><value>ReLimiter GitHub</value></data>
+  <data name="Menu_Discord" xml:space="preserve"><value>Discord</value></data>
+  <data name="Menu_Guide" xml:space="preserve"><value>使用指南</value></data>
+  <data name="Menu_Kofi" xml:space="preserve"><value>Ko-fi</value></data>
+  <data name="Menu_About" xml:space="preserve"><value>关于</value></data>
+
+  <data name="Tip_NewMods" xml:space="preserve"><value>RenoDX Wiki 新增了模组</value></data>
+  <data name="Tip_QuickStart" xml:space="preserve"><value>快速入门指南</value></data>
+  <data name="Tip_Refresh" xml:space="preserve"><value>重新扫描游戏库并获取最新模组信息</value></data>
+  <data name="Tip_ShadersAddons" xml:space="preserve"><value>管理全局着色器和 ReShade 附加组件</value></data>
+  <data name="Tip_Links" xml:space="preserve"><value>常用链接与资源</value></data>
+  <data name="Tip_Help" xml:space="preserve"><value>支持与帮助资源</value></data>
+  <data name="Toolbar_Settings" xml:space="preserve"><value>设置</value></data>
+  <data name="Tip_Layout" xml:space="preserve"><value>切换详情与简洁视图</value></data>
+  <data name="Tip_Settings" xml:space="preserve"><value>打开设置</value></data>
+  <data name="Status_Loading" xml:space="preserve"><value>加载中...</value></data>
+  <data name="Filter_AllGames" xml:space="preserve"><value>全部游戏</value></data>
+  <data name="Filter_Installed" xml:space="preserve"><value>已安装</value></data>
+  <data name="Filter_Favourites" xml:space="preserve"><value>收藏</value></data>
+  <data name="Filter_Hidden" xml:space="preserve"><value>隐藏</value></data>
+  <data name="Filter_Unreal" xml:space="preserve"><value>Unreal</value></data>
+  <data name="Filter_Unity" xml:space="preserve"><value>Unity</value></data>
+  <data name="Filter_Other" xml:space="preserve"><value>其他</value></data>
+  <data name="Filter_RenoDX" xml:space="preserve"><value>RenoDX</value></data>
+  <data name="Filter_Luma" xml:space="preserve"><value>Luma</value></data>
+  <data name="Common_Close" xml:space="preserve"><value>关闭</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>取消</value></data>
+  <data name="Common_Ok" xml:space="preserve"><value>确定</value></data>
+  <data name="Common_DontShowAgain" xml:space="preserve"><value>不再显示</value></data>
+  <data name="Dialog_RtxHdrExplanation" xml:space="preserve"><value>RTX HDR 利用 NVIDIA 驱动层的 HDR 注入功能，将 SDR 游戏升级为 HDR 显示。</value></data>
+  <data name="Dialog_SupportedBadgeDlssFsr" xml:space="preserve"><value>✅ DLSS / FSR</value></data>
+  <data name="Dialog_SupportedBadgeHdr" xml:space="preserve"><value>✅ HDR</value></data>
+  <data name="Dialog_AdminRequiredTitle" xml:space="preserve"><value>需要管理员权限</value></data>
+  <data name="Dialog_VulkanReshadePath" xml:space="preserve"><value>安装 Vulkan ReShade 层需要写入 C:\ProgramData\ReShade\ 目录。</value></data>
+  <data name="Dialog_EnableAdminMode" xml:space="preserve"><value>启用管理员模式</value></data>
+  <data name="Dialog_RestartAsAdmin" xml:space="preserve"><value>以管理员身份重启</value></data>
+  <data name="Dialog_DownloadFailed" xml:space="preserve"><value>❌ 下载失败。请稍后重试或从 GitHub 手动下载。</value></data>
+  <data name="Dialog_MotdTitle" xml:space="preserve"><value>📢 RHI 通知</value></data>
+  <data name="Settings_ScreenshotsHotkeysTitle" xml:space="preserve"><value>截图与快捷键</value></data>
+  <data name="Settings_PeakNitsTitle" xml:space="preserve"><value>峰值亮度</value></data>
+  <data name="Settings_PeakNitsNotConfigured" xml:space="preserve"><value>峰值亮度未配置或已禁用。</value></data>
+  <data name="Settings_AdminModeTitle" xml:space="preserve"><value>管理员模式</value></data>
+  <data name="Settings_LogsCopiedTitle" xml:space="preserve"><value>日志已复制</value></data>
+  <data name="Settings_LogsCopiedContent" xml:space="preserve"><value>所有会话日志已归档并复制到剪贴板。可直接粘贴到 Discord 分享。</value></data>
+  <data name="Settings_PurgeStagingTitle" xml:space="preserve"><value>⚠ 清理暂存文件</value></data>
+  <data name="Settings_PurgeStagingContent" xml:space="preserve"><value>此操作将删除缓存的 DLSS、Streamline 和组件暂存文件以释放磁盘空间。</value></data>
+  <data name="Settings_Purge" xml:space="preserve"><value>清理</value></data>
+  <data name="Settings_CachePurgedTitle" xml:space="preserve"><value>✅ 缓存已清理</value></data>
+  <data name="Settings_PurgeFailedTitle" xml:space="preserve"><value>❌ 清理失败</value></data>
+  <data name="Settings_ReShadeUiHotkeyTitle" xml:space="preserve"><value>ReShade UI 快捷键</value></data>
+  <data name="Settings_ReShadeHotkeysTitle" xml:space="preserve"><value>ReShade 快捷键</value></data>
+  <data name="Settings_ReShadeScreenshotHotkeyTitle" xml:space="preserve"><value>ReShade 截图快捷键</value></data>
+  <data name="Settings_ReLimiterSettingsTitle" xml:space="preserve"><value>ReLimiter 设置</value></data>
+  <data name="Settings_CustomFpsPrompt" xml:space="preserve"><value>输入自定义 FPS 值（20-1000）：</value></data>
+  <data name="Settings_CustomFpsPlaceholder" xml:space="preserve"><value>例如 165</value></data>
+  <data name="Settings_CustomFpsTitle" xml:space="preserve"><value>自定义目标帧率</value></data>
+  <data name="Settings_Set" xml:space="preserve"><value>设置</value></data>
+  <data name="Settings_GlobalUpdateInclusionPrompt" xml:space="preserve"><value>在『全部更新』中全局包含的组件：</value></data>
+  <data name="Settings_GlobalUpdateInclusionTitle" xml:space="preserve"><value>全局更新包含</value></data>
+  <data name="Settings_Save" xml:space="preserve"><value>保存</value></data>
+  <data name="Settings_OptiScalerHotkeyTitle" xml:space="preserve"><value>OptiScaler 快捷键</value></data>
+  <data name="Settings_DxvkVariantChangedTitle" xml:space="preserve"><value>DXVK 版本已更改</value></data>
+  <data name="Settings_ReShadeChannelChangedTitle" xml:space="preserve"><value>ReShade 构建通道已更改</value></data>
+  <data name="Settings_NexusReconnect" xml:space="preserve"><value>重新连接</value></data>
+  <data name="Settings_NotConnected" xml:space="preserve"><value>未连接</value></data>
+  <data name="Settings_NexusConnect" xml:space="preserve"><value>连接</value></data>
+  <data name="Settings_NexusModsTitle" xml:space="preserve"><value>Nexus Mods</value></data>
+  <data name="Settings_NexusModsNoApiKey" xml:space="preserve"><value>请先粘贴您的 API key。您可以在 nexusmods.com → 设置 → API 密钥 中找到它。</value></data>
+  <data name="Settings_Validating" xml:space="preserve"><value>验证中...</value></data>
+  <data name="Settings_InvalidApiKey" xml:space="preserve"><value>无效的 API key 或网络错误。</value></data>
+  <data name="Settings_NxmProtocolHandlerTitle" xml:space="preserve"><value>NXM 协议处理程序</value></data>
+  <data name="Settings_NxmHandlerConflict" xml:space="preserve"><value>另一个应用程序（例如 Vortex 或 MO2）已经注册为 nxm:// 处理程序。注册 RHI 将替换它。是否继续？</value></data>
+  <data name="Settings_RegisterRhi" xml:space="preserve"><value>注册 RHI</value></data>
+  <data name="Settings_NxmRegistrationFailedTitle" xml:space="preserve"><value>NXM 注册失败</value></data>
+  <data name="Settings_NxmRegisterFailed" xml:space="preserve"><value>无法注册 nxm:// 处理程序：{0}</value></data>
+  <data name="About_VersionStatus" xml:space="preserve"><value>v{0}  ·  RankFTW 打造的简化的 PC 游戏 HDR 管理</value></data>
+  <data name="Settings_ReshadeIniApplied" xml:space="preserve"><value>截图路径、ReShade 快捷键和效果列表样式已应用到 {0} 个 reshade.ini 文件。</value></data>
+  <data name="Settings_PeakNitsApplied" xml:space="preserve"><value>已将峰值亮度 ({0}) 应用到 {1} 个 reshade.ini 文件。</value></data>
+  <data name="Settings_PurgeResult" xml:space="preserve"><value>已删除 {0} 个文件，释放 {1} 磁盘空间。</value></data>
+  <data name="Common_AnErrorOccurred" xml:space="preserve"><value>发生错误：{0}</value></data>
+  <data name="Settings_ReshadeIniUpdatedShort" xml:space="preserve"><value>已更新 {0} 个 reshade.ini 文件。</value></data>
+  <data name="Settings_RelimiterIniUpdated" xml:space="preserve"><value>已更新 {0} 个 relimiter.ini 文件。</value></data>
+  <data name="Common_LabelColon" xml:space="preserve"><value>{0}：</value></data>
+  <data name="Settings_OptiScalerIniUpdated" xml:space="preserve"><value>已更新 {0} 个 OptiScaler.ini 文件。</value></data>
+  <data name="Settings_DxvkVariantChangedContent" xml:space="preserve"><value>DXVK 版本已更改为 {0}。</value></data>
+  <data name="Settings_ReShadeChannelChangedContent" xml:space="preserve"><value>ReShade 构建通道已更改为 {0}。</value></data>
+  <data name="Settings_NexusConnected" xml:space="preserve"><value>已连接为 {0}（{1}）</value></data>
+  <data name="Detail_Favourite" xml:space="preserve"><value>收藏</value></data>
+</root>

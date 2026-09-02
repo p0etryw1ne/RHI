@@ -10,6 +10,7 @@ using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Media;
 using RenoDXCommander.Models;
 using RenoDXCommander.ViewModels;
+using RenoDXCommander.Localization;
 using Windows.Storage.Pickers;
 using WinRT.Interop;
 
@@ -86,7 +87,8 @@ public sealed partial class MainWindow : Window
         AuxInstallService.EnsureReShadeStaging(); // create staging dir (DLLs downloaded by ReShadeUpdateService)
         App.Services.GetRequiredService<CustomReShadeHashService>().EnsureInitialized(); // seed hash file on first run
         App.Services.GetRequiredService<IOptiScalerService>().SeedUserInis(); // seed OptiScaler INIs if missing
-        Title = "RHI";
+        Title = Localizer.Instance["AppTitle"];
+        Loc.ApplyTo(Content);
         // Fire-and-forget: check/download shader packs in the background
         // When CacheAllShaders is off, skip the bulk download — packs will be fetched on demand.
         Task shaderTask;

@@ -4,6 +4,7 @@ using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media;
 using RenoDXCommander.Models;
 using RenoDXCommander.Services;
+using RenoDXCommander.Localization;
 using RenoDXCommander.ViewModels;
 
 namespace RenoDXCommander;
@@ -192,7 +193,7 @@ public partial class DialogService
             {
                 Title           = $"{addonName} — {card.GameName}",
                 Content         = scrollContent,
-                CloseButtonText = "Close",
+                CloseButtonText = Localizer.Instance["Common_Close"],
                 XamlRoot        = _window.Content.XamlRoot,
                 Background      = Brush(ResourceKeys.SurfaceToolbarBrush),
                 RequestedTheme  = ElementTheme.Dark,
@@ -257,7 +258,7 @@ public partial class DialogService
 
             panel.Children.Add(new TextBlock
             {
-                Text = "RTX HDR uses NVIDIA's driver-level HDR injection to upgrade SDR games to HDR. " +
+                Text = Localizer.Instance["Dialog_RtxHdrExplanation"] +
                        "It works at the GPU level without injecting DLLs into the game, making it compatible with anti-cheat systems.\n\n" +
                        "Requires: NVIDIA App installed, Game Filter/Freestyle enabled, RTX GPU, driver 550+.",
                 TextWrapping = TextWrapping.Wrap,
@@ -403,7 +404,7 @@ public partial class DialogService
             if (card.LumaDlssFsrSupported)
                 flagPanel.Children.Add(new TextBlock
                 {
-                    Text = "✅ DLSS / FSR",
+                    Text = Localizer.Instance["Dialog_SupportedBadgeDlssFsr"],
                     FontSize = 12,
                     Foreground = Brush(ResourceKeys.AccentGreenBrush),
                 });
@@ -411,7 +412,7 @@ public partial class DialogService
             if (card.LumaHdrSupported)
                 flagPanel.Children.Add(new TextBlock
                 {
-                    Text = "✅ HDR",
+                    Text = Localizer.Instance["Dialog_SupportedBadgeHdr"],
                     FontSize = 12,
                     Foreground = Brush(ResourceKeys.AccentGreenBrush),
                 });
@@ -877,7 +878,7 @@ public partial class DialogService
                                    notesHint,
                 },
                 PrimaryButtonText   = "OK, I understand",
-                SecondaryButtonText = "Don't show again",
+                SecondaryButtonText = Localizer.Instance["Common_DontShowAgain"],
                 XamlRoot            = _window.Content.XamlRoot,
                 Background          = Brush(ResourceKeys.SurfaceOverlayBrush),
                 RequestedTheme      = ElementTheme.Dark,
@@ -908,19 +909,19 @@ public partial class DialogService
 
             var dlg = new ContentDialog
             {
-                Title = "Administrator Privileges Required",
+                Title = Localizer.Instance["Dialog_AdminRequiredTitle"],
                 Content = new TextBlock
                 {
                     TextWrapping = TextWrapping.Wrap,
                     FontSize = 13,
-                    Text = "Installing the Vulkan ReShade layer requires writing to C:\\ProgramData\\ReShade\\ " +
+                    Text = Localizer.Instance["Dialog_VulkanReshadePath"] +
                            "and modifying system registry keys, which needs administrator privileges.\n\n" +
                            "Enable Admin Mode — RHI will always launch elevated (no UAC prompt after setup).\n\n" +
                            "Restart as Admin — one-time elevated restart to complete this install.",
                 },
-                PrimaryButtonText = "Enable Admin Mode",
-                SecondaryButtonText = "Restart as Admin",
-                CloseButtonText = "Cancel",
+                PrimaryButtonText = Localizer.Instance["Dialog_EnableAdminMode"],
+                SecondaryButtonText = Localizer.Instance["Dialog_RestartAsAdmin"],
+                CloseButtonText = Localizer.Instance["Common_Cancel"],
                 XamlRoot = _window.Content.XamlRoot,
                 Background = Brush(ResourceKeys.SurfaceOverlayBrush),
                 RequestedTheme = ElementTheme.Dark,

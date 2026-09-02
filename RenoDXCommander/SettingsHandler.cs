@@ -3,6 +3,7 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using RenoDXCommander.Models;
 using RenoDXCommander.Services;
+using RenoDXCommander.Localization;
 using RenoDXCommander.ViewModels;
 
 namespace RenoDXCommander;
@@ -47,7 +48,7 @@ public class SettingsHandler
         _window.LoadingPanel.Visibility = Visibility.Collapsed;
         // Sync toggle state with ViewModel
         _window.CustomShadersCombo.SelectedIndex = ViewModel.Settings.GlobalShadersOff ? 0 : (ViewModel.Settings.UseCustomShaders ? 2 : 1);
-        _window.AboutVersionText.Text = $"v{CrashReporter.AppVersion}  ·  Simplified PC Gaming by RankFTW";
+        _window.AboutVersionText.Text = Localizer.Format("About_VersionStatus", CrashReporter.AppVersion);
         // Populate addon watch folder textbox
         _window.AddonWatchFolderBox.Text = ViewModel.Settings.AddonWatchFolder;
         // Populate screenshot path and per-game combo
@@ -461,9 +462,9 @@ public class SettingsHandler
         // Show confirmation dialog
         var dialog = new ContentDialog
         {
-            Title = "Screenshots & Hotkeys",
-            Content = $"Screenshot path, ReShade hotkeys, and effect list style applied to {updatedCount} reshade.ini file{(updatedCount == 1 ? "" : "s")}.",
-            CloseButtonText = "OK",
+            Title = Localizer.Instance["Settings_ScreenshotsHotkeysTitle"],
+            Content = Localizer.Format("Settings_ReshadeIniApplied", updatedCount),
+            CloseButtonText = Localizer.Instance["Common_Ok"],
             XamlRoot = _window.Content.XamlRoot,
             RequestedTheme = ElementTheme.Dark,
         };
@@ -498,9 +499,9 @@ public class SettingsHandler
         {
             var emptyDialog = new ContentDialog
             {
-                Title = "Peak Nits",
-                Content = "Peak nits is not configured or is disabled.",
-                CloseButtonText = "OK",
+                Title = Localizer.Instance["Settings_PeakNitsTitle"],
+                Content = Localizer.Instance["Settings_PeakNitsNotConfigured"],
+                CloseButtonText = Localizer.Instance["Common_Ok"],
                 XamlRoot = _window.Content.XamlRoot,
                 RequestedTheme = ElementTheme.Dark,
             };
@@ -537,9 +538,9 @@ public class SettingsHandler
 
         var dialog = new ContentDialog
         {
-            Title = "Peak Nits",
-            Content = $"Applied peak nits ({peakNits}) to {updatedCount} reshade.ini file{(updatedCount == 1 ? "" : "s")}.",
-            CloseButtonText = "OK",
+            Title = Localizer.Instance["Settings_PeakNitsTitle"],
+            Content = Localizer.Format("Settings_PeakNitsApplied", peakNits, updatedCount),
+            CloseButtonText = Localizer.Instance["Common_Ok"],
             XamlRoot = _window.Content.XamlRoot,
             RequestedTheme = ElementTheme.Dark,
         };
@@ -589,11 +590,11 @@ public class SettingsHandler
             // Show restart notice
             await DialogService.ShowSafeAsync(new ContentDialog
             {
-                Title = "Admin Mode",
+                Title = Localizer.Instance["Settings_AdminModeTitle"],
                 Content = enable
                     ? "Admin Mode enabled. Restart RHI for it to take effect."
                     : "Admin Mode disabled. RHI will launch normally on next start.",
-                CloseButtonText = "OK",
+                CloseButtonText = Localizer.Instance["Common_Ok"],
                 XamlRoot = _window.Content.XamlRoot,
                 RequestedTheme = ElementTheme.Dark,
             });
@@ -731,9 +732,9 @@ public class SettingsHandler
             {
                 await DialogService.ShowSafeAsync(new ContentDialog
                 {
-                    Title = "Logs Copied",
-                    Content = "All session logs have been archived and copied to your clipboard. Paste directly into Discord to share.",
-                    CloseButtonText = "OK",
+                    Title = Localizer.Instance["Settings_LogsCopiedTitle"],
+                    Content = Localizer.Instance["Settings_LogsCopiedContent"],
+                    CloseButtonText = Localizer.Instance["Common_Ok"],
                     XamlRoot = fe.XamlRoot,
                 });
             }
@@ -749,10 +750,10 @@ public class SettingsHandler
         // Show warning dialog
         var warningDialog = new ContentDialog
         {
-            Title = "⚠ Purge Staging Files",
-            Content = "This will delete cached DLSS, Streamline, and component staging files to free disk space.\n\nShaders, installed RenoDX addons, and version metadata are preserved.\n\nThese files will be re-downloaded automatically when needed.\n\nContinue?",
-            PrimaryButtonText = "Purge",
-            CloseButtonText = "Cancel",
+            Title = Localizer.Instance["Settings_PurgeStagingTitle"],
+            Content = Localizer.Instance["Settings_PurgeStagingContent"],
+            PrimaryButtonText = Localizer.Instance["Settings_Purge"],
+            CloseButtonText = Localizer.Instance["Common_Cancel"],
             XamlRoot = _window.Content.XamlRoot,
             RequestedTheme = ElementTheme.Dark,
         };
@@ -871,9 +872,9 @@ public class SettingsHandler
 
             var resultDialog = new ContentDialog
             {
-                Title = "✅ Cache Purged",
-                Content = $"Deleted {filesDeleted} files, freed {sizeStr} of disk space.",
-                CloseButtonText = "OK",
+                Title = Localizer.Instance["Settings_CachePurgedTitle"],
+                Content = Localizer.Format("Settings_PurgeResult", filesDeleted, sizeStr),
+                CloseButtonText = Localizer.Instance["Common_Ok"],
                 XamlRoot = _window.Content.XamlRoot,
                 RequestedTheme = ElementTheme.Dark,
             };
@@ -884,9 +885,9 @@ public class SettingsHandler
             CrashReporter.Log($"[SettingsHandler.PurgeCachedFiles_Click] Failed: {ex.Message}");
             var errDialog = new ContentDialog
             {
-                Title = "❌ Purge Failed",
-                Content = $"An error occurred: {ex.Message}",
-                CloseButtonText = "OK",
+                Title = Localizer.Instance["Settings_PurgeFailedTitle"],
+                Content = Localizer.Format("Common_AnErrorOccurred", ex.Message),
+                CloseButtonText = Localizer.Instance["Common_Ok"],
                 XamlRoot = _window.Content.XamlRoot,
                 RequestedTheme = ElementTheme.Dark,
             };
@@ -996,9 +997,9 @@ public class SettingsHandler
         // Req 4.5: Show confirmation dialog with count of updated files
         var dialog = new ContentDialog
         {
-            Title = "ReShade UI Hotkey",
-            Content = $"Updated {updatedCount} reshade.ini file{(updatedCount == 1 ? "" : "s")}.",
-            CloseButtonText = "OK",
+            Title = Localizer.Instance["Settings_ReShadeUiHotkeyTitle"],
+            Content = Localizer.Format("Settings_ReshadeIniUpdatedShort", updatedCount),
+            CloseButtonText = Localizer.Instance["Common_Ok"],
             XamlRoot = _window.Content.XamlRoot,
             RequestedTheme = ElementTheme.Dark,
         };
@@ -1050,9 +1051,9 @@ public class SettingsHandler
 
         var dialog = new ContentDialog
         {
-            Title = "ReShade Hotkeys",
-            Content = $"Updated {updatedCount} reshade.ini file{(updatedCount == 1 ? "" : "s")}.",
-            CloseButtonText = "OK",
+            Title = Localizer.Instance["Settings_ReShadeHotkeysTitle"],
+            Content = Localizer.Format("Settings_ReshadeIniUpdatedShort", updatedCount),
+            CloseButtonText = Localizer.Instance["Common_Ok"],
             XamlRoot = _window.Content.XamlRoot,
             RequestedTheme = ElementTheme.Dark,
         };
@@ -1142,9 +1143,9 @@ public class SettingsHandler
 
         var dialog = new ContentDialog
         {
-            Title = "ReShade Screenshot Hotkey",
-            Content = $"Updated {updatedCount} reshade.ini file{(updatedCount == 1 ? "" : "s")}.",
-            CloseButtonText = "OK",
+            Title = Localizer.Instance["Settings_ReShadeScreenshotHotkeyTitle"],
+            Content = Localizer.Format("Settings_ReshadeIniUpdatedShort", updatedCount),
+            CloseButtonText = Localizer.Instance["Common_Ok"],
             XamlRoot = _window.Content.XamlRoot,
             RequestedTheme = ElementTheme.Dark,
         };
@@ -1264,9 +1265,9 @@ public class SettingsHandler
 
         var dialog = new ContentDialog
         {
-            Title = "ReLimiter Settings",
-            Content = $"Updated {updatedCount} relimiter.ini file{(updatedCount == 1 ? "" : "s")}.",
-            CloseButtonText = "OK",
+            Title = Localizer.Instance["Settings_ReLimiterSettingsTitle"],
+            Content = Localizer.Format("Settings_RelimiterIniUpdated", updatedCount),
+            CloseButtonText = Localizer.Instance["Common_Ok"],
             XamlRoot = _window.Content.XamlRoot,
             RequestedTheme = ElementTheme.Dark,
         };
@@ -1365,22 +1366,22 @@ public class SettingsHandler
             var panel = new StackPanel { Spacing = 8 };
             panel.Children.Add(new TextBlock
             {
-                Text = "Enter a custom FPS value (20-1000):",
+                Text = Localizer.Instance["Settings_CustomFpsPrompt"],
                 FontSize = 12,
             });
             var inputBox = new TextBox
             {
-                PlaceholderText = "e.g. 165",
+                PlaceholderText = Localizer.Instance["Settings_CustomFpsPlaceholder"],
                 FontSize = 12,
             };
             panel.Children.Add(inputBox);
 
             var dialog = new ContentDialog
             {
-                Title = "Custom Target FPS",
+                Title = Localizer.Instance["Settings_CustomFpsTitle"],
                 Content = panel,
-                PrimaryButtonText = "Set",
-                CloseButtonText = "Cancel",
+                PrimaryButtonText = Localizer.Instance["Settings_Set"],
+                CloseButtonText = Localizer.Instance["Common_Cancel"],
                 XamlRoot = _window.Content.XamlRoot,
                 RequestedTheme = ElementTheme.Dark,
             };
@@ -1453,7 +1454,7 @@ public class SettingsHandler
         var refCheck = new CheckBox { Content = "RE Framework", IsChecked = !settings.GlobalSkipRefUpdates, FontSize = 12, Foreground = UIFactory.Brush(ResourceKeys.TextSecondaryBrush), Margin = new Thickness(0, 4, 0, 4) };
 
         var checkPanel = new StackPanel { Spacing = 0 };
-        checkPanel.Children.Add(new TextBlock { Text = "Include components in Update All globally:", FontSize = 12, Foreground = UIFactory.Brush(ResourceKeys.TextPrimaryBrush), Margin = new Thickness(0, 0, 0, 8) });
+        checkPanel.Children.Add(new TextBlock { Text = Localizer.Instance["Settings_GlobalUpdateInclusionPrompt"], FontSize = 12, Foreground = UIFactory.Brush(ResourceKeys.TextPrimaryBrush), Margin = new Thickness(0, 0, 0, 8) });
         checkPanel.Children.Add(rsCheck);
         checkPanel.Children.Add(rdxCheck);
         checkPanel.Children.Add(ulCheck);
@@ -1463,10 +1464,10 @@ public class SettingsHandler
 
         var dialog = new ContentDialog
         {
-            Title = "Global Update Inclusion",
+            Title = Localizer.Instance["Settings_GlobalUpdateInclusionTitle"],
             Content = checkPanel,
-            PrimaryButtonText = "Save",
-            CloseButtonText = "Cancel",
+            PrimaryButtonText = Localizer.Instance["Settings_Save"],
+            CloseButtonText = Localizer.Instance["Common_Cancel"],
             XamlRoot = xamlRoot,
             RequestedTheme = ElementTheme.Dark,
         };
@@ -1504,7 +1505,7 @@ public class SettingsHandler
             var (label, isOn) = items[i];
             tb.Inlines.Add(new Microsoft.UI.Xaml.Documents.Run
             {
-                Text = $"{label}: ",
+                Text = Localizer.Format("Common_LabelColon", label),
                 Foreground = UIFactory.Brush(ResourceKeys.TextTertiaryBrush),
             });
             tb.Inlines.Add(new Microsoft.UI.Xaml.Documents.Run
@@ -1595,9 +1596,9 @@ public class SettingsHandler
 
         var dialog = new ContentDialog
         {
-            Title = "OptiScaler Hotkey",
-            Content = $"Updated {updatedCount} OptiScaler.ini file{(updatedCount == 1 ? "" : "s")}.",
-            CloseButtonText = "OK",
+            Title = Localizer.Instance["Settings_OptiScalerHotkeyTitle"],
+            Content = Localizer.Format("Settings_OptiScalerIniUpdated", updatedCount),
+            CloseButtonText = Localizer.Instance["Common_Ok"],
             XamlRoot = _window.Content.XamlRoot,
             RequestedTheme = ElementTheme.Dark,
         };
@@ -1667,12 +1668,12 @@ public class SettingsHandler
 
         var dialog = new ContentDialog
         {
-            Title = "DXVK Variant Changed",
-            Content = $"DXVK variant changed to {variantLabel}."
+            Title = Localizer.Instance["Settings_DxvkVariantChangedTitle"],
+            Content = Localizer.Format("Settings_DxvkVariantChangedContent", variantLabel)
                 + (gamesWithDxvk.Count > 0
                     ? $"\n\nSwitching {gamesWithDxvk.Count} game(s) to the {variantLabel} build."
                     : "\n\nNo games currently have DXVK installed."),
-            CloseButtonText = "OK",
+            CloseButtonText = Localizer.Instance["Common_Ok"],
             XamlRoot = _window.Content.XamlRoot,
             RequestedTheme = ElementTheme.Dark,
         };
@@ -1821,13 +1822,13 @@ public class SettingsHandler
 
         var dialog = new ContentDialog
         {
-            Title = "ReShade Build Channel Changed",
-            Content = $"ReShade build channel changed to {channelLabel}.\n\n"
+            Title = Localizer.Instance["Settings_ReShadeChannelChangedTitle"],
+            Content = Localizer.Format("Settings_ReShadeChannelChangedContent", channelLabel)
                 + (totalCount > 0
                     ? $"Switching {totalCount} game(s) to the {channelLabel} build."
                       + (vulkanCount > 0 ? $"\n{vulkanCount} Vulkan game(s) updated via global layer." : "")
                     : "No games currently have ReShade installed."),
-            CloseButtonText = "OK",
+            CloseButtonText = Localizer.Instance["Common_Ok"],
             XamlRoot = _window.Content.XamlRoot,
             RequestedTheme = ElementTheme.Dark,
         };
@@ -1872,18 +1873,18 @@ public class SettingsHandler
         if (connected)
         {
             var tier = isPremium ? "Premium" : "Free";
-            _window.NexusStatusText.Text = $"Connected as {username} ({tier})";
+            _window.NexusStatusText.Text = Localizer.Format("Settings_NexusConnected", username, tier);
             _window.NexusStatusText.Foreground = UIFactory.Brush(
                 isPremium ? ResourceKeys.AccentGreenBrush : ResourceKeys.TextSecondaryBrush);
             _window.NexusDisconnectRow.Visibility = Microsoft.UI.Xaml.Visibility.Visible;
-            _window.NexusConnectBtn.Content = "Re-connect";
+            _window.NexusConnectBtn.Content = Localizer.Instance["Settings_NexusReconnect"];
         }
         else
         {
-            _window.NexusStatusText.Text = "Not connected";
+            _window.NexusStatusText.Text = Localizer.Instance["Settings_NotConnected"];
             _window.NexusStatusText.Foreground = UIFactory.Brush(ResourceKeys.TextTertiaryBrush);
             _window.NexusDisconnectRow.Visibility = Microsoft.UI.Xaml.Visibility.Collapsed;
-            _window.NexusConnectBtn.Content = "Connect";
+            _window.NexusConnectBtn.Content = Localizer.Instance["Settings_NexusConnect"];
         }
 
         // NXM handler status
@@ -1901,9 +1902,9 @@ public class SettingsHandler
         {
             await DialogService.ShowSafeAsync(new ContentDialog
             {
-                Title = "Nexus Mods",
-                Content = "Please paste your API key first. You can find it at nexusmods.com → Settings → API Keys.",
-                CloseButtonText = "OK",
+                Title = Localizer.Instance["Settings_NexusModsTitle"],
+                Content = Localizer.Instance["Settings_NexusModsNoApiKey"],
+                CloseButtonText = Localizer.Instance["Common_Ok"],
                 XamlRoot = _window.Content.XamlRoot,
                 RequestedTheme = Microsoft.UI.Xaml.ElementTheme.Dark,
             });
@@ -1911,7 +1912,7 @@ public class SettingsHandler
         }
 
         _window.NexusConnectBtn.IsEnabled = false;
-        _window.NexusStatusText.Text = "Validating...";
+        _window.NexusStatusText.Text = Localizer.Instance["Settings_Validating"];
         _window.NexusStatusText.Foreground = UIFactory.Brush(ResourceKeys.TextTertiaryBrush);
 
         var nexusDl = App.Services.GetRequiredService<NexusDownloadService>();
@@ -1921,7 +1922,7 @@ public class SettingsHandler
 
         if (info == null)
         {
-            _window.NexusStatusText.Text = "Invalid API key or network error.";
+            _window.NexusStatusText.Text = Localizer.Instance["Settings_InvalidApiKey"];
             _window.NexusStatusText.Foreground = UIFactory.Brush(ResourceKeys.AccentRedBrush);
             return;
         }
@@ -1963,10 +1964,10 @@ public class SettingsHandler
             {
                 var result = await DialogService.ShowSafeAsync(new ContentDialog
                 {
-                    Title = "NXM Protocol Handler",
-                    Content = "Another application (e.g. Vortex or MO2) is already registered as the nxm:// handler. Registering RHI will replace it. Continue?",
-                    PrimaryButtonText = "Register RHI",
-                    CloseButtonText = "Cancel",
+                    Title = Localizer.Instance["Settings_NxmProtocolHandlerTitle"],
+                    Content = Localizer.Instance["Settings_NxmHandlerConflict"],
+                    PrimaryButtonText = Localizer.Instance["Settings_RegisterRhi"],
+                    CloseButtonText = Localizer.Instance["Common_Cancel"],
                     XamlRoot = _window.Content.XamlRoot,
                     RequestedTheme = Microsoft.UI.Xaml.ElementTheme.Dark,
                 });
@@ -1982,9 +1983,9 @@ public class SettingsHandler
             {
                 await DialogService.ShowSafeAsync(new ContentDialog
                 {
-                    Title = "NXM Registration Failed",
-                    Content = $"Could not register the nxm:// handler: {ex.Message}",
-                    CloseButtonText = "OK",
+                    Title = Localizer.Instance["Settings_NxmRegistrationFailedTitle"],
+                    Content = Localizer.Format("Settings_NxmRegisterFailed", ex.Message),
+                    CloseButtonText = Localizer.Instance["Common_Ok"],
                     XamlRoot = _window.Content.XamlRoot,
                     RequestedTheme = Microsoft.UI.Xaml.ElementTheme.Dark,
                 });

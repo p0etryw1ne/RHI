@@ -8,6 +8,7 @@ using Microsoft.UI.Xaml.Media;
 using RenoDXCommander.Models;
 using RenoDXCommander.Services;
 using RenoDXCommander.ViewModels;
+using RenoDXCommander.Localization;
 using System.IO;
 
 namespace RenoDXCommander;
@@ -216,7 +217,7 @@ public partial class DetailPanelBuilder
 
         // Utility buttons — set Tag for event handlers
         _window.DetailFavBtn.Tag = card;
-        _window.DetailFavIcon.Text = "Favourite";
+        _window.DetailFavIcon.Text = Localizer.Get("Detail_Favourite");
         var favColor = card.IsFavourite
             ? ((SolidColorBrush)Application.Current.Resources[ResourceKeys.AccentAmberBrush]).Color
             : ((SolidColorBrush)Application.Current.Resources[ResourceKeys.ChipTextBrush]).Color;

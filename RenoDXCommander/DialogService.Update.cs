@@ -2,6 +2,7 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media;
 using RenoDXCommander.Services;
+using RenoDXCommander.Localization;
 using RenoDXCommander.ViewModels;
 
 namespace RenoDXCommander;
@@ -141,9 +142,9 @@ public partial class DialogService
             // Download failed — update dialog to show error with a Close button
             _dispatcherQueue.TryEnqueue(() =>
             {
-                progressText.Text = "❌ Download failed. Please try again later or download manually from GitHub.";
+                progressText.Text = Localizer.Instance["Dialog_DownloadFailed"];
                 progressBar.Value = 0;
-                downloadDlg.CloseButtonText = "Close";
+                downloadDlg.CloseButtonText = Localizer.Instance["Common_Close"];
             });
             return;
         }
@@ -318,7 +319,7 @@ public partial class DialogService
     {
         var dlg = new ContentDialog
         {
-            Title = "📢 Message from RHI",
+            Title = Localizer.Instance["Dialog_MotdTitle"],
             Content = new ScrollViewer
             {
                 Content = new TextBlock
@@ -329,7 +330,7 @@ public partial class DialogService
                 },
                 MaxHeight = 400,
             },
-            CloseButtonText = "OK",
+            CloseButtonText = Localizer.Instance["Common_Ok"],
             XamlRoot = _window.Content.XamlRoot,
             RequestedTheme = ElementTheme.Dark,
         };

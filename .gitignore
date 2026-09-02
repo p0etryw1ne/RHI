@@ -27,3 +27,9 @@ todo.md
 nvidiaProfileInspector-master/
 
 docs/v2.3.3-test-checklist.md
+# Build diagnostic artifacts (transient, never commit)
+stderr.log
+stdout.log
+build.log
+msbuild.binlog
+
