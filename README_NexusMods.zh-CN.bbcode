@@ -1,0 +1,210 @@
+[center][size=6][b]RHI — 简化的 PC 游戏 HDR 管理[/b][/size][/center]
+
+一个应用管理你的整个 PC 游戏库的 HDR 模组。RHI 自动识别来自 8 个商店的游戏，自动安装和更新 ReShade、RenoDX、帧率限制器、DLSS/Streamline、OptiScaler 等 — 全部按游戏粒度控制，零手动配置。
+
+[center][img]https://raw.githubusercontent.com/RankFTW/RHI/main/screenshots/game_view.png[/img][/center]
+
+[color=#FF6600][b]⚠ 仅限单机使用。[/b][/color] RHI 安装带附加组件支持的 ReShade，可能在联机游戏中触发反外挂。请在进入多人游戏前卸载。
+
+[line]
+
+[size=5][b]为什么选 RHI？[/b][/size]
+
+[list][*][b]8 商店自动识别[/b] — Steam、GOG、Epic、EA App、Ubisoft Connect、Xbox/Game Pass、Battle.net、Rockstar。无需手动设置。
+[*][b]10 个可管理组件[/b] — ReShade、RenoDX、RenoDX Upgrade、ReLimiter、Display Commander、OptiScaler、RE Framework、Luma Framework、DXVK、DOF Fix。每个都支持一键安装、更新、卸载。
+[*][b]46 个着色器包[/b] — RHI 内置、自定义、或关闭。全局或每游戏独立。按文件粒度勾选你想要的着色器，保存并分享命名的着色器配置 — 导出为 zip 分享到 Discord。
+[*][b]所有 DX11 UE 游戏的通用 Luma[/b] — 库中每个 DX11 Unreal Engine 游戏都会出现 Luma 行。安装时自动应用游戏特定的 Engine.ini 调整和启动参数。
+[*][b]DLSS 与 Streamline 管理[/b] — 独立切换 SR、光线重建与帧生成的任意版本。作为一个集合更新或回退 Streamline。无需 NVIDIA Profile Inspector 即可设置每游戏的 DLSS 预设。
+[*][b]Nvidia 驱动配置覆盖[/b] — VSync、低延迟、Smooth Motion、电源模式、ReBAR、多帧生成、DLSS 渲染缩放比例（33–100%）。全部按游戏粒度，直接写入 NVIDIA 驱动配置。
+[*][b]批量部署[/b] — 一次性更新多个游戏的 DLSS/Streamline 版本和预设。
+[*][b]DLSS/Streamline 默认值[/b] — 配置首选版本、预设和渲染缩放比例。一键快速应用到任何游戏。
+[*][b]配置导出/导入[/b] — 备份所有每游戏的 NVIDIA 配置到 JSON，驱动更新后可恢复。
+[*][b]拖放[/b] — 拖入 exe、附加组件、预设、Luma 压缩包或 URL，RHI 自动识别。
+[*][b]两种视图模式[/b] — 详情和紧凑。一键切换。
+[*][b]启动游戏[/b] — Steam 使用 -applaunch（含覆盖层和游戏时长统计），Epic 使用协议，其他直接启动。每游戏可配置自定义 exe 和参数。
+[*][b]HDR 自动切换[/b] — 启动游戏时自动启用 Windows HDR，退出时关闭。全局或每游戏设置。再也不用在 Windows 设置里手动切换。
+[*][b]运行中游戏指示[/b] — 侧边栏在 RHI 启动的游戏运行时显示绿色高亮。
+[*][b]系统托盘与跳转列表[/b] — 关闭时最小化到系统托盘。右键点击托盘或任务栏图标可快速启动最近游戏。
+[*][b]后台自动更新[/b] — 运行期间每 4 小时重新检查所有模组和应用更新。
+[*][b]自定义附加组件[/b] — 将 .addon64/.addon32 文件放入 Custom 文件夹，会出现在附加组件管理器中可开关切换。
+[*][b]数字鲜艳度[/b] — 启动时自动恢复按显示器的颜色鲜艳度（0–100）。
+[*][b]DLSS/Streamline 自动更新[/b] — 游戏已是最新版本时，新版本发布后自动替换。手动选择的老版本保留不动。
+[*][b]峰值亮度[/b] — 设置一次显示器的峰值亮度（nit），每次部署时自动写入所有 reshade.ini。
+[*][b]Luma + RenoDX 共存[/b] — 兼容的游戏可同时运行两个框架。
+[*][b]Ryubing 模拟器支持[/b] — 来自 Souperman9 的 9 个 Switch 游戏附加组件，一键下载部署。附加组件自动识别当前运行的游戏。
+[*][b]RTX HDR 按游戏切换[/b] — 为任何游戏启用 NVIDIA 驱动层 HDR 注入。可配置峰值亮度、对比度、鲜艳度、中间灰、去环。需要 NVIDIA App 启用覆盖层和游戏滤镜。
+[*][b]自定义 ReShade 自动重部署[/b] — 更新 Custom 文件夹中的自定义 ReShade DLL 后，会自动重新部署到所有使用它的游戏。Refresh 和每 4 小时检查。
+[*][b]随 Windows 启动[/b] — 启动时最小化到系统托盘。
+[*][b]UE-Extended 自动配置[/b] — reshade.ini 的 [renodx] 段和 Engine.ini HDR 设置自动写入。
+[*][b]Nexus Mods 更新提醒[/b] — GraphQL API，无需 API 密钥。
+[*][b]远程清单[/b] — 无需应用更新即可推送游戏特定修复。
+[*][b]外来 DLL 保护[/b] — 二进制签名扫描防止意外覆盖 DXVK、Special K、ENB 等。
+[*][b]附加组件文件监控[/b] — 自动检测下载文件夹中的新附加组件并提示安装。
+[*][b]每日提示[/b] — 有重要变化时启动后提示。
+[/list]
+
+[line]
+[size=5][b]可管理的组件[/b][/size]
+
+[table]
+[tr][th]组件[/th][th]功能[/th][/tr]
+[tr][td][url=https://reshade.me]ReShade[/url][/td][td]后处理注入框架。通道：Stable、Nightly、Custom（用户 DLL）、Legacy（锁定 6.0.0+）、No Addons。[/td][/tr]
+[tr][td][url=https://github.com/clshortfuse/renodx]RenoDX[/url][/td][td]HDR 模组框架。从 RenoDX Wiki 匹配游戏特定模组，含通用 Unreal/Unity/UE-Extended 回退。[/td][/tr]
+[tr][td][url=https://github.com/RankFTW/ReLimiter]ReLimiter[/url][/td][td]帧率调节附加组件，含可配置的 OSD 快捷键和共享预设。[/td][/tr]
+[tr][td][url=https://github.com/pmnoxx/display-commander]Display Commander[/url][/td][td]另一个帧率限制器。与 ReLimiter 互斥。[/td][/tr]
+[tr][td][url=https://github.com/optiscaler/OptiScaler]OptiScaler[/url][/td][td]上采样重定向（DLSS ↔ FSR ↔ XeSS）和任意 GPU 上的帧生成。Stable 和 Nightly 通道。通过 ⚙ 齿轮提供每游戏 FG 设置、预设和 DLSS SR/RR/Render Scale 控件。[/td][/tr]
+[tr][td][url=https://github.com/praydog/REFramework-nightly]RE Framework[/url][/td][td]RE Engine 游戏上 ReShade 所需（Monster Hunter Wilds、Resident Evil、DMC5、SF6 等）。[/td][/tr]
+[tr][td][url=https://github.com/Filoppi/Luma-Framework]Luma Framework[/url][/td][td]面向 DX11 游戏的 HDR 模组框架。支持命名模组和所有 DX11 Unreal Engine 游戏（通用）。在所有 Luma 游戏上由 RHI 管理 ReShade 和 DLSS。[/td][/tr]
+[tr][td][url=https://github.com/doitsujin/dxvk]DXVK[/url][/td][td]DX8–DX10 游戏的 DirectX-to-Vulkan 转换。变体：Development、Stable、Lilium HDR（scRGB 输出）。按游戏选择。[/td][/tr]
+[tr][td][url=https://github.com/RankFTW/rhi-repo/releases]DOF Fix[/url][/td][td]修复 Unreal Engine 5.0–5.6 游戏的景深阶梯状色块和平铺色问题。一键安装，参与全部更新。[/td][/tr]
+[tr][td][url=https://github.com/OopyDoopy/renodx]RenoDX Upgrade[/url][/td][td]DX9+ 游戏的逆向 tone mapping 和资源升级。与 RenoFX 着色器配合使用以获得完整 HDR 转换。使用 RenoDX/Luma 模组时不需要。[/td][/tr]
+[/table]
+
+[line]
+
+[size=5][b]主要特性[/b][/size]
+
+[size=4][b]DLSS 与 Streamline[/b][/size]
+
+[list]
+[*]独立切换 DLSS SR、光线重建与帧生成的任意版本
+[*]作为一个集合更新或回退 Streamline
+[*]每游戏 DLSS 预设 — SR：Default/J/K/L/M · RR：Default/D/E · FG：Default/A/B
+[*]DLSS 渲染缩放比例覆盖：每游戏 SR 和 RR 都可设 33–100%
+[*]多帧生成（RTX 50 系列）：模式（Default/Fixed/Dynamic）、帧数（2x–6x）、目标 FPS
+[*]快速应用一键将你的默认配置部署到任何游戏
+[*]批量部署同时更新多个游戏的版本 + 预设
+[*]每游戏备份/恢复（.original 文件）
+[/list]
+
+[size=4][b]Nvidia 驱动配置覆盖[/b][/size]
+
+全部按游戏独立，通过 NVIDIA 驱动配置。需要管理员权限（可用任务计划程序实现持久提权）。
+
+[list]
+[*][b]VSync[/b] — 模式 + 撕裂控制
+[*][b]低延迟[/b] — Off / On / Ultra
+[*][b]Smooth Motion[/b] — 启用 + API + 翻转节奏
+[*][b]电源模式[/b] — 自适应 / 优先最高性能 / 最优
+[*][b]ReBAR[/b] — 启用 / 模式 / 大小限制
+[*][b]FPS 限制[/b] — VRR 优化预设或自定义值。在安装 ReLimiter/DC 时按游戏自动禁用。
+[*][b]G-Sync[/b] — 按游戏禁用开关
+[*][b]配置导出/导入[/b] — 备份所有设置到 JSON，驱动更新后恢复
+[/list]
+[size=4][b]全局 Nvidia 设置（设置页）[/b][/size]
+
+[list]
+[*]Shader Cache 大小
+[*]Shader 预编译
+[*]G-Sync 模式
+[*]首选刷新率
+[*]全局 ReBAR（开/关 + 大小）
+[*]DLSS 屏上指示
+[*]FPS 限制（Frame Rate Limiter V3）
+[*]G-Sync 启用
+[*]G-Sync 屏上指示
+[*]数字鲜艳度（按显示器）
+[*]DMFG 默认值（帧数 + 目标 FPS）
+[/list]
+
+[size=4][b]管理员模式[/b][/size]
+
+基于任务计划程序的持久提权。在设置中打开/关闭。启用后，RHI 会在启动时静默重新以管理员权限启动 — 无需每次操作都提示 UAC。ReBAR、低延迟（ULL）、Smooth Motion 写入需要此权限。管理员模式下 Drop Helper 可提供 Discord 拖放。
+
+[size=4][b]每游戏覆盖[/b][/size]
+
+DLL 命名 · 着色器模式（全局/自定义/选择/关闭）· 附加组件模式（全局/选择/关闭）· 位数 · 图形 API · ReShade 通道（Stable/Nightly/Custom/Legacy/No Addons）· DXVK 变体 · 启动参数 · 更新包含开关 · Wiki 名称映射 · HDR 自动切换 · G-Sync 禁用 · 保持 reshade.ini 更新（每游戏锁定，防止自动修改）
+
+[size=4][b]DOF Fix[/b][/size]
+
+面向 Unreal Engine 5.0–5.6 发生景深阶梯状色块或平铺色问题的一键安装。参与全部更新。通过引擎版本自动检测资格，或通过清单强制启用。
+
+[size=4][b]OptiScaler[/b][/size]
+
+上采样重定向和帧生成，Stable 和 Nightly 通道。⚙ 齿轮提供每游戏设置：FG Input/Output/Nvngx Override、HUD Fix、DLSS SR/RR 预设、渲染缩放、Streamline/DLSS Enabler 部署以及 4 个用户可配置的预设（Nightly）。Unreal Engine 游戏的 Engine.ini 调整。两个上采样下拉让你可以针对不同 API（DX11、DX12、Vulkan）独立选择上采样器，无需手动编辑 INI。
+
+[size=4][b]HDR Gaming Database[/b][/size]
+
+RenoDX Info 按钮可直接跳转到支持游戏的 HDR Gaming Database 页面。
+
+[size=4][b]超宽修复与 Ultra+ 链接[/b][/size]
+
+在游戏卡片上可以看到超宽修复（Lyall、RoseTheFlower、p1xel8ted）和 Ultra+ 模组的快捷链接。
+
+[line]
+[size=5][b]快速入门[/b][/size]
+
+[list=1]
+[*][b]下载并运行 RHI[/b] — 你的游戏库会自动出现。
+[*][b]选择一个游戏[/b] — 在侧边栏中选择。你可以搜索或使用筛选标签筛选。
+[*][b]点击安装[/b] — 选择你要的组件（ReShade、RenoDX、帧率限制器）。
+[*][b]启动游戏[/b] — 启动后按 [b]Home[/b] 打开 ReShade，进入 [b]Add-ons[/b] 配置 RenoDX。
+[*][b]选择着色器[/b] — 点击工具栏的 [b]着色器/附加组件[/b] 按钮，选择全局着色器。展开包选择单个着色器文件，保存为命名配置，或导出以分享。
+[/list]
+
+[line]
+
+[size=5][b]下载[/b][/size]
+
+从 [url=https://github.com/RankFTW/RHI/releases]GitHub Releases 页面[/url] 获取最新版本。
+
+[size=4][b]系统要求：[/b][/size]
+[list]
+[*]Windows 10/11 (x64)
+[*][url=https://dotnet.microsoft.com/download/dotnet/8.0].NET 8 Desktop Runtime[/url]
+[*]推荐使用 NVIDIA GPU 运行 DLSS/Streamline 和驱动配置覆盖功能（AMD/Intel GPU 可用于其他全部功能）
+[/list]
+
+[line]
+
+[size=5][b]故障排查[/b][/size]
+
+[table]
+[tr][th]问题[/th][th]解决[/th][/tr]
+[tr][td]游戏未被识别[/td][td][b]设置[/b] 中 [b]Add Game[/b] — 选择游戏的 exe 并命名[/td][/tr]
+[tr][td]Xbox 游戏缺失[/td][td]点击 [b]Refresh[/b] — Game Pass 检测可能需要片刻[/td][/tr]
+[tr][td]ReShade 未加载[/td][td]通过 📁 检查安装路径 — DLL 必须放在游戏 exe 同目录[/td][/tr]
+[tr][td]黑屏（Unreal）[/td][td]ReShade → Add-ons → RenoDX → 将 R10G10B10A2_UNORM 设为 output size[/td][/tr]
+[tr][td]UE-Extended 不工作[/td][td]先在游戏的显示设置中启用 HDR[/td][/tr]
+[tr][td]下载失败[/td][td]点击 [b]Refresh[/b]，或在 设置 → 打开下载缓存 中清除缓存[/td][/tr]
+[tr][td]DLSS 预设未应用[/td][td]在设置中启用管理员模式，或以管理员身份运行 RHI[/td][/tr]
+[tr][td]一切不同步[/td][td]设置 → [b]Full Refresh[/b] 清除所有缓存并重新扫描[/td][/tr]
+[/table]
+
+完整的功能参考请查看 [url=docs/DETAILED_GUIDE.md]详细指南[/url]。
+
+[line]
+[size=5][b]第三方组件[/b][/size]
+
+[table]
+[tr][th]组件[/th][th]作者[/th][th]许可[/th][/tr]
+[tr][td][url=https://reshade.me]ReShade[/url][/td][td]Crosire[/td][td][url=https://github.com/crosire/reshade/blob/main/LICENSE.md]BSD 3-Clause[/url][/td][/tr]
+[tr][td][url=https://github.com/clshortfuse/renodx]RenoDX[/url][/td][td]clshortfuse 与贡献者[/td][td][url=https://github.com/clshortfuse/renodx/blob/main/LICENSE]MIT[/url][/td][/tr]
+[tr][td][url=https://github.com/RankFTW/ReLimiter]ReLimiter[/url][/td][td]RankFTW[/td][td]Source-available[/td][/tr]
+[tr][td][url=https://github.com/pmnoxx/display-commander]Display Commander[/url][/td][td]pmnoxx[/td][td][url=https://github.com/pmnoxx/display-commander/blob/main/LICENSE]GPL-3[/url][/td][/tr]
+[tr][td][url=https://github.com/praydog/REFramework-nightly]RE Framework[/url][/td][td]praydog[/td][td][url=https://github.com/praydog/REFramework/blob/master/LICENSE]MIT[/url][/td][/tr]
+[tr][td][url=https://github.com/Filoppi/Luma-Framework]Luma Framework[/url][/td][td]Pumbo (Filoppi)[/td][td]Source-available[/td][/tr]
+[tr][td][url=https://github.com/optiscaler/OptiScaler]OptiScaler[/url][/td][td]OptiScaler 贡献者[/td][td]Source-available[/td][/tr]
+[tr][td][url=https://github.com/doitsujin/dxvk]DXVK[/url][/td][td]doitsujin 与贡献者[/td][td][url=https://github.com/doitsujin/dxvk/blob/master/LICENSE]Zlib[/url][/td][/tr]
+[tr][td][url=https://github.com/EndlesslyFlowering/dxvk]DXVK HDR-mod[/url][/td][td]EndlesslyFlowering (Lilium)[/td][td][url=https://github.com/EndlesslyFlowering/dxvk/blob/HDR-mod/LICENSE]Zlib[/url][/td][/tr]
+[tr][td][url=https://github.com/RankFTW/rhi-repo/releases]DOF Fix[/url][/td][td]Lazorr[/td][td]Source-available[/td][/tr]
+[tr][td][url=https://www.7-zip.org/]7-Zip[/url][/td][td]Igor Pavlov[/td][td][url=https://www.7-zip.org/license.txt]LGPL-2.1 / BSD-3-Clause[/url][/td][/tr]
+[/table]
+
+[color=#888888]RHI 是非官方第三方工具，与 RenoDX 项目、Crosire 或 Luma Framework 无关或未经其认可。所有模组文件在运行时从其官方源下载，不重新分发。[/color]
+
+[line]
+
+[size=5][b]致谢[/b][/size]
+
+没有整个 RenoDX 团队和 ReShade 的创造者 [url=https://reshade.me]Crosire[/url] 的辛勤工作，RHI 不可能存在。感谢每一位推动 PC HDR 前进的模组作者、贡献者和测试者。
+
+[line]
+
+[size=4][b]链接[/b][/size]
+
+[url=https://github.com/clshortfuse/renodx]RenoDX[/url] · [url=https://github.com/clshortfuse/renodx/wiki/Mods]RenoDX Wiki[/url] · [url=https://reshade.me]ReShade[/url] · [url=https://github.com/Filoppi/Luma-Framework]Luma Framework[/url] · [url=https://github.com/Filoppi/Luma-Framework/wiki/Mods-List]Luma Mods List[/url] · [url=https://github.com/RankFTW/ReLimiter]ReLimiter[/url] · [url=https://www.hdrmods.com]HDR Guides[/url]
+
+[url=https://discord.gg/gF4GRJWZ2A]RenoDX Discord[/url] · [url=https://discord.gg/k3cDruEQ]HDR Den Discord[/url] · [url=https://discordapp.com/channels/1296187754979528747/1475173660686815374]RHI 支持[/url] · [url=https://discord.gg/pQtPYcdE]Ultra+ Discord[/url]
+
+[url=https://ko-fi.com/rankftw]在 Ko-Fi 上支持 RHI ☕[/url]
