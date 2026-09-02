@@ -1,6 +1,7 @@
-// MainViewModel.cs -- Core scaffolding: constructor, fields, observable properties, forwarding properties, UI callbacks, and shared helpers.
+﻿// MainViewModel.cs -- Core scaffolding: constructor, fields, observable properties, forwarding properties, UI callbacks, and shared helpers.
 
 using CommunityToolkit.Mvvm.ComponentModel;
+using RenoDXCommander.Localization;
 using Microsoft.Extensions.DependencyInjection;
 using RenoDXCommander.Collections;
 using RenoDXCommander.Models;
@@ -139,9 +140,9 @@ public partial class MainViewModel : ObservableObject
 
     public string LayoutToggleLabel => CurrentViewLayout switch
     {
-        ViewLayout.Detail => "Detail View",
-        ViewLayout.Compact => "Simple View",
-        _ => "Detail View",
+        ViewLayout.Detail => Localizer.Get("Layout_Detail"),
+        ViewLayout.Compact => Localizer.Get("Layout_Simple"),
+        _ => Localizer.Get("Layout_Detail"),
     };
 
     partial void OnCurrentViewLayoutChanged(ViewLayout value)

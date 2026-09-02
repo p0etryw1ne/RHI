@@ -1,4 +1,4 @@
-// DetailPanelBuilder.Overrides.NvidiaProfile.cs — Nvidia Profile Overrides header + DLSS/Streamline section.
+﻿// DetailPanelBuilder.Overrides.NvidiaProfile.cs — Nvidia Profile Overrides header + DLSS/Streamline section.
 
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -78,7 +78,7 @@ public partial class DetailPanelBuilder
 
             // RR column
             bool rrDriverOverride = presetService.IsSupported && presetService.IsRrDriverOverrideActive(card.GameName, card.InstallPath ?? "");
-            var rrCol = BuildDlssColumn("Ray Reconstruction", hasDlssd, dlssService.DlssdVersions,
+            var rrCol = BuildDlssColumn(Localizer.Get("Dlss_RayReconstruction"), hasDlssd, dlssService.DlssdVersions,
                 card.DlssdInstalledVersion, DlssPresetService.RrPresets,
                 presetService.IsSupported && hasDlssd ? presetService.GetRrPreset(card.GameName, card.InstallPath) : 0u,
                 async (version) =>
@@ -104,7 +104,7 @@ public partial class DetailPanelBuilder
             // FG column — no v1.x guard (FG can be updated from v1.0.0 to newer versions)
             bool fgEnabled = hasDlssg;
             bool fgDriverOverride = presetService.IsSupported && presetService.IsFgDriverOverrideActive(card.GameName, card.InstallPath ?? "");
-            var fgCol = BuildDlssColumn("Frame Generation", fgEnabled, dlssService.DlssgVersions,
+            var fgCol = BuildDlssColumn(Localizer.Get("Dlss_FrameGeneration"), fgEnabled, dlssService.DlssgVersions,
                 card.DlssgInstalledVersion, DlssPresetService.FgPresets,
                 presetService.IsSupported && fgEnabled ? presetService.GetFgPreset(card.GameName, card.InstallPath) : 0u,
                 async (version) =>
@@ -180,7 +180,7 @@ public partial class DetailPanelBuilder
                 string nrSelectedVersion = nrInstalledVersion ?? "";
 
                 bool nrDriverOverride = presetService.IsSupported && presetService.IsNrDriverOverrideActive(card.GameName, card.InstallPath ?? "");
-                var nrCol = BuildDlssColumn("Neural Rendering", hasDlssnr, dlssService.DlssnrVersions,
+                var nrCol = BuildDlssColumn(Localizer.Get("Dlss_NeuralRendering"), hasDlssnr, dlssService.DlssnrVersions,
                     nrInstalledVersion, DlssPresetService.NrPresets,
                     presetService.IsSupported && hasDlssnr ? presetService.GetNrPreset(card.GameName, card.InstallPath) : 0u,
                     async (version) =>

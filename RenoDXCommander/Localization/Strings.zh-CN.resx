@@ -473,4 +473,10 @@
   <data name="Status_Install" xml:space="preserve"><value>安装</value></data>
   <data name="Status_Uninstall" xml:space="preserve"><value>卸载</value></data>
   <data name="Status_Reinstall" xml:space="preserve"><value>↺ 重装</value></data>
+  <data name="Layout_Detail" xml:space="preserve"><value>详情视图</value></data>
+  <data name="Layout_Compact" xml:space="preserve"><value>紧凑视图</value></data>
+  <data name="Dlss_RayReconstruction" xml:space="preserve"><value>光线重建</value></data>
+  <data name="Dlss_FrameGeneration" xml:space="preserve"><value>帧生成</value></data>
+  <data name="Dlss_NeuralRendering" xml:space="preserve"><value>神经渲染</value></data>
+  <data name="Layout_Simple" xml:space="preserve"><value>简洁视图</value></data>
 </root>

@@ -481,4 +481,10 @@ Place your .dll files in:</value></data>
   <data name="Status_Install" xml:space="preserve"><value>Install</value></data>
   <data name="Status_Uninstall" xml:space="preserve"><value>Uninstall</value></data>
   <data name="Status_Reinstall" xml:space="preserve"><value>↺ Reinstall</value></data>
+  <data name="Layout_Detail" xml:space="preserve"><value>Detail View</value></data>
+  <data name="Layout_Compact" xml:space="preserve"><value>Compact View</value></data>
+  <data name="Dlss_RayReconstruction" xml:space="preserve"><value>Ray Reconstruction</value></data>
+  <data name="Dlss_FrameGeneration" xml:space="preserve"><value>Frame Generation</value></data>
+  <data name="Dlss_NeuralRendering" xml:space="preserve"><value>Neural Rendering</value></data>
+  <data name="Layout_Simple" xml:space="preserve"><value>Simple View</value></data>
 </root>
