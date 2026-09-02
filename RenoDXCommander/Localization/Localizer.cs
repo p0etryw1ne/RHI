@@ -118,13 +118,13 @@ public sealed class Localizer : INotifyPropertyChanged
     /// </summary>
     public static void InitializeStartupCulture()
     {
-        // RHI zh-CN fork: default to Simplified Chinese so the localized UI shows
-        // on any system, regardless of the OS display language. A user who set a
-        // language preference earlier (Settings) wins; otherwise we use zh-CN.
-        var ui = CultureInfo.CurrentUICulture;
-        var target = ui.Name.StartsWith("zh", StringComparison.OrdinalIgnoreCase)
-            ? ui
-            : new CultureInfo("zh-CN");
+        // RHI zh-CN fork: always normalize to zh-CN. The satellite resource is
+        // only shipped as zh-CN (Strings.zh-CN.resx). Systems whose display
+        // language is zh-Hans-CN / zh-TW / zh-HK / zh-SG would otherwise fall
+        // through to the neutral English resource because ResourceManager cannot
+        // find a satellite for those exact tags. Normalizing to zh-CN guarantees
+        // the translated UI regardless of the OS language.
+        var target = new CultureInfo("zh-CN");
 
         CultureInfo.CurrentUICulture = target;
         Instance._culture = target;
