@@ -1,4 +1,6 @@
-# RHI — Detailed Guide
+﻿# RHI — Detailed Guide
+
+> **中文用户**：本指南的中文版（已翻译前 5 节）请见 [DETAILED_GUIDE.zh-CN.md](DETAILED_GUIDE.zh-CN.md)。英文完整版保持原状。
 
 This document covers every feature in RHI. For a quick overview, see the [README](../README.md).
 
