@@ -1,4 +1,4 @@
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Documents;
@@ -83,7 +83,7 @@ public static class Loc
         public ContentKind Kind { get; }
     }
 
-    private enum ContentKind { Text, Content, ToolTip, RunText }
+    private enum ContentKind { Text, Content, ToolTip, RunText, Placeholder }
 
     /// <summary>
     /// Walk the visual subtree starting at <paramref name="root"/>, collect
@@ -117,6 +117,7 @@ public static class Loc
                 TextBlock => ContentKind.Text,
                 Button => ContentKind.Content,
                 Run => ContentKind.RunText,
+                TextBox => ContentKind.Placeholder,
                 _ => ContentKind.Text, // falls through to runtime branch
             };
             _entries.Add(new Entry(node, key!, kind));
@@ -175,6 +176,9 @@ public static class Loc
                 break;
             case ContentKind.ToolTip:
                 ToolTipService.SetToolTip(entry.Element, text);
+                break;
+            case ContentKind.Placeholder:
+                if (entry.Element is TextBox tb3) tb3.PlaceholderText = text;
                 break;
         }
     }

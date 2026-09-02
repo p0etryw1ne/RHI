@@ -296,4 +296,157 @@ Place your .dll files in:</value></data>
   <data name="DP_Drv_ReBAR_Auto" xml:space="preserve"><value>Auto (Default)</value></data>
   <data name="Common_Off" xml:space="preserve"><value>Off</value></data>
   <data name="Common_On" xml:space="preserve"><value>On</value></data>
+  <data name="Filter_Placeholder" xml:space="preserve"><value>Filter games...</value></data>
+  <data name="DP_SaveSearchFilter" xml:space="preserve"><value>Save current search as a custom filter</value></data>
+  <data name="DP_ManualAddGame" xml:space="preserve"><value>Manually add a game</value></data>
+  <data name="DP_LaunchGame" xml:space="preserve"><value>Launch this game</value></data>
+  <data name="DP_OpenNexus" xml:space="preserve"><value>Open Nexus Mods page</value></data>
+  <data name="DP_Nexus" xml:space="preserve"><value>Nexus</value></data>
+  <data name="DP_OpenPcgw" xml:space="preserve"><value>Open PCGamingWiki page</value></data>
+  <data name="DP_Pcgw" xml:space="preserve"><value>PCGW</value></data>
+  <data name="DP_OpenUwFix" xml:space="preserve"><value>Open ultrawide fix page</value></data>
+  <data name="DP_UwFix" xml:space="preserve"><value>UW Fix</value></data>
+  <data name="DP_OpenUltraPlus" xml:space="preserve"><value>Open Ultra+ page for this game</value></data>
+  <data name="DP_UltraPlus" xml:space="preserve"><value>Ultra+</value></data>
+  <data name="DP_ToggleFavourite" xml:space="preserve"><value>Toggle favourite</value></data>
+  <data name="DP_OpenConfigFolder" xml:space="preserve"><value>Open game config folder in Explorer</value></data>
+  <data name="DP_Config" xml:space="preserve"><value>Config</value></data>
+  <data name="DP_OpenGameFolder" xml:space="preserve"><value>Open game folder in Explorer</value></data>
+  <data name="DP_Components" xml:space="preserve"><value>Components</value></data>
+  <data name="Common_Info" xml:space="preserve"><value>Info</value></data>
+  <data name="DP_RemoveRef" xml:space="preserve"><value>Remove RE Framework</value></data>
+  <data name="DP_ReShadeSettings" xml:space="preserve"><value>ReShade Settings</value></data>
+  <data name="DP_RemoveReShade" xml:space="preserve"><value>Remove ReShade</value></data>
+  <data name="DP_RenoDxSettings" xml:space="preserve"><value>RenoDX Settings</value></data>
+  <data name="DP_RemoveRenoDx" xml:space="preserve"><value>Remove RenoDX mod</value></data>
+  <data name="DP_LumaSettings" xml:space="preserve"><value>Luma Settings</value></data>
+  <data name="DP_RemoveLuma" xml:space="preserve"><value>Remove Luma mod</value></data>
+  <data name="DP_DofFixSettings" xml:space="preserve"><value>DOF Fix Settings</value></data>
+  <data name="DP_RemoveDofFix" xml:space="preserve"><value>Remove DOF Fix</value></data>
+  <data name="Settings_ReLimiter" xml:space="preserve"><value>ReLimiter</value></data>
+  <data name="DP_ReLimiterSettings" xml:space="preserve"><value>ReLimiter Settings</value></data>
+  <data name="DP_RemoveReLimiter" xml:space="preserve"><value>Remove ReLimiter</value></data>
+  <data name="DP_DcSettings" xml:space="preserve"><value>Display Commander Settings</value></data>
+  <data name="DP_RemoveDc" xml:space="preserve"><value>Remove Display Commander</value></data>
+  <data name="Settings_OptiScaler" xml:space="preserve"><value>OptiScaler</value></data>
+  <data name="DP_OptiScalerSettings" xml:space="preserve"><value>OptiScaler Settings</value></data>
+  <data name="DP_RemoveOptiScaler" xml:space="preserve"><value>Remove OptiScaler</value></data>
+  <data name="DP_DxvkSettings" xml:space="preserve"><value>DXVK Settings</value></data>
+  <data name="DP_RemoveDxvk" xml:space="preserve"><value>Remove DXVK</value></data>
+  <data name="DP_NoRenoDxMod" xml:space="preserve"><value>No RenoDX mod available for this game</value></data>
+  <data name="Settings_ComponentUpdates" xml:space="preserve"><value>Component Updates</value></data>
+  <data name="Settings_CheckForUpdates" xml:space="preserve"><value>Check For Updates</value></data>
+  <data name="Settings_CheckForUpdatesTip" xml:space="preserve"><value>Check all components and the app for available updates</value></data>
+  <data name="Settings_AutomaticUpdates" xml:space="preserve"><value>Automatic Updates</value></data>
+  <data name="Settings_ReShadeDisplay" xml:space="preserve"><value>ReShade &amp;amp; Display</value></data>
+  <data name="Settings_ScreenshotsHotkeys" xml:space="preserve"><value>Screenshots &amp;amp; Hotkeys</value></data>
+  <data name="Settings_HdrPeakBrightness" xml:space="preserve"><value>HDR &amp;amp; Peak Brightness</value></data>
+  <data name="Settings_ScreenshotFolderPlaceholder" xml:space="preserve"><value>Type or choose screenshot folder</value></data>
+  <data name="Settings_PickScreenshotFolderTip" xml:space="preserve"><value>Pick a folder for screenshots</value></data>
+  <data name="Common_Open" xml:space="preserve"><value>Open</value></data>
+  <data name="Settings_OpenScreenshotFolderTip" xml:space="preserve"><value>Open the screenshot folder in Explorer</value></data>
+  <data name="Settings_PeakNits" xml:space="preserve"><value>Peak Nits</value></data>
+  <data name="Settings_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Settings_PeakNitsAutoTip" xml:space="preserve"><value>Reads your monitor's peak brightness automatically.</value></data>
+  <data name="Settings_NitsPlaceholder" xml:space="preserve"><value>nits</value></data>
+  <data name="Settings_PeakNitsPresetsTip" xml:space="preserve"><value>Configure which presets receive the global peak nits value.</value></data>
+  <data name="Settings_OverlayKey" xml:space="preserve"><value>Overlay key</value></data>
+  <data name="Settings_ScreenshotKey" xml:space="preserve"><value>Screenshot key</value></data>
+  <data name="Settings_Subfolders" xml:space="preserve"><value>Subfolders</value></data>
+  <data name="Settings_PressKeyPlaceholder" xml:space="preserve"><value>Press a key...</value></data>
+  <data name="Settings_ResetToPrintScreenTip" xml:space="preserve"><value>Reset to Print Screen</value></data>
+  <data name="Settings_PerGameScreenshotTip" xml:space="preserve"><value>When On, each game gets its own screenshot subfolder.</value></data>
+  <data name="Settings_ApplyToAllGames" xml:space="preserve"><value>Apply to All Games</value></data>
+  <data name="Settings_HdrAutoToggle" xml:space="preserve"><value>HDR Auto-Toggle</value></data>
+  <data name="Settings_EffectListStyle" xml:space="preserve"><value>Effect list style</value></data>
+  <data name="Settings_Tabs" xml:space="preserve"><value>Tabs</value></data>
+  <data name="Settings_Tree" xml:space="preserve"><value>Tree</value></data>
+  <data name="Settings_ResolutionControl" xml:space="preserve"><value>Resolution Control</value></data>
+  <data name="Settings_TargetResolution" xml:space="preserve"><value>Target Resolution</value></data>
+  <data name="Settings_ResolutionAutoToggle" xml:space="preserve"><value>Resolution Auto-Toggle</value></data>
+  <data name="Settings_NexusMods" xml:space="preserve"><value>Nexus Mods</value></data>
+  <data name="Settings_ApiKey" xml:space="preserve"><value>API Key</value></data>
+  <data name="Settings_NxmProtocolHandler" xml:space="preserve"><value>NXM Protocol Handler</value></data>
+  <data name="Settings_PasteApiKeyPlaceholder" xml:space="preserve"><value>Paste API key here...</value></data>
+  <data name="Settings_Connect" xml:space="preserve"><value>Connect</value></data>
+  <data name="Settings_NotRegistered" xml:space="preserve"><value>Not registered</value></data>
+  <data name="Settings_Register" xml:space="preserve"><value>Register</value></data>
+  <data name="Settings_Disconnect" xml:space="preserve"><value>Disconnect</value></data>
+  <data name="Settings_DlssStreamline" xml:space="preserve"><value>DLSS / Streamline Settings</value></data>
+  <data name="Settings_Defaults" xml:space="preserve"><value>Defaults</value></data>
+  <data name="Settings_ConfigureDefaults" xml:space="preserve"><value>Configure Defaults</value></data>
+  <data name="Settings_DmfgDefaults" xml:space="preserve"><value>DMFG Defaults</value></data>
+  <data name="Settings_FrameCount" xml:space="preserve"><value>Frame Count</value></data>
+  <data name="Settings_TargetFps" xml:space="preserve"><value>Target FPS</value></data>
+  <data name="Settings_BatchDeploy" xml:space="preserve"><value>Batch Deploy</value></data>
+  <data name="Settings_DlssOsd" xml:space="preserve"><value>DLSS On-Screen Indicator</value></data>
+  <data name="Settings_Enabled" xml:space="preserve"><value>Enabled</value></data>
+  <data name="Settings_Disabled" xml:space="preserve"><value>Disabled</value></data>
+  <data name="Settings_GSyncOsd" xml:space="preserve"><value>G-Sync On-Screen Indicator</value></data>
+  <data name="Settings_AutoUpdate" xml:space="preserve"><value>Auto-Update</value></data>
+  <data name="Settings_Dlss" xml:space="preserve"><value>DLSS</value></data>
+  <data name="Settings_Streamline" xml:space="preserve"><value>Streamline</value></data>
+  <data name="Settings_GlobalNvidia" xml:space="preserve"><value>Global NVIDIA Driver Settings</value></data>
+  <data name="Settings_ShaderCacheSize" xml:space="preserve"><value>Shader Cache Size</value></data>
+  <data name="Settings_ShaderPreCompile" xml:space="preserve"><value>Shader Pre-Compile</value></data>
+  <data name="Settings_GSync" xml:space="preserve"><value>G-Sync</value></data>
+  <data name="Settings_GSyncMode" xml:space="preserve"><value>G-Sync Mode</value></data>
+  <data name="Settings_FpsLimit" xml:space="preserve"><value>FPS Limit</value></data>
+  <data name="Settings_PreferredRefreshRate" xml:space="preserve"><value>Preferred Refresh Rate</value></data>
+  <data name="Settings_VSync" xml:space="preserve"><value>VSync</value></data>
+  <data name="Settings_PowerMode" xml:space="preserve"><value>Power Mode</value></data>
+  <data name="Settings_ReBar" xml:space="preserve"><value>ReBAR</value></data>
+  <data name="Settings_ReBarSizeLimit" xml:space="preserve"><value>ReBAR Size Limit</value></data>
+  <data name="Settings_DigitalVibrance" xml:space="preserve"><value>Digital Vibrance</value></data>
+  <data name="Settings_CreateMissingProfiles" xml:space="preserve"><value>Create Missing Profiles</value></data>
+  <data name="Settings_BackupProfiles" xml:space="preserve"><value>Backup Profiles</value></data>
+  <data name="Settings_BackupProfilesTip" xml:space="preserve"><value>Save all per-game NVIDIA profile settings to a backup file.</value></data>
+  <data name="Settings_RestoreProfiles" xml:space="preserve"><value>Restore Profiles</value></data>
+  <data name="Settings_ResetNvidiaProfiles" xml:space="preserve"><value>Reset Nvidia Profiles</value></data>
+  <data name="Settings_ClearShaderCache" xml:space="preserve"><value>Clear Shader Cache</value></data>
+  <data name="Settings_ComponentSettings" xml:space="preserve"><value>Component Settings</value></data>
+  <data name="Settings_OsdKey" xml:space="preserve"><value>OSD Key</value></data>
+  <data name="Settings_SharedPresets" xml:space="preserve"><value>Shared Presets</value></data>
+  <data name="Settings_DlssHooks" xml:space="preserve"><value>DLSS Hooks</value></data>
+  <data name="Settings_OsdKeyTip" xml:space="preserve"><value>The key that toggles the ReLimiter OSD overlay in-game.</value></data>
+  <data name="Settings_GpuType" xml:space="preserve"><value>GPU Type</value></data>
+  <data name="Settings_DlssInputs" xml:space="preserve"><value>DLSS Inputs</value></data>
+  <data name="Settings_ShadersAddons" xml:space="preserve"><value>Shaders &amp;amp; Addons</value></data>
+  <data name="Settings_ShaderManagement" xml:space="preserve"><value>Shader Management</value></data>
+  <data name="Settings_ShaderManagementDesc" xml:space="preserve"><value>Control how RHI manages shader files across your games.</value></data>
+  <data name="Settings_CacheAllShaders" xml:space="preserve"><value>Cache All Shaders</value></data>
+  <data name="Settings_RhiManaged" xml:space="preserve"><value>RHI Managed</value></data>
+  <data name="Settings_Custom" xml:space="preserve"><value>Custom</value></data>
+  <data name="Settings_AddonWatchFolder" xml:space="preserve"><value>Addon Watch Folder</value></data>
+  <data name="Settings_DownloadsFolderPlaceholder" xml:space="preserve"><value>Downloads folder (default)</value></data>
+  <data name="Common_Reset" xml:space="preserve"><value>Reset</value></data>
+  <data name="Settings_UpdateDeployment" xml:space="preserve"><value>Update &amp;amp; Deployment</value></data>
+  <data name="Settings_GlobalUpdateChecks" xml:space="preserve"><value>Global Update Checks</value></data>
+  <data name="Settings_MassIniDeployment" xml:space="preserve"><value>Mass INI Deployment</value></data>
+  <data name="Settings_UpdateInclusion" xml:space="preserve"><value>Update Inclusion</value></data>
+  <data name="Settings_MassPresetInstall" xml:space="preserve"><value>Mass Preset Install</value></data>
+  <data name="Settings_SystemMaintenance" xml:space="preserve"><value>System &amp;amp; Maintenance</value></data>
+  <data name="Settings_FullRefresh" xml:space="preserve"><value>Full Refresh</value></data>
+  <data name="Settings_PurgeStagingFiles" xml:space="preserve"><value>Purge Staging Files</value></data>
+  <data name="Settings_AdminMode" xml:space="preserve"><value>Admin Mode</value></data>
+  <data name="Settings_DropHelper" xml:space="preserve"><value>Drop Helper</value></data>
+  <data name="Settings_SystemTray" xml:space="preserve"><value>System Tray</value></data>
+  <data name="Settings_CloseToTray" xml:space="preserve"><value>Close to Tray</value></data>
+  <data name="Settings_RecentGames" xml:space="preserve"><value>Recent Games</value></data>
+  <data name="Settings_StartWithWindows" xml:space="preserve"><value>Start with Windows</value></data>
+  <data name="Settings_DataCustomFiles" xml:space="preserve"><value>Data &amp;amp; Custom Files</value></data>
+  <data name="Settings_AppDataFolder" xml:space="preserve"><value>AppData Folder</value></data>
+  <data name="Settings_DownloadsFolder" xml:space="preserve"><value>Downloads Folder</value></data>
+  <data name="Settings_CustomFolder" xml:space="preserve"><value>Custom Folder</value></data>
+  <data name="Settings_LogsFolder" xml:space="preserve"><value>Logs Folder</value></data>
+  <data name="Settings_CopyLogs" xml:space="preserve"><value>Copy Logs</value></data>
+  <data name="About_WhatRhiManages" xml:space="preserve"><value>What RHI manages</value></data>
+  <data name="About_SinglePlayerOnly" xml:space="preserve"><value>Single-player only</value></data>
+  <data name="About_Credits" xml:space="preserve"><value>Credits &amp;amp; Acknowledgements</value></data>
+  <data name="Menu_Links2" xml:space="preserve"><value>Links</value></data>
+  <data name="Faq_QuickStartGuide" xml:space="preserve"><value>Quick Start Guide</value></data>
+  <data name="About_PatchNotes" xml:space="preserve"><value>Patch Notes</value></data>
+  <data name="About_ViewPatchNotes" xml:space="preserve"><value>View recent patch notes</value></data>
+  <data name="About_Motd" xml:space="preserve"><value>MOTD</value></data>
+  <data name="About_ShowMotd" xml:space="preserve"><value>Show message of the day</value></data>
 </root>

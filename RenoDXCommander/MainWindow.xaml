@@ -180,7 +180,7 @@
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBox x:Name="SearchBox" Grid.Column="0"
-                                         PlaceholderText="Filter games..."
+                                         PlaceholderText="Filter games..." loc:Loc.Key="Filter_Placeholder"
                                          TextChanged="SearchBox_TextChanged"
                                          Background="{StaticResource SurfaceInputBrush}" Foreground="{StaticResource TextSecondaryBrush}"
                                          BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1"
@@ -198,7 +198,7 @@
                                         MinWidth="0" MinHeight="0"
                                         FontSize="14" FontWeight="Bold"
                                         VerticalAlignment="Center"
-                                        ToolTipService.ToolTip="Save current search as a custom filter"/>
+                                        ToolTipService.ToolTip="Save current search as a custom filter" loc:Loc.ToolTipKey="DP_SaveSearchFilter"/>
                                 <Button x:Name="AddGameBtn" Grid.Column="2"
                                         Content="+"
                                         Click="AddGameButton_Click"
@@ -210,7 +210,7 @@
                                         MinWidth="0" MinHeight="0"
                                         FontSize="14" FontWeight="Bold"
                                         VerticalAlignment="Center"
-                                        ToolTipService.ToolTip="Manually add a game"/>
+                                        ToolTipService.ToolTip="Manually add a game" loc:Loc.ToolTipKey="DP_ManualAddGame"/>
                             </Grid>
                         </Border>
 
@@ -381,7 +381,7 @@
                                                 CornerRadius="6" Padding="10,4" MinWidth="0" MinHeight="0"
                                                 FontSize="11" FontWeight="SemiBold"
                                                 Click="LaunchGame_Click"
-                                                ToolTipService.ToolTip="Launch this game">
+                                                ToolTipService.ToolTip="Launch this game" loc:Loc.ToolTipKey="DP_LaunchGame">
                                             <TextBlock Text="▶ Launch" FontSize="11"/>
                                         </Button>
                                         <Button x:Name="DetailHdrToggleBtn" x:FieldModifier="internal"
@@ -414,8 +414,8 @@
                                                 FontSize="11"
                                                 Click="NexusModsLink_Click"
                                                 Visibility="Collapsed"
-                                                ToolTipService.ToolTip="Open Nexus Mods page">
-                                            <TextBlock Text="Nexus" TextDecorations="Underline"/>
+                                                ToolTipService.ToolTip="Open Nexus Mods page" loc:Loc.ToolTipKey="DP_OpenNexus">
+                                            <TextBlock Text="Nexus" loc:Loc.Key="DP_Nexus" TextDecorations="Underline"/>
                                         </Button>
                                         <Button x:Name="DetailPcgwBtn" x:FieldModifier="internal"
                                                 Background="{StaticResource SurfaceOverlayBrush}"
@@ -425,8 +425,8 @@
                                                 FontSize="11"
                                                 Click="PcgwLink_Click"
                                                 Visibility="Collapsed"
-                                                ToolTipService.ToolTip="Open PCGamingWiki page">
-                                            <TextBlock Text="PCGW" TextDecorations="Underline"/>
+                                                ToolTipService.ToolTip="Open PCGamingWiki page" loc:Loc.ToolTipKey="DP_OpenPcgw">
+                                            <TextBlock Text="PCGW" loc:Loc.Key="DP_Pcgw" TextDecorations="Underline"/>
                                         </Button>
                                         <Button x:Name="DetailUwFixBtn" x:FieldModifier="internal"
                                                 Background="{StaticResource SurfaceOverlayBrush}"
@@ -436,8 +436,8 @@
                                                 FontSize="11"
                                                 Click="UwFixLink_Click"
                                                 Visibility="Collapsed"
-                                                ToolTipService.ToolTip="Open ultrawide fix page">
-                                            <TextBlock Text="UW Fix" TextDecorations="Underline"/>
+                                                ToolTipService.ToolTip="Open ultrawide fix page" loc:Loc.ToolTipKey="DP_OpenUwFix">
+                                            <TextBlock Text="UW Fix" loc:Loc.Key="DP_UwFix" TextDecorations="Underline"/>
                                         </Button>
                                         <Button x:Name="DetailUltraPlusBtn" x:FieldModifier="internal"
                                                 Background="{StaticResource SurfaceOverlayBrush}"
@@ -447,8 +447,8 @@
                                                 FontSize="11"
                                                 Click="UltraPlusLink_Click"
                                                 Visibility="Collapsed"
-                                                ToolTipService.ToolTip="Open Ultra+ page for this game">
-                                            <TextBlock Text="Ultra+" TextDecorations="Underline"/>
+                                                ToolTipService.ToolTip="Open Ultra+ page for this game" loc:Loc.ToolTipKey="DP_OpenUltraPlus">
+                                            <TextBlock Text="Ultra+" loc:Loc.Key="DP_UltraPlus" TextDecorations="Underline"/>
                                         </Button>
                                     </StackPanel>
 
@@ -553,8 +553,8 @@
                                             CornerRadius="6" Padding="8,4" MinWidth="0" MinHeight="0"
                                             FontSize="11" HorizontalAlignment="Stretch"
                                             Click="FavouriteButton_Click"
-                                            ToolTipService.ToolTip="Toggle favourite">
-                                        <TextBlock x:Name="DetailFavIcon" x:FieldModifier="internal" FontSize="11" Text="Favourite" HorizontalAlignment="Center"/>
+                                            ToolTipService.ToolTip="Toggle favourite" loc:Loc.ToolTipKey="DP_ToggleFavourite">
+                                        <TextBlock x:Name="DetailFavIcon" x:FieldModifier="internal" FontSize="11" Text="Favourite" loc:Loc.Key="Detail_Favourite" HorizontalAlignment="Center"/>
                                     </Button>
                                     <Button Grid.Row="1" Grid.Column="0" x:Name="DetailAppDataBtn" x:FieldModifier="internal"
                                             Background="{StaticResource SurfaceOverlayBrush}"
@@ -564,8 +564,8 @@
                                             FontSize="11" HorizontalAlignment="Stretch"
                                             Click="OpenAppData_Click"
                                             Visibility="Collapsed"
-                                            ToolTipService.ToolTip="Open game config folder in Explorer">
-                                        <TextBlock Text="Config" TextDecorations="Underline" HorizontalAlignment="Center"/>
+                                            ToolTipService.ToolTip="Open game config folder in Explorer" loc:Loc.ToolTipKey="DP_OpenConfigFolder">
+                                        <TextBlock Text="Config" loc:Loc.Key="DP_Config" TextDecorations="Underline" HorizontalAlignment="Center"/>
                                     </Button>
                                     <Button Grid.Row="1" Grid.Column="1" x:Name="DetailFolderBtn" x:FieldModifier="internal"
                                             Background="{StaticResource SurfaceOverlayBrush}"
@@ -574,8 +574,8 @@
                                             CornerRadius="6" Padding="8,4" MinWidth="0" MinHeight="0"
                                             FontSize="11" HorizontalAlignment="Stretch"
                                             Click="OpenFolder_Click"
-                                            ToolTipService.ToolTip="Open game folder in Explorer">
-                                        <TextBlock Text="Browse" TextDecorations="Underline" HorizontalAlignment="Center"/>
+                                            ToolTipService.ToolTip="Open game folder in Explorer" loc:Loc.ToolTipKey="DP_OpenGameFolder">
+                                        <TextBlock Text="Browse" loc:Loc.Key="Common_Browse" TextDecorations="Underline" HorizontalAlignment="Center"/>
                                     </Button>
                                 </Grid>
                             </Border>
@@ -596,7 +596,7 @@
                                         <ColumnDefinition Width="36"/>
                                         <ColumnDefinition Width="36"/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" Text="Components" FontSize="13" FontWeight="SemiBold"
+                                    <TextBlock Grid.Column="0" Text="Components" loc:Loc.Key="DP_Components" FontSize="13" FontWeight="SemiBold"
                                                Foreground="{StaticResource TextPrimaryBrush}" VerticalAlignment="Center"/>
                                     <TextBlock x:Name="DetailLumaInfoText" x:FieldModifier="internal" Grid.Column="3"
                                                FontSize="11" TextWrapping="Wrap" VerticalAlignment="Center"
@@ -627,7 +627,7 @@
                                                PointerPressed="DetailRefStatus_PointerPressed"
                                                PointerEntered="LinkText_PointerEntered" PointerExited="LinkText_PointerExited"/>
                                     <Button x:Name="DetailRefInfoBtn" x:FieldModifier="internal" Grid.Column="2"
-                                            Content="Info" FontSize="11" Padding="6,2,6,2"
+                                            Content="Info" loc:Loc.Key="Common_Info" FontSize="11" Padding="6,2,6,2"
                                             Background="{StaticResource SurfaceOverlayBrush}"
                                             Foreground="{StaticResource TextSecondaryBrush}"
                                             BorderBrush="{StaticResource BorderStrongBrush}" BorderThickness="1"
@@ -643,7 +643,7 @@
                                             Background="{StaticResource AccentRedBgBrush}" Foreground="{StaticResource AccentRedBrush}"
                                             BorderBrush="{StaticResource AccentPurpleBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Width="36" Height="32" Padding="0"
-                                            ToolTipService.ToolTip="Remove RE Framework" Opacity="0" IsHitTestVisible="False">
+                                            ToolTipService.ToolTip="Remove RE Framework" loc:Loc.ToolTipKey="DP_RemoveRef" Opacity="0" IsHitTestVisible="False">
                                         <TextBlock Text="✕" FontSize="12" HorizontalAlignment="Center" Foreground="{StaticResource AccentRedBrush}"/>
                                     </Button>
                                 </Grid>
@@ -665,7 +665,7 @@
                                                PointerPressed="DetailRsStatus_PointerPressed"
                                                PointerEntered="LinkText_PointerEntered" PointerExited="LinkText_PointerExited"/>
                                     <Button x:Name="DetailRsInfoBtn" x:FieldModifier="internal" Grid.Column="2"
-                                            Content="Info" FontSize="11" Padding="6,2,6,2"
+                                            Content="Info" loc:Loc.Key="Common_Info" FontSize="11" Padding="6,2,6,2"
                                             Background="{StaticResource SurfaceOverlayBrush}"
                                             Foreground="{StaticResource TextSecondaryBrush}"
                                             BorderBrush="{StaticResource BorderStrongBrush}" BorderThickness="1"
@@ -680,7 +680,7 @@
                                             Background="{StaticResource SurfaceOverlayBrush}" Foreground="{StaticResource TextSecondaryBrush}"
                                             BorderBrush="{StaticResource BorderStrongBrush}" BorderThickness="1"
                                             CornerRadius="8" Width="36" Height="32" Padding="0"
-                                            ToolTipService.ToolTip="ReShade Settings">
+                                            ToolTipService.ToolTip="ReShade Settings" loc:Loc.ToolTipKey="DP_ReShadeSettings">
                                         <TextBlock Text="⚙" FontSize="14" HorizontalAlignment="Center"/>
                                     </Button>
                                     <Button x:Name="DetailRsDeleteBtn" x:FieldModifier="internal" Grid.Column="5"
@@ -688,7 +688,7 @@
                                             Background="{StaticResource AccentRedBgBrush}" Foreground="{StaticResource AccentRedBrush}"
                                             BorderBrush="{StaticResource AccentPurpleBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Width="36" Height="32" Padding="0"
-                                            ToolTipService.ToolTip="Remove ReShade" Opacity="0" IsHitTestVisible="False">
+                                            ToolTipService.ToolTip="Remove ReShade" loc:Loc.ToolTipKey="DP_RemoveReShade" Opacity="0" IsHitTestVisible="False">
                                         <TextBlock Text="✕" FontSize="12" HorizontalAlignment="Center" Foreground="{StaticResource AccentRedBrush}"/>
                                     </Button>
                                 </Grid>
@@ -725,7 +725,7 @@
                                                PointerPressed="DetailRdxStatus_PointerPressed"
                                                PointerEntered="LinkText_PointerEntered" PointerExited="LinkText_PointerExited"/>
                                     <Button x:Name="DetailRdxInfoBtn" x:FieldModifier="internal" Grid.Column="2"
-                                            Content="Info" FontSize="11" Padding="6,2,6,2"
+                                            Content="Info" loc:Loc.Key="Common_Info" FontSize="11" Padding="6,2,6,2"
                                             Background="{StaticResource SurfaceOverlayBrush}"
                                             Foreground="{StaticResource TextSecondaryBrush}"
                                             BorderBrush="{StaticResource BorderStrongBrush}" BorderThickness="1"
@@ -740,7 +740,7 @@
                                             Background="{StaticResource SurfaceOverlayBrush}" Foreground="{StaticResource TextSecondaryBrush}"
                                             BorderBrush="{StaticResource BorderStrongBrush}" BorderThickness="1"
                                             CornerRadius="8" Width="36" Height="32" Padding="0"
-                                            ToolTipService.ToolTip="RenoDX Settings">
+                                            ToolTipService.ToolTip="RenoDX Settings" loc:Loc.ToolTipKey="DP_RenoDxSettings">
                                         <TextBlock Text="⚙" FontSize="14" HorizontalAlignment="Center"/>
                                     </Button>
                                     <Button x:Name="DetailRdxDeleteBtn" x:FieldModifier="internal" Grid.Column="5"
@@ -748,7 +748,7 @@
                                             Background="{StaticResource AccentRedBgBrush}" Foreground="{StaticResource AccentRedBrush}"
                                             BorderBrush="{StaticResource AccentPurpleBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Width="36" Height="32" Padding="0"
-                                            ToolTipService.ToolTip="Remove RenoDX mod" Opacity="0" IsHitTestVisible="False">
+                                            ToolTipService.ToolTip="Remove RenoDX mod" loc:Loc.ToolTipKey="DP_RemoveRenoDx" Opacity="0" IsHitTestVisible="False">
                                         <TextBlock Text="✕" FontSize="12" HorizontalAlignment="Center" Foreground="{StaticResource AccentRedBrush}"/>
                                     </Button>
                                 </Grid>
@@ -770,7 +770,7 @@
                                                PointerPressed="DetailLumaStatus_PointerPressed"
                                                PointerEntered="LinkText_PointerEntered" PointerExited="LinkText_PointerExited"/>
                                     <Button x:Name="DetailLumaInfoBtn" x:FieldModifier="internal" Grid.Column="2"
-                                            Content="Info" FontSize="11" Padding="6,2,6,2"
+                                            Content="Info" loc:Loc.Key="Common_Info" FontSize="11" Padding="6,2,6,2"
                                             Background="{StaticResource SurfaceOverlayBrush}"
                                             Foreground="{StaticResource TextSecondaryBrush}"
                                             BorderBrush="{StaticResource BorderStrongBrush}" BorderThickness="1"
@@ -786,7 +786,7 @@
                                             Background="{StaticResource SurfaceOverlayBrush}" Foreground="{StaticResource TextSecondaryBrush}"
                                             BorderBrush="{StaticResource BorderStrongBrush}" BorderThickness="1"
                                             CornerRadius="8" Width="36" Height="32" Padding="0"
-                                            ToolTipService.ToolTip="Luma Settings">
+                                            ToolTipService.ToolTip="Luma Settings" loc:Loc.ToolTipKey="DP_LumaSettings">
                                         <TextBlock Text="⚙" FontSize="12" HorizontalAlignment="Center"/>
                                     </Button>
                                     <Button x:Name="DetailLumaDeleteBtn" x:FieldModifier="internal" Grid.Column="5"
@@ -794,7 +794,7 @@
                                             Background="{StaticResource AccentRedBgBrush}" Foreground="{StaticResource AccentRedBrush}"
                                             BorderBrush="{StaticResource AccentPurpleBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Width="36" Height="32" Padding="0"
-                                            ToolTipService.ToolTip="Remove Luma mod" Opacity="0" IsHitTestVisible="False">
+                                            ToolTipService.ToolTip="Remove Luma mod" loc:Loc.ToolTipKey="DP_RemoveLuma" Opacity="0" IsHitTestVisible="False">
                                         <TextBlock Text="✕" FontSize="12" HorizontalAlignment="Center" Foreground="{StaticResource AccentRedBrush}"/>
                                     </Button>
                                 </Grid>
@@ -831,7 +831,7 @@
                                                PointerPressed="DetailDofFixStatus_PointerPressed"
                                                PointerEntered="LinkText_PointerEntered" PointerExited="LinkText_PointerExited"/>
                                     <Button x:Name="DetailDofFixInfoBtn" x:FieldModifier="internal" Grid.Column="2"
-                                            Content="Info" FontSize="11" Padding="6,2,6,2"
+                                            Content="Info" loc:Loc.Key="Common_Info" FontSize="11" Padding="6,2,6,2"
                                             Background="{StaticResource SurfaceOverlayBrush}"
                                             Foreground="{StaticResource TextSecondaryBrush}"
                                             BorderBrush="{StaticResource BorderStrongBrush}" BorderThickness="1"
@@ -847,7 +847,7 @@
                                             Background="{StaticResource SurfaceOverlayBrush}" Foreground="{StaticResource TextSecondaryBrush}"
                                             BorderBrush="{StaticResource BorderStrongBrush}" BorderThickness="1"
                                             CornerRadius="8" Width="36" Height="32" Padding="0"
-                                            ToolTipService.ToolTip="DOF Fix Settings">
+                                            ToolTipService.ToolTip="DOF Fix Settings" loc:Loc.ToolTipKey="DP_DofFixSettings">
                                         <TextBlock Text="⚙" FontSize="14" HorizontalAlignment="Center"/>
                                     </Button>
                                     <Button x:Name="DetailDofFixDeleteBtn" x:FieldModifier="internal" Grid.Column="5"
@@ -855,7 +855,7 @@
                                             Background="{StaticResource AccentRedBgBrush}" Foreground="{StaticResource AccentRedBrush}"
                                             BorderBrush="{StaticResource AccentPurpleBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Width="36" Height="32" Padding="0"
-                                            ToolTipService.ToolTip="Remove DOF Fix" Opacity="0" IsHitTestVisible="False">
+                                            ToolTipService.ToolTip="Remove DOF Fix" loc:Loc.ToolTipKey="DP_RemoveDofFix" Opacity="0" IsHitTestVisible="False">
                                         <TextBlock Text="✕" FontSize="12" HorizontalAlignment="Center" Foreground="{StaticResource AccentRedBrush}"/>
                                     </Button>
                                 </Grid>
@@ -885,14 +885,14 @@
                                         <ColumnDefinition Width="36"/>
                                         <ColumnDefinition Width="36"/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock x:Name="DetailUlLabel" x:FieldModifier="internal" Grid.Column="0" Text="ReLimiter" FontSize="12"
+                                    <TextBlock x:Name="DetailUlLabel" x:FieldModifier="internal" Grid.Column="0" Text="ReLimiter" loc:Loc.Key="Settings_ReLimiter" FontSize="12"
                                                Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center"/>
                                     <TextBlock x:Name="DetailUlStatus" x:FieldModifier="internal" Grid.Column="1" FontSize="12"
                                                VerticalAlignment="Center" HorizontalTextAlignment="Center"
                                                PointerPressed="DetailUlStatus_PointerPressed"
                                                PointerEntered="LinkText_PointerEntered" PointerExited="LinkText_PointerExited"/>
                                     <Button x:Name="DetailUlInfoBtn" x:FieldModifier="internal" Grid.Column="2"
-                                            Content="Info" FontSize="11" Padding="6,2,6,2"
+                                            Content="Info" loc:Loc.Key="Common_Info" FontSize="11" Padding="6,2,6,2"
                                             Background="{StaticResource SurfaceOverlayBrush}"
                                             Foreground="{StaticResource TextSecondaryBrush}"
                                             BorderBrush="{StaticResource BorderStrongBrush}" BorderThickness="1"
@@ -907,7 +907,7 @@
                                             Background="{StaticResource SurfaceOverlayBrush}" Foreground="{StaticResource TextSecondaryBrush}"
                                             BorderBrush="{StaticResource BorderStrongBrush}" BorderThickness="1"
                                             CornerRadius="8" Width="36" Height="32" Padding="0"
-                                            ToolTipService.ToolTip="ReLimiter Settings">
+                                            ToolTipService.ToolTip="ReLimiter Settings" loc:Loc.ToolTipKey="DP_ReLimiterSettings">
                                         <TextBlock Text="⚙" FontSize="14" HorizontalAlignment="Center"/>
                                     </Button>
                                     <Button x:Name="DetailUlDeleteBtn" x:FieldModifier="internal" Grid.Column="5"
@@ -915,7 +915,7 @@
                                             Background="{StaticResource AccentRedBgBrush}" Foreground="{StaticResource AccentRedBrush}"
                                             BorderBrush="{StaticResource AccentPurpleBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Width="36" Height="32" Padding="0"
-                                            ToolTipService.ToolTip="Remove ReLimiter" Opacity="0" IsHitTestVisible="False">
+                                            ToolTipService.ToolTip="Remove ReLimiter" loc:Loc.ToolTipKey="DP_RemoveReLimiter" Opacity="0" IsHitTestVisible="False">
                                         <TextBlock Text="✕" FontSize="12" HorizontalAlignment="Center" Foreground="{StaticResource AccentRedBrush}"/>
                                     </Button>
                                 </Grid>
@@ -937,7 +937,7 @@
                                                PointerPressed="DetailDcStatus_PointerPressed"
                                                PointerEntered="LinkText_PointerEntered" PointerExited="LinkText_PointerExited"/>
                                     <Button x:Name="DetailDcInfoBtn" x:FieldModifier="internal" Grid.Column="2"
-                                            Content="Info" FontSize="11" Padding="6,2,6,2"
+                                            Content="Info" loc:Loc.Key="Common_Info" FontSize="11" Padding="6,2,6,2"
                                             Background="{StaticResource SurfaceOverlayBrush}"
                                             Foreground="{StaticResource TextSecondaryBrush}"
                                             BorderBrush="{StaticResource BorderStrongBrush}" BorderThickness="1"
@@ -952,7 +952,7 @@
                                             Background="{StaticResource SurfaceOverlayBrush}" Foreground="{StaticResource TextSecondaryBrush}"
                                             BorderBrush="{StaticResource BorderStrongBrush}" BorderThickness="1"
                                             CornerRadius="8" Width="36" Height="32" Padding="0"
-                                            ToolTipService.ToolTip="Display Commander Settings">
+                                            ToolTipService.ToolTip="Display Commander Settings" loc:Loc.ToolTipKey="DP_DcSettings">
                                         <TextBlock Text="⚙" FontSize="14" HorizontalAlignment="Center"/>
                                     </Button>
                                     <Button x:Name="DetailDcDeleteBtn" x:FieldModifier="internal" Grid.Column="5"
@@ -960,7 +960,7 @@
                                             Background="{StaticResource AccentRedBgBrush}" Foreground="{StaticResource AccentRedBrush}"
                                             BorderBrush="{StaticResource AccentPurpleBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Width="36" Height="32" Padding="0"
-                                            ToolTipService.ToolTip="Remove Display Commander" Opacity="0" IsHitTestVisible="False">
+                                            ToolTipService.ToolTip="Remove Display Commander" loc:Loc.ToolTipKey="DP_RemoveDc" Opacity="0" IsHitTestVisible="False">
                                         <TextBlock Text="✕" FontSize="12" HorizontalAlignment="Center" Foreground="{StaticResource AccentRedBrush}"/>
                                     </Button>
                                 </Grid>
@@ -990,14 +990,14 @@
                                         <ColumnDefinition Width="36"/>
                                         <ColumnDefinition Width="36"/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock x:Name="DetailOsLabel" x:FieldModifier="internal" Grid.Column="0" Text="OptiScaler" FontSize="12"
+                                    <TextBlock x:Name="DetailOsLabel" x:FieldModifier="internal" Grid.Column="0" Text="OptiScaler" loc:Loc.Key="Settings_OptiScaler" FontSize="12"
                                                Foreground="{StaticResource TextSecondaryBrush}" VerticalAlignment="Center"/>
                                     <TextBlock x:Name="DetailOsStatus" x:FieldModifier="internal" Grid.Column="1" FontSize="12"
                                                VerticalAlignment="Center" HorizontalTextAlignment="Center"
                                                PointerPressed="DetailOsStatus_PointerPressed"
                                                PointerEntered="LinkText_PointerEntered" PointerExited="LinkText_PointerExited"/>
                                     <Button x:Name="DetailOsInfoBtn" x:FieldModifier="internal" Grid.Column="2"
-                                            Content="Info" FontSize="11" Padding="6,2,6,2"
+                                            Content="Info" loc:Loc.Key="Common_Info" FontSize="11" Padding="6,2,6,2"
                                             Background="{StaticResource SurfaceOverlayBrush}"
                                             Foreground="{StaticResource TextSecondaryBrush}"
                                             BorderBrush="{StaticResource BorderStrongBrush}" BorderThickness="1"
@@ -1012,7 +1012,7 @@
                                             Background="{StaticResource SurfaceOverlayBrush}" Foreground="{StaticResource TextSecondaryBrush}"
                                             BorderBrush="{StaticResource BorderStrongBrush}" BorderThickness="1"
                                             CornerRadius="8" Width="36" Height="32" Padding="0"
-                                            ToolTipService.ToolTip="OptiScaler Settings">
+                                            ToolTipService.ToolTip="OptiScaler Settings" loc:Loc.ToolTipKey="DP_OptiScalerSettings">
                                         <TextBlock Text="⚙" FontSize="14" HorizontalAlignment="Center"/>
                                     </Button>
                                     <Button x:Name="DetailOsDeleteBtn" x:FieldModifier="internal" Grid.Column="5"
@@ -1020,7 +1020,7 @@
                                             Background="{StaticResource AccentRedBgBrush}" Foreground="{StaticResource AccentRedBrush}"
                                             BorderBrush="{StaticResource AccentPurpleBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Width="36" Height="32" Padding="0"
-                                            ToolTipService.ToolTip="Remove OptiScaler" Opacity="0" IsHitTestVisible="False">
+                                            ToolTipService.ToolTip="Remove OptiScaler" loc:Loc.ToolTipKey="DP_RemoveOptiScaler" Opacity="0" IsHitTestVisible="False">
                                         <TextBlock Text="✕" FontSize="12" HorizontalAlignment="Center" Foreground="{StaticResource AccentRedBrush}"/>
                                     </Button>
                                 </Grid>
@@ -1042,7 +1042,7 @@
                                                PointerPressed="DetailDxvkStatus_PointerPressed"
                                                PointerEntered="LinkText_PointerEntered" PointerExited="LinkText_PointerExited"/>
                                     <Button x:Name="DetailDxvkInfoBtn" x:FieldModifier="internal" Grid.Column="2"
-                                            Content="Info" FontSize="11" Padding="6,2,6,2"
+                                            Content="Info" loc:Loc.Key="Common_Info" FontSize="11" Padding="6,2,6,2"
                                             Background="{StaticResource SurfaceOverlayBrush}"
                                             Foreground="{StaticResource TextSecondaryBrush}"
                                             BorderBrush="{StaticResource BorderStrongBrush}" BorderThickness="1"
@@ -1057,7 +1057,7 @@
                                             Background="{StaticResource SurfaceOverlayBrush}" Foreground="{StaticResource TextSecondaryBrush}"
                                             BorderBrush="{StaticResource BorderStrongBrush}" BorderThickness="1"
                                             CornerRadius="8" Width="36" Height="32" Padding="0"
-                                            ToolTipService.ToolTip="DXVK Settings">
+                                            ToolTipService.ToolTip="DXVK Settings" loc:Loc.ToolTipKey="DP_DxvkSettings">
                                         <TextBlock Text="⚙" FontSize="14" HorizontalAlignment="Center"/>
                                     </Button>
                                     <Button x:Name="DetailDxvkDeleteBtn" x:FieldModifier="internal" Grid.Column="5"
@@ -1065,7 +1065,7 @@
                                             Background="{StaticResource AccentRedBgBrush}" Foreground="{StaticResource AccentRedBrush}"
                                             BorderBrush="{StaticResource AccentPurpleBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Width="36" Height="32" Padding="0"
-                                            ToolTipService.ToolTip="Remove DXVK" Opacity="0" IsHitTestVisible="False">
+                                            ToolTipService.ToolTip="Remove DXVK" loc:Loc.ToolTipKey="DP_RemoveDxvk" Opacity="0" IsHitTestVisible="False">
                                         <TextBlock Text="✕" FontSize="12" HorizontalAlignment="Center" Foreground="{StaticResource AccentRedBrush}"/>
                                     </Button>
                                 </Grid>
@@ -1074,7 +1074,7 @@
                                 <Border x:Name="DetailNoModMsg" x:FieldModifier="internal" Visibility="Collapsed"
                                         Background="{StaticResource AccentPurpleBgBrush}" CornerRadius="8" Padding="12,8"
                                         BorderBrush="{StaticResource AccentPurpleBorderBrush}" BorderThickness="1">
-                                    <TextBlock Text="No RenoDX mod available for this game"
+                                    <TextBlock Text="No RenoDX mod available for this game" loc:Loc.Key="DP_NoRenoDxMod"
                                                FontSize="12" Foreground="{StaticResource TextDisabledBrush}" TextAlignment="Center"/>
                                 </Border>
 
@@ -1206,7 +1206,7 @@
                                 Background="{StaticResource SurfaceOverlayBrush}" Foreground="{StaticResource TextSecondaryBrush}"
                                 BorderBrush="{StaticResource BorderDefaultBrush}" BorderThickness="1"
                                 CornerRadius="8" Padding="12,6" FontSize="12"/>
-                        <TextBlock Text="Settings" FontSize="20" FontWeight="Bold"
+                        <TextBlock Text="Settings" loc:Loc.Key="Toolbar_Settings" FontSize="20" FontWeight="Bold"
                                    Foreground="{StaticResource TextPrimaryBrush}" VerticalAlignment="Center"/>
                     </StackPanel>
                 </Border>
@@ -1222,7 +1222,7 @@
                         <Border Background="{StaticResource SurfaceRaisedBrush}" CornerRadius="10" Padding="20,16"
                                 BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1">
                             <StackPanel Spacing="12">
-                            <TextBlock Text="Component Updates" FontSize="15" FontWeight="Bold"
+                            <TextBlock Text="Component Updates" loc:Loc.Key="Settings_ComponentUpdates" FontSize="15" FontWeight="Bold"
                                        Foreground="{StaticResource TextPrimaryBrush}"/>
                             <Grid ColumnSpacing="0" RowSpacing="8">
                                 <Grid.ColumnDefinitions>
@@ -1238,18 +1238,18 @@
                                         <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
                                     <StackPanel Grid.Row="0" Spacing="8">
-                                        <TextBlock Text="Check For Updates" FontSize="13" FontWeight="SemiBold"
+                                        <TextBlock Text="Check For Updates" loc:Loc.Key="Settings_CheckForUpdates" FontSize="13" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
                                                    Text="Fetches the latest manifest data and checks all components for available updates. Bypasses the 4-hour cooldown."/>
                                     </StackPanel>
-                                    <Button Grid.Row="1" x:Name="CheckForUpdatesBtn" Content="Check For Updates"
+                                    <Button Grid.Row="1" x:Name="CheckForUpdatesBtn" Content="Check For Updates" loc:Loc.Key="Settings_CheckForUpdates"
                                             Click="CheckForUpdatesButton_Click"
                                             Background="{StaticResource AccentBlueBgBrush}" Foreground="{StaticResource AccentBlueBrush}"
                                             BorderBrush="{StaticResource AccentBlueBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Padding="12,7" FontSize="12"
                                             HorizontalAlignment="Stretch"
-                                            ToolTipService.ToolTip="Check all components and the app for available updates"/>
+                                            ToolTipService.ToolTip="Check all components and the app for available updates" loc:Loc.ToolTipKey="Settings_CheckForUpdatesTip"/>
                                 </Grid>
 
                                 <!-- Divider -->
@@ -1259,7 +1259,7 @@
 
                                 <!-- Right: Automatic Updates -->
                                 <StackPanel Grid.Column="2" Spacing="8">
-                                    <TextBlock Text="Automatic Updates" FontSize="13" FontWeight="SemiBold"
+                                    <TextBlock Text="Automatic Updates" loc:Loc.Key="Settings_AutomaticUpdates" FontSize="13" FontWeight="SemiBold"
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
                                     <TextBlock TextWrapping="Wrap" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
                                                Text="When enabled, RHI silently installs component updates in the background after each update check. Games that are running when an update is detected will be retried automatically once they close. Does not apply to app updates."/>
@@ -1268,7 +1268,7 @@
                                               ToolTipService.ToolTip="Automatically install ReShade, RenoDX, ReLimiter, DC, OptiScaler, RE Framework, Luma, DXVK and DOF Fix updates silently in the background"
                                               SelectionChanged="AutoUpdateComponentsCombo_SelectionChanged">
                                         <ComboBoxItem Content="No"/>
-                                        <ComboBoxItem Content="Yes"/>
+                                        <ComboBoxItem Content="Yes" loc:Loc.Key="Common_Yes"/>
                                     </ComboBox>
                                 </StackPanel>
                             </Grid>
@@ -1281,7 +1281,7 @@
                         <Border Background="{StaticResource SurfaceRaisedBrush}" CornerRadius="10" Padding="20,16"
                                 BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1">
                             <StackPanel Spacing="12">
-                            <TextBlock Text="ReShade &amp; Display" FontSize="15" FontWeight="Bold"
+                            <TextBlock Text="ReShade &amp; Display" loc:Loc.Key="Settings_ReShadeDisplay" FontSize="15" FontWeight="Bold"
                                        Foreground="{StaticResource TextPrimaryBrush}"/>
                             <Grid ColumnSpacing="0" RowSpacing="8">
                                 <Grid.ColumnDefinitions>
@@ -1299,7 +1299,7 @@
 
                                 <!-- ── Left: Screenshots & Hotkeys ── -->
                                 <StackPanel Grid.Row="0" Grid.Column="0" Spacing="4">
-                                    <TextBlock Text="Screenshots &amp; Hotkeys" FontSize="14" FontWeight="SemiBold"
+                                    <TextBlock Text="Screenshots &amp; Hotkeys" loc:Loc.Key="Settings_ScreenshotsHotkeys" FontSize="14" FontWeight="SemiBold"
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
                                     <TextBlock TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
@@ -1313,7 +1313,7 @@
 
                                 <!-- ── Right: HDR & Peak Brightness ── -->
                                 <StackPanel Grid.Row="0" Grid.Column="2" Spacing="4">
-                                    <TextBlock Text="HDR &amp; Peak Brightness" FontSize="14" FontWeight="SemiBold"
+                                    <TextBlock Text="HDR &amp; Peak Brightness" loc:Loc.Key="Settings_HdrPeakBrightness" FontSize="14" FontWeight="SemiBold"
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
                                     <TextBlock TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
@@ -1328,7 +1328,7 @@
                                     </Grid.ColumnDefinitions>
                                     <Grid Grid.Column="0">
                                         <TextBox x:Name="ScreenshotPathBox" x:FieldModifier="internal"
-                                                 PlaceholderText="Type or choose screenshot folder"
+                                                 PlaceholderText="Type or choose screenshot folder" loc:Loc.Key="Settings_ScreenshotFolderPlaceholder"
                                                  FontSize="12" Padding="12,8,36,8"
                                                  Background="{StaticResource SurfaceInputBrush}"
                                                  Foreground="{StaticResource TextSecondaryBrush}"
@@ -1338,16 +1338,16 @@
                                                 Padding="8,6" MinWidth="0" MinHeight="0"
                                                 HorizontalAlignment="Right" VerticalAlignment="Center"
                                                 Margin="0,0,4,0"
-                                                ToolTipService.ToolTip="Pick a folder for screenshots">
+                                                ToolTipService.ToolTip="Pick a folder for screenshots" loc:Loc.ToolTipKey="Settings_PickScreenshotFolderTip">
                                             <FontIcon Glyph="&#xED25;" FontSize="14"
                                                       Foreground="{StaticResource TextTertiaryBrush}"/>
                                         </Button>
                                     </Grid>
-                                    <Button Grid.Column="1" Content="Open" Click="OpenScreenshotFolder_Click"
+                                    <Button Grid.Column="1" Content="Open" loc:Loc.Key="Common_Open" Click="OpenScreenshotFolder_Click"
                                             Background="{StaticResource AccentBlueBgBrush}" Foreground="{StaticResource AccentBlueBrush}"
                                             BorderBrush="{StaticResource AccentBlueBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Padding="12,6" FontSize="12"
-                                            ToolTipService.ToolTip="Open the screenshot folder in Explorer"/>
+                                            ToolTipService.ToolTip="Open the screenshot folder in Explorer" loc:Loc.ToolTipKey="Settings_OpenScreenshotFolderTip"/>
                                 </Grid>
 
                                 <!-- Row 1 Right: Peak Nits -->
@@ -1358,18 +1358,18 @@
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" Text="Peak Nits" FontSize="12"
+                                    <TextBlock Grid.Column="0" Text="Peak Nits" loc:Loc.Key="Settings_PeakNits" FontSize="12"
                                                Foreground="{StaticResource TextSecondaryBrush}"
                                                VerticalAlignment="Center"/>
                                     <Button Grid.Column="1" x:Name="PeakNitsAutoBtn"
-                                            Content="Auto" Click="PeakNitsAuto_Click"
+                                            Content="Auto" loc:Loc.Key="Settings_Auto" Click="PeakNitsAuto_Click"
                                             Background="{StaticResource AccentBlueBgBrush}"
                                             Foreground="{StaticResource AccentBlueBrush}"
                                             BorderBrush="{StaticResource AccentBlueBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Padding="10,5" FontSize="12"
-                                            ToolTipService.ToolTip="Reads your monitor's peak brightness automatically."/>
+                                            ToolTipService.ToolTip="Reads your monitor's peak brightness automatically." loc:Loc.ToolTipKey="Settings_PeakNitsAutoTip"/>
                                     <TextBox Grid.Column="2" x:Name="PeakNitsBox" x:FieldModifier="internal"
-                                             PlaceholderText="nits" FontSize="12"
+                                             PlaceholderText="nits" loc:Loc.Key="Settings_NitsPlaceholder" FontSize="12"
                                              VerticalContentAlignment="Center"
                                              Background="{StaticResource SurfaceInputBrush}"
                                              Foreground="{StaticResource TextSecondaryBrush}"
@@ -1381,7 +1381,7 @@
                                             BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1"
                                             CornerRadius="6" Padding="8,4" MinWidth="0" MinHeight="0"
                                             FontSize="12" VerticalAlignment="Center"
-                                            ToolTipService.ToolTip="Configure which presets receive the global peak nits value."/>
+                                            ToolTipService.ToolTip="Configure which presets receive the global peak nits value." loc:Loc.ToolTipKey="Settings_PeakNitsPresetsTip"/>
                                 </Grid>
 
                                 <!-- Row 2 Left: Overlay key | Screenshot key | Per-Game Folders combo -->
@@ -1397,15 +1397,15 @@
                                     </Grid.RowDefinitions>
                                     <TextBlock Grid.Row="0" Grid.Column="0" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}"
-                                               Text="Overlay key" Margin="0,0,0,3"/>
+                                               Text="Overlay key" loc:Loc.Key="Settings_OverlayKey" Margin="0,0,0,3"/>
                                     <TextBlock Grid.Row="0" Grid.Column="1" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}"
-                                               Text="Screenshot key" Margin="0,0,0,3"/>
+                                               Text="Screenshot key" loc:Loc.Key="Settings_ScreenshotKey" Margin="0,0,0,3"/>
                                     <TextBlock Grid.Row="0" Grid.Column="2" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}"
-                                               Text="Subfolders" Margin="0,0,0,3"/>
+                                               Text="Subfolders" loc:Loc.Key="Settings_Subfolders" Margin="0,0,0,3"/>
                                     <TextBox Grid.Row="1" Grid.Column="0" x:Name="HotkeyBox" x:FieldModifier="internal"
-                                             PlaceholderText="Press a key..." IsReadOnly="True" FontSize="12"
+                                             PlaceholderText="Press a key..." loc:Loc.Key="Settings_PressKeyPlaceholder" IsReadOnly="True" FontSize="12"
                                              VerticalContentAlignment="Center"
                                              Background="{StaticResource SurfaceInputBrush}"
                                              Foreground="{StaticResource TextSecondaryBrush}"
@@ -1417,14 +1417,14 @@
                                             <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
                                         <TextBox Grid.Column="0" x:Name="ScreenshotHotkeyBox" x:FieldModifier="internal"
-                                                 PlaceholderText="Press a key..." IsReadOnly="True" FontSize="12"
+                                                 PlaceholderText="Press a key..." loc:Loc.Key="Settings_PressKeyPlaceholder" IsReadOnly="True" FontSize="12"
                                                  VerticalContentAlignment="Center"
                                                  Background="{StaticResource SurfaceInputBrush}"
                                                  Foreground="{StaticResource TextSecondaryBrush}"
                                                  BorderBrush="{StaticResource BorderSubtleBrush}"
                                                  PreviewKeyDown="ScreenshotHotkeyBox_PreviewKeyDown"/>
                                         <Button Grid.Column="1" Content="↺" Click="ResetScreenshotHotkey_Click"
-                                                ToolTipService.ToolTip="Reset to Print Screen"
+                                                ToolTipService.ToolTip="Reset to Print Screen" loc:Loc.ToolTipKey="Settings_ResetToPrintScreenTip"
                                                 Background="Transparent" BorderThickness="0"
                                                 Padding="6,4" MinWidth="0" MinHeight="0" FontSize="14"
                                                 Foreground="{StaticResource TextTertiaryBrush}"
@@ -1432,16 +1432,16 @@
                                     </Grid>
                                     <ComboBox Grid.Row="1" Grid.Column="2" x:Name="PerGameScreenshotCombo" x:FieldModifier="internal"
                                               FontSize="12" MinWidth="60"
-                                              ToolTipService.ToolTip="When On, each game gets its own screenshot subfolder."
+                                              ToolTipService.ToolTip="When On, each game gets its own screenshot subfolder." loc:Loc.ToolTipKey="Settings_PerGameScreenshotTip"
                                               SelectionChanged="PerGameScreenshotCombo_SelectionChanged">
-                                        <ComboBoxItem Content="Off"/>
-                                        <ComboBoxItem Content="On"/>
+                                        <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
+                                        <ComboBoxItem Content="On" loc:Loc.Key="Common_On"/>
                                     </ComboBox>
                                 </Grid>
 
                                 <!-- Row 2 Right: Apply to All Games (nits) -->
                                 <Button Grid.Row="2" Grid.Column="2" x:Name="ApplyScreenshotPathBtn"
-                                        Content="Apply to All Games"
+                                        Content="Apply to All Games" loc:Loc.Key="Settings_ApplyToAllGames"
                                         Click="ApplyPeakNitsToAll_Click"
                                         Background="{StaticResource AccentBlueBgBrush}"
                                         Foreground="{StaticResource AccentBlueBrush}"
@@ -1455,15 +1455,15 @@
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" Text="HDR Auto-Toggle" FontSize="12"
+                                    <TextBlock Grid.Column="0" Text="HDR Auto-Toggle" loc:Loc.Key="Settings_HdrAutoToggle" FontSize="12"
                                                Foreground="{StaticResource TextSecondaryBrush}"
                                                VerticalAlignment="Center"/>
                                     <ComboBox Grid.Column="1" x:Name="HdrAutoToggleCombo" x:FieldModifier="internal"
                                               FontSize="12" HorizontalAlignment="Stretch" VerticalAlignment="Center"
                                               ToolTipService.ToolTip="When On, Windows HDR is automatically enabled when launching a game through RHI and disabled when the game exits."
                                               SelectionChanged="HdrAutoToggleCombo_SelectionChanged">
-                                        <ComboBoxItem Content="Off"/>
-                                        <ComboBoxItem Content="On"/>
+                                        <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
+                                        <ComboBoxItem Content="On" loc:Loc.Key="Common_On"/>
                                     </ComboBox>
                                     <Button Grid.Column="2" Content="⚙" Click="HdrSelectMonitors_Click"
                                             Background="{StaticResource SurfaceOverlayBrush}"
@@ -1480,21 +1480,21 @@
                                         <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" Text="Effect list style" FontSize="12"
+                                    <TextBlock Grid.Column="0" Text="Effect list style" loc:Loc.Key="Settings_EffectListStyle" FontSize="12"
                                                Foreground="{StaticResource TextSecondaryBrush}"
                                                VerticalAlignment="Center"/>
                                     <ComboBox Grid.Column="1" x:Name="RsVariableListUseTabsCombo" x:FieldModifier="internal"
                                               FontSize="12" HorizontalAlignment="Stretch"
                                               ToolTipService.ToolTip="Controls how shaders are displayed in the ReShade overlay. Tabs groups effect files into named tabs; Tree shows a collapsible hierarchy."
                                               SelectionChanged="RsVariableListUseTabsCombo_SelectionChanged">
-                                        <ComboBoxItem Content="Tabs"/>
-                                        <ComboBoxItem Content="Tree"/>
+                                        <ComboBoxItem Content="Tabs" loc:Loc.Key="Settings_Tabs"/>
+                                        <ComboBoxItem Content="Tree" loc:Loc.Key="Settings_Tree"/>
                                     </ComboBox>
                                 </Grid>
 
                                 <!-- Row 4: Apply buttons -->
                                 <Button Grid.Row="4" Grid.Column="0" x:Name="ApplyHotkeyBtn" x:FieldModifier="internal"
-                                        Content="Apply to All Games"
+                                        Content="Apply to All Games" loc:Loc.Key="Settings_ApplyToAllGames"
                                         Click="ApplyScreenshotPath_Click"
                                         Background="{StaticResource AccentBlueBgBrush}"
                                         Foreground="{StaticResource AccentBlueBrush}"
@@ -1513,7 +1513,7 @@
                                 Background="{StaticResource SurfaceRaisedBrush}" CornerRadius="10" Padding="20,16"
                                 BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1">
                             <StackPanel Spacing="12">
-                                <TextBlock Text="Resolution Control" FontSize="15" FontWeight="Bold"
+                                <TextBlock Text="Resolution Control" loc:Loc.Key="Settings_ResolutionControl" FontSize="15" FontWeight="Bold"
                                            Foreground="{StaticResource TextPrimaryBrush}"/>
                                 <Grid ColumnSpacing="0" RowSpacing="8">
                                     <Grid.ColumnDefinitions>
@@ -1528,7 +1528,7 @@
 
                                     <!-- Left: description -->
                                     <StackPanel Grid.Row="0" Grid.Column="0" Spacing="4">
-                                        <TextBlock Text="Target Resolution" FontSize="14" FontWeight="SemiBold"
+                                        <TextBlock Text="Target Resolution" loc:Loc.Key="Settings_TargetResolution" FontSize="14" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11"
                                                    Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
@@ -1542,7 +1542,7 @@
 
                                     <!-- Right: Auto-Toggle On/Off + cog -->
                                     <StackPanel Grid.Row="0" Grid.Column="2" Spacing="4">
-                                        <TextBlock Text="Resolution Auto-Toggle" FontSize="14" FontWeight="SemiBold"
+                                        <TextBlock Text="Resolution Auto-Toggle" loc:Loc.Key="Settings_ResolutionAutoToggle" FontSize="14" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11"
                                                    Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
@@ -1563,15 +1563,15 @@
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Grid.Column="0" Text="Resolution Auto-Toggle" FontSize="12"
+                                        <TextBlock Grid.Column="0" Text="Resolution Auto-Toggle" loc:Loc.Key="Settings_ResolutionAutoToggle" FontSize="12"
                                                    Foreground="{StaticResource TextSecondaryBrush}"
                                                    VerticalAlignment="Center"/>
                                         <ComboBox Grid.Column="1" x:Name="ResAutoToggleCombo" x:FieldModifier="internal"
                                                   FontSize="12" HorizontalAlignment="Stretch" VerticalAlignment="Center"
                                                   ToolTipService.ToolTip="When On, switches desktop resolution on game launch and restores on exit."
                                                   SelectionChanged="ResAutoToggleCombo_SelectionChanged">
-                                            <ComboBoxItem Content="Off"/>
-                                            <ComboBoxItem Content="On"/>
+                                            <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
+                                            <ComboBoxItem Content="On" loc:Loc.Key="Common_On"/>
                                         </ComboBox>
                                         <Button Grid.Column="2" Content="⚙" Click="ResSelectMonitors_Click"
                                                 Background="{StaticResource SurfaceOverlayBrush}"
@@ -1593,7 +1593,7 @@
                                 Background="{StaticResource SurfaceRaisedBrush}" CornerRadius="10" Padding="20,16"
                                 BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1">
                             <StackPanel Spacing="12">
-                                <TextBlock Text="Nexus Mods" FontSize="15" FontWeight="Bold"
+                                <TextBlock Text="Nexus Mods" loc:Loc.Key="Settings_NexusMods" FontSize="15" FontWeight="Bold"
                                            Foreground="{StaticResource TextPrimaryBrush}"/>
 
                                 <Grid ColumnSpacing="0" RowSpacing="8">
@@ -1610,7 +1610,7 @@
 
                                     <!-- Left description -->
                                     <StackPanel Grid.Row="0" Grid.Column="0" Spacing="4">
-                                        <TextBlock Text="API Key" FontSize="14" FontWeight="SemiBold"
+                                        <TextBlock Text="API Key" loc:Loc.Key="Settings_ApiKey" FontSize="14" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11"
                                                    Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
@@ -1624,7 +1624,7 @@
 
                                     <!-- Right: connection status + NXM toggle -->
                                     <StackPanel Grid.Row="0" Grid.Column="2" Spacing="4">
-                                        <TextBlock Text="NXM Protocol Handler" FontSize="14" FontWeight="SemiBold"
+                                        <TextBlock Text="NXM Protocol Handler" loc:Loc.Key="Settings_NxmProtocolHandler" FontSize="14" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11"
                                                    Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
@@ -1640,12 +1640,12 @@
                                             </Grid.ColumnDefinitions>
                                             <PasswordBox x:Name="NexusApiKeyBox" x:FieldModifier="internal"
                                                          Grid.Column="0"
-                                                         PlaceholderText="Paste API key here..."
+                                                         PlaceholderText="Paste API key here..." loc:Loc.Key="Settings_PasteApiKeyPlaceholder"
                                                          FontSize="12" VerticalAlignment="Center"
                                                          PasswordRevealMode="Peek"/>
                                             <Button x:Name="NexusConnectBtn" x:FieldModifier="internal"
                                                     Grid.Column="1"
-                                                    Content="Connect"
+                                                    Content="Connect" loc:Loc.Key="Settings_Connect"
                                                     Click="NexusConnectBtn_Click"
                                                     Background="{StaticResource AccentGreenBrush}"
                                                     Foreground="White"
@@ -1656,7 +1656,7 @@
                                         <TextBlock x:Name="NexusStatusText" x:FieldModifier="internal"
                                                    FontSize="11" TextWrapping="Wrap"
                                                    Foreground="{StaticResource TextTertiaryBrush}"
-                                                   Text="Not connected"/>
+                                                   Text="Not connected" loc:Loc.Key="Settings_NotConnected"/>
                                     </StackPanel>
 
                                     <!-- Row 1 Right: NXM handler register/unregister -->
@@ -1670,10 +1670,10 @@
                                                        Grid.Column="0"
                                                        FontSize="12" TextWrapping="Wrap" VerticalAlignment="Center"
                                                        Foreground="{StaticResource TextSecondaryBrush}"
-                                                       Text="Not registered"/>
+                                                       Text="Not registered" loc:Loc.Key="Settings_NotRegistered"/>
                                             <Button x:Name="NxmRegisterBtn" x:FieldModifier="internal"
                                                     Grid.Column="1"
-                                                    Content="Register"
+                                                    Content="Register" loc:Loc.Key="Settings_Register"
                                                     Click="NxmRegisterBtn_Click"
                                                     Background="{StaticResource SurfaceOverlayBrush}"
                                                     Foreground="{StaticResource ChipTextBrush}"
@@ -1685,7 +1685,7 @@
 
                                     <!-- Row 2: Disconnect row (shown only when connected) -->
                                     <StackPanel Grid.Row="2" Grid.Column="0" Spacing="4" x:Name="NexusDisconnectRow" x:FieldModifier="internal" Visibility="Collapsed">
-                                        <Button Content="Disconnect"
+                                        <Button Content="Disconnect" loc:Loc.Key="Settings_Disconnect"
                                                 Click="NexusDisconnectBtn_Click"
                                                 Background="Transparent"
                                                 Foreground="{StaticResource AccentRedBrush}"
@@ -1703,7 +1703,7 @@
                         <Border Background="{StaticResource SurfaceRaisedBrush}" CornerRadius="10" Padding="20,16"
                                 BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1">
                             <StackPanel Spacing="12">
-                            <TextBlock Text="DLSS / Streamline Settings" FontSize="15" FontWeight="Bold"
+                            <TextBlock Text="DLSS / Streamline Settings" loc:Loc.Key="Settings_DlssStreamline" FontSize="15" FontWeight="Bold"
                                        Foreground="{StaticResource TextPrimaryBrush}"/>
                             <Grid ColumnSpacing="0" RowSpacing="12">
                                 <Grid.ColumnDefinitions>
@@ -1720,12 +1720,12 @@
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
                                     <StackPanel Grid.Row="0" Spacing="8">
-                                        <TextBlock Text="Defaults" FontSize="14" FontWeight="SemiBold"
+                                        <TextBlock Text="Defaults" loc:Loc.Key="Settings_Defaults" FontSize="14" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11"
                                                    Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
                                                    Text="Configure preferred DLSS/Streamline versions, presets, and render scales. Use 'Quick Apply' in the Nvidia Profile section to stamp these onto any game."/>
-                                        <Button Content="Configure Defaults" Click="DlssDefaults_Click"
+                                        <Button Content="Configure Defaults" loc:Loc.Key="Settings_ConfigureDefaults" Click="DlssDefaults_Click"
                                                 Background="{StaticResource AccentBlueBgBrush}"
                                                 Foreground="{StaticResource AccentBlueBrush}"
                                                 BorderBrush="{StaticResource AccentBlueBorderBrush}" BorderThickness="1"
@@ -1736,7 +1736,7 @@
 
                                     <!-- DMFG Defaults (global base profile) -->
                                     <StackPanel Grid.Row="1" Spacing="8" Margin="0,16,0,0">
-                                        <TextBlock Text="DMFG Defaults" FontSize="13" FontWeight="SemiBold"
+                                        <TextBlock Text="DMFG Defaults" loc:Loc.Key="Settings_DmfgDefaults" FontSize="13" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11"
                                                    Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
@@ -1747,14 +1747,14 @@
                                                 <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
                                             <StackPanel Grid.Column="0" Spacing="4">
-                                                <TextBlock Text="Frame Count" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
+                                                <TextBlock Text="Frame Count" loc:Loc.Key="Settings_FrameCount" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                                 <ComboBox x:Name="DmfgFrameCountCombo" x:FieldModifier="internal"
                                                           FontSize="12" HorizontalAlignment="Stretch"
                                                           ToolTipService.ToolTip="Global DMFG max frame count. Games using Dynamic mode inherit this unless overridden per-game."
                                                           SelectionChanged="DmfgFrameCountCombo_SelectionChanged"/>
                                             </StackPanel>
                                             <StackPanel Grid.Column="1" Spacing="4">
-                                                <TextBlock Text="Target FPS" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
+                                                <TextBlock Text="Target FPS" loc:Loc.Key="Settings_TargetFps" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                                 <ComboBox x:Name="DmfgTargetFpsCombo" x:FieldModifier="internal"
                                                           FontSize="12" HorizontalAlignment="Stretch"
                                                           ToolTipService.ToolTip="Global DMFG target frame rate. Off = no target. Max Refresh Rate = match display. Or pick a specific FPS."
@@ -1764,12 +1764,12 @@
                                     </StackPanel>
 
                                     <StackPanel Grid.Row="2" Spacing="8" Margin="0,16,0,0">
-                                        <TextBlock Text="Batch Deploy" FontSize="13" FontWeight="SemiBold"
+                                        <TextBlock Text="Batch Deploy" loc:Loc.Key="Settings_BatchDeploy" FontSize="13" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11"
                                                    Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
                                                    Text="Deploy DLSS and Streamline DLL versions and DLSS presets to multiple games at once. Backs up originals automatically. Pre-populated with your configured defaults."/>
-                                        <Button Content="Batch Deploy" Click="MassDlssDeploy_Click"
+                                        <Button Content="Batch Deploy" loc:Loc.Key="Settings_BatchDeploy" Click="MassDlssDeploy_Click"
                                                 Background="{StaticResource AccentBlueBgBrush}"
                                                 Foreground="{StaticResource AccentBlueBrush}"
                                                 BorderBrush="{StaticResource AccentBlueBorderBrush}" BorderThickness="1"
@@ -1784,7 +1784,7 @@
 
                                 <!-- Right: DLSS & G-Sync Indicators + Auto-Update -->
                                 <StackPanel Grid.Column="2" Spacing="8">
-                                    <TextBlock Text="DLSS On-Screen Indicator" FontSize="13" FontWeight="SemiBold"
+                                    <TextBlock Text="DLSS On-Screen Indicator" loc:Loc.Key="Settings_DlssOsd" FontSize="13" FontWeight="SemiBold"
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
                                     <TextBlock TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
@@ -1792,20 +1792,20 @@
                                     <ComboBox x:Name="DlssIndicatorCombo" x:FieldModifier="internal"
                                               FontSize="12" HorizontalAlignment="Stretch"
                                               SelectionChanged="DlssIndicatorCombo_SelectionChanged">
-                                        <ComboBoxItem Content="Enabled"/>
-                                        <ComboBoxItem Content="Disabled"/>
+                                        <ComboBoxItem Content="Enabled" loc:Loc.Key="Settings_Enabled"/>
+                                        <ComboBoxItem Content="Disabled" loc:Loc.Key="Settings_Disabled"/>
                                     </ComboBox>
 
-                                    <TextBlock Text="G-Sync On-Screen Indicator" FontSize="13" FontWeight="SemiBold"
+                                    <TextBlock Text="G-Sync On-Screen Indicator" loc:Loc.Key="Settings_GSyncOsd" FontSize="13" FontWeight="SemiBold"
                                                Foreground="{StaticResource TextPrimaryBrush}" Margin="0,8,0,0"/>
                                     <ComboBox x:Name="GSyncIndicatorCombo" x:FieldModifier="internal"
                                               FontSize="12" HorizontalAlignment="Stretch"
                                               SelectionChanged="GSyncIndicatorCombo_SelectionChanged">
-                                        <ComboBoxItem Content="Enabled"/>
-                                        <ComboBoxItem Content="Disabled"/>
+                                        <ComboBoxItem Content="Enabled" loc:Loc.Key="Settings_Enabled"/>
+                                        <ComboBoxItem Content="Disabled" loc:Loc.Key="Settings_Disabled"/>
                                     </ComboBox>
 
-                                    <TextBlock Text="Auto-Update" FontSize="13" FontWeight="SemiBold"
+                                    <TextBlock Text="Auto-Update" loc:Loc.Key="Settings_AutoUpdate" FontSize="13" FontWeight="SemiBold"
                                                Foreground="{StaticResource TextPrimaryBrush}" Margin="0,8,0,0"/>
                                     <TextBlock TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
@@ -1816,21 +1816,21 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <StackPanel Grid.Column="0" Spacing="4">
-                                            <TextBlock Text="DLSS" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
+                                            <TextBlock Text="DLSS" loc:Loc.Key="Settings_Dlss" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                             <ComboBox x:Name="AutoUpdateDlssCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       SelectionChanged="AutoUpdateDlssCombo_SelectionChanged">
-                                                <ComboBoxItem Content="Off"/>
-                                                <ComboBoxItem Content="On"/>
+                                                <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
+                                                <ComboBoxItem Content="On" loc:Loc.Key="Common_On"/>
                                             </ComboBox>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Spacing="4">
-                                            <TextBlock Text="Streamline" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
+                                            <TextBlock Text="Streamline" loc:Loc.Key="Settings_Streamline" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                             <ComboBox x:Name="AutoUpdateStreamlineCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       SelectionChanged="AutoUpdateStreamlineCombo_SelectionChanged">
-                                                <ComboBoxItem Content="Off"/>
-                                                <ComboBoxItem Content="On"/>
+                                                <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
+                                                <ComboBoxItem Content="On" loc:Loc.Key="Common_On"/>
                                             </ComboBox>
                                         </StackPanel>
                                     </Grid>
@@ -1845,7 +1845,7 @@
                         <Border Background="{StaticResource SurfaceRaisedBrush}" CornerRadius="10" Padding="20,16"
                                 BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1">
                             <StackPanel Spacing="12">
-                            <TextBlock Text="Global NVIDIA Driver Settings" FontSize="15" FontWeight="Bold"
+                            <TextBlock Text="Global NVIDIA Driver Settings" loc:Loc.Key="Settings_GlobalNvidia" FontSize="15" FontWeight="Bold"
                                        Foreground="{StaticResource TextPrimaryBrush}"/>
                             <Grid ColumnSpacing="0">
                                 <Grid.ColumnDefinitions>
@@ -1866,14 +1866,14 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <StackPanel Grid.Column="0" Spacing="4">
-                                            <TextBlock Text="Shader Cache Size" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
+                                            <TextBlock Text="Shader Cache Size" loc:Loc.Key="Settings_ShaderCacheSize" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                             <ComboBox x:Name="ShaderCacheSizeCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="Maximum disk space for compiled shader cache. Larger = fewer stutters on revisits. 16GB is the driver default."
                                                       SelectionChanged="ShaderCacheSizeCombo_SelectionChanged"/>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Spacing="4">
-                                            <TextBlock Text="Shader Pre-Compile" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
+                                            <TextBlock Text="Shader Pre-Compile" loc:Loc.Key="Settings_ShaderPreCompile" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                             <ComboBox x:Name="ShaderPrecompileCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="Auto-compiles shaders in the background when idle. Higher = more CPU usage during idle, faster first-time game loads."
@@ -1887,14 +1887,14 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <StackPanel Grid.Column="0" Spacing="4">
-                                            <TextBlock Text="G-Sync" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
+                                            <TextBlock Text="G-Sync" loc:Loc.Key="Settings_GSync" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                             <ComboBox x:Name="GSyncEnableCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="Globally enables or disables G-Sync/FreeSync variable refresh rate."
                                                       SelectionChanged="GSyncEnableCombo_SelectionChanged"/>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Spacing="4">
-                                            <TextBlock Text="G-Sync Mode" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
+                                            <TextBlock Text="G-Sync Mode" loc:Loc.Key="Settings_GSyncMode" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                             <ComboBox x:Name="GSyncModeCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="Controls G-Sync/FreeSync variable refresh rate. Fullscreen and Windowed recommended for seamless experience."
@@ -1908,14 +1908,14 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <StackPanel Grid.Column="0" Spacing="4">
-                                            <TextBlock Text="FPS Limit" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
+                                            <TextBlock Text="FPS Limit" loc:Loc.Key="Settings_FpsLimit" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                             <ComboBox x:Name="FpsLimitCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="Global FPS cap via NVIDIA driver. VRR-optimal presets cap just below refresh rate to stay in VRR range."
                                                       SelectionChanged="FpsLimitCombo_SelectionChanged"/>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Spacing="4">
-                                            <TextBlock Text="Preferred Refresh Rate" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
+                                            <TextBlock Text="Preferred Refresh Rate" loc:Loc.Key="Settings_PreferredRefreshRate" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                             <ComboBox x:Name="PreferredRefreshRateCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="Highest available forces your max refresh rate. App Setting lets games choose their own refresh rate."
@@ -1929,14 +1929,14 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <StackPanel Grid.Column="0" Spacing="4">
-                                            <TextBlock Text="VSync" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
+                                            <TextBlock Text="VSync" loc:Loc.Key="Settings_VSync" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                             <ComboBox x:Name="GlobalVSyncCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="Global VSync mode — applies to all games without a per-game override."
                                                       SelectionChanged="GlobalVSyncCombo_SelectionChanged"/>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Spacing="4">
-                                            <TextBlock Text="Power Mode" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
+                                            <TextBlock Text="Power Mode" loc:Loc.Key="Settings_PowerMode" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                             <ComboBox x:Name="GlobalPowerModeCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="Global power management mode — applies to all games without a per-game override."
@@ -1952,7 +1952,7 @@
                                         </Grid.ColumnDefinitions>
                                         <StackPanel Grid.Column="0" Spacing="4">
                                             <StackPanel Orientation="Horizontal" Spacing="6">
-                                                <TextBlock Text="ReBAR" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
+                                                <TextBlock Text="ReBAR" loc:Loc.Key="Settings_ReBar" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                                 <TextBlock x:Name="ReBarAdminWarning" x:FieldModifier="internal"
                                                            Text="— Admin required" FontSize="11"
                                                            Foreground="{StaticResource AccentAmberBrush}"
@@ -1964,7 +1964,7 @@
                                                       SelectionChanged="GlobalReBarEnableCombo_SelectionChanged"/>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Spacing="4">
-                                            <TextBlock Text="ReBAR Size Limit" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
+                                            <TextBlock Text="ReBAR Size Limit" loc:Loc.Key="Settings_ReBarSizeLimit" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                             <ComboBox x:Name="GlobalReBarSizeCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="Maximum BAR transfer size. 1GB is optimal for most games. Decrease to 512MB if experiencing ReBAR-related stutters."
@@ -1983,7 +1983,7 @@
                                     <TextBlock TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
                                                Text="Adjust NVIDIA Digital Vibrance (color saturation) per-display. Saved values are automatically restored on app startup."/>
-                                    <Button Content="Digital Vibrance"
+                                    <Button Content="Digital Vibrance" loc:Loc.Key="Settings_DigitalVibrance"
                                             Click="DigitalVibrance_Click"
                                             ToolTipService.ToolTip="Adjust Digital Vibrance (color saturation) per-display. Saved values are restored on app startup."
                                             Background="{StaticResource AccentBlueBgBrush}"
@@ -1996,7 +1996,7 @@
                                     <TextBlock TextWrapping="Wrap" FontSize="11" Margin="0,8,0,0"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
                                                Text="Games without an NVIDIA profile don't benefit from global driver settings. Create profiles for all games in your library to ensure global settings apply."/>
-                                    <Button Content="Create Missing Profiles"
+                                    <Button Content="Create Missing Profiles" loc:Loc.Key="Settings_CreateMissingProfiles"
                                             Click="CreateMissingNvidiaProfiles_Click"
                                             ToolTipService.ToolTip="Creates NVIDIA driver profiles for all games that don't have one yet. Ensures global settings like Power Mode and VSync apply to every game."
                                             Background="{StaticResource AccentBlueBgBrush}"
@@ -2014,15 +2014,15 @@
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
-                                        <Button Grid.Column="0" Content="Backup Profiles"
+                                        <Button Grid.Column="0" Content="Backup Profiles" loc:Loc.Key="Settings_BackupProfiles"
                                                 Click="ExportNvidiaProfiles_Click"
-                                                ToolTipService.ToolTip="Save all per-game NVIDIA profile settings to a backup file."
+                                                ToolTipService.ToolTip="Save all per-game NVIDIA profile settings to a backup file." loc:Loc.ToolTipKey="Settings_BackupProfilesTip"
                                                 Background="{StaticResource AccentBlueBgBrush}"
                                                 Foreground="{StaticResource AccentBlueBrush}"
                                                 BorderBrush="{StaticResource AccentBlueBorderBrush}" BorderThickness="1"
                                                 CornerRadius="8" Padding="12,7" FontSize="12"
                                                 HorizontalAlignment="Stretch"/>
-                                        <Button Grid.Column="1" Content="Restore Profiles"
+                                        <Button Grid.Column="1" Content="Restore Profiles" loc:Loc.Key="Settings_RestoreProfiles"
                                                 Click="ImportNvidiaProfiles_Click"
                                                 ToolTipService.ToolTip="Restore per-game NVIDIA profile settings from a previous export."
                                                 Background="{StaticResource AccentBlueBgBrush}"
@@ -2037,7 +2037,7 @@
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
-                                        <Button Grid.Column="0" Content="Reset Nvidia Profiles"
+                                        <Button Grid.Column="0" Content="Reset Nvidia Profiles" loc:Loc.Key="Settings_ResetNvidiaProfiles"
                                                 Click="ResetAllNvidiaProfiles_Click"
                                                 ToolTipService.ToolTip="Removes ALL per-game NVIDIA profile overrides. The global profile will be like new."
                                                 Background="{StaticResource AccentBlueBgBrush}"
@@ -2045,7 +2045,7 @@
                                                 BorderBrush="#CC4444" BorderThickness="1"
                                                 CornerRadius="8" Padding="12,7" FontSize="12"
                                                 HorizontalAlignment="Stretch"/>
-                                        <Button Grid.Column="1" Content="Clear Shader Cache"
+                                        <Button Grid.Column="1" Content="Clear Shader Cache" loc:Loc.Key="Settings_ClearShaderCache"
                                                 Click="ClearNvidiaShaderCache_Click"
                                                 ToolTipService.ToolTip="Deletes the NVIDIA DXCache and GLCache folders. Forces shaders to recompile on next launch."
                                                 Background="{StaticResource AccentBlueBgBrush}"
@@ -2065,7 +2065,7 @@
                         <Border Background="{StaticResource SurfaceRaisedBrush}" CornerRadius="10" Padding="20,16"
                                 BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1">
                             <StackPanel Spacing="12">
-                            <TextBlock Text="Component Settings" FontSize="15" FontWeight="Bold"
+                            <TextBlock Text="Component Settings" loc:Loc.Key="Settings_ComponentSettings" FontSize="15" FontWeight="Bold"
                                        Foreground="{StaticResource TextPrimaryBrush}"/>
                             <Grid ColumnSpacing="0" RowSpacing="8">
                                 <Grid.ColumnDefinitions>
@@ -2081,7 +2081,7 @@
 
                                 <!-- Left: ReLimiter -->
                                 <StackPanel Grid.Row="0" Grid.Column="0" Spacing="4">
-                                    <TextBlock Text="ReLimiter" FontSize="14" FontWeight="SemiBold"
+                                    <TextBlock Text="ReLimiter" loc:Loc.Key="Settings_ReLimiter" FontSize="14" FontWeight="SemiBold"
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
                                     <TextBlock TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
@@ -2095,7 +2095,7 @@
 
                                 <!-- Right: OptiScaler -->
                                 <StackPanel Grid.Row="0" Grid.Column="2" Spacing="4">
-                                    <TextBlock Text="OptiScaler" FontSize="14" FontWeight="SemiBold"
+                                    <TextBlock Text="OptiScaler" loc:Loc.Key="Settings_OptiScaler" FontSize="14" FontWeight="SemiBold"
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
                                     <TextBlock TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
@@ -2116,37 +2116,37 @@
                                     </Grid.RowDefinitions>
                                     <TextBlock Grid.Row="0" Grid.Column="0" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}"
-                                               Text="OSD Key" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
+                                               Text="OSD Key" loc:Loc.Key="Settings_OsdKey" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
                                     <TextBlock Grid.Row="0" Grid.Column="1" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}"
-                                               Text="Shared Presets" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
+                                               Text="Shared Presets" loc:Loc.Key="Settings_SharedPresets" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
                                     <TextBlock Grid.Row="0" Grid.Column="2" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}"
-                                               Text="DLSS Hooks" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
+                                               Text="DLSS Hooks" loc:Loc.Key="Settings_DlssHooks" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
                                     <TextBlock Grid.Row="0" Grid.Column="3" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}"
-                                               Text="Target FPS" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
+                                               Text="Target FPS" loc:Loc.Key="Settings_TargetFps" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
                                     <TextBox Grid.Row="1" Grid.Column="0" x:Name="UlHotkeyBox" x:FieldModifier="internal"
-                                             PlaceholderText="Press a key..." IsReadOnly="True"
+                                             PlaceholderText="Press a key..." loc:Loc.Key="Settings_PressKeyPlaceholder" IsReadOnly="True"
                                              FontSize="12" MinWidth="80"
                                              Background="{StaticResource SurfaceInputBrush}"
                                              Foreground="{StaticResource TextSecondaryBrush}"
                                              BorderBrush="{StaticResource BorderSubtleBrush}"
-                                             ToolTipService.ToolTip="The key that toggles the ReLimiter OSD overlay in-game."
+                                             ToolTipService.ToolTip="The key that toggles the ReLimiter OSD overlay in-game." loc:Loc.ToolTipKey="Settings_OsdKeyTip"
                                              PreviewKeyDown="UlHotkeyBox_PreviewKeyDown"/>
                                     <ComboBox Grid.Row="1" Grid.Column="1" x:Name="UlSharedPresetsCombo" x:FieldModifier="internal"
                                               FontSize="12" HorizontalAlignment="Stretch"
                                               ToolTipService.ToolTip="When On, all games share the same OSD presets file. When Off, each game has its own presets."
                                               SelectionChanged="UlSharedPresetsCombo_SelectionChanged">
-                                        <ComboBoxItem Content="Off"/>
-                                        <ComboBoxItem Content="On"/>
+                                        <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
+                                        <ComboBoxItem Content="On" loc:Loc.Key="Common_On"/>
                                     </ComboBox>
                                     <ComboBox Grid.Row="1" Grid.Column="2" x:Name="UlDlssHooksCombo" x:FieldModifier="internal"
                                               FontSize="12" HorizontalAlignment="Stretch"
                                               ToolTipService.ToolTip="Shows DLSS quality mode, render resolution, and active features on the ReLimiter OSD. Disable if experiencing crashes."
                                               SelectionChanged="UlDlssHooksCombo_SelectionChanged">
-                                        <ComboBoxItem Content="Off"/>
-                                        <ComboBoxItem Content="On"/>
+                                        <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
+                                        <ComboBoxItem Content="On" loc:Loc.Key="Common_On"/>
                                     </ComboBox>
                                     <ComboBox Grid.Row="1" Grid.Column="3" x:Name="UlTargetFpsCombo" x:FieldModifier="internal"
                                               FontSize="12" HorizontalAlignment="Stretch"
@@ -2167,7 +2167,7 @@
                                         <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
                                     <StackPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Spacing="4">
-                                        <TextBlock Text="GPU Type" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
+                                        <TextBlock Text="GPU Type" loc:Loc.Key="Settings_GpuType" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                         <ComboBox x:Name="OsGpuCombo" x:FieldModifier="internal"
                                                   FontSize="12" HorizontalAlignment="Stretch"
                                                   Background="{StaticResource SurfaceInputBrush}"
@@ -2181,7 +2181,7 @@
                                     </StackPanel>
                                     <StackPanel Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Spacing="4"
                                                 x:Name="OsDlssInputsPanel" x:FieldModifier="internal" Visibility="Collapsed">
-                                        <TextBlock Text="DLSS Inputs" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
+                                        <TextBlock Text="DLSS Inputs" loc:Loc.Key="Settings_DlssInputs" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                         <ComboBox x:Name="OsDlssInputsCombo" x:FieldModifier="internal"
                                                   FontSize="12" HorizontalAlignment="Stretch"
                                                   Background="{StaticResource SurfaceInputBrush}"
@@ -2196,7 +2196,7 @@
 
                                 <!-- Row 2 Left: ReLimiter Apply -->
                                 <Button Grid.Row="2" Grid.Column="0" x:Name="ApplyUlHotkeyBtn" x:FieldModifier="internal"
-                                        Content="Apply to All Games"
+                                        Content="Apply to All Games" loc:Loc.Key="Settings_ApplyToAllGames"
                                         Click="ApplyUlOsdHotkey_Click"
                                         Background="{StaticResource AccentBlueBgBrush}"
                                         Foreground="{StaticResource AccentBlueBrush}"
@@ -2236,7 +2236,7 @@
                                         <x:String>F12</x:String>
                                     </ComboBox>
                                     <Button Grid.Column="1" x:Name="ApplyOsHotkeyBtn" x:FieldModifier="internal"
-                                            Content="Apply to All Games"
+                                            Content="Apply to All Games" loc:Loc.Key="Settings_ApplyToAllGames"
                                             Click="ApplyOsHotkey_Click"
                                             Background="{StaticResource AccentBlueBgBrush}"
                                             Foreground="{StaticResource AccentBlueBrush}"
@@ -2254,7 +2254,7 @@
                         <Border Background="{StaticResource SurfaceRaisedBrush}" CornerRadius="10" Padding="20,16"
                                 BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1">
                             <StackPanel Spacing="12">
-                            <TextBlock Text="Shaders &amp; Addons" FontSize="15" FontWeight="Bold"
+                            <TextBlock Text="Shaders &amp; Addons" loc:Loc.Key="Settings_ShadersAddons" FontSize="15" FontWeight="Bold"
                                        Foreground="{StaticResource TextPrimaryBrush}"/>
                             <Grid ColumnSpacing="0">
                                 <Grid.ColumnDefinitions>
@@ -2266,10 +2266,10 @@
                                 <!-- Left: Shader Management + Cache -->
                                 <StackPanel Grid.Column="0" Spacing="12">
                                     <StackPanel Spacing="4">
-                                        <TextBlock Text="Shader Management" FontSize="13" FontWeight="SemiBold"
+                                        <TextBlock Text="Shader Management" loc:Loc.Key="Settings_ShaderManagement" FontSize="13" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                                   Text="Control how RHI manages shader files across your games."/>
+                                                   Text="Control how RHI manages shader files across your games." loc:Loc.Key="Settings_ShaderManagementDesc"/>
                                     </StackPanel>
                                     <Grid ColumnSpacing="16">
                                         <Grid.ColumnDefinitions>
@@ -2280,24 +2280,24 @@
                                             <RowDefinition Height="Auto"/>
                                             <RowDefinition Height="Auto"/>
                                         </Grid.RowDefinitions>
-                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Shader Management" FontSize="11"
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Shader Management" loc:Loc.Key="Settings_ShaderManagement" FontSize="11"
                                                    Foreground="{StaticResource InlineDescriptionBrush}" Margin="0,0,0,3"/>
-                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="Cache All Shaders" FontSize="11"
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="Cache All Shaders" loc:Loc.Key="Settings_CacheAllShaders" FontSize="11"
                                                    Foreground="{StaticResource InlineDescriptionBrush}" Margin="0,0,0,3"/>
                                         <ComboBox Grid.Row="1" Grid.Column="0" x:Name="CustomShadersCombo" x:FieldModifier="internal"
                                                   FontSize="12" HorizontalAlignment="Stretch"
                                                   ToolTipService.ToolTip="RHI Managed: deploy built-in shader packs to all games.&#10;Custom: use your own shader directory.&#10;Off: RHI never touches shaders on any game."
                                                   SelectionChanged="CustomShadersCombo_SelectionChanged">
-                                            <ComboBoxItem Content="Off"/>
-                                            <ComboBoxItem Content="RHI Managed"/>
-                                            <ComboBoxItem Content="Custom"/>
+                                            <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
+                                            <ComboBoxItem Content="RHI Managed" loc:Loc.Key="Settings_RhiManaged"/>
+                                            <ComboBoxItem Content="Custom" loc:Loc.Key="Settings_Custom"/>
                                         </ComboBox>
                                         <ComboBox Grid.Row="1" Grid.Column="1" x:Name="CacheAllShadersCombo" x:FieldModifier="internal"
                                                   FontSize="12" HorizontalAlignment="Stretch"
                                                   ToolTipService.ToolTip="When On, all shader packs are downloaded and cached at startup. When Off, packs are downloaded on demand when needed."
                                                   SelectionChanged="CacheAllShadersCombo_SelectionChanged">
-                                            <ComboBoxItem Content="Off"/>
-                                            <ComboBoxItem Content="On"/>
+                                            <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
+                                            <ComboBoxItem Content="On" loc:Loc.Key="Common_On"/>
                                         </ComboBox>
                                     </Grid>
                                 </StackPanel>
@@ -2310,7 +2310,7 @@
                                 <!-- Right: Addon Watch Folder -->
                                 <StackPanel Grid.Column="2" Spacing="12">
                                     <StackPanel Spacing="4">
-                                        <TextBlock Text="Addon Watch Folder" FontSize="13" FontWeight="SemiBold"
+                                        <TextBlock Text="Addon Watch Folder" loc:Loc.Key="Settings_AddonWatchFolder" FontSize="13" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
                                                    Text="RHI watches this folder for RenoDX addon files (.addon64/.addon32) and archives. Defaults to your Downloads folder."/>
@@ -2323,16 +2323,16 @@
                                         </Grid.ColumnDefinitions>
                                         <TextBox x:Name="AddonWatchFolderBox" x:FieldModifier="internal"
                                                  Grid.Column="0"
-                                                 PlaceholderText="Downloads folder (default)"
+                                                 PlaceholderText="Downloads folder (default)" loc:Loc.Key="Settings_DownloadsFolderPlaceholder"
                                                  FontSize="12"
                                                  Background="{StaticResource SurfaceInputBrush}"
                                                  Foreground="{StaticResource TextSecondaryBrush}"
                                                  BorderBrush="{StaticResource BorderSubtleBrush}"/>
-                                        <Button Grid.Column="1" Content="Browse" Click="BrowseAddonWatchFolder_Click"
+                                        <Button Grid.Column="1" Content="Browse" loc:Loc.Key="Common_Browse" Click="BrowseAddonWatchFolder_Click"
                                                 Background="{StaticResource AccentBlueBgBrush}" Foreground="{StaticResource AccentBlueBrush}"
                                                 BorderBrush="{StaticResource AccentBlueBorderBrush}" BorderThickness="1"
                                                 CornerRadius="8" Padding="12,6" FontSize="12"/>
-                                        <Button Grid.Column="2" Content="Reset" Click="ResetAddonWatchFolder_Click"
+                                        <Button Grid.Column="2" Content="Reset" loc:Loc.Key="Common_Reset" Click="ResetAddonWatchFolder_Click"
                                                 Background="{StaticResource SurfaceInputBrush}" Foreground="{StaticResource TextTertiaryBrush}"
                                                 BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1"
                                                 CornerRadius="8" Padding="12,6" FontSize="12"/>
@@ -2348,7 +2348,7 @@
                         <Border Background="{StaticResource SurfaceRaisedBrush}" CornerRadius="10" Padding="20,16"
                                 BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1">
                             <StackPanel Spacing="12">
-                            <TextBlock Text="Update &amp; Deployment" FontSize="15" FontWeight="Bold"
+                            <TextBlock Text="Update &amp; Deployment" loc:Loc.Key="Settings_UpdateDeployment" FontSize="15" FontWeight="Bold"
                                        Foreground="{StaticResource TextPrimaryBrush}"/>
                             <Grid ColumnSpacing="0" RowSpacing="8">
                                 <Grid.ColumnDefinitions>
@@ -2364,7 +2364,7 @@
 
                                 <!-- Left: Global Update Checks -->
                                 <StackPanel Grid.Row="0" Grid.Column="0" Spacing="4">
-                                    <TextBlock Text="Global Update Checks" FontSize="14" FontWeight="SemiBold"
+                                    <TextBlock Text="Global Update Checks" loc:Loc.Key="Settings_GlobalUpdateChecks" FontSize="14" FontWeight="SemiBold"
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
                                     <TextBlock TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
@@ -2378,7 +2378,7 @@
 
                                 <!-- Right: Mass INI Deployment -->
                                 <StackPanel Grid.Row="0" Grid.Column="2" Spacing="4">
-                                    <TextBlock Text="Mass INI Deployment" FontSize="14" FontWeight="SemiBold"
+                                    <TextBlock Text="Mass INI Deployment" loc:Loc.Key="Settings_MassIniDeployment" FontSize="14" FontWeight="SemiBold"
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
                                     <TextBlock TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
@@ -2387,7 +2387,7 @@
 
                                 <!-- Row 1 Left: Update Inclusion button -->
                                 <Button Grid.Row="1" Grid.Column="0" x:Name="GlobalUpdateInclusionBtn"
-                                        Content="Update Inclusion"
+                                        Content="Update Inclusion" loc:Loc.Key="Settings_UpdateInclusion"
                                         Click="GlobalUpdateInclusion_Click"
                                         Background="{StaticResource AccentBlueBgBrush}"
                                         Foreground="{StaticResource AccentBlueBrush}"
@@ -2422,7 +2422,7 @@
                                             Background="{StaticResource AccentBlueBgBrush}" Foreground="{StaticResource AccentBlueBrush}"
                                             BorderBrush="{StaticResource AccentBlueBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Padding="12,7" FontSize="12" HorizontalAlignment="Stretch"/>
-                                    <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Content="Mass Preset Install"
+                                    <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Content="Mass Preset Install" loc:Loc.Key="Settings_MassPresetInstall"
                                             Click="MassPresetInstall_Click"
                                             Background="{StaticResource AccentBlueBgBrush}" Foreground="{StaticResource AccentBlueBrush}"
                                             BorderBrush="{StaticResource AccentBlueBorderBrush}" BorderThickness="1"
@@ -2442,7 +2442,7 @@
                         <Border Background="{StaticResource SurfaceRaisedBrush}" CornerRadius="10" Padding="20,16"
                                 BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1">
                             <StackPanel Spacing="12">
-                            <TextBlock Text="System &amp; Maintenance" FontSize="15" FontWeight="Bold"
+                            <TextBlock Text="System &amp; Maintenance" loc:Loc.Key="Settings_SystemMaintenance" FontSize="15" FontWeight="Bold"
                                        Foreground="{StaticResource TextPrimaryBrush}"/>
                             <Grid ColumnSpacing="0" RowSpacing="8">
                                 <Grid.ColumnDefinitions>
@@ -2460,12 +2460,12 @@
                                         <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
                                     <StackPanel Grid.Row="0" Spacing="8">
-                                        <TextBlock Text="Full Refresh" FontSize="13" FontWeight="SemiBold"
+                                        <TextBlock Text="Full Refresh" loc:Loc.Key="Settings_FullRefresh" FontSize="13" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
                                                    Text="Clears all caches and re-scans everything from disk. Use as a last resort if games are missing, paths have changed, DLSS has been added to a game, or the DLSS section is missing from a game card."/>
                                     </StackPanel>
-                                    <Button Grid.Row="1" x:Name="FullRefreshBtn" Content="Full Refresh"
+                                    <Button Grid.Row="1" x:Name="FullRefreshBtn" Content="Full Refresh" loc:Loc.Key="Settings_FullRefresh"
                                             Click="FullRefreshButton_Click"
                                             Background="{StaticResource AccentBlueBgBrush}" Foreground="{StaticResource AccentBlueBrush}"
                                             BorderBrush="{StaticResource AccentBlueBorderBrush}" BorderThickness="1"
@@ -2475,7 +2475,7 @@
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
                                                Text="Deletes cached DLSS, Streamline, and component staging files to free disk space. Shaders, installed addons, and version metadata are preserved. Files are re-downloaded automatically when needed."/>
                                     <Button Grid.Row="3" x:Name="PurgeCacheBtn"
-                                            Content="Purge Staging Files"
+                                            Content="Purge Staging Files" loc:Loc.Key="Settings_PurgeStagingFiles"
                                             Click="PurgeCachedFiles_Click"
                                             Background="{StaticResource AccentRedBgBrush}" Foreground="{StaticResource AccentRedBrush}"
                                             BorderBrush="{StaticResource AccentPurpleBorderBrush}" BorderThickness="1"
@@ -2500,7 +2500,7 @@
                                     </Grid.RowDefinitions>
                                     <!-- Admin Mode description + combo -->
                                     <StackPanel Grid.Row="0" Spacing="4">
-                                        <TextBlock Text="Admin Mode" FontSize="13" FontWeight="SemiBold"
+                                        <TextBlock Text="Admin Mode" loc:Loc.Key="Settings_AdminMode" FontSize="13" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
                                                    Text="Creates a scheduled task to launch RHI with elevated privileges. Required for ReBAR, Low Latency Ultra, and Smooth Motion driver settings. The Drop Helper enables Discord drag-and-drop when running elevated."/>
@@ -2511,30 +2511,30 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <StackPanel Grid.Column="0" Spacing="4">
-                                            <TextBlock Text="Admin Mode" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
+                                            <TextBlock Text="Admin Mode" loc:Loc.Key="Settings_AdminMode" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
                                             <ComboBox x:Name="AdminModeCombo" x:FieldModifier="internal"
                                                       SelectionChanged="AdminModeCombo_SelectionChanged"
                                                       FontSize="12" Padding="8,4"
                                                       CornerRadius="8" HorizontalAlignment="Stretch">
-                                                <ComboBoxItem Content="Off"/>
-                                                <ComboBoxItem Content="On"/>
+                                                <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
+                                                <ComboBoxItem Content="On" loc:Loc.Key="Common_On"/>
                                             </ComboBox>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Spacing="4">
-                                            <TextBlock Text="Drop Helper" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
+                                            <TextBlock Text="Drop Helper" loc:Loc.Key="Settings_DropHelper" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
                                             <ComboBox x:Name="DropHelperCombo" x:FieldModifier="internal"
                                                       SelectionChanged="DropHelperCombo_SelectionChanged"
                                                       FontSize="12" Padding="8,4"
                                                       CornerRadius="8" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="The drop helper window enables Discord drag-and-drop in admin mode. Disable if you don't need it. Restart required.">
-                                                <ComboBoxItem Content="Off"/>
-                                                <ComboBoxItem Content="On"/>
+                                                <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
+                                                <ComboBoxItem Content="On" loc:Loc.Key="Common_On"/>
                                             </ComboBox>
                                         </StackPanel>
                                     </Grid>
                                     <!-- System Tray description + combos -->
                                     <StackPanel Grid.Row="2" Spacing="4" Margin="0,12,0,0">
-                                        <TextBlock Text="System Tray" FontSize="13" FontWeight="SemiBold"
+                                        <TextBlock Text="System Tray" loc:Loc.Key="Settings_SystemTray" FontSize="13" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
                                                    Text="Minimize to system tray on close. Right-click the tray icon or pinned taskbar icon to quickly launch recent games."/>
@@ -2546,30 +2546,30 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <StackPanel Grid.Column="0" Spacing="4">
-                                            <TextBlock Text="Close to Tray" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
+                                            <TextBlock Text="Close to Tray" loc:Loc.Key="Settings_CloseToTray" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
                                             <ComboBox x:Name="CloseToTrayCombo" x:FieldModifier="internal"
                                                       SelectionChanged="CloseToTrayCombo_SelectionChanged"
                                                       FontSize="12" Padding="8,4" CornerRadius="8" HorizontalAlignment="Stretch">
-                                                <ComboBoxItem Content="Off"/>
-                                                <ComboBoxItem Content="On"/>
+                                                <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
+                                                <ComboBoxItem Content="On" loc:Loc.Key="Common_On"/>
                                             </ComboBox>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Spacing="4">
-                                            <TextBlock Text="Recent Games" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
+                                            <TextBlock Text="Recent Games" loc:Loc.Key="Settings_RecentGames" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
                                             <ComboBox x:Name="RecentGamesCombo" x:FieldModifier="internal"
                                                       SelectionChanged="RecentGamesCombo_SelectionChanged"
                                                       FontSize="12" Padding="8,4" CornerRadius="8" HorizontalAlignment="Stretch">
-                                                <ComboBoxItem Content="Off"/>
-                                                <ComboBoxItem Content="On"/>
+                                                <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
+                                                <ComboBoxItem Content="On" loc:Loc.Key="Common_On"/>
                                             </ComboBox>
                                         </StackPanel>
                                         <StackPanel Grid.Column="2" Spacing="4">
-                                            <TextBlock Text="Start with Windows" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
+                                            <TextBlock Text="Start with Windows" loc:Loc.Key="Settings_StartWithWindows" FontSize="11" Foreground="{StaticResource TextSecondaryBrush}"/>
                                             <ComboBox x:Name="StartWithWindowsCombo" x:FieldModifier="internal"
                                                       SelectionChanged="StartWithWindowsCombo_SelectionChanged"
                                                       FontSize="12" Padding="8,4" CornerRadius="8" HorizontalAlignment="Stretch">
-                                                <ComboBoxItem Content="Off"/>
-                                                <ComboBoxItem Content="On"/>
+                                                <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
+                                                <ComboBoxItem Content="On" loc:Loc.Key="Common_On"/>
                                             </ComboBox>
                                         </StackPanel>
                                     </Grid>
@@ -2584,28 +2584,28 @@
                         <Border Background="{StaticResource SurfaceRaisedBrush}" CornerRadius="10" Padding="20,16"
                                 BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1">
                             <StackPanel Spacing="8">
-                                <TextBlock Text="Data &amp; Custom Files" FontSize="15" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}"/>
+                                <TextBlock Text="Data &amp; Custom Files" loc:Loc.Key="Settings_DataCustomFiles" FontSize="15" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}"/>
                                 <TextBlock TextWrapping="Wrap" FontSize="12" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="20">
                                     All RHI data is stored in AppData. Drop custom ReShade, DLSS, or Streamline DLLs into the Custom folder to use them as per-game overrides. The Logs folder contains session usage logs useful for troubleshooting.
                                 </TextBlock>
                                 <StackPanel Orientation="Horizontal" Spacing="8">
-                                    <Button x:Name="OpenAppDataBtn" Content="AppData Folder" Click="OpenAppDataFolder_Click"
+                                    <Button x:Name="OpenAppDataBtn" Content="AppData Folder" loc:Loc.Key="Settings_AppDataFolder" Click="OpenAppDataFolder_Click"
                                             Background="{StaticResource AccentBlueBgBrush}" Foreground="{StaticResource AccentBlueBrush}"
                                             BorderBrush="{StaticResource AccentBlueBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Padding="12,6" FontSize="12"/>
-                                    <Button x:Name="OpenDownloadsBtn" Content="Downloads Folder" Click="OpenDownloadsFolder_Click"
+                                    <Button x:Name="OpenDownloadsBtn" Content="Downloads Folder" loc:Loc.Key="Settings_DownloadsFolder" Click="OpenDownloadsFolder_Click"
                                             Background="{StaticResource AccentBlueBgBrush}" Foreground="{StaticResource AccentBlueBrush}"
                                             BorderBrush="{StaticResource AccentBlueBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Padding="12,6" FontSize="12"/>
-                                    <Button x:Name="OpenCustomBtn" Content="Custom Folder" Click="OpenCustomFolder_Click"
+                                    <Button x:Name="OpenCustomBtn" Content="Custom Folder" loc:Loc.Key="Settings_CustomFolder" Click="OpenCustomFolder_Click"
                                             Background="{StaticResource AccentBlueBgBrush}" Foreground="{StaticResource AccentBlueBrush}"
                                             BorderBrush="{StaticResource AccentBlueBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Padding="12,6" FontSize="12"/>
-                                    <Button x:Name="OpenLogsBtn" Content="Logs Folder" Click="OpenLogsFolder_Click"
+                                    <Button x:Name="OpenLogsBtn" Content="Logs Folder" loc:Loc.Key="Settings_LogsFolder" Click="OpenLogsFolder_Click"
                                             Background="{StaticResource AccentBlueBgBrush}" Foreground="{StaticResource AccentBlueBrush}"
                                             BorderBrush="{StaticResource AccentBlueBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Padding="12,6" FontSize="12"/>
-                                    <Button x:Name="CopyLogsArchiveBtn" Content="Copy Logs" Click="CopyLogsArchive_Click"
+                                    <Button x:Name="CopyLogsArchiveBtn" Content="Copy Logs" loc:Loc.Key="Settings_CopyLogs" Click="CopyLogsArchive_Click"
                                             Background="{StaticResource AccentBlueBgBrush}" Foreground="{StaticResource AccentBlueBrush}"
                                             BorderBrush="{StaticResource AccentBlueBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Padding="12,6" FontSize="12"
@@ -2651,7 +2651,7 @@
                                 Background="{StaticResource SurfaceOverlayBrush}" Foreground="{StaticResource TextSecondaryBrush}"
                                 BorderBrush="{StaticResource BorderDefaultBrush}" BorderThickness="1"
                                 CornerRadius="8" Padding="12,6" FontSize="12"/>
-                        <TextBlock Text="About" FontSize="20" FontWeight="Bold"
+                        <TextBlock Text="About" loc:Loc.Key="Menu_About" FontSize="20" FontWeight="Bold"
                                    Foreground="{StaticResource TextPrimaryBrush}" VerticalAlignment="Center"/>
                     </StackPanel>
                 </Border>
@@ -2682,7 +2682,7 @@
                                 <Border Background="{StaticResource SurfaceToolbarBrush}" CornerRadius="8" Padding="14,10"
                                         BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1">
                                     <StackPanel Spacing="4">
-                                        <TextBlock Text="What RHI manages" FontSize="12" FontWeight="SemiBold"
+                                        <TextBlock Text="What RHI manages" loc:Loc.Key="About_WhatRhiManages" FontSize="12" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
                                                    Text="ReShade &amp; shader packs · RenoDX HDR mods · Luma Framework · DLSS/Streamline version swaps &amp; presets · NVIDIA driver profile settings (VSync, Low Latency, ReBAR, Smooth Motion, Power) · OptiScaler · ReLimiter &amp; Display Commander frame limiters · RE Framework · DXVK · UE-Extended native HDR · Per-game overrides for everything."/>
@@ -2694,7 +2694,7 @@
                                 <Border Background="{StaticResource AccentRedBgBrush}" CornerRadius="8" Padding="14,10"
                                         BorderBrush="{StaticResource AccentPurpleBorderBrush}" BorderThickness="1">
                                     <StackPanel Spacing="4">
-                                        <TextBlock Text="Single-player only" FontSize="12" FontWeight="SemiBold"
+                                        <TextBlock Text="Single-player only" loc:Loc.Key="About_SinglePlayerOnly" FontSize="12" FontWeight="SemiBold"
                                                    Foreground="{StaticResource AccentRedBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
                                                    Text="RHI installs ReShade with full addon support, OptiScaler, and can swap DLSS/Streamline DLLs. These modifications may be flagged by anti-cheat in online or multiplayer games. Uninstall ReShade, OptiScaler, and restore DLSS/Streamline defaults before playing online."/>
@@ -2707,7 +2707,7 @@
                         <Border Background="{StaticResource SurfaceRaisedBrush}" CornerRadius="10" Padding="20,16"
                                 BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1">
                             <StackPanel Spacing="10">
-                                <TextBlock Text="Credits &amp; Acknowledgements" FontSize="13" FontWeight="SemiBold"
+                                <TextBlock Text="Credits &amp; Acknowledgements" loc:Loc.Key="About_Credits" FontSize="13" FontWeight="SemiBold"
                                            Foreground="{StaticResource TextPrimaryBrush}"/>
                                 <TextBlock TextWrapping="Wrap" FontSize="12" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="20"
                                            Text="This app would not exist without the work of the following people and projects."/>
@@ -2844,7 +2844,7 @@
                                 <Border Background="{StaticResource SurfaceToolbarBrush}" CornerRadius="8" Padding="12,10" BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1">
                                     <StackPanel Spacing="3">
                                         <TextBlock FontSize="12">
-                                            <Run Text="OptiScaler" FontWeight="SemiBold" Foreground="{StaticResource TextSecondaryBrush}"/>
+                                            <Run Text="OptiScaler" loc:Loc.Key="Settings_OptiScaler" FontWeight="SemiBold" Foreground="{StaticResource TextSecondaryBrush}"/>
                                             <Run Text=" by OptiScaler contributors" Foreground="{StaticResource TextTertiaryBrush}"/>
                                             <Run Text="  ·  Source-available" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
                                         </TextBlock>
@@ -2940,7 +2940,7 @@
                         <Border Background="{StaticResource SurfaceRaisedBrush}" CornerRadius="10" Padding="20,16"
                                 BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1">
                             <StackPanel Spacing="8">
-                                <TextBlock Text="Links" FontSize="14" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}"/>
+                                <TextBlock Text="Links" loc:Loc.Key="Menu_Links2" FontSize="14" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}"/>
                                 <HyperlinkButton NavigateUri="https://github.com/clshortfuse/renodx" Padding="0">
                                     <TextBlock Foreground="{StaticResource AccentBlueBrush}" FontSize="12">RenoDX Project — github.com/clshortfuse/renodx</TextBlock>
                                 </HyperlinkButton>
@@ -3007,7 +3007,7 @@
                                 Background="{StaticResource SurfaceOverlayBrush}" Foreground="{StaticResource TextSecondaryBrush}"
                                 BorderBrush="{StaticResource BorderDefaultBrush}" BorderThickness="1"
                                 CornerRadius="8" Padding="12,6" FontSize="12"/>
-                        <TextBlock Text="Quick Start Guide" FontSize="20" FontWeight="Bold"
+                        <TextBlock Text="Quick Start Guide" loc:Loc.Key="Faq_QuickStartGuide" FontSize="20" FontWeight="Bold"
                                    Foreground="{StaticResource TextPrimaryBrush}" VerticalAlignment="Center"/>
                     </StackPanel>
                 </Border>
@@ -3046,18 +3046,18 @@
                     <TextBlock x:Name="StatusBarVersionText" x:FieldModifier="internal"
                                FontSize="11" Foreground="{StaticResource TextDisabledBrush}"
                                VerticalAlignment="Center"/>
-                    <Button Content="Patch Notes"
+                    <Button Content="Patch Notes" loc:Loc.Key="About_PatchNotes"
                             Click="PatchNotesLink_Click"
                             Background="Transparent" BorderThickness="0"
                             Foreground="{StaticResource TextDisabledBrush}" FontSize="11"
                             Padding="8,2" VerticalAlignment="Center"
-                            ToolTipService.ToolTip="View recent patch notes"/>
-                    <Button Content="MOTD"
+                            ToolTipService.ToolTip="View recent patch notes" loc:Loc.ToolTipKey="About_ViewPatchNotes"/>
+                    <Button Content="MOTD" loc:Loc.Key="About_Motd"
                             Click="MotdButton_Click"
                             Background="Transparent" BorderThickness="0"
                             Foreground="{StaticResource TextDisabledBrush}" FontSize="11"
                             Padding="8,2" VerticalAlignment="Center"
-                            ToolTipService.ToolTip="Show message of the day"/>
+                            ToolTipService.ToolTip="Show message of the day" loc:Loc.ToolTipKey="About_ShowMotd"/>
                 </StackPanel>
             </Grid>
         </Border>
