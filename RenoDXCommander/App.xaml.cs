@@ -1,6 +1,7 @@
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.UI.Xaml;
 using RenoDXCommander.Services;
+using RenoDXCommander.Localization;
 using RenoDXCommander.ViewModels;
 
 namespace RenoDXCommander;
@@ -18,6 +19,10 @@ public partial class App : Application
 
     public App()
     {
+        // RHI zh-CN fork: force the UI culture to zh-CN before any resource or
+        // XAML binding resolves, so the localized UI loads on any OS language.
+        Localizer.InitializeStartupCulture();
+
         InitializeComponent();
         // Register crash/error reporting before anything else runs.
         // This catches AppDomain, TaskScheduler, and WinUI exceptions.
