@@ -83,7 +83,7 @@ public static class Loc
         public ContentKind Kind { get; }
     }
 
-    private enum ContentKind { Text, Content, ToolTip, RunText, Placeholder }
+    private enum ContentKind { Text, Content, ToolTip, RunText, Placeholder, MenuText }
 
     /// <summary>
     /// Walk the visual subtree starting at <paramref name="root"/>, collect
@@ -116,7 +116,11 @@ public static class Loc
             {
                 TextBlock => ContentKind.Text,
                 Button => ContentKind.Content,
+                ComboBoxItem => ContentKind.Content,
+                RadioButton => ContentKind.Content,
+                Microsoft.UI.Xaml.Controls.Primitives.ToggleButton => ContentKind.Content,
                 Run => ContentKind.RunText,
+                MenuFlyoutItem => ContentKind.MenuText,
                 TextBox => ContentKind.Placeholder,
                 _ => ContentKind.Text, // falls through to runtime branch
             };
@@ -170,6 +174,7 @@ public static class Loc
                 break;
             case ContentKind.Content:
                 if (entry.Element is Button btn) btn.Content = text;
+                else if (entry.Element is ContentControl cc) cc.Content = text;
                 break;
             case ContentKind.RunText:
                 if (entry.Element is Run run) run.Text = text;
@@ -179,6 +184,10 @@ public static class Loc
                 break;
             case ContentKind.Placeholder:
                 if (entry.Element is TextBox tb3) tb3.PlaceholderText = text;
+                break;
+            case ContentKind.MenuText:
+                if (entry.Element is MenuFlyoutItem mfi) mfi.Text = text;
+                else if (entry.Element is ContentControl cc2) cc2.Content = text;
                 break;
         }
     }
