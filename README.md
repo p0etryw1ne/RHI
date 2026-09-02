@@ -1,4 +1,6 @@
-# RHI — Simplified PC Gaming
+﻿# RHI — Simplified PC Gaming
+
+> **中文用户**：本仓库 fork 自上游 [RankFTW/RHI](https://github.com/RankFTW/RHI)，汉化版本请见 [README_zh-CN.md](README_zh-CN.md)。
 
 One app to manage HDR mods across your entire PC game library. RHI auto-detects games from eight storefronts, installs and updates ReShade, RenoDX, frame limiters, DLSS/Streamline, OptiScaler, and more — all with per-game control and zero manual configuration.
 
