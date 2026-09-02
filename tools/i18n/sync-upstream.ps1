@@ -36,6 +36,35 @@ function Write-Section($title) {
     Write-Host ("=" * 60) -ForegroundColor Cyan
 }
 
+# Assert the fork-specific i18n hooks are still present after an upstream merge.
+# Upstream rewrites of these files can silently drop the fork's additions, which
+# makes the app fall back to English even though the satellite resource is packed.
+function Assert-I18nHooks {
+    $root = Get-Location
+    $checks = @(
+        @{ File = 'RenoDXCommander\App.xaml.cs';        Needle = 'Localizer.InitializeStartupCulture()'; Desc = 'App startup culture bootstrap (zh-CN default)' },
+        @{ File = 'RenoDXCommander\MainWindow.xaml.cs';  Needle = 'Loc.ApplyTo(Content)';                 Desc = 'XAML Loc.ApplyTo wiring' },
+        @{ File = 'RenoDXCommander\Localization\Localizer.cs'; Needle = 'new CultureInfo("zh-CN")';        Desc = 'zh-CN normalization' }
+    )
+    $missing = @()
+    foreach ($c in $checks) {
+        $full = Join-Path $root $c.File
+        if (-not (Test-Path $full)) { $missing += ('{0}  (missing file)' -f $c.File); continue }
+        $content = [System.IO.File]::ReadAllText($full)
+        if (-not $content.Contains($c.Needle)) {
+            $missing += ('{0}  -- missing {1}  [{2}]' -f $c.File, $c.Needle, $c.Desc)
+        }
+    }
+    if ($missing.Count -gt 0) {
+        Write-Host 'WARNING: i18n hooks missing after merge (app will fall back to English):' -ForegroundColor Red
+        $missing | ForEach-Object { Write-Host '  - $_' -ForegroundColor Red }
+        Write-Host 'Re-apply these fork-specific lines before committing.' -ForegroundColor Red
+        Write-Host 'See:  git log --all -S "$($checks[0].Needle)" -- $($checks[0].File)' -ForegroundColor Red
+        return $false
+    }
+    Write-Host 'i18n hooks present: App.InitializeStartupCulture / MainWindow.Loc.ApplyTo / Localizer zh-CN' -ForegroundColor Green
+    return $true
+}
 # 1. Ensure upstream remote is configured.
 $upstream = git remote get-url upstream 2>$null
 if ($LASTEXITCODE -ne 0) {
@@ -103,6 +132,12 @@ if ($conflicted) {
 
 # 5. Clean merge -- proceed to verification.
 Write-Section "Merge completed cleanly (no conflicts)"
+Write-Section "Verify i18n hooks survived the merge"
+if (-not (Assert-I18nHooks)) {
+    Write-Host "Fix the missing hooks above, then re-run this script." -ForegroundColor Red
+    exit 2
+}
+
 
 # 6. Build + test.
 Write-Section "Running dotnet build"
