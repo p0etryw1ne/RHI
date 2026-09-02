@@ -167,10 +167,16 @@ public static class Loc
             case Flyout flyout:
                 if (flyout.Content is DependencyObject dc) Collect(dc);
                 break;
-            default:
+            case UIElement:
                 var count = VisualTreeHelper.GetChildrenCount(node);
                 for (int i = 0; i < count; i++)
                     Collect(VisualTreeHelper.GetChild(node, i));
+                break;
+            default:
+                // Run and other non-visual DependencyObjects do not implement
+                // the visual-tree COM interface. Their own localization key
+                // has already been collected above, so there is nothing else
+                // to traverse here.
                 break;
         }
 
