@@ -480,4 +480,7 @@
   <data name="Dlss_NeuralRendering" xml:space="preserve"><value>神经渲染</value></data>
   <data name="Layout_Simple" xml:space="preserve"><value>简洁视图</value></data>
   <data name="Settings_NoDefaultsConfigured" xml:space="preserve"><value>尚未配置默认值。</value></data>
+  <data name="Settings_AutoUpdateDesc" xml:space="preserve"><value>启用后，RHI 会在每次检查更新后于后台静默安装组件更新。检测到更新时正在运行的游戏会在关闭后自动重试。不适用于应用自身的更新。</value></data>
+  <data name="Settings_UpdateInclusionDesc" xml:space="preserve"><value>可针对单个组件禁用更新检查。禁用后，该组件在启动或全部更新时不会被检查。</value></data>
+  <data name="Settings_FullRefreshDesc" xml:space="preserve"><value>清除所有缓存并从头重新扫描磁盘。如果游戏缺失、路径变更、游戏新增了 DLSS，或游戏卡的 DLSS 区域消失，可将其作为最后手段使用。</value></data>
 </root>

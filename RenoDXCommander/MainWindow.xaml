@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Window
     x:Class="RenoDXCommander.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -1262,7 +1262,7 @@
                                     <TextBlock Text="Automatic Updates" loc:Loc.Key="Settings_AutomaticUpdates" FontSize="13" FontWeight="SemiBold"
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
                                     <TextBlock TextWrapping="Wrap" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                               Text="When enabled, RHI silently installs component updates in the background after each update check. Games that are running when an update is detected will be retried automatically once they close. Does not apply to app updates."/>
+                                               Text="When enabled, RHI silently installs component updates in the background after each update check. Games that are running when an update is detected will be retried automatically once they close. Does not apply to app updates." loc:Loc.Key="Settings_AutoUpdateDesc"/>
                                     <ComboBox x:Name="AutoUpdateComponentsCombo" x:FieldModifier="internal"
                                               FontSize="12" HorizontalAlignment="Stretch"
                                               ToolTipService.ToolTip="Automatically install ReShade, RenoDX, ReLimiter, DC, OptiScaler, RE Framework, Luma, DXVK and DOF Fix updates silently in the background"
@@ -2368,7 +2368,7 @@
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
                                     <TextBlock TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                               Text="Disable update checks for individual components. When disabled, the component will not be checked during startup or Update All."/>
+                                               Text="Disable update checks for individual components. When disabled, the component will not be checked during startup or Update All." loc:Loc.Key="Settings_UpdateInclusionDesc"/>
                                 </StackPanel>
 
                                 <!-- Divider -->
@@ -2463,7 +2463,7 @@
                                         <TextBlock Text="Full Refresh" loc:Loc.Key="Settings_FullRefresh" FontSize="13" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                                   Text="Clears all caches and re-scans everything from disk. Use as a last resort if games are missing, paths have changed, DLSS has been added to a game, or the DLSS section is missing from a game card."/>
+                                                   Text="Clears all caches and re-scans everything from disk. Use as a last resort if games are missing, paths have changed, DLSS has been added to a game, or the DLSS section is missing from a game card." loc:Loc.Key="Settings_FullRefreshDesc"/>
                                     </StackPanel>
                                     <Button Grid.Row="1" x:Name="FullRefreshBtn" Content="Full Refresh" loc:Loc.Key="Settings_FullRefresh"
                                             Click="FullRefreshButton_Click"

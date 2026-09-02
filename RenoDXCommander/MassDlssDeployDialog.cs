@@ -4,6 +4,7 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media;
 using RenoDXCommander.Services;
+using RenoDXCommander.Localization;
 using RenoDXCommander.ViewModels;
 
 namespace RenoDXCommander;
@@ -186,7 +187,7 @@ public class MassDlssDeployDialog
             Content = mainGrid,
             PrimaryButtonText = "Deploy",
             SecondaryButtonText = "Restore",
-            CloseButtonText = "Cancel",
+            CloseButtonText = Localizer.Get("Common_Cancel"),
             XamlRoot = _xamlRoot,
             RequestedTheme = ElementTheme.Dark,
         };

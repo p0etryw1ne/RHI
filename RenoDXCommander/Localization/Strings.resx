@@ -488,4 +488,7 @@ Place your .dll files in:</value></data>
   <data name="Dlss_NeuralRendering" xml:space="preserve"><value>Neural Rendering</value></data>
   <data name="Layout_Simple" xml:space="preserve"><value>Simple View</value></data>
   <data name="Settings_NoDefaultsConfigured" xml:space="preserve"><value>No defaults configured yet.</value></data>
+  <data name="Settings_AutoUpdateDesc" xml:space="preserve"><value>When enabled, RHI silently installs component updates in the background after each update check. Games that are running when an update is detected will be retried automatically once they close. Does not apply to app updates.</value></data>
+  <data name="Settings_UpdateInclusionDesc" xml:space="preserve"><value>Disable update checks for individual components. When disabled, the component will not be checked during startup or Update All.</value></data>
+  <data name="Settings_FullRefreshDesc" xml:space="preserve"><value>Clears all caches and re-scans everything from disk. Use as a last resort if games are missing, paths have changed, DLSS has been added to a game, or the DLSS section is missing from a game card.</value></data>
 </root>

@@ -30,7 +30,7 @@ public static class DlssDefaultsDialog
         var srCol = new StackPanel { Spacing = 4 };
         srCol.Children.Add(new TextBlock { Text = "DLSS", FontSize = 11, FontWeight = Microsoft.UI.Text.FontWeights.SemiBold, Foreground = UIFactory.Brush(ResourceKeys.TextPrimaryBrush) });
 
-        srCol.Children.Add(new TextBlock { Text = "Version", FontSize = 10, Foreground = UIFactory.Brush(ResourceKeys.TextTertiaryBrush), Margin = new Microsoft.UI.Xaml.Thickness(0, 2, 0, 0) });
+        srCol.Children.Add(new TextBlock { Text = Localizer.Get("DP_Dlss_Version"), FontSize = 10, Foreground = UIFactory.Brush(ResourceKeys.TextTertiaryBrush), Margin = new Microsoft.UI.Xaml.Thickness(0, 2, 0, 0) });
         var srVersionCombo = BuildCombo(dlssService.DlssVersions, settings.DefaultDlssVersion);
         srCol.Children.Add(srVersionCombo);
 
@@ -38,7 +38,7 @@ public static class DlssDefaultsDialog
         var srPresetCombo = BuildPresetComboBox(DlssPresetService.SrPresets, settings.DefaultSrPreset);
         srCol.Children.Add(srPresetCombo);
 
-        srCol.Children.Add(new TextBlock { Text = "Render Scale", FontSize = 10, Foreground = UIFactory.Brush(ResourceKeys.TextTertiaryBrush), Margin = new Microsoft.UI.Xaml.Thickness(0, 2, 0, 0) });
+        srCol.Children.Add(new TextBlock { Text = Localizer.Get("DP_Dlss_RenderScale"), FontSize = 10, Foreground = UIFactory.Brush(ResourceKeys.TextTertiaryBrush), Margin = new Microsoft.UI.Xaml.Thickness(0, 2, 0, 0) });
         var srScaleCombo = BuildRenderScaleComboBox(settings.DefaultSrRenderScale);
         srCol.Children.Add(srScaleCombo);
 
@@ -52,7 +52,7 @@ public static class DlssDefaultsDialog
         var rrCol = new StackPanel { Spacing = 4 };
         rrCol.Children.Add(new TextBlock { Text = Localizer.Get("Dlss_RayReconstruction"), FontSize = 11, FontWeight = Microsoft.UI.Text.FontWeights.SemiBold, Foreground = UIFactory.Brush(ResourceKeys.TextPrimaryBrush) });
 
-        rrCol.Children.Add(new TextBlock { Text = "Version", FontSize = 10, Foreground = UIFactory.Brush(ResourceKeys.TextTertiaryBrush), Margin = new Microsoft.UI.Xaml.Thickness(0, 2, 0, 0) });
+        rrCol.Children.Add(new TextBlock { Text = Localizer.Get("DP_Dlss_Version"), FontSize = 10, Foreground = UIFactory.Brush(ResourceKeys.TextTertiaryBrush), Margin = new Microsoft.UI.Xaml.Thickness(0, 2, 0, 0) });
         var rrVersionCombo = BuildCombo(dlssService.DlssdVersions, settings.DefaultDlssdVersion);
         rrCol.Children.Add(rrVersionCombo);
 
@@ -60,7 +60,7 @@ public static class DlssDefaultsDialog
         var rrPresetCombo = BuildPresetComboBox(DlssPresetService.RrPresets, settings.DefaultRrPreset);
         rrCol.Children.Add(rrPresetCombo);
 
-        rrCol.Children.Add(new TextBlock { Text = "Render Scale", FontSize = 10, Foreground = UIFactory.Brush(ResourceKeys.TextTertiaryBrush), Margin = new Microsoft.UI.Xaml.Thickness(0, 2, 0, 0) });
+        rrCol.Children.Add(new TextBlock { Text = Localizer.Get("DP_Dlss_RenderScale"), FontSize = 10, Foreground = UIFactory.Brush(ResourceKeys.TextTertiaryBrush), Margin = new Microsoft.UI.Xaml.Thickness(0, 2, 0, 0) });
         var rrScaleCombo = BuildRenderScaleComboBox(settings.DefaultRrRenderScale);
         rrCol.Children.Add(rrScaleCombo);
 
@@ -74,7 +74,7 @@ public static class DlssDefaultsDialog
         var fgCol = new StackPanel { Spacing = 4 };
         fgCol.Children.Add(new TextBlock { Text = Localizer.Get("Dlss_FrameGeneration"), FontSize = 11, FontWeight = Microsoft.UI.Text.FontWeights.SemiBold, Foreground = UIFactory.Brush(ResourceKeys.TextPrimaryBrush) });
 
-        fgCol.Children.Add(new TextBlock { Text = "Version", FontSize = 10, Foreground = UIFactory.Brush(ResourceKeys.TextTertiaryBrush), Margin = new Microsoft.UI.Xaml.Thickness(0, 2, 0, 0) });
+        fgCol.Children.Add(new TextBlock { Text = Localizer.Get("DP_Dlss_Version"), FontSize = 10, Foreground = UIFactory.Brush(ResourceKeys.TextTertiaryBrush), Margin = new Microsoft.UI.Xaml.Thickness(0, 2, 0, 0) });
         var fgVersionCombo = BuildCombo(dlssService.DlssgVersions, settings.DefaultDlssgVersion);
         fgCol.Children.Add(fgVersionCombo);
 
@@ -100,7 +100,7 @@ public static class DlssDefaultsDialog
             var nrCol = new StackPanel { Spacing = 4 };
             nrCol.Children.Add(new TextBlock { Text = Localizer.Get("Dlss_NeuralRendering"), FontSize = 11, FontWeight = Microsoft.UI.Text.FontWeights.SemiBold, Foreground = UIFactory.Brush(ResourceKeys.TextPrimaryBrush) });
 
-            nrCol.Children.Add(new TextBlock { Text = "Version", FontSize = 10, Foreground = UIFactory.Brush(ResourceKeys.TextTertiaryBrush), Margin = new Microsoft.UI.Xaml.Thickness(0, 2, 0, 0) });
+            nrCol.Children.Add(new TextBlock { Text = Localizer.Get("DP_Dlss_Version"), FontSize = 10, Foreground = UIFactory.Brush(ResourceKeys.TextTertiaryBrush), Margin = new Microsoft.UI.Xaml.Thickness(0, 2, 0, 0) });
             nrVersionCombo = BuildCombo(dlssService.DlssnrVersions, settings.DefaultDlssnrVersion);
             nrCol.Children.Add(nrVersionCombo);
 
@@ -120,7 +120,7 @@ public static class DlssDefaultsDialog
         var slCol = new StackPanel { Spacing = 4 };
         slCol.Children.Add(new TextBlock { Text = "Streamline", FontSize = 11, FontWeight = Microsoft.UI.Text.FontWeights.SemiBold, Foreground = UIFactory.Brush(ResourceKeys.TextPrimaryBrush) });
 
-        slCol.Children.Add(new TextBlock { Text = "Version", FontSize = 10, Foreground = UIFactory.Brush(ResourceKeys.TextTertiaryBrush), Margin = new Microsoft.UI.Xaml.Thickness(0, 2, 0, 0) });
+        slCol.Children.Add(new TextBlock { Text = Localizer.Get("DP_Dlss_Version"), FontSize = 10, Foreground = UIFactory.Brush(ResourceKeys.TextTertiaryBrush), Margin = new Microsoft.UI.Xaml.Thickness(0, 2, 0, 0) });
         var slVersionCombo = BuildCombo(dlssService.StreamlineVersions, settings.DefaultStreamlineVersion);
         slCol.Children.Add(slVersionCombo);
 
@@ -131,8 +131,8 @@ public static class DlssDefaultsDialog
         {
             Title = "DLSS & Streamline Defaults",
             Content = grid,
-            PrimaryButtonText = "Save",
-            CloseButtonText = "Cancel",
+            PrimaryButtonText = Localizer.Get("Settings_Save"),
+            CloseButtonText = Localizer.Get("Common_Cancel"),
             XamlRoot = xamlRoot,
             RequestedTheme = ElementTheme.Dark,
         };

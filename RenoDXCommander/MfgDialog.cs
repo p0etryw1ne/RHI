@@ -1,6 +1,7 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using RenoDXCommander.Services;
+using RenoDXCommander.Localization;
 using RenoDXCommander.ViewModels;
 
 namespace RenoDXCommander;
@@ -61,7 +62,7 @@ public static class MfgDialog
                 Title = "⚠ Hardware Requirement",
                 Content = warningPanel,
                 PrimaryButtonText = "OK",
-                CloseButtonText = "Cancel",
+                CloseButtonText = Localizer.Get("Common_Cancel"),
                 XamlRoot = xamlRoot,
                 RequestedTheme = ElementTheme.Dark,
             };
