@@ -338,9 +338,9 @@ Place your .dll files in:</value></data>
   <data name="Settings_CheckForUpdates" xml:space="preserve"><value>Check For Updates</value></data>
   <data name="Settings_CheckForUpdatesTip" xml:space="preserve"><value>Check all components and the app for available updates</value></data>
   <data name="Settings_AutomaticUpdates" xml:space="preserve"><value>Automatic Updates</value></data>
-  <data name="Settings_ReShadeDisplay" xml:space="preserve"><value>ReShade &amp;amp; Display</value></data>
-  <data name="Settings_ScreenshotsHotkeys" xml:space="preserve"><value>Screenshots &amp;amp; Hotkeys</value></data>
-  <data name="Settings_HdrPeakBrightness" xml:space="preserve"><value>HDR &amp;amp; Peak Brightness</value></data>
+  <data name="Settings_ReShadeDisplay" xml:space="preserve"><value>ReShade &amp; Display</value></data>
+  <data name="Settings_ScreenshotsHotkeys" xml:space="preserve"><value>Screenshots &amp; Hotkeys</value></data>
+  <data name="Settings_HdrPeakBrightness" xml:space="preserve"><value>HDR &amp; Peak Brightness</value></data>
   <data name="Settings_ScreenshotFolderPlaceholder" xml:space="preserve"><value>Type or choose screenshot folder</value></data>
   <data name="Settings_PickScreenshotFolderTip" xml:space="preserve"><value>Pick a folder for screenshots</value></data>
   <data name="Common_Open" xml:space="preserve"><value>Open</value></data>
@@ -411,7 +411,7 @@ Place your .dll files in:</value></data>
   <data name="Settings_OsdKeyTip" xml:space="preserve"><value>The key that toggles the ReLimiter OSD overlay in-game.</value></data>
   <data name="Settings_GpuType" xml:space="preserve"><value>GPU Type</value></data>
   <data name="Settings_DlssInputs" xml:space="preserve"><value>DLSS Inputs</value></data>
-  <data name="Settings_ShadersAddons" xml:space="preserve"><value>Shaders &amp;amp; Addons</value></data>
+  <data name="Settings_ShadersAddons" xml:space="preserve"><value>Shaders &amp; Addons</value></data>
   <data name="Settings_ShaderManagement" xml:space="preserve"><value>Shader Management</value></data>
   <data name="Settings_ShaderManagementDesc" xml:space="preserve"><value>Control how RHI manages shader files across your games.</value></data>
   <data name="Settings_CacheAllShaders" xml:space="preserve"><value>Cache All Shaders</value></data>
@@ -420,12 +420,12 @@ Place your .dll files in:</value></data>
   <data name="Settings_AddonWatchFolder" xml:space="preserve"><value>Addon Watch Folder</value></data>
   <data name="Settings_DownloadsFolderPlaceholder" xml:space="preserve"><value>Downloads folder (default)</value></data>
   <data name="Common_Reset" xml:space="preserve"><value>Reset</value></data>
-  <data name="Settings_UpdateDeployment" xml:space="preserve"><value>Update &amp;amp; Deployment</value></data>
+  <data name="Settings_UpdateDeployment" xml:space="preserve"><value>Update &amp; Deployment</value></data>
   <data name="Settings_GlobalUpdateChecks" xml:space="preserve"><value>Global Update Checks</value></data>
   <data name="Settings_MassIniDeployment" xml:space="preserve"><value>Mass INI Deployment</value></data>
   <data name="Settings_UpdateInclusion" xml:space="preserve"><value>Update Inclusion</value></data>
   <data name="Settings_MassPresetInstall" xml:space="preserve"><value>Mass Preset Install</value></data>
-  <data name="Settings_SystemMaintenance" xml:space="preserve"><value>System &amp;amp; Maintenance</value></data>
+  <data name="Settings_SystemMaintenance" xml:space="preserve"><value>System &amp; Maintenance</value></data>
   <data name="Settings_FullRefresh" xml:space="preserve"><value>Full Refresh</value></data>
   <data name="Settings_PurgeStagingFiles" xml:space="preserve"><value>Purge Staging Files</value></data>
   <data name="Settings_AdminMode" xml:space="preserve"><value>Admin Mode</value></data>
@@ -434,7 +434,7 @@ Place your .dll files in:</value></data>
   <data name="Settings_CloseToTray" xml:space="preserve"><value>Close to Tray</value></data>
   <data name="Settings_RecentGames" xml:space="preserve"><value>Recent Games</value></data>
   <data name="Settings_StartWithWindows" xml:space="preserve"><value>Start with Windows</value></data>
-  <data name="Settings_DataCustomFiles" xml:space="preserve"><value>Data &amp;amp; Custom Files</value></data>
+  <data name="Settings_DataCustomFiles" xml:space="preserve"><value>Data &amp; Custom Files</value></data>
   <data name="Settings_AppDataFolder" xml:space="preserve"><value>AppData Folder</value></data>
   <data name="Settings_DownloadsFolder" xml:space="preserve"><value>Downloads Folder</value></data>
   <data name="Settings_CustomFolder" xml:space="preserve"><value>Custom Folder</value></data>
@@ -442,7 +442,7 @@ Place your .dll files in:</value></data>
   <data name="Settings_CopyLogs" xml:space="preserve"><value>Copy Logs</value></data>
   <data name="About_WhatRhiManages" xml:space="preserve"><value>What RHI manages</value></data>
   <data name="About_SinglePlayerOnly" xml:space="preserve"><value>Single-player only</value></data>
-  <data name="About_Credits" xml:space="preserve"><value>Credits &amp;amp; Acknowledgements</value></data>
+  <data name="About_Credits" xml:space="preserve"><value>Credits &amp; Acknowledgements</value></data>
   <data name="Menu_Links2" xml:space="preserve"><value>Links</value></data>
   <data name="Faq_QuickStartGuide" xml:space="preserve"><value>Quick Start Guide</value></data>
   <data name="About_PatchNotes" xml:space="preserve"><value>Patch Notes</value></data>
@@ -491,4 +491,110 @@ Place your .dll files in:</value></data>
   <data name="Settings_AutoUpdateDesc" xml:space="preserve"><value>When enabled, RHI silently installs component updates in the background after each update check. Games that are running when an update is detected will be retried automatically once they close. Does not apply to app updates.</value></data>
   <data name="Settings_UpdateInclusionDesc" xml:space="preserve"><value>Disable update checks for individual components. When disabled, the component will not be checked during startup or Update All.</value></data>
   <data name="Settings_FullRefreshDesc" xml:space="preserve"><value>Clears all caches and re-scans everything from disk. Use as a last resort if games are missing, paths have changed, DLSS has been added to a game, or the DLSS section is missing from a game card.</value></data>
+  <data name="Settings_CheckForUpdatesDesc" xml:space="preserve"><value>Fetches the latest manifest data and checks all components for available updates. Bypasses the 4-hour cooldown.</value></data>
+  <data name="Settings_ScreenshotPathDesc" xml:space="preserve"><value>Screenshot save path and ReShade key bindings applied to all managed reshade.ini files.</value></data>
+  <data name="Settings_PeakNitsDesc" xml:space="preserve"><value>Peak brightness (nits) written to reshade.ini presets. HDR auto-toggle enables Windows HDR on game launch and disables on exit.</value></data>
+  <data name="Settings_TargetResDesc" xml:space="preserve"><value>Desktop resolution to switch to before a game launches. Restored on game exit.</value></data>
+  <data name="Settings_ResAutoToggleDesc" xml:space="preserve"><value>When On, switches to the target resolution on game launch and restores it on exit.</value></data>
+  <data name="Settings_NexusApiKeyDesc" xml:space="preserve"><value>Paste your Nexus Mods personal API key. Premium users get one-click downloads and silent auto-updates. Free users get one-click browser downloads.</value></data>
+  <data name="Settings_NxmDesc" xml:space="preserve"><value>Register RHI as the nxm:// handler so Nexus &quot;Mod Manager Download&quot; buttons open directly in RHI.</value></data>
+  <data name="Settings_DlssDefaultsDesc" xml:space="preserve"><value>Configure preferred DLSS/Streamline versions, presets, and render scales. Use 'Quick Apply' in the Nvidia Profile section to stamp these onto any game.</value></data>
+  <data name="Settings_DmfgDesc" xml:space="preserve"><value>Global Dynamic Multi Frame Generation defaults. Set these once — then just enable Dynamic mode on each game's MFG dialog.</value></data>
+  <data name="Settings_BatchDeployDesc" xml:space="preserve"><value>Deploy DLSS and Streamline DLL versions and DLSS presets to multiple games at once. Backs up originals automatically. Pre-populated with your configured defaults.</value></data>
+  <data name="Settings_DlssOsdDesc" xml:space="preserve"><value>Controls the DLSS text overlay NVIDIA shows in the corner of games. Global system setting — affects all games. Requires admin.</value></data>
+  <data name="Settings_DlssAutoUpdateDesc" xml:space="preserve"><value>Automatically swap to the newest version when a new release appears. Only affects games currently on the previous latest — manually chosen older versions are left alone.</value></data>
+  <data name="Settings_GlobalNvidiaDesc" xml:space="preserve"><value>Driver-level settings applied globally via the base NVIDIA profile. Per-game settings are in the Nvidia Profile section of each game's overrides panel.</value></data>
+  <data name="Settings_DigitalVibranceDesc" xml:space="preserve"><value>Adjust NVIDIA Digital Vibrance (color saturation) per-display. Saved values are automatically restored on app startup.</value></data>
+  <data name="Settings_CreateProfilesDesc" xml:space="preserve"><value>Games without an NVIDIA profile don't benefit from global driver settings. Create profiles for all games in your library to ensure global settings apply.</value></data>
+  <data name="Settings_BackupProfilesDesc" xml:space="preserve"><value>Backup saves all per-game NVIDIA driver settings to a file. Restore loads them back — useful before updating drivers.</value></data>
+  <data name="Settings_ReLimiterDesc" xml:space="preserve"><value>ReLimiter OSD hotkey and global feature settings applied to all games.</value></data>
+  <data name="Settings_OptiScalerDesc" xml:space="preserve"><value>GPU type, DLSS input settings, and overlay hotkey for OptiScaler installations.</value></data>
+  <data name="Settings_AddonWatchDesc" xml:space="preserve"><value>RHI watches this folder for RenoDX addon files (.addon64/.addon32) and archives. Defaults to your Downloads folder.</value></data>
+  <data name="Settings_MassIniDesc" xml:space="preserve"><value>Deploy INI files or ReShade presets to multiple games at once. Custom hotkey and screenshot path settings are preserved.</value></data>
+  <data name="Settings_PurgeDesc" xml:space="preserve"><value>Deletes cached DLSS, Streamline, and component staging files to free disk space. Shaders, installed addons, and version metadata are preserved. Files are re-downloaded automatically when needed.</value></data>
+  <data name="Settings_AdminModeDesc" xml:space="preserve"><value>Creates a scheduled task to launch RHI with elevated privileges. Required for ReBAR, Low Latency Ultra, and Smooth Motion driver settings. The Drop Helper enables Discord drag-and-drop when running elevated.</value></data>
+  <data name="Settings_SystemTrayDesc" xml:space="preserve"><value>Minimize to system tray on close. Right-click the tray icon or pinned taskbar icon to quickly launch recent games.</value></data>
+  <data name="About_HeroDesc" xml:space="preserve"><value>The all-in-one game enhancement toolkit for PC. Auto-detects games from 8 storefronts and provides one-click management for ReShade, HDR mods, shaders, DLSS/Streamline, frame limiters, NVIDIA driver profiles, and more — all from one place.</value></data>
+  <data name="About_WhatManages" xml:space="preserve"><value>ReShade &amp; shader packs · RenoDX HDR mods · Luma Framework · DLSS/Streamline version swaps &amp; presets · NVIDIA driver profile settings (VSync, Low Latency, ReBAR, Smooth Motion, Power) · OptiScaler · ReLimiter &amp; Display Commander frame limiters · RE Framework · DXVK · UE-Extended native HDR · Per-game overrides for everything.</value></data>
+  <data name="About_SinglePlayerWarning" xml:space="preserve"><value>RHI installs ReShade with full addon support, OptiScaler, and can swap DLSS/Streamline DLLs. These modifications may be flagged by anti-cheat in online or multiplayer games. Uninstall ReShade, OptiScaler, and restore DLSS/Streamline defaults before playing online.</value></data>
+  <data name="About_CreditsIntro" xml:space="preserve"><value>This app would not exist without the work of the following people and projects.</value></data>
+  <data name="About_RenoDxDesc" xml:space="preserve"><value>HDR mod framework powering 800+ games. The entire reason this app exists.</value></data>
+  <data name="Detail_FrameLimitersSection" xml:space="preserve"><value>———  Frame limiters — Choose one  ———</value></data>
+  <data name="About_ReShadeDesc" xml:space="preserve"><value>Post-processing injection framework. Downloaded with full addon support from reshade.me and cached locally. Copyright © Crosire.</value></data>
+  <data name="About_LumaDesc" xml:space="preserve"><value>DX11 modding framework adding HDR support and graphics improvements via the ReShade addon system. Mods are downloaded from official GitHub releases. Drag-and-drop install with auto-detection, update checking, and per-game toggle.</value></data>
+  <data name="About_SevenZipDesc" xml:space="preserve"><value>Archive utility used to extract ReShade DLLs from the NSIS installer. 7z.exe and 7z.dll are bundled under the LGPL licence. Copyright © Igor Pavlov.</value></data>
+  <data name="About_HtmlAgilityDesc" xml:space="preserve"><value>HTML parser used to scrape game data from the RenoDX wiki. Copyright © ZZZ Projects Inc.</value></data>
+  <data name="About_CommunityToolkitDesc" xml:space="preserve"><value>MVVM helpers (ObservableObject, RelayCommand, etc.) used throughout the app. Copyright © .NET Foundation.</value></data>
+  <data name="About_DisplayCommanderDesc" xml:space="preserve"><value>Frame rate limiter addon available as an alternative to ReLimiter. The LITE variant is downloaded from GitHub on demand.</value></data>
+  <data name="About_ReFrameworkDesc" xml:space="preserve"><value>Modding framework required for ReShade injection on RE Engine games. Downloaded from nightly builds on GitHub.</value></data>
+  <data name="About_OptiScalerDesc" xml:space="preserve"><value>Upscaler redirection layer enabling DLSS, FSR, and XeSS across different GPU vendors. Downloaded from GitHub releases.</value></data>
+  <data name="About_DxvkDesc" xml:space="preserve"><value>DirectX-to-Vulkan translation layer for DX8/DX9/DX10 games. Includes Lilium HDR fork by EndlesslyFlowering for scRGB HDR output.</value></data>
+  <data name="About_NvApiWrapperDesc" xml:space="preserve"><value>.NET wrapper for NVIDIA's NvAPI used for all driver profile management — DLSS presets, render scale, ReBAR, VSync, Smooth Motion, and more.</value></data>
+  <data name="About_LazorrDesc" xml:space="preserve"><value>Somehow I have become a UI guy in multiple aspects of life lol.</value></data>
+  <data name="About_UeDofFixDesc" xml:space="preserve"><value>Fixes depth-of-field stepping and tiling artifacts in Unreal Engine 5 games.</value></data>
+  <data name="About_RhiDesc" xml:space="preserve"><value>Unofficial companion app. Not affiliated with RenoDX, Crosire, or pmnoxx.</value></data>
+  <data name="Dialog_WarningAntiCheat" xml:space="preserve"><value>⚠ ReShade, OptiScaler, and DLSS/Streamline modifications may trigger anti-cheat in online/multiplayer games</value></data>
+  <data name="About_ByClshortfuse" xml:space="preserve"><value> by clshortfuse &amp; contributors</value></data>
+  <data name="About_LicMit" xml:space="preserve"><value>  ·  MIT Licence</value></data>
+  <data name="About_ByCrosire" xml:space="preserve"><value> by Crosire</value></data>
+  <data name="About_LicBsd3" xml:space="preserve"><value>  ·  BSD 3-Clause Licence</value></data>
+  <data name="About_ByPumbo" xml:space="preserve"><value> by Pumbo (Filoppi)</value></data>
+  <data name="About_LicSourceAvailable" xml:space="preserve"><value>  ·  Source-available</value></data>
+  <data name="About_ByIgorPavlov" xml:space="preserve"><value> by Igor Pavlov</value></data>
+  <data name="About_ByZzz" xml:space="preserve"><value> by ZZZ Projects</value></data>
+  <data name="About_ByMicrosoft" xml:space="preserve"><value> by Microsoft</value></data>
+  <data name="About_ByPmnox" xml:space="preserve"><value> by pmnox</value></data>
+  <data name="About_ByPraydog" xml:space="preserve"><value> by praydog</value></data>
+  <data name="About_ByOptiScaler" xml:space="preserve"><value> by OptiScaler contributors</value></data>
+  <data name="About_ByDoitsujin" xml:space="preserve"><value> by doitsujin &amp; contributors</value></data>
+  <data name="About_LicZlib" xml:space="preserve"><value>  ·  Zlib Licence</value></data>
+  <data name="About_ByFalahati" xml:space="preserve"><value> by falahati</value></data>
+  <data name="About_ByLazorr" xml:space="preserve"><value> by Lazorr</value></data>
+  <data name="About_ByRankFtw" xml:space="preserve"><value> by RankFTW</value></data>
+  <data name="Tip_HdrAutoSwitch" xml:space="preserve"><value>Toggle per-game HDR auto-switch. Purple = HDR enabled on launch, disabled on exit.</value></data>
+  <data name="Tip_ResAutoSwitch" xml:space="preserve"><value>Toggle per-game resolution switch. Purple = resolution changes on launch, restores on exit.</value></data>
+  <data name="Tip_HideGame" xml:space="preserve"><value>Hide this game from the sidebar (find it again in the Hidden filter)</value></data>
+  <data name="Tip_AutoInstallUpdates" xml:space="preserve"><value>Automatically install ReShade, RenoDX, ReLimiter, DC, OptiScaler, RE Framework, Luma, DXVK and DOF Fix updates silently in the background</value></data>
+  <data name="Tip_HdrAutoToggle" xml:space="preserve"><value>When On, Windows HDR is automatically enabled when launching a game through RHI and disabled when the game exits.</value></data>
+  <data name="Tip_HdrMonitors" xml:space="preserve"><value>Select which monitors to enable HDR on. Empty = primary display only.</value></data>
+  <data name="Tip_ShaderDisplayMode" xml:space="preserve"><value>Controls how shaders are displayed in the ReShade overlay. Tabs groups effect files into named tabs; Tree shows a collapsible hierarchy.</value></data>
+  <data name="Tip_TargetResolution" xml:space="preserve"><value>Select the target desktop resolution. Populated from your monitor's supported modes.</value></data>
+  <data name="Tip_ResAutoToggle" xml:space="preserve"><value>When On, switches desktop resolution on game launch and restores on exit.</value></data>
+  <data name="Tip_ResMonitors" xml:space="preserve"><value>Select which monitors to change resolution on. Empty = primary display only.</value></data>
+  <data name="Tip_DmfgMaxFrames" xml:space="preserve"><value>Global DMFG max frame count. Games using Dynamic mode inherit this unless overridden per-game.</value></data>
+  <data name="Tip_DmfgTargetFps" xml:space="preserve"><value>Global DMFG target frame rate. Off = no target. Max Refresh Rate = match display. Or pick a specific FPS.</value></data>
+  <data name="Tip_ShaderCacheSize" xml:space="preserve"><value>Maximum disk space for compiled shader cache. Larger = fewer stutters on revisits. 16GB is the driver default.</value></data>
+  <data name="Tip_ShaderAutoCompile" xml:space="preserve"><value>Auto-compiles shaders in the background when idle. Higher = more CPU usage during idle, faster first-time game loads.</value></data>
+  <data name="Tip_GSyncEnable" xml:space="preserve"><value>Globally enables or disables G-Sync/FreeSync variable refresh rate.</value></data>
+  <data name="Tip_GSyncMode" xml:space="preserve"><value>Controls G-Sync/FreeSync variable refresh rate. Fullscreen and Windowed recommended for seamless experience.</value></data>
+  <data name="Tip_FpsCap" xml:space="preserve"><value>Global FPS cap via NVIDIA driver. VRR-optimal presets cap just below refresh rate to stay in VRR range.</value></data>
+  <data name="Tip_PreferredRefreshRate" xml:space="preserve"><value>Highest available forces your max refresh rate. App Setting lets games choose their own refresh rate.</value></data>
+  <data name="Tip_VSyncMode" xml:space="preserve"><value>Global VSync mode — applies to all games without a per-game override.</value></data>
+  <data name="Tip_PowerMode" xml:space="preserve"><value>Global power management mode — applies to all games without a per-game override.</value></data>
+  <data name="Tip_ReBar" xml:space="preserve"><value>Global Resizable BAR — enables large GPU memory transfers for all games. Requires admin and compatible hardware (RTX 30 Series+).</value></data>
+  <data name="Tip_ReBarSize" xml:space="preserve"><value>Maximum BAR transfer size. 1GB is optimal for most games. Decrease to 512MB if experiencing ReBAR-related stutters.</value></data>
+  <data name="Tip_DigitalVibrance" xml:space="preserve"><value>Adjust Digital Vibrance (color saturation) per-display. Saved values are restored on app startup.</value></data>
+  <data name="Tip_CreateProfiles" xml:space="preserve"><value>Creates NVIDIA driver profiles for all games that don't have one yet. Ensures global settings like Power Mode and VSync apply to every game.</value></data>
+  <data name="Tip_RestoreProfiles" xml:space="preserve"><value>Restore per-game NVIDIA profile settings from a previous export.</value></data>
+  <data name="Tip_ResetNvidiaProfiles" xml:space="preserve"><value>Removes ALL per-game NVIDIA profile overrides. The global profile will be like new.</value></data>
+  <data name="Tip_ClearShaderCache" xml:space="preserve"><value>Deletes the NVIDIA DXCache and GLCache folders. Forces shaders to recompile on next launch.</value></data>
+  <data name="Tip_SharedPresets" xml:space="preserve"><value>When On, all games share the same OSD presets file. When Off, each game has its own presets.</value></data>
+  <data name="Tip_OsdDetails" xml:space="preserve"><value>Shows DLSS quality mode, render resolution, and active features on the ReLimiter OSD. Disable if experiencing crashes.</value></data>
+  <data name="Tip_RelimiterFpsCap" xml:space="preserve"><value>Global FPS cap written to all relimiter.ini files. Select a VRR preset or Custom for a manual value.</value></data>
+  <data name="Tip_ShaderMode" xml:space="preserve"><value>RHI Managed: deploy built-in shader packs to all games.
+Custom: use your own shader directory.
+Off: RHI never touches shaders on any game.</value></data>
+  <data name="Tip_CacheAllShaders" xml:space="preserve"><value>When On, all shader packs are downloaded and cached at startup. When Off, packs are downloaded on demand when needed.</value></data>
+  <data name="Tip_PurgeFiles" xml:space="preserve"><value>Deletes cached DLSS, Streamline, and download files to free disk space. Shaders are preserved.</value></data>
+  <data name="Tip_DropHelper" xml:space="preserve"><value>The drop helper window enables Discord drag-and-drop in admin mode. Disable if you don't need it. Restart required.</value></data>
+  <data name="Tip_CopyLogs" xml:space="preserve"><value>Creates a zip archive of all logs and copies it to clipboard — paste directly into Discord</value></data>
+  <data name="Detail_HdrModsSection" xml:space="preserve"><value>———  HDR Mods — Install one or both  ———</value></data>
+  <data name="Settings_BackToGames" xml:space="preserve"><value>← Back to Games</value></data>
+  <data name="Settings_ReBarAdminRequired" xml:space="preserve"><value>— Admin required</value></data>
+  <data name="Settings_AppDataDesc" xml:space="preserve"><value>All RHI data is stored in AppData. Drop custom ReShade, DLSS, or Streamline DLLs into the Custom folder to use them as per-game overrides. The Logs folder contains session usage logs useful for troubleshooting.</value></data>
+  <data name="Status_DetectionOnline" xml:space="preserve"><value>{0} games detected · {1} mods installed</value></data>
+  <data name="Status_DetectionOffline" xml:space="preserve"><value>{0} games detected · offline mode (mod info unavailable)</value></data>
+  <data name="Status_ShownCount" xml:space="preserve"><value>{0} shown</value></data>
+  <data name="Status_InstalledCount" xml:space="preserve"><value>{0} installed</value></data>
+  <data name="Status_HiddenCount" xml:space="preserve"><value>· {0} hidden</value></data>
 </root>

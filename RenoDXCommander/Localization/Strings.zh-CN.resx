@@ -330,18 +330,18 @@
   <data name="Settings_CheckForUpdates" xml:space="preserve"><value>检查更新</value></data>
   <data name="Settings_CheckForUpdatesTip" xml:space="preserve"><value>检查所有组件和应用是否有可用更新</value></data>
   <data name="Settings_AutomaticUpdates" xml:space="preserve"><value>自动更新</value></data>
-  <data name="Settings_ReShadeDisplay" xml:space="preserve"><value>ReShade &amp;amp; Display</value></data>
-  <data name="Settings_ScreenshotsHotkeys" xml:space="preserve"><value>Screenshots &amp;amp; Hotkeys</value></data>
-  <data name="Settings_HdrPeakBrightness" xml:space="preserve"><value>HDR &amp;amp; Peak Brightness</value></data>
+  <data name="Settings_ReShadeDisplay" xml:space="preserve"><value>ReShade 与显示</value></data>
+  <data name="Settings_ScreenshotsHotkeys" xml:space="preserve"><value>截图与快捷键</value></data>
+  <data name="Settings_HdrPeakBrightness" xml:space="preserve"><value>HDR 与峰值亮度</value></data>
   <data name="Settings_ScreenshotFolderPlaceholder" xml:space="preserve"><value>输入或选择截图文件夹</value></data>
-  <data name="Settings_PickScreenshotFolderTip" xml:space="preserve"><value>Pick a folder for screenshots</value></data>
+  <data name="Settings_PickScreenshotFolderTip" xml:space="preserve"><value>为截图选择文件夹</value></data>
   <data name="Common_Open" xml:space="preserve"><value>打开</value></data>
   <data name="Settings_OpenScreenshotFolderTip" xml:space="preserve"><value>在资源管理器中打开截图文件夹</value></data>
   <data name="Settings_PeakNits" xml:space="preserve"><value>峰值亮度</value></data>
   <data name="Settings_Auto" xml:space="preserve"><value>自动</value></data>
-  <data name="Settings_PeakNitsAutoTip" xml:space="preserve"><value>Reads your monitor's peak brightness automatically.</value></data>
+  <data name="Settings_PeakNitsAutoTip" xml:space="preserve"><value>自动读取显示器的峰值亮度。</value></data>
   <data name="Settings_NitsPlaceholder" xml:space="preserve"><value>nits</value></data>
-  <data name="Settings_PeakNitsPresetsTip" xml:space="preserve"><value>Configure which presets receive the global peak nits value.</value></data>
+  <data name="Settings_PeakNitsPresetsTip" xml:space="preserve"><value>配置哪些预设接收全局峰值亮度值。</value></data>
   <data name="Settings_OverlayKey" xml:space="preserve"><value>覆盖层按键</value></data>
   <data name="Settings_ScreenshotKey" xml:space="preserve"><value>截图按键</value></data>
   <data name="Settings_Subfolders" xml:space="preserve"><value>子文件夹</value></data>
@@ -351,30 +351,30 @@
   <data name="Settings_ApplyToAllGames" xml:space="preserve"><value>应用到所有游戏</value></data>
   <data name="Settings_HdrAutoToggle" xml:space="preserve"><value>HDR 自动切换</value></data>
   <data name="Settings_EffectListStyle" xml:space="preserve"><value>效果列表样式</value></data>
-  <data name="Settings_Tabs" xml:space="preserve"><value>Tabs</value></data>
-  <data name="Settings_Tree" xml:space="preserve"><value>Tree</value></data>
+  <data name="Settings_Tabs" xml:space="preserve"><value>选项卡</value></data>
+  <data name="Settings_Tree" xml:space="preserve"><value>树形</value></data>
   <data name="Settings_ResolutionControl" xml:space="preserve"><value>分辨率控制</value></data>
   <data name="Settings_TargetResolution" xml:space="preserve"><value>目标分辨率</value></data>
   <data name="Settings_ResolutionAutoToggle" xml:space="preserve"><value>分辨率自动切换</value></data>
   <data name="Settings_NexusMods" xml:space="preserve"><value>Nexus Mods</value></data>
-  <data name="Settings_ApiKey" xml:space="preserve"><value>API Key</value></data>
-  <data name="Settings_NxmProtocolHandler" xml:space="preserve"><value>NXM Protocol Handler</value></data>
-  <data name="Settings_PasteApiKeyPlaceholder" xml:space="preserve"><value>Paste API key here...</value></data>
-  <data name="Settings_Connect" xml:space="preserve"><value>Connect</value></data>
-  <data name="Settings_NotRegistered" xml:space="preserve"><value>Not registered</value></data>
-  <data name="Settings_Register" xml:space="preserve"><value>Register</value></data>
-  <data name="Settings_Disconnect" xml:space="preserve"><value>Disconnect</value></data>
-  <data name="Settings_DlssStreamline" xml:space="preserve"><value>DLSS / Streamline Settings</value></data>
+  <data name="Settings_ApiKey" xml:space="preserve"><value>API 密钥</value></data>
+  <data name="Settings_NxmProtocolHandler" xml:space="preserve"><value>NXM 协议处理程序</value></data>
+  <data name="Settings_PasteApiKeyPlaceholder" xml:space="preserve"><value>在此粘贴 API 密钥。</value></data>
+  <data name="Settings_Connect" xml:space="preserve"><value>连接</value></data>
+  <data name="Settings_NotRegistered" xml:space="preserve"><value>未注册</value></data>
+  <data name="Settings_Register" xml:space="preserve"><value>注册</value></data>
+  <data name="Settings_Disconnect" xml:space="preserve"><value>断开连接</value></data>
+  <data name="Settings_DlssStreamline" xml:space="preserve"><value>DLSS / Streamline 设置</value></data>
   <data name="Settings_Defaults" xml:space="preserve"><value>默认值</value></data>
   <data name="Settings_ConfigureDefaults" xml:space="preserve"><value>配置默认值</value></data>
   <data name="Settings_DmfgDefaults" xml:space="preserve"><value>DMFG 默认值</value></data>
   <data name="Settings_FrameCount" xml:space="preserve"><value>帧数</value></data>
   <data name="Settings_TargetFps" xml:space="preserve"><value>目标 FPS</value></data>
   <data name="Settings_BatchDeploy" xml:space="preserve"><value>批量部署</value></data>
-  <data name="Settings_DlssOsd" xml:space="preserve"><value>DLSS On-Screen Indicator</value></data>
+  <data name="Settings_DlssOsd" xml:space="preserve"><value>DLSS 屏上指示器</value></data>
   <data name="Settings_Enabled" xml:space="preserve"><value>已启用</value></data>
   <data name="Settings_Disabled" xml:space="preserve"><value>已禁用</value></data>
-  <data name="Settings_GSyncOsd" xml:space="preserve"><value>G-Sync On-Screen Indicator</value></data>
+  <data name="Settings_GSyncOsd" xml:space="preserve"><value>G-Sync 屏上指示器</value></data>
   <data name="Settings_AutoUpdate" xml:space="preserve"><value>自动更新</value></data>
   <data name="Settings_Dlss" xml:space="preserve"><value>DLSS</value></data>
   <data name="Settings_Streamline" xml:space="preserve"><value>Streamline</value></data>
@@ -382,51 +382,51 @@
   <data name="Settings_ShaderCacheSize" xml:space="preserve"><value>着色器缓存大小</value></data>
   <data name="Settings_ShaderPreCompile" xml:space="preserve"><value>着色器预编译</value></data>
   <data name="Settings_GSync" xml:space="preserve"><value>G-Sync</value></data>
-  <data name="Settings_GSyncMode" xml:space="preserve"><value>G-Sync Mode</value></data>
+  <data name="Settings_GSyncMode" xml:space="preserve"><value>G-Sync 模式</value></data>
   <data name="Settings_FpsLimit" xml:space="preserve"><value>FPS 限制</value></data>
-  <data name="Settings_PreferredRefreshRate" xml:space="preserve"><value>Preferred Refresh Rate</value></data>
+  <data name="Settings_PreferredRefreshRate" xml:space="preserve"><value>首选刷新率</value></data>
   <data name="Settings_VSync" xml:space="preserve"><value>VSync</value></data>
   <data name="Settings_PowerMode" xml:space="preserve"><value>电源模式</value></data>
   <data name="Settings_ReBar" xml:space="preserve"><value>ReBAR</value></data>
-  <data name="Settings_ReBarSizeLimit" xml:space="preserve"><value>ReBAR Size Limit</value></data>
+  <data name="Settings_ReBarSizeLimit" xml:space="preserve"><value>ReBAR 大小限制</value></data>
   <data name="Settings_DigitalVibrance" xml:space="preserve"><value>数字鲜艳度</value></data>
   <data name="Settings_CreateMissingProfiles" xml:space="preserve"><value>创建缺失的配置</value></data>
   <data name="Settings_BackupProfiles" xml:space="preserve"><value>备份配置</value></data>
-  <data name="Settings_BackupProfilesTip" xml:space="preserve"><value>Save all per-game NVIDIA profile settings to a backup file.</value></data>
-  <data name="Settings_RestoreProfiles" xml:space="preserve"><value>Restore Profiles</value></data>
-  <data name="Settings_ResetNvidiaProfiles" xml:space="preserve"><value>Reset Nvidia Profiles</value></data>
+  <data name="Settings_BackupProfilesTip" xml:space="preserve"><value>将所有游戏的 NVIDIA 配置设置保存到备份文件。</value></data>
+  <data name="Settings_RestoreProfiles" xml:space="preserve"><value>恢复配置</value></data>
+  <data name="Settings_ResetNvidiaProfiles" xml:space="preserve"><value>重置 Nvidia 配置</value></data>
   <data name="Settings_ClearShaderCache" xml:space="preserve"><value>清除着色器缓存</value></data>
   <data name="Settings_ComponentSettings" xml:space="preserve"><value>组件设置</value></data>
   <data name="Settings_OsdKey" xml:space="preserve"><value>OSD 按键</value></data>
-  <data name="Settings_SharedPresets" xml:space="preserve"><value>Shared Presets</value></data>
+  <data name="Settings_SharedPresets" xml:space="preserve"><value>共享预设</value></data>
   <data name="Settings_DlssHooks" xml:space="preserve"><value>DLSS Hooks</value></data>
-  <data name="Settings_OsdKeyTip" xml:space="preserve"><value>The key that toggles the ReLimiter OSD overlay in-game.</value></data>
+  <data name="Settings_OsdKeyTip" xml:space="preserve"><value>在游戏中切换 ReLimiter OSD 覆盖层的按键。</value></data>
   <data name="Settings_GpuType" xml:space="preserve"><value>GPU 类型</value></data>
   <data name="Settings_DlssInputs" xml:space="preserve"><value>DLSS Inputs</value></data>
-  <data name="Settings_ShadersAddons" xml:space="preserve"><value>Shaders &amp;amp; Addons</value></data>
+  <data name="Settings_ShadersAddons" xml:space="preserve"><value>着色器与附加组件</value></data>
   <data name="Settings_ShaderManagement" xml:space="preserve"><value>着色器管理</value></data>
-  <data name="Settings_ShaderManagementDesc" xml:space="preserve"><value>Control how RHI manages shader files across your games.</value></data>
+  <data name="Settings_ShaderManagementDesc" xml:space="preserve"><value>控制 RHI 如何跨游戏管理着色器文件。</value></data>
   <data name="Settings_CacheAllShaders" xml:space="preserve"><value>缓存所有着色器</value></data>
-  <data name="Settings_RhiManaged" xml:space="preserve"><value>RHI Managed</value></data>
-  <data name="Settings_Custom" xml:space="preserve"><value>Custom</value></data>
+  <data name="Settings_RhiManaged" xml:space="preserve"><value>RHI 管理</value></data>
+  <data name="Settings_Custom" xml:space="preserve"><value>自定义</value></data>
   <data name="Settings_AddonWatchFolder" xml:space="preserve"><value>附加组件监视文件夹</value></data>
   <data name="Settings_DownloadsFolderPlaceholder" xml:space="preserve"><value>下载文件夹（默认）</value></data>
-  <data name="Common_Reset" xml:space="preserve"><value>Reset</value></data>
-  <data name="Settings_UpdateDeployment" xml:space="preserve"><value>Update &amp;amp; Deployment</value></data>
+  <data name="Common_Reset" xml:space="preserve"><value>重置</value></data>
+  <data name="Settings_UpdateDeployment" xml:space="preserve"><value>更新与部署</value></data>
   <data name="Settings_GlobalUpdateChecks" xml:space="preserve"><value>全局更新检查</value></data>
   <data name="Settings_MassIniDeployment" xml:space="preserve"><value>批量 INI 部署</value></data>
   <data name="Settings_UpdateInclusion" xml:space="preserve"><value>更新包含</value></data>
-  <data name="Settings_MassPresetInstall" xml:space="preserve"><value>Mass Preset Install</value></data>
-  <data name="Settings_SystemMaintenance" xml:space="preserve"><value>System &amp;amp; Maintenance</value></data>
-  <data name="Settings_FullRefresh" xml:space="preserve"><value>Full Refresh</value></data>
+  <data name="Settings_MassPresetInstall" xml:space="preserve"><value>批量预设安装</value></data>
+  <data name="Settings_SystemMaintenance" xml:space="preserve"><value>系统与维护</value></data>
+  <data name="Settings_FullRefresh" xml:space="preserve"><value>完全刷新</value></data>
   <data name="Settings_PurgeStagingFiles" xml:space="preserve"><value>清理暂存文件</value></data>
   <data name="Settings_AdminMode" xml:space="preserve"><value>管理员模式</value></data>
-  <data name="Settings_DropHelper" xml:space="preserve"><value>Drop Helper</value></data>
+  <data name="Settings_DropHelper" xml:space="preserve"><value>拖放助手</value></data>
   <data name="Settings_SystemTray" xml:space="preserve"><value>系统托盘</value></data>
   <data name="Settings_CloseToTray" xml:space="preserve"><value>关闭到托盘</value></data>
   <data name="Settings_RecentGames" xml:space="preserve"><value>最近游戏</value></data>
   <data name="Settings_StartWithWindows" xml:space="preserve"><value>随 Windows 启动</value></data>
-  <data name="Settings_DataCustomFiles" xml:space="preserve"><value>Data &amp;amp; Custom Files</value></data>
+  <data name="Settings_DataCustomFiles" xml:space="preserve"><value>数据与自定义文件</value></data>
   <data name="Settings_AppDataFolder" xml:space="preserve"><value>AppData 文件夹</value></data>
   <data name="Settings_DownloadsFolder" xml:space="preserve"><value>下载文件夹</value></data>
   <data name="Settings_CustomFolder" xml:space="preserve"><value>自定义文件夹</value></data>
@@ -483,4 +483,110 @@
   <data name="Settings_AutoUpdateDesc" xml:space="preserve"><value>启用后，RHI 会在每次检查更新后于后台静默安装组件更新。检测到更新时正在运行的游戏会在关闭后自动重试。不适用于应用自身的更新。</value></data>
   <data name="Settings_UpdateInclusionDesc" xml:space="preserve"><value>可针对单个组件禁用更新检查。禁用后，该组件在启动或全部更新时不会被检查。</value></data>
   <data name="Settings_FullRefreshDesc" xml:space="preserve"><value>清除所有缓存并从头重新扫描磁盘。如果游戏缺失、路径变更、游戏新增了 DLSS，或游戏卡的 DLSS 区域消失，可将其作为最后手段使用。</value></data>
+  <data name="Settings_CheckForUpdatesDesc" xml:space="preserve"><value>获取最新清单数据并检查所有组件是否有可用更新。绕过 4 小时冷却时间。</value></data>
+  <data name="Settings_ScreenshotPathDesc" xml:space="preserve"><value>截图保存路径和 ReShade 按键绑定将应用到所有受管的 reshade.ini 文件。</value></data>
+  <data name="Settings_PeakNitsDesc" xml:space="preserve"><value>峰值亮度（nits）会写入 reshade.ini 预设。HDR 自动切换会在游戏启动时启用 Windows HDR、退出时关闭。</value></data>
+  <data name="Settings_TargetResDesc" xml:space="preserve"><value>游戏启动前切换到的桌面分辨率。游戏退出时恢复。</value></data>
+  <data name="Settings_ResAutoToggleDesc" xml:space="preserve"><value>开启后，会在游戏启动时切换到目标分辨率，退出时恢复。</value></data>
+  <data name="Settings_NexusApiKeyDesc" xml:space="preserve"><value>粘贴您的 Nexus Mods 个人 API 密钥。高级用户可获得一键下载和静默自动更新。免费用户可获得一键浏览器下载。</value></data>
+  <data name="Settings_NxmDesc" xml:space="preserve"><value>将 RHI 注册为 nxm:// 处理程序，使 Nexus 的"Mod Manager Download"按钮直接在 RHI 中打开。</value></data>
+  <data name="Settings_DlssDefaultsDesc" xml:space="preserve"><value>配置首选的 DLSS/Streamline 版本、预设和渲染缩放。在 Nvidia 配置区域使用'快速应用'可将这些设置应用到任意游戏。</value></data>
+  <data name="Settings_DmfgDesc" xml:space="preserve"><value>全局动态多帧生成默认值。一次性设置好后，只需在每个游戏的 MFG 弹窗中启用 Dynamic 模式即可。</value></data>
+  <data name="Settings_BatchDeployDesc" xml:space="preserve"><value>将 DLSS 和 Streamline DLL 版本及 DLSS 预设一次部署到多个游戏。自动备份原文件。会预先填入您配置的默认值。</value></data>
+  <data name="Settings_DlssOsdDesc" xml:space="preserve"><value>控制 NVIDIA 在游戏角落显示的 DLSS 文字覆盖层。全局系统设置 — 影响所有游戏。需要管理员权限。</value></data>
+  <data name="Settings_DlssAutoUpdateDesc" xml:space="preserve"><value>新版本发布时自动切换到最新版本。仅影响当前使用上一版本的游戏 — 手动选择的老版本不受影响。</value></data>
+  <data name="Settings_GlobalNvidiaDesc" xml:space="preserve"><value>通过基础 NVIDIA 配置全局应用的驱动级设置。每游戏设置位于各游戏覆盖面板的 Nvidia 配置区域。</value></data>
+  <data name="Settings_DigitalVibranceDesc" xml:space="preserve"><value>按显示器调整 NVIDIA 数字鲜艳度（颜色饱和度）。保存的值会在应用启动时自动恢复。</value></data>
+  <data name="Settings_CreateProfilesDesc" xml:space="preserve"><value>没有 Nvidia 配置的游戏不会受益于全局驱动设置。为库中所有游戏创建配置，以确保全局设置在各处生效。</value></data>
+  <data name="Settings_BackupProfilesDesc" xml:space="preserve"><value>备份会将所有游戏的 NVIDIA 驱动设置保存到文件。恢复可将其读回 — 在更新驱动前非常有用。</value></data>
+  <data name="Settings_ReLimiterDesc" xml:space="preserve"><value>ReLimiter OSD 快捷键和全局功能设置会应用到所有游戏。</value></data>
+  <data name="Settings_OptiScalerDesc" xml:space="preserve"><value>OptiScaler 安装的 GPU 类型、DLSS 输入设置和覆盖层快捷键。</value></data>
+  <data name="Settings_AddonWatchDesc" xml:space="preserve"><value>RHI 会监视此文件夹中的 RenoDX 附加组件文件（.addon64/.addon32）和压缩包。默认为下载文件夹。</value></data>
+  <data name="Settings_MassIniDesc" xml:space="preserve"><value>将 INI 文件或 ReShade 预设一次部署到多个游戏。自定义快捷键和截图路径设置会被保留。</value></data>
+  <data name="Settings_PurgeDesc" xml:space="preserve"><value>删除缓存的 DLSS、Streamline 和组件暂存文件以释放磁盘空间。着色器、已安装的附加组件和版本元数据会被保留。文件会在需要时自动重新下载。</value></data>
+  <data name="Settings_AdminModeDesc" xml:space="preserve"><value>创建计划任务以管理员权限启动 RHI。ReBAR、低延迟 Ultra 和 Smooth Motion 驱动设置需要此功能。Drop Helper 在提权运行时支持 Discord 拖放。</value></data>
+  <data name="Settings_SystemTrayDesc" xml:space="preserve"><value>关闭时最小化到系统托盘。右键点击托盘图标或固定的任务栏图标可快速启动最近游戏。</value></data>
+  <data name="About_HeroDesc" xml:space="preserve"><value>面向 PC 的一体化游戏增强工具包。自动识别 8 个商店的游戏，并对 ReShade、HDR 模组、着色器、DLSS/Streamline、帧率限制器、NVIDIA 驱动配置等提供一键管理 — 全部集中在一处。</value></data>
+  <data name="About_WhatManages" xml:space="preserve"><value>ReShade 与着色器包 · RenoDX HDR 模组 · Luma Framework · DLSS/Streamline 版本切换与预设 · NVIDIA 驱动配置设置（VSync、低延迟、ReBAR、Smooth Motion、电源）· OptiScaler · ReLimiter 与 Display Commander 帧率限制器 · RE Framework · DXVK · UE-Extended 原生 HDR · 所有内容均支持每游戏覆盖。</value></data>
+  <data name="About_SinglePlayerWarning" xml:space="preserve"><value>RHI 会安装带完整附加组件支持的 ReShade、OptiScaler，并可切换 DLSS/Streamline DLL。这些修改可能被联机或多人在线游戏的反外挂系统标出。在线游玩前请卸载 ReShade、OptiScaler，并恢复 DLSS/Streamline 默认值。</value></data>
+  <data name="About_CreditsIntro" xml:space="preserve"><value>没有以下人员与项目的贡献，本应用将不会存在。</value></data>
+  <data name="About_RenoDxDesc" xml:space="preserve"><value>驱动 800+ 款游戏的 HDR 模组框架。这是本应用存在的全部原因。</value></data>
+  <data name="Detail_FrameLimitersSection" xml:space="preserve"><value>——— 帧率限制器 — 二选一 ———</value></data>
+  <data name="About_ReShadeDesc" xml:space="preserve"><value>后处理注入框架。从 reshade.me 下载带完整附加组件支持的版本并缓存到本地。版权所有 © Crosire。</value></data>
+  <data name="About_LumaDesc" xml:space="preserve"><value>基于 ReShade 附加组件体系增加 HDR 支持与图形增强的 DX11 模组框架。模组从官方 GitHub 发布页下载。支持拖放安装、自动检测、更新检查和按游戏开关。</value></data>
+  <data name="About_SevenZipDesc" xml:space="preserve"><value>用于从 NSIS 安装程序解压 ReShade DLL 的归档工具。7z.exe 与 7z.dll 按 LGPL 许可证随附。版权所有 © Igor Pavlov。</value></data>
+  <data name="About_HtmlAgilityDesc" xml:space="preserve"><value>用于从 RenoDX Wiki 抓取游戏数据的 HTML 解析器。版权所有 © ZZZ Projects Inc。</value></data>
+  <data name="About_CommunityToolkitDesc" xml:space="preserve"><value>贯穿应用使用的 MVVM 辅助类（ObservableObject、RelayCommand 等）。版权所有 © .NET Foundation。</value></data>
+  <data name="About_DisplayCommanderDesc" xml:space="preserve"><value>作为 ReLimiter 替代方案的帧率限制器附加组件。LITE 版本按需从 GitHub 下载。</value></data>
+  <data name="About_ReFrameworkDesc" xml:space="preserve"><value>RE Engine 游戏进行 ReShade 注入所必需的模组框架。从 GitHub 的 nightly 构建下载。</value></data>
+  <data name="About_OptiScalerDesc" xml:space="preserve"><value>超分辨率重定向层，可在不同 GPU 厂商间启用 DLSS、FSR 和 XeSS。从 GitHub 发布页下载。</value></data>
+  <data name="About_DxvkDesc" xml:space="preserve"><value>面向 DX8/DX9/DX10 游戏的 DirectX 到 Vulkan 转换层。包含 EndlesslyFlowering 的 Lilium HDR 分支，用于 scRGB HDR 输出。</value></data>
+  <data name="About_NvApiWrapperDesc" xml:space="preserve"><value>NVIDIA NvAPI 的 .NET 封装，用于全部驱动配置管理 — DLSS 预设、渲染缩放、ReBAR、VSync、Smooth Motion 等。</value></data>
+  <data name="About_LazorrDesc" xml:space="preserve"><value>不知怎的，我在生活的多个方面都变成了搞 UI 的人（笑）。</value></data>
+  <data name="About_UeDofFixDesc" xml:space="preserve"><value>修复虚幻引擎 5 游戏中的景深步进和瓦片伪影。</value></data>
+  <data name="About_RhiDesc" xml:space="preserve"><value>非官方辅助应用。与 RenoDX、Crosire 或 pmnoxx 无关。</value></data>
+  <data name="Dialog_WarningAntiCheat" xml:space="preserve"><value>⚠ ReShade、OptiScaler 和 DLSS/Streamline 修改可能在联机/多人游戏中触发反外挂检测</value></data>
+  <data name="About_ByClshortfuse" xml:space="preserve"><value> 由 clshortfuse 及贡献者开发</value></data>
+  <data name="About_LicMit" xml:space="preserve"><value>  ·  MIT 许可证</value></data>
+  <data name="About_ByCrosire" xml:space="preserve"><value> 由 Crosire 开发</value></data>
+  <data name="About_LicBsd3" xml:space="preserve"><value>  ·  BSD 3-Clause 许可证</value></data>
+  <data name="About_ByPumbo" xml:space="preserve"><value> 由 Pumbo (Filoppi) 开发</value></data>
+  <data name="About_LicSourceAvailable" xml:space="preserve"><value>  ·  源码可用</value></data>
+  <data name="About_ByIgorPavlov" xml:space="preserve"><value> 由 Igor Pavlov 开发</value></data>
+  <data name="About_ByZzz" xml:space="preserve"><value> 由 ZZZ Projects 开发</value></data>
+  <data name="About_ByMicrosoft" xml:space="preserve"><value> 由 Microsoft 开发</value></data>
+  <data name="About_ByPmnox" xml:space="preserve"><value> 由 pmnox 开发</value></data>
+  <data name="About_ByPraydog" xml:space="preserve"><value> 由 praydog 开发</value></data>
+  <data name="About_ByOptiScaler" xml:space="preserve"><value> 由 OptiScaler 贡献者开发</value></data>
+  <data name="About_ByDoitsujin" xml:space="preserve"><value> 由 doitsujin 及贡献者开发</value></data>
+  <data name="About_LicZlib" xml:space="preserve"><value>  ·  Zlib 许可证</value></data>
+  <data name="About_ByFalahati" xml:space="preserve"><value> 由 falahati 开发</value></data>
+  <data name="About_ByLazorr" xml:space="preserve"><value> 由 Lazorr 开发</value></data>
+  <data name="About_ByRankFtw" xml:space="preserve"><value> 由 RankFTW 开发</value></data>
+  <data name="Tip_HdrAutoSwitch" xml:space="preserve"><value>切换每个游戏的 HDR 自动开关。紫色 = 启动时启用 HDR，退出时关闭。</value></data>
+  <data name="Tip_ResAutoSwitch" xml:space="preserve"><value>切换每个游戏的分辨率开关。紫色 = 启动时切换分辨率，退出时恢复。</value></data>
+  <data name="Tip_HideGame" xml:space="preserve"><value>从侧边栏隐藏此游戏（可在“隐藏”筛选中重新找到）</value></data>
+  <data name="Tip_AutoInstallUpdates" xml:space="preserve"><value>在后台静默自动安装 ReShade、RenoDX、ReLimiter、DC、OptiScaler、RE Framework、Luma、DXVK 和 DOF Fix 的更新</value></data>
+  <data name="Tip_HdrAutoToggle" xml:space="preserve"><value>开启后，通过 RHI 启动游戏时自动启用 Windows HDR，游戏退出时自动关闭。</value></data>
+  <data name="Tip_HdrMonitors" xml:space="preserve"><value>选择要启用 HDR 的显示器。留空 = 仅主显示器。</value></data>
+  <data name="Tip_ShaderDisplayMode" xml:space="preserve"><value>控制着色器在 ReShade 覆盖层中的显示方式。选项卡会将效果文件分组到命名的标签页中；树形显示可折叠的层级结构。</value></data>
+  <data name="Tip_TargetResolution" xml:space="preserve"><value>选择目标桌面分辨率。从显示器支持的模式中获取。</value></data>
+  <data name="Tip_ResAutoToggle" xml:space="preserve"><value>开启后，在游戏启动时切换桌面分辨率，退出时恢复。</value></data>
+  <data name="Tip_ResMonitors" xml:space="preserve"><value>选择要更改分辨率的显示器。留空 = 仅主显示器。</value></data>
+  <data name="Tip_DmfgMaxFrames" xml:space="preserve"><value>全局 DMFG 最大帧数。使用 Dynamic 模式的游戏会继承此值，除非在每游戏设置中覆盖。</value></data>
+  <data name="Tip_DmfgTargetFps" xml:space="preserve"><value>全局 DMFG 目标帧率。关闭 = 无目标。最大刷新率 = 匹配显示器。也可选择特定 FPS。</value></data>
+  <data name="Tip_ShaderCacheSize" xml:space="preserve"><value>编译后着色器缓存的最大磁盘空间。越大 = 重访时卡顿越少。16GB 是驱动默认值。</value></data>
+  <data name="Tip_ShaderAutoCompile" xml:space="preserve"><value>空闲时在后台自动编译着色器。越高 = 空闲时 CPU 占用越多，游戏首次加载越快。</value></data>
+  <data name="Tip_GSyncEnable" xml:space="preserve"><value>全局启用或禁用 G-Sync/FreeSync 可变刷新率。</value></data>
+  <data name="Tip_GSyncMode" xml:space="preserve"><value>控制 G-Sync/FreeSync 可变刷新率。建议选择“全屏”和“窗口化”以获得无缝体验。</value></data>
+  <data name="Tip_FpsCap" xml:space="preserve"><value>通过 NVIDIA 驱动设置全局 FPS 上限。VRR 优化预设将上限设在刷新率之下，以保持在 VRR 范围内。</value></data>
+  <data name="Tip_PreferredRefreshRate" xml:space="preserve"><value>可用最高值会强制使用您的最大刷新率。“应用设置”则允许游戏自行选择刷新率。</value></data>
+  <data name="Tip_VSyncMode" xml:space="preserve"><value>全局 VSync 模式 — 应用于所有未单独覆盖的游戏。</value></data>
+  <data name="Tip_PowerMode" xml:space="preserve"><value>全局电源管理模式 — 应用于所有未单独覆盖的游戏。</value></data>
+  <data name="Tip_ReBar" xml:space="preserve"><value>全局 Resizable BAR — 为所有游戏启用大块 GPU 内存传输。需要管理员权限和兼容硬件（RTX 30 系列及以上）。</value></data>
+  <data name="Tip_ReBarSize" xml:space="preserve"><value>最大 BAR 传输大小。1GB 对大多数游戏是最优的。如果遇到与 ReBAR 相关的卡顿，可降至 512MB。</value></data>
+  <data name="Tip_DigitalVibrance" xml:space="preserve"><value>按显示器调整数字鲜艳度（颜色饱和度）。保存的值会在应用启动时恢复。</value></data>
+  <data name="Tip_CreateProfiles" xml:space="preserve"><value>为所有还没有配置的 NVIDIA 驱动创建配置。确保电源模式和 VSync 等全局设置适用于每款游戏。</value></data>
+  <data name="Tip_RestoreProfiles" xml:space="preserve"><value>从之前的导出恢复各游戏的 NVIDIA 配置设置。</value></data>
+  <data name="Tip_ResetNvidiaProfiles" xml:space="preserve"><value>移除所有游戏的 NVIDIA 配置覆盖。全局配置将恢复如新。</value></data>
+  <data name="Tip_ClearShaderCache" xml:space="preserve"><value>删除 NVIDIA DXCache 和 GLCache 文件夹。强制下次启动时重新编译着色器。</value></data>
+  <data name="Tip_SharedPresets" xml:space="preserve"><value>开启后，所有游戏共享同一个 OSD 预设文件。关闭后，每款游戏使用自己的预设。</value></data>
+  <data name="Tip_OsdDetails" xml:space="preserve"><value>在 ReLimiter OSD 上显示 DLSS 质量模式、渲染分辨率和已启用的功能。若遇到崩溃请关闭。</value></data>
+  <data name="Tip_RelimiterFpsCap" xml:space="preserve"><value>写入所有 relimiter.ini 文件的全局 FPS 上限。选择 VRR 预设或“自定义”以手动设置数值。</value></data>
+  <data name="Tip_ShaderMode" xml:space="preserve"><value>RHI 管理：将内置着色器包部署到所有游戏。
+自定义：使用您自己的着色器目录。
+关闭：RHI 不触碰任何游戏中的着色器。</value></data>
+  <data name="Tip_CacheAllShaders" xml:space="preserve"><value>开启后，所有着色器包会在启动时下载并缓存。关闭后，按需下载。</value></data>
+  <data name="Tip_PurgeFiles" xml:space="preserve"><value>删除缓存的 DLSS、Streamline 和下载文件以释放磁盘空间。着色器会保留。</value></data>
+  <data name="Tip_DropHelper" xml:space="preserve"><value>Drop Helper 窗口可在管理员模式下启用 Discord 拖放。不需要时可关闭。需要重吏。</value></data>
+  <data name="Tip_CopyLogs" xml:space="preserve"><value>将所有日志打包为 zip 并复制到剪贴板 — 可直接粘贴到 Discord</value></data>
+  <data name="Detail_HdrModsSection" xml:space="preserve"><value>——— HDR 模组 — 安装其一或两者 ———</value></data>
+  <data name="Settings_BackToGames" xml:space="preserve"><value>← 返回游戏</value></data>
+  <data name="Settings_ReBarAdminRequired" xml:space="preserve"><value>— 需要管理员权限</value></data>
+  <data name="Settings_AppDataDesc" xml:space="preserve"><value>所有 RHI 数据都存储在 AppData 中。将自定义 ReShade、DLSS 或 Streamline DLL 放入 Custom 文件夹，即可将其用作各游戏的覆盖文件。Logs 文件夹包含可用于排查问题的会话使用日志。</value></data>
+  <data name="Status_DetectionOnline" xml:space="preserve"><value>检测到 {0} 个游戏 · 已安装 {1} 个模组</value></data>
+  <data name="Status_DetectionOffline" xml:space="preserve"><value>检测到 {0} 个游戏 · 离线模式（模组信息不可用）</value></data>
+  <data name="Status_ShownCount" xml:space="preserve"><value>显示 {0} 个</value></data>
+  <data name="Status_InstalledCount" xml:space="preserve"><value>已安装 {0} 个</value></data>
+  <data name="Status_HiddenCount" xml:space="preserve"><value>· 隐藏 {0} 个</value></data>
 </root>

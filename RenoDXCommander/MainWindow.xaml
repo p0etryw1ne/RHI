@@ -391,7 +391,7 @@
                                                 CornerRadius="6" Padding="8,4" MinWidth="0" MinHeight="0"
                                                 FontSize="11"
                                                 Click="HdrToggle_Click"
-                                                ToolTipService.ToolTip="Toggle per-game HDR auto-switch. Purple = HDR enabled on launch, disabled on exit.">
+                                                ToolTipService.ToolTip="Toggle per-game HDR auto-switch. Purple = HDR enabled on launch, disabled on exit." loc:Loc.ToolTipKey="Tip_HdrAutoSwitch">
                                             <TextBlock x:Name="DetailHdrToggleText" x:FieldModifier="internal" FontSize="11" Text="HDR"/>
                                         </Button>
                                         <Button x:Name="DetailResToggleBtn" x:FieldModifier="internal"
@@ -402,7 +402,7 @@
                                                 CornerRadius="6" Padding="8,4" MinWidth="0" MinHeight="0"
                                                 FontSize="11"
                                                 Click="ResToggle_Click"
-                                                ToolTipService.ToolTip="Toggle per-game resolution switch. Purple = resolution changes on launch, restores on exit.">
+                                                ToolTipService.ToolTip="Toggle per-game resolution switch. Purple = resolution changes on launch, restores on exit." loc:Loc.ToolTipKey="Tip_ResAutoSwitch">
                                             <TextBlock x:Name="DetailResToggleText" x:FieldModifier="internal" FontSize="11" Text="RES"/>
                                         </Button>
                                         <Border Width="1" Background="{StaticResource BorderSubtleBrush}" Margin="4,2"/>
@@ -543,7 +543,7 @@
                                             CornerRadius="6" Padding="8,4" MinWidth="0" MinHeight="0"
                                             FontSize="11" HorizontalAlignment="Stretch"
                                             Click="HideButton_Click"
-                                            ToolTipService.ToolTip="Hide this game from the sidebar (find it again in the Hidden filter)">
+                                            ToolTipService.ToolTip="Hide this game from the sidebar (find it again in the Hidden filter)" loc:Loc.ToolTipKey="Tip_HideGame">
                                         <TextBlock x:Name="DetailHideIcon" x:FieldModifier="internal" FontSize="11" HorizontalAlignment="Center"/>
                                     </Button>
                                     <Button Grid.Row="0" Grid.Column="1" x:Name="DetailFavBtn" x:FieldModifier="internal"
@@ -703,7 +703,7 @@
                                         <ColumnDefinition Width="36"/>
                                         <ColumnDefinition Width="36"/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="3" Text="———  HDR Mods — Install one or both  ———" FontSize="11"
+                                    <TextBlock Grid.Column="3" Text="———  HDR Mods — Install one or both  ———" loc:Loc.Key="Detail_HdrModsSection" FontSize="11"
                                                Foreground="{StaticResource TextSecondaryBrush}"
                                                HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                 </Grid>
@@ -870,7 +870,7 @@
                                         <ColumnDefinition Width="36"/>
                                         <ColumnDefinition Width="36"/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="3" Text="———  Frame limiters — Choose one  ———" FontSize="11"
+                                    <TextBlock Grid.Column="3" Text="———  Frame limiters — Choose one  ———" loc:Loc.Key="Detail_FrameLimitersSection" FontSize="11"
                                                Foreground="{StaticResource TextSecondaryBrush}"
                                                HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                 </Grid>
@@ -1201,7 +1201,7 @@
                 <Border Grid.Row="0" Padding="24,12,24,10" Background="Transparent"
                         BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="0,0,0,1">
                     <StackPanel Orientation="Horizontal" Spacing="12" VerticalAlignment="Center">
-                        <Button x:Name="SettingsBackBtn" Content="← Back to Games"
+                        <Button x:Name="SettingsBackBtn" Content="← Back to Games" loc:Loc.Key="Settings_BackToGames"
                                 Click="SettingsBack_Click"
                                 Background="{StaticResource SurfaceOverlayBrush}" Foreground="{StaticResource TextSecondaryBrush}"
                                 BorderBrush="{StaticResource BorderDefaultBrush}" BorderThickness="1"
@@ -1241,7 +1241,7 @@
                                         <TextBlock Text="Check For Updates" loc:Loc.Key="Settings_CheckForUpdates" FontSize="13" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                                   Text="Fetches the latest manifest data and checks all components for available updates. Bypasses the 4-hour cooldown."/>
+                                                   Text="Fetches the latest manifest data and checks all components for available updates. Bypasses the 4-hour cooldown." loc:Loc.Key="Settings_CheckForUpdatesDesc"/>
                                     </StackPanel>
                                     <Button Grid.Row="1" x:Name="CheckForUpdatesBtn" Content="Check For Updates" loc:Loc.Key="Settings_CheckForUpdates"
                                             Click="CheckForUpdatesButton_Click"
@@ -1266,7 +1266,7 @@
                                     <ComboBox x:Name="AutoUpdateComponentsCombo" x:FieldModifier="internal"
                                               FontSize="12" HorizontalAlignment="Stretch"
                                               ToolTipService.ToolTip="Automatically install ReShade, RenoDX, ReLimiter, DC, OptiScaler, RE Framework, Luma, DXVK and DOF Fix updates silently in the background"
-                                              SelectionChanged="AutoUpdateComponentsCombo_SelectionChanged">
+                                              SelectionChanged="AutoUpdateComponentsCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_AutoInstallUpdates">
                                         <ComboBoxItem Content="No"/>
                                         <ComboBoxItem Content="Yes" loc:Loc.Key="Common_Yes"/>
                                     </ComboBox>
@@ -1303,7 +1303,7 @@
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
                                     <TextBlock TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                               Text="Screenshot save path and ReShade key bindings applied to all managed reshade.ini files."/>
+                                               Text="Screenshot save path and ReShade key bindings applied to all managed reshade.ini files." loc:Loc.Key="Settings_ScreenshotPathDesc"/>
                                 </StackPanel>
 
                                 <!-- Divider -->
@@ -1317,7 +1317,7 @@
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
                                     <TextBlock TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                               Text="Peak brightness (nits) written to reshade.ini presets. HDR auto-toggle enables Windows HDR on game launch and disables on exit."/>
+                                               Text="Peak brightness (nits) written to reshade.ini presets. HDR auto-toggle enables Windows HDR on game launch and disables on exit." loc:Loc.Key="Settings_PeakNitsDesc"/>
                                 </StackPanel>
 
                                 <!-- Row 1 Left: Screenshot path + Open -->
@@ -1461,7 +1461,7 @@
                                     <ComboBox Grid.Column="1" x:Name="HdrAutoToggleCombo" x:FieldModifier="internal"
                                               FontSize="12" HorizontalAlignment="Stretch" VerticalAlignment="Center"
                                               ToolTipService.ToolTip="When On, Windows HDR is automatically enabled when launching a game through RHI and disabled when the game exits."
-                                              SelectionChanged="HdrAutoToggleCombo_SelectionChanged">
+                                              SelectionChanged="HdrAutoToggleCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_HdrAutoToggle">
                                         <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
                                         <ComboBoxItem Content="On" loc:Loc.Key="Common_On"/>
                                     </ComboBox>
@@ -1471,7 +1471,7 @@
                                             BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1"
                                             CornerRadius="6" Padding="8,4" MinWidth="0" MinHeight="0"
                                             FontSize="12" VerticalAlignment="Center"
-                                            ToolTipService.ToolTip="Select which monitors to enable HDR on. Empty = primary display only."/>
+                                            ToolTipService.ToolTip="Select which monitors to enable HDR on. Empty = primary display only." loc:Loc.ToolTipKey="Tip_HdrMonitors"/>
                                 </Grid>
 
                                 <!-- Row 3 Left: Effect list style -->
@@ -1486,7 +1486,7 @@
                                     <ComboBox Grid.Column="1" x:Name="RsVariableListUseTabsCombo" x:FieldModifier="internal"
                                               FontSize="12" HorizontalAlignment="Stretch"
                                               ToolTipService.ToolTip="Controls how shaders are displayed in the ReShade overlay. Tabs groups effect files into named tabs; Tree shows a collapsible hierarchy."
-                                              SelectionChanged="RsVariableListUseTabsCombo_SelectionChanged">
+                                              SelectionChanged="RsVariableListUseTabsCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_ShaderDisplayMode">
                                         <ComboBoxItem Content="Tabs" loc:Loc.Key="Settings_Tabs"/>
                                         <ComboBoxItem Content="Tree" loc:Loc.Key="Settings_Tree"/>
                                     </ComboBox>
@@ -1532,7 +1532,7 @@
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11"
                                                    Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                                   Text="Desktop resolution to switch to before a game launches. Restored on game exit."/>
+                                                   Text="Desktop resolution to switch to before a game launches. Restored on game exit." loc:Loc.Key="Settings_TargetResDesc"/>
                                     </StackPanel>
 
                                     <!-- Divider -->
@@ -1546,7 +1546,7 @@
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11"
                                                    Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                                   Text="When On, switches to the target resolution on game launch and restores it on exit."/>
+                                                   Text="When On, switches to the target resolution on game launch and restores it on exit." loc:Loc.Key="Settings_ResAutoToggleDesc"/>
                                     </StackPanel>
 
                                     <!-- Row 1 Left: Resolution picker ComboBox -->
@@ -1554,7 +1554,7 @@
                                               x:Name="ResolutionTargetCombo" x:FieldModifier="internal"
                                               FontSize="12" HorizontalAlignment="Stretch"
                                               ToolTipService.ToolTip="Select the target desktop resolution. Populated from your monitor's supported modes."
-                                              SelectionChanged="ResolutionTargetCombo_SelectionChanged"/>
+                                              SelectionChanged="ResolutionTargetCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_TargetResolution"/>
 
                                     <!-- Row 1 Right: Auto-Toggle combo + cog -->
                                     <Grid Grid.Row="1" Grid.Column="2" ColumnSpacing="6" VerticalAlignment="Center">
@@ -1569,7 +1569,7 @@
                                         <ComboBox Grid.Column="1" x:Name="ResAutoToggleCombo" x:FieldModifier="internal"
                                                   FontSize="12" HorizontalAlignment="Stretch" VerticalAlignment="Center"
                                                   ToolTipService.ToolTip="When On, switches desktop resolution on game launch and restores on exit."
-                                                  SelectionChanged="ResAutoToggleCombo_SelectionChanged">
+                                                  SelectionChanged="ResAutoToggleCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_ResAutoToggle">
                                             <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
                                             <ComboBoxItem Content="On" loc:Loc.Key="Common_On"/>
                                         </ComboBox>
@@ -1579,7 +1579,7 @@
                                                 BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1"
                                                 CornerRadius="6" Padding="8,4" MinWidth="0" MinHeight="0"
                                                 FontSize="12" VerticalAlignment="Center"
-                                                ToolTipService.ToolTip="Select which monitors to change resolution on. Empty = primary display only."/>
+                                                ToolTipService.ToolTip="Select which monitors to change resolution on. Empty = primary display only." loc:Loc.ToolTipKey="Tip_ResMonitors"/>
                                     </Grid>
                                 </Grid>
                             </StackPanel>
@@ -1614,7 +1614,7 @@
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11"
                                                    Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                                   Text="Paste your Nexus Mods personal API key. Premium users get one-click downloads and silent auto-updates. Free users get one-click browser downloads."/>
+                                                   Text="Paste your Nexus Mods personal API key. Premium users get one-click downloads and silent auto-updates. Free users get one-click browser downloads." loc:Loc.Key="Settings_NexusApiKeyDesc"/>
                                     </StackPanel>
 
                                     <!-- Divider -->
@@ -1628,7 +1628,7 @@
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11"
                                                    Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                                   Text="Register RHI as the nxm:// handler so Nexus &quot;Mod Manager Download&quot; buttons open directly in RHI."/>
+                                                   Text="Register RHI as the nxm:// handler so Nexus &quot;Mod Manager Download&quot; buttons open directly in RHI." loc:Loc.Key="Settings_NxmDesc"/>
                                     </StackPanel>
 
                                     <!-- Row 1 Left: API key input + Connect/Disconnect buttons -->
@@ -1724,7 +1724,7 @@
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11"
                                                    Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                                   Text="Configure preferred DLSS/Streamline versions, presets, and render scales. Use 'Quick Apply' in the Nvidia Profile section to stamp these onto any game."/>
+                                                   Text="Configure preferred DLSS/Streamline versions, presets, and render scales. Use 'Quick Apply' in the Nvidia Profile section to stamp these onto any game." loc:Loc.Key="Settings_DlssDefaultsDesc"/>
                                         <Button Content="Configure Defaults" loc:Loc.Key="Settings_ConfigureDefaults" Click="DlssDefaults_Click"
                                                 Background="{StaticResource AccentBlueBgBrush}"
                                                 Foreground="{StaticResource AccentBlueBrush}"
@@ -1740,7 +1740,7 @@
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11"
                                                    Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                                   Text="Global Dynamic Multi Frame Generation defaults. Set these once — then just enable Dynamic mode on each game's MFG dialog."/>
+                                                   Text="Global Dynamic Multi Frame Generation defaults. Set these once — then just enable Dynamic mode on each game's MFG dialog." loc:Loc.Key="Settings_DmfgDesc"/>
                                         <Grid ColumnSpacing="12">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
@@ -1751,14 +1751,14 @@
                                                 <ComboBox x:Name="DmfgFrameCountCombo" x:FieldModifier="internal"
                                                           FontSize="12" HorizontalAlignment="Stretch"
                                                           ToolTipService.ToolTip="Global DMFG max frame count. Games using Dynamic mode inherit this unless overridden per-game."
-                                                          SelectionChanged="DmfgFrameCountCombo_SelectionChanged"/>
+                                                          SelectionChanged="DmfgFrameCountCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_DmfgMaxFrames"/>
                                             </StackPanel>
                                             <StackPanel Grid.Column="1" Spacing="4">
                                                 <TextBlock Text="Target FPS" loc:Loc.Key="Settings_TargetFps" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                                 <ComboBox x:Name="DmfgTargetFpsCombo" x:FieldModifier="internal"
                                                           FontSize="12" HorizontalAlignment="Stretch"
                                                           ToolTipService.ToolTip="Global DMFG target frame rate. Off = no target. Max Refresh Rate = match display. Or pick a specific FPS."
-                                                          SelectionChanged="DmfgTargetFpsCombo_SelectionChanged"/>
+                                                          SelectionChanged="DmfgTargetFpsCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_DmfgTargetFps"/>
                                             </StackPanel>
                                         </Grid>
                                     </StackPanel>
@@ -1768,7 +1768,7 @@
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11"
                                                    Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                                   Text="Deploy DLSS and Streamline DLL versions and DLSS presets to multiple games at once. Backs up originals automatically. Pre-populated with your configured defaults."/>
+                                                   Text="Deploy DLSS and Streamline DLL versions and DLSS presets to multiple games at once. Backs up originals automatically. Pre-populated with your configured defaults." loc:Loc.Key="Settings_BatchDeployDesc"/>
                                         <Button Content="Batch Deploy" loc:Loc.Key="Settings_BatchDeploy" Click="MassDlssDeploy_Click"
                                                 Background="{StaticResource AccentBlueBgBrush}"
                                                 Foreground="{StaticResource AccentBlueBrush}"
@@ -1788,7 +1788,7 @@
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
                                     <TextBlock TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                               Text="Controls the DLSS text overlay NVIDIA shows in the corner of games. Global system setting — affects all games. Requires admin."/>
+                                               Text="Controls the DLSS text overlay NVIDIA shows in the corner of games. Global system setting — affects all games. Requires admin." loc:Loc.Key="Settings_DlssOsdDesc"/>
                                     <ComboBox x:Name="DlssIndicatorCombo" x:FieldModifier="internal"
                                               FontSize="12" HorizontalAlignment="Stretch"
                                               SelectionChanged="DlssIndicatorCombo_SelectionChanged">
@@ -1809,7 +1809,7 @@
                                                Foreground="{StaticResource TextPrimaryBrush}" Margin="0,8,0,0"/>
                                     <TextBlock TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                               Text="Automatically swap to the newest version when a new release appears. Only affects games currently on the previous latest — manually chosen older versions are left alone."/>
+                                               Text="Automatically swap to the newest version when a new release appears. Only affects games currently on the previous latest — manually chosen older versions are left alone." loc:Loc.Key="Settings_DlssAutoUpdateDesc"/>
                                     <Grid ColumnSpacing="12">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*"/>
@@ -1858,7 +1858,7 @@
                                 <StackPanel Grid.Column="0" Spacing="12" VerticalAlignment="Top">
                                     <TextBlock TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                               Text="Driver-level settings applied globally via the base NVIDIA profile. Per-game settings are in the Nvidia Profile section of each game's overrides panel."/>
+                                               Text="Driver-level settings applied globally via the base NVIDIA profile. Per-game settings are in the Nvidia Profile section of each game's overrides panel." loc:Loc.Key="Settings_GlobalNvidiaDesc"/>
 
                                     <Grid ColumnSpacing="12">
                                         <Grid.ColumnDefinitions>
@@ -1870,14 +1870,14 @@
                                             <ComboBox x:Name="ShaderCacheSizeCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="Maximum disk space for compiled shader cache. Larger = fewer stutters on revisits. 16GB is the driver default."
-                                                      SelectionChanged="ShaderCacheSizeCombo_SelectionChanged"/>
+                                                      SelectionChanged="ShaderCacheSizeCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_ShaderCacheSize"/>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Spacing="4">
                                             <TextBlock Text="Shader Pre-Compile" loc:Loc.Key="Settings_ShaderPreCompile" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                             <ComboBox x:Name="ShaderPrecompileCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="Auto-compiles shaders in the background when idle. Higher = more CPU usage during idle, faster first-time game loads."
-                                                      SelectionChanged="ShaderPrecompileCombo_SelectionChanged"/>
+                                                      SelectionChanged="ShaderPrecompileCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_ShaderAutoCompile"/>
                                         </StackPanel>
                                     </Grid>
 
@@ -1891,14 +1891,14 @@
                                             <ComboBox x:Name="GSyncEnableCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="Globally enables or disables G-Sync/FreeSync variable refresh rate."
-                                                      SelectionChanged="GSyncEnableCombo_SelectionChanged"/>
+                                                      SelectionChanged="GSyncEnableCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_GSyncEnable"/>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Spacing="4">
                                             <TextBlock Text="G-Sync Mode" loc:Loc.Key="Settings_GSyncMode" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                             <ComboBox x:Name="GSyncModeCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="Controls G-Sync/FreeSync variable refresh rate. Fullscreen and Windowed recommended for seamless experience."
-                                                      SelectionChanged="GSyncModeCombo_SelectionChanged"/>
+                                                      SelectionChanged="GSyncModeCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_GSyncMode"/>
                                         </StackPanel>
                                     </Grid>
 
@@ -1912,14 +1912,14 @@
                                             <ComboBox x:Name="FpsLimitCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="Global FPS cap via NVIDIA driver. VRR-optimal presets cap just below refresh rate to stay in VRR range."
-                                                      SelectionChanged="FpsLimitCombo_SelectionChanged"/>
+                                                      SelectionChanged="FpsLimitCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_FpsCap"/>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Spacing="4">
                                             <TextBlock Text="Preferred Refresh Rate" loc:Loc.Key="Settings_PreferredRefreshRate" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                             <ComboBox x:Name="PreferredRefreshRateCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="Highest available forces your max refresh rate. App Setting lets games choose their own refresh rate."
-                                                      SelectionChanged="PreferredRefreshRateCombo_SelectionChanged"/>
+                                                      SelectionChanged="PreferredRefreshRateCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_PreferredRefreshRate"/>
                                         </StackPanel>
                                     </Grid>
 
@@ -1933,14 +1933,14 @@
                                             <ComboBox x:Name="GlobalVSyncCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="Global VSync mode — applies to all games without a per-game override."
-                                                      SelectionChanged="GlobalVSyncCombo_SelectionChanged"/>
+                                                      SelectionChanged="GlobalVSyncCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_VSyncMode"/>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Spacing="4">
                                             <TextBlock Text="Power Mode" loc:Loc.Key="Settings_PowerMode" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                             <ComboBox x:Name="GlobalPowerModeCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="Global power management mode — applies to all games without a per-game override."
-                                                      SelectionChanged="GlobalPowerModeCombo_SelectionChanged"/>
+                                                      SelectionChanged="GlobalPowerModeCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_PowerMode"/>
                                         </StackPanel>
                                     </Grid>
 
@@ -1954,21 +1954,21 @@
                                             <StackPanel Orientation="Horizontal" Spacing="6">
                                                 <TextBlock Text="ReBAR" loc:Loc.Key="Settings_ReBar" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                                 <TextBlock x:Name="ReBarAdminWarning" x:FieldModifier="internal"
-                                                           Text="— Admin required" FontSize="11"
+                                                           Text="— Admin required" loc:Loc.Key="Settings_ReBarAdminRequired" FontSize="11"
                                                            Foreground="{StaticResource AccentAmberBrush}"
                                                            Visibility="Collapsed"/>
                                             </StackPanel>
                                             <ComboBox x:Name="GlobalReBarEnableCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="Global Resizable BAR — enables large GPU memory transfers for all games. Requires admin and compatible hardware (RTX 30 Series+)."
-                                                      SelectionChanged="GlobalReBarEnableCombo_SelectionChanged"/>
+                                                      SelectionChanged="GlobalReBarEnableCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_ReBar"/>
                                         </StackPanel>
                                         <StackPanel Grid.Column="1" Spacing="4">
                                             <TextBlock Text="ReBAR Size Limit" loc:Loc.Key="Settings_ReBarSizeLimit" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}"/>
                                             <ComboBox x:Name="GlobalReBarSizeCombo" x:FieldModifier="internal"
                                                       FontSize="12" HorizontalAlignment="Stretch"
                                                       ToolTipService.ToolTip="Maximum BAR transfer size. 1GB is optimal for most games. Decrease to 512MB if experiencing ReBAR-related stutters."
-                                                      SelectionChanged="GlobalReBarSizeCombo_SelectionChanged"/>
+                                                      SelectionChanged="GlobalReBarSizeCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_ReBarSize"/>
                                         </StackPanel>
                                     </Grid>
                                 </StackPanel>
@@ -1982,7 +1982,7 @@
                                 <StackPanel Grid.Column="2" Spacing="12" VerticalAlignment="Top">
                                     <TextBlock TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                               Text="Adjust NVIDIA Digital Vibrance (color saturation) per-display. Saved values are automatically restored on app startup."/>
+                                               Text="Adjust NVIDIA Digital Vibrance (color saturation) per-display. Saved values are automatically restored on app startup." loc:Loc.Key="Settings_DigitalVibranceDesc"/>
                                     <Button Content="Digital Vibrance" loc:Loc.Key="Settings_DigitalVibrance"
                                             Click="DigitalVibrance_Click"
                                             ToolTipService.ToolTip="Adjust Digital Vibrance (color saturation) per-display. Saved values are restored on app startup."
@@ -1990,12 +1990,12 @@
                                             Foreground="{StaticResource AccentBlueBrush}"
                                             BorderBrush="{StaticResource AccentBlueBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Padding="12,7" FontSize="12"
-                                            HorizontalAlignment="Stretch"/>
+                                            HorizontalAlignment="Stretch" loc:Loc.ToolTipKey="Tip_DigitalVibrance"/>
 
                                     <!-- Create Missing Profiles -->
                                     <TextBlock TextWrapping="Wrap" FontSize="11" Margin="0,8,0,0"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                               Text="Games without an NVIDIA profile don't benefit from global driver settings. Create profiles for all games in your library to ensure global settings apply."/>
+                                               Text="Games without an NVIDIA profile don't benefit from global driver settings. Create profiles for all games in your library to ensure global settings apply." loc:Loc.Key="Settings_CreateProfilesDesc"/>
                                     <Button Content="Create Missing Profiles" loc:Loc.Key="Settings_CreateMissingProfiles"
                                             Click="CreateMissingNvidiaProfiles_Click"
                                             ToolTipService.ToolTip="Creates NVIDIA driver profiles for all games that don't have one yet. Ensures global settings like Power Mode and VSync apply to every game."
@@ -2003,9 +2003,9 @@
                                             Foreground="{StaticResource AccentBlueBrush}"
                                             BorderBrush="{StaticResource AccentBlueBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Padding="12,7" FontSize="12"
-                                            HorizontalAlignment="Stretch"/>
+                                            HorizontalAlignment="Stretch" loc:Loc.ToolTipKey="Tip_CreateProfiles"/>
 
-                                    <TextBlock Text="Backup saves all per-game NVIDIA driver settings to a file. Restore loads them back — useful before updating drivers."
+                                    <TextBlock Text="Backup saves all per-game NVIDIA driver settings to a file. Restore loads them back — useful before updating drivers." loc:Loc.Key="Settings_BackupProfilesDesc"
                                                TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource TextSecondaryBrush}"
                                                Margin="0,8,0,0"/>
@@ -2029,7 +2029,7 @@
                                                 Foreground="{StaticResource AccentBlueBrush}"
                                                 BorderBrush="{StaticResource AccentBlueBorderBrush}" BorderThickness="1"
                                                 CornerRadius="8" Padding="12,7" FontSize="12"
-                                                HorizontalAlignment="Stretch"/>
+                                                HorizontalAlignment="Stretch" loc:Loc.ToolTipKey="Tip_RestoreProfiles"/>
                                     </Grid>
 
                                     <Grid ColumnSpacing="12">
@@ -2044,7 +2044,7 @@
                                                 Foreground="{StaticResource AccentBlueBrush}"
                                                 BorderBrush="#CC4444" BorderThickness="1"
                                                 CornerRadius="8" Padding="12,7" FontSize="12"
-                                                HorizontalAlignment="Stretch"/>
+                                                HorizontalAlignment="Stretch" loc:Loc.ToolTipKey="Tip_ResetNvidiaProfiles"/>
                                         <Button Grid.Column="1" Content="Clear Shader Cache" loc:Loc.Key="Settings_ClearShaderCache"
                                                 Click="ClearNvidiaShaderCache_Click"
                                                 ToolTipService.ToolTip="Deletes the NVIDIA DXCache and GLCache folders. Forces shaders to recompile on next launch."
@@ -2052,7 +2052,7 @@
                                                 Foreground="{StaticResource AccentBlueBrush}"
                                                 BorderBrush="#CC4444" BorderThickness="1"
                                                 CornerRadius="8" Padding="12,7" FontSize="12"
-                                                HorizontalAlignment="Stretch"/>
+                                                HorizontalAlignment="Stretch" loc:Loc.ToolTipKey="Tip_ClearShaderCache"/>
                                     </Grid>
                                 </StackPanel>
                             </Grid>
@@ -2085,7 +2085,7 @@
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
                                     <TextBlock TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                               Text="ReLimiter OSD hotkey and global feature settings applied to all games."/>
+                                               Text="ReLimiter OSD hotkey and global feature settings applied to all games." loc:Loc.Key="Settings_ReLimiterDesc"/>
                                 </StackPanel>
 
                                 <!-- Divider -->
@@ -2099,7 +2099,7 @@
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
                                     <TextBlock TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                               Text="GPU type, DLSS input settings, and overlay hotkey for OptiScaler installations."/>
+                                               Text="GPU type, DLSS input settings, and overlay hotkey for OptiScaler installations." loc:Loc.Key="Settings_OptiScalerDesc"/>
                                 </StackPanel>
 
                                 <!-- Row 1 Left: ReLimiter controls -->
@@ -2137,21 +2137,21 @@
                                     <ComboBox Grid.Row="1" Grid.Column="1" x:Name="UlSharedPresetsCombo" x:FieldModifier="internal"
                                               FontSize="12" HorizontalAlignment="Stretch"
                                               ToolTipService.ToolTip="When On, all games share the same OSD presets file. When Off, each game has its own presets."
-                                              SelectionChanged="UlSharedPresetsCombo_SelectionChanged">
+                                              SelectionChanged="UlSharedPresetsCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_SharedPresets">
                                         <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
                                         <ComboBoxItem Content="On" loc:Loc.Key="Common_On"/>
                                     </ComboBox>
                                     <ComboBox Grid.Row="1" Grid.Column="2" x:Name="UlDlssHooksCombo" x:FieldModifier="internal"
                                               FontSize="12" HorizontalAlignment="Stretch"
                                               ToolTipService.ToolTip="Shows DLSS quality mode, render resolution, and active features on the ReLimiter OSD. Disable if experiencing crashes."
-                                              SelectionChanged="UlDlssHooksCombo_SelectionChanged">
+                                              SelectionChanged="UlDlssHooksCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_OsdDetails">
                                         <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
                                         <ComboBoxItem Content="On" loc:Loc.Key="Common_On"/>
                                     </ComboBox>
                                     <ComboBox Grid.Row="1" Grid.Column="3" x:Name="UlTargetFpsCombo" x:FieldModifier="internal"
                                               FontSize="12" HorizontalAlignment="Stretch"
                                               ToolTipService.ToolTip="Global FPS cap written to all relimiter.ini files. Select a VRR preset or Custom for a manual value."
-                                              SelectionChanged="UlTargetFpsCombo_SelectionChanged">
+                                              SelectionChanged="UlTargetFpsCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_RelimiterFpsCap">
                                         <!-- Items populated in code-behind -->
                                     </ComboBox>
                                 </Grid>
@@ -2287,7 +2287,7 @@
                                         <ComboBox Grid.Row="1" Grid.Column="0" x:Name="CustomShadersCombo" x:FieldModifier="internal"
                                                   FontSize="12" HorizontalAlignment="Stretch"
                                                   ToolTipService.ToolTip="RHI Managed: deploy built-in shader packs to all games.&#10;Custom: use your own shader directory.&#10;Off: RHI never touches shaders on any game."
-                                                  SelectionChanged="CustomShadersCombo_SelectionChanged">
+                                                  SelectionChanged="CustomShadersCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_ShaderMode">
                                             <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
                                             <ComboBoxItem Content="RHI Managed" loc:Loc.Key="Settings_RhiManaged"/>
                                             <ComboBoxItem Content="Custom" loc:Loc.Key="Settings_Custom"/>
@@ -2295,7 +2295,7 @@
                                         <ComboBox Grid.Row="1" Grid.Column="1" x:Name="CacheAllShadersCombo" x:FieldModifier="internal"
                                                   FontSize="12" HorizontalAlignment="Stretch"
                                                   ToolTipService.ToolTip="When On, all shader packs are downloaded and cached at startup. When Off, packs are downloaded on demand when needed."
-                                                  SelectionChanged="CacheAllShadersCombo_SelectionChanged">
+                                                  SelectionChanged="CacheAllShadersCombo_SelectionChanged" loc:Loc.ToolTipKey="Tip_CacheAllShaders">
                                             <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
                                             <ComboBoxItem Content="On" loc:Loc.Key="Common_On"/>
                                         </ComboBox>
@@ -2313,7 +2313,7 @@
                                         <TextBlock Text="Addon Watch Folder" loc:Loc.Key="Settings_AddonWatchFolder" FontSize="13" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                                   Text="RHI watches this folder for RenoDX addon files (.addon64/.addon32) and archives. Defaults to your Downloads folder."/>
+                                                   Text="RHI watches this folder for RenoDX addon files (.addon64/.addon32) and archives. Defaults to your Downloads folder." loc:Loc.Key="Settings_AddonWatchDesc"/>
                                     </StackPanel>
                                     <Grid ColumnSpacing="8">
                                         <Grid.ColumnDefinitions>
@@ -2382,7 +2382,7 @@
                                                Foreground="{StaticResource TextPrimaryBrush}"/>
                                     <TextBlock TextWrapping="Wrap" FontSize="11"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                               Text="Deploy INI files or ReShade presets to multiple games at once. Custom hotkey and screenshot path settings are preserved."/>
+                                               Text="Deploy INI files or ReShade presets to multiple games at once. Custom hotkey and screenshot path settings are preserved." loc:Loc.Key="Settings_MassIniDesc"/>
                                 </StackPanel>
 
                                 <!-- Row 1 Left: Update Inclusion button -->
@@ -2473,7 +2473,7 @@
                                             HorizontalAlignment="Stretch"/>
                                     <TextBlock Grid.Row="2" TextWrapping="Wrap" FontSize="11" Margin="0,8,0,0"
                                                Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                               Text="Deletes cached DLSS, Streamline, and component staging files to free disk space. Shaders, installed addons, and version metadata are preserved. Files are re-downloaded automatically when needed."/>
+                                               Text="Deletes cached DLSS, Streamline, and component staging files to free disk space. Shaders, installed addons, and version metadata are preserved. Files are re-downloaded automatically when needed." loc:Loc.Key="Settings_PurgeDesc"/>
                                     <Button Grid.Row="3" x:Name="PurgeCacheBtn"
                                             Content="Purge Staging Files" loc:Loc.Key="Settings_PurgeStagingFiles"
                                             Click="PurgeCachedFiles_Click"
@@ -2481,7 +2481,7 @@
                                             BorderBrush="{StaticResource AccentPurpleBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Padding="12,7" FontSize="12"
                                             HorizontalAlignment="Stretch"
-                                            ToolTipService.ToolTip="Deletes cached DLSS, Streamline, and download files to free disk space. Shaders are preserved."/>
+                                            ToolTipService.ToolTip="Deletes cached DLSS, Streamline, and download files to free disk space. Shaders are preserved." loc:Loc.ToolTipKey="Tip_PurgeFiles"/>
                                 </Grid>
 
                                 <!-- Divider -->
@@ -2503,7 +2503,7 @@
                                         <TextBlock Text="Admin Mode" loc:Loc.Key="Settings_AdminMode" FontSize="13" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                                   Text="Creates a scheduled task to launch RHI with elevated privileges. Required for ReBAR, Low Latency Ultra, and Smooth Motion driver settings. The Drop Helper enables Discord drag-and-drop when running elevated."/>
+                                                   Text="Creates a scheduled task to launch RHI with elevated privileges. Required for ReBAR, Low Latency Ultra, and Smooth Motion driver settings. The Drop Helper enables Discord drag-and-drop when running elevated." loc:Loc.Key="Settings_AdminModeDesc"/>
                                     </StackPanel>
                                     <Grid Grid.Row="1" ColumnSpacing="12">
                                         <Grid.ColumnDefinitions>
@@ -2526,7 +2526,7 @@
                                                       SelectionChanged="DropHelperCombo_SelectionChanged"
                                                       FontSize="12" Padding="8,4"
                                                       CornerRadius="8" HorizontalAlignment="Stretch"
-                                                      ToolTipService.ToolTip="The drop helper window enables Discord drag-and-drop in admin mode. Disable if you don't need it. Restart required.">
+                                                      ToolTipService.ToolTip="The drop helper window enables Discord drag-and-drop in admin mode. Disable if you don't need it. Restart required." loc:Loc.ToolTipKey="Tip_DropHelper">
                                                 <ComboBoxItem Content="Off" loc:Loc.Key="Common_Off"/>
                                                 <ComboBoxItem Content="On" loc:Loc.Key="Common_On"/>
                                             </ComboBox>
@@ -2537,7 +2537,7 @@
                                         <TextBlock Text="System Tray" loc:Loc.Key="Settings_SystemTray" FontSize="13" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                                   Text="Minimize to system tray on close. Right-click the tray icon or pinned taskbar icon to quickly launch recent games."/>
+                                                   Text="Minimize to system tray on close. Right-click the tray icon or pinned taskbar icon to quickly launch recent games." loc:Loc.Key="Settings_SystemTrayDesc"/>
                                     </StackPanel>
                                     <Grid Grid.Row="3" ColumnSpacing="12">
                                         <Grid.ColumnDefinitions>
@@ -2585,7 +2585,8 @@
                                 BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1">
                             <StackPanel Spacing="8">
                                 <TextBlock Text="Data &amp; Custom Files" loc:Loc.Key="Settings_DataCustomFiles" FontSize="15" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}"/>
-                                <TextBlock TextWrapping="Wrap" FontSize="12" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="20">
+                                <TextBlock TextWrapping="Wrap" FontSize="12" loc:Loc.Key="Settings_AppDataDesc"
+                                           Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="20">
                                     All RHI data is stored in AppData. Drop custom ReShade, DLSS, or Streamline DLLs into the Custom folder to use them as per-game overrides. The Logs folder contains session usage logs useful for troubleshooting.
                                 </TextBlock>
                                 <StackPanel Orientation="Horizontal" Spacing="8">
@@ -2609,7 +2610,7 @@
                                             Background="{StaticResource AccentBlueBgBrush}" Foreground="{StaticResource AccentBlueBrush}"
                                             BorderBrush="{StaticResource AccentBlueBorderBrush}" BorderThickness="1"
                                             CornerRadius="8" Padding="12,6" FontSize="12"
-                                            ToolTipService.ToolTip="Creates a zip archive of all logs and copies it to clipboard — paste directly into Discord"/>
+                                            ToolTipService.ToolTip="Creates a zip archive of all logs and copies it to clipboard — paste directly into Discord" loc:Loc.ToolTipKey="Tip_CopyLogs"/>
                                 </StackPanel>
                             </StackPanel>
                         </Border>
@@ -2646,7 +2647,7 @@
                 <Border Grid.Row="0" Padding="24,12,24,10" Background="Transparent"
                         BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="0,0,0,1">
                     <StackPanel Orientation="Horizontal" Spacing="12" VerticalAlignment="Center">
-                        <Button Content="← Back to Games"
+                        <Button Content="← Back to Games" loc:Loc.Key="Settings_BackToGames"
                                 Click="AboutBack_Click"
                                 Background="{StaticResource SurfaceOverlayBrush}" Foreground="{StaticResource TextSecondaryBrush}"
                                 BorderBrush="{StaticResource BorderDefaultBrush}" BorderThickness="1"
@@ -2676,7 +2677,7 @@
                                 </StackPanel>
 
                                 <TextBlock TextWrapping="Wrap" FontSize="12" Foreground="{StaticResource TextTertiaryBrush}" LineHeight="20"
-                                           Text="The all-in-one game enhancement toolkit for PC. Auto-detects games from 8 storefronts and provides one-click management for ReShade, HDR mods, shaders, DLSS/Streamline, frame limiters, NVIDIA driver profiles, and more — all from one place."/>
+                                           Text="The all-in-one game enhancement toolkit for PC. Auto-detects games from 8 storefronts and provides one-click management for ReShade, HDR mods, shaders, DLSS/Streamline, frame limiters, NVIDIA driver profiles, and more — all from one place." loc:Loc.Key="About_HeroDesc"/>
 
                                 <!-- What it does -->
                                 <Border Background="{StaticResource SurfaceToolbarBrush}" CornerRadius="8" Padding="14,10"
@@ -2685,7 +2686,7 @@
                                         <TextBlock Text="What RHI manages" loc:Loc.Key="About_WhatRhiManages" FontSize="12" FontWeight="SemiBold"
                                                    Foreground="{StaticResource TextPrimaryBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                                   Text="ReShade &amp; shader packs · RenoDX HDR mods · Luma Framework · DLSS/Streamline version swaps &amp; presets · NVIDIA driver profile settings (VSync, Low Latency, ReBAR, Smooth Motion, Power) · OptiScaler · ReLimiter &amp; Display Commander frame limiters · RE Framework · DXVK · UE-Extended native HDR · Per-game overrides for everything."/>
+                                                   Text="ReShade &amp; shader packs · RenoDX HDR mods · Luma Framework · DLSS/Streamline version swaps &amp; presets · NVIDIA driver profile settings (VSync, Low Latency, ReBAR, Smooth Motion, Power) · OptiScaler · ReLimiter &amp; Display Commander frame limiters · RE Framework · DXVK · UE-Extended native HDR · Per-game overrides for everything." loc:Loc.Key="About_WhatManages"/>
                                     </StackPanel>
                                 </Border>
 
@@ -2697,7 +2698,7 @@
                                         <TextBlock Text="Single-player only" loc:Loc.Key="About_SinglePlayerOnly" FontSize="12" FontWeight="SemiBold"
                                                    Foreground="{StaticResource AccentRedBrush}"/>
                                         <TextBlock TextWrapping="Wrap" FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="18"
-                                                   Text="RHI installs ReShade with full addon support, OptiScaler, and can swap DLSS/Streamline DLLs. These modifications may be flagged by anti-cheat in online or multiplayer games. Uninstall ReShade, OptiScaler, and restore DLSS/Streamline defaults before playing online."/>
+                                                   Text="RHI installs ReShade with full addon support, OptiScaler, and can swap DLSS/Streamline DLLs. These modifications may be flagged by anti-cheat in online or multiplayer games. Uninstall ReShade, OptiScaler, and restore DLSS/Streamline defaults before playing online." loc:Loc.Key="About_SinglePlayerWarning"/>
                                     </StackPanel>
                                 </Border>
                             </StackPanel>
@@ -2710,18 +2711,18 @@
                                 <TextBlock Text="Credits &amp; Acknowledgements" loc:Loc.Key="About_Credits" FontSize="13" FontWeight="SemiBold"
                                            Foreground="{StaticResource TextPrimaryBrush}"/>
                                 <TextBlock TextWrapping="Wrap" FontSize="12" Foreground="{StaticResource InlineDescriptionBrush}" LineHeight="20"
-                                           Text="This app would not exist without the work of the following people and projects."/>
+                                           Text="This app would not exist without the work of the following people and projects." loc:Loc.Key="About_CreditsIntro"/>
 
                                 <!-- RenoDX -->
                                 <Border Background="{StaticResource SurfaceToolbarBrush}" CornerRadius="8" Padding="12,10" BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="1">
                                     <StackPanel Spacing="3">
                                         <TextBlock FontSize="12">
                                             <Run Text="RenoDX" FontWeight="SemiBold" Foreground="{StaticResource AccentTealBrush}"/>
-                                            <Run Text=" by clshortfuse &amp; contributors" Foreground="{StaticResource TextTertiaryBrush}"/>
-                                            <Run Text="  ·  MIT Licence" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
+                                            <Run Text=" by clshortfuse &amp; contributors" loc:Loc.Key="About_ByClshortfuse" Foreground="{StaticResource TextTertiaryBrush}"/>
+                                            <Run Text="  ·  MIT Licence" loc:Loc.Key="About_LicMit" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
                                         </TextBlock>
                                         <TextBlock FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" Margin="0,0,0,0" TextWrapping="Wrap"
-                                                   Text="HDR mod framework powering 800+ games. The entire reason this app exists."/>
+                                                   Text="HDR mod framework powering 800+ games. The entire reason this app exists." loc:Loc.Key="About_RenoDxDesc"/>
                                         <HyperlinkButton NavigateUri="https://github.com/clshortfuse/renodx" Padding="0,2,0,0" FontSize="11">
                                             <TextBlock Foreground="{StaticResource AccentTealDimBrush}" Text="github.com/clshortfuse/renodx"/>
                                         </HyperlinkButton>
@@ -2733,11 +2734,11 @@
                                     <StackPanel Spacing="3">
                                         <TextBlock FontSize="12">
                                             <Run Text="ReShade" FontWeight="SemiBold" Foreground="{StaticResource TextSecondaryBrush}"/>
-                                            <Run Text=" by Crosire" Foreground="{StaticResource TextTertiaryBrush}"/>
-                                            <Run Text="  ·  BSD 3-Clause Licence" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
+                                            <Run Text=" by Crosire" loc:Loc.Key="About_ByCrosire" Foreground="{StaticResource TextTertiaryBrush}"/>
+                                            <Run Text="  ·  BSD 3-Clause Licence" loc:Loc.Key="About_LicBsd3" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
                                         </TextBlock>
                                         <TextBlock FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" TextWrapping="Wrap"
-                                                   Text="Post-processing injection framework. Downloaded with full addon support from reshade.me and cached locally. Copyright © Crosire."/>
+                                                   Text="Post-processing injection framework. Downloaded with full addon support from reshade.me and cached locally. Copyright © Crosire." loc:Loc.Key="About_ReShadeDesc"/>
                                         <HyperlinkButton NavigateUri="https://reshade.me" Padding="0,2,0,0" FontSize="11">
                                             <TextBlock Foreground="{StaticResource AccentTealDimBrush}" Text="reshade.me  ·  github.com/crosire/reshade"/>
                                         </HyperlinkButton>
@@ -2749,11 +2750,11 @@
                                     <StackPanel Spacing="3">
                                         <TextBlock FontSize="12">
                                             <Run Text="Luma Framework" FontWeight="SemiBold" Foreground="{StaticResource TextSecondaryBrush}"/>
-                                            <Run Text=" by Pumbo (Filoppi)" Foreground="{StaticResource TextTertiaryBrush}"/>
-                                            <Run Text="  ·  Source-available" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
+                                            <Run Text=" by Pumbo (Filoppi)" loc:Loc.Key="About_ByPumbo" Foreground="{StaticResource TextTertiaryBrush}"/>
+                                            <Run Text="  ·  Source-available" loc:Loc.Key="About_LicSourceAvailable" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
                                         </TextBlock>
                                         <TextBlock FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" TextWrapping="Wrap"
-                                                   Text="DX11 modding framework adding HDR support and graphics improvements via the ReShade addon system. Mods are downloaded from official GitHub releases. Drag-and-drop install with auto-detection, update checking, and per-game toggle."/>
+                                                   Text="DX11 modding framework adding HDR support and graphics improvements via the ReShade addon system. Mods are downloaded from official GitHub releases. Drag-and-drop install with auto-detection, update checking, and per-game toggle." loc:Loc.Key="About_LumaDesc"/>
                                         <HyperlinkButton NavigateUri="https://github.com/Filoppi/Luma-Framework" Padding="0,2,0,0" FontSize="11">
                                             <TextBlock Foreground="{StaticResource AccentTealDimBrush}" Text="github.com/Filoppi/Luma-Framework"/>
                                         </HyperlinkButton>
@@ -2765,11 +2766,11 @@
                                     <StackPanel Spacing="3">
                                         <TextBlock FontSize="12">
                                             <Run Text="7-Zip" FontWeight="SemiBold" Foreground="{StaticResource TextSecondaryBrush}"/>
-                                            <Run Text=" by Igor Pavlov" Foreground="{StaticResource TextTertiaryBrush}"/>
+                                            <Run Text=" by Igor Pavlov" loc:Loc.Key="About_ByIgorPavlov" Foreground="{StaticResource TextTertiaryBrush}"/>
                                             <Run Text="  ·  LGPL + BSD 3-Clause" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
                                         </TextBlock>
                                         <TextBlock FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" TextWrapping="Wrap"
-                                                   Text="Archive utility used to extract ReShade DLLs from the NSIS installer. 7z.exe and 7z.dll are bundled under the LGPL licence. Copyright © Igor Pavlov."/>
+                                                   Text="Archive utility used to extract ReShade DLLs from the NSIS installer. 7z.exe and 7z.dll are bundled under the LGPL licence. Copyright © Igor Pavlov." loc:Loc.Key="About_SevenZipDesc"/>
                                         <HyperlinkButton NavigateUri="https://www.7-zip.org/" Padding="0,2,0,0" FontSize="11">
                                             <TextBlock Foreground="{StaticResource AccentTealDimBrush}" Text="7-zip.org  ·  LGPL-2.1 / BSD-3-Clause"/>
                                         </HyperlinkButton>
@@ -2781,11 +2782,11 @@
                                     <StackPanel Spacing="3">
                                         <TextBlock FontSize="12">
                                             <Run Text="HtmlAgilityPack" FontWeight="SemiBold" Foreground="{StaticResource TextSecondaryBrush}"/>
-                                            <Run Text=" by ZZZ Projects" Foreground="{StaticResource TextTertiaryBrush}"/>
-                                            <Run Text="  ·  MIT Licence" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
+                                            <Run Text=" by ZZZ Projects" loc:Loc.Key="About_ByZzz" Foreground="{StaticResource TextTertiaryBrush}"/>
+                                            <Run Text="  ·  MIT Licence" loc:Loc.Key="About_LicMit" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
                                         </TextBlock>
                                         <TextBlock FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" TextWrapping="Wrap"
-                                                   Text="HTML parser used to scrape game data from the RenoDX wiki. Copyright © ZZZ Projects Inc."/>
+                                                   Text="HTML parser used to scrape game data from the RenoDX wiki. Copyright © ZZZ Projects Inc." loc:Loc.Key="About_HtmlAgilityDesc"/>
                                         <HyperlinkButton NavigateUri="https://github.com/zzzprojects/html-agility-pack" Padding="0,2,0,0" FontSize="11">
                                             <TextBlock Foreground="{StaticResource AccentTealDimBrush}" Text="github.com/zzzprojects/html-agility-pack"/>
                                         </HyperlinkButton>
@@ -2797,11 +2798,11 @@
                                     <StackPanel Spacing="3">
                                         <TextBlock FontSize="12">
                                             <Run Text="CommunityToolkit.Mvvm" FontWeight="SemiBold" Foreground="{StaticResource TextSecondaryBrush}"/>
-                                            <Run Text=" by Microsoft" Foreground="{StaticResource TextTertiaryBrush}"/>
-                                            <Run Text="  ·  MIT Licence" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
+                                            <Run Text=" by Microsoft" loc:Loc.Key="About_ByMicrosoft" Foreground="{StaticResource TextTertiaryBrush}"/>
+                                            <Run Text="  ·  MIT Licence" loc:Loc.Key="About_LicMit" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
                                         </TextBlock>
                                         <TextBlock FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" TextWrapping="Wrap"
-                                                   Text="MVVM helpers (ObservableObject, RelayCommand, etc.) used throughout the app. Copyright © .NET Foundation."/>
+                                                   Text="MVVM helpers (ObservableObject, RelayCommand, etc.) used throughout the app. Copyright © .NET Foundation." loc:Loc.Key="About_CommunityToolkitDesc"/>
                                         <HyperlinkButton NavigateUri="https://github.com/CommunityToolkit/dotnet" Padding="0,2,0,0" FontSize="11">
                                             <TextBlock Foreground="{StaticResource AccentTealDimBrush}" Text="github.com/CommunityToolkit/dotnet"/>
                                         </HyperlinkButton>
@@ -2813,11 +2814,11 @@
                                     <StackPanel Spacing="3">
                                         <TextBlock FontSize="12">
                                             <Run Text="Display Commander" FontWeight="SemiBold" Foreground="{StaticResource TextSecondaryBrush}"/>
-                                            <Run Text=" by pmnox" Foreground="{StaticResource TextTertiaryBrush}"/>
-                                            <Run Text="  ·  Source-available" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
+                                            <Run Text=" by pmnox" loc:Loc.Key="About_ByPmnox" Foreground="{StaticResource TextTertiaryBrush}"/>
+                                            <Run Text="  ·  Source-available" loc:Loc.Key="About_LicSourceAvailable" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
                                         </TextBlock>
                                         <TextBlock FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" TextWrapping="Wrap"
-                                                   Text="Frame rate limiter addon available as an alternative to ReLimiter. The LITE variant is downloaded from GitHub on demand."/>
+                                                   Text="Frame rate limiter addon available as an alternative to ReLimiter. The LITE variant is downloaded from GitHub on demand." loc:Loc.Key="About_DisplayCommanderDesc"/>
                                         <HyperlinkButton NavigateUri="https://github.com/pmnoxx/display-commander" Padding="0,2,0,0" FontSize="11">
                                             <TextBlock Foreground="{StaticResource AccentTealDimBrush}" Text="github.com/pmnoxx/display-commander"/>
                                         </HyperlinkButton>
@@ -2829,11 +2830,11 @@
                                     <StackPanel Spacing="3">
                                         <TextBlock FontSize="12">
                                             <Run Text="RE Framework" FontWeight="SemiBold" Foreground="{StaticResource TextSecondaryBrush}"/>
-                                            <Run Text=" by praydog" Foreground="{StaticResource TextTertiaryBrush}"/>
-                                            <Run Text="  ·  MIT Licence" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
+                                            <Run Text=" by praydog" loc:Loc.Key="About_ByPraydog" Foreground="{StaticResource TextTertiaryBrush}"/>
+                                            <Run Text="  ·  MIT Licence" loc:Loc.Key="About_LicMit" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
                                         </TextBlock>
                                         <TextBlock FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" TextWrapping="Wrap"
-                                                   Text="Modding framework required for ReShade injection on RE Engine games. Downloaded from nightly builds on GitHub."/>
+                                                   Text="Modding framework required for ReShade injection on RE Engine games. Downloaded from nightly builds on GitHub." loc:Loc.Key="About_ReFrameworkDesc"/>
                                         <HyperlinkButton NavigateUri="https://github.com/praydog/REFramework-nightly" Padding="0,2,0,0" FontSize="11">
                                             <TextBlock Foreground="{StaticResource AccentTealDimBrush}" Text="github.com/praydog/REFramework-nightly"/>
                                         </HyperlinkButton>
@@ -2845,11 +2846,11 @@
                                     <StackPanel Spacing="3">
                                         <TextBlock FontSize="12">
                                             <Run Text="OptiScaler" loc:Loc.Key="Settings_OptiScaler" FontWeight="SemiBold" Foreground="{StaticResource TextSecondaryBrush}"/>
-                                            <Run Text=" by OptiScaler contributors" Foreground="{StaticResource TextTertiaryBrush}"/>
-                                            <Run Text="  ·  Source-available" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
+                                            <Run Text=" by OptiScaler contributors" loc:Loc.Key="About_ByOptiScaler" Foreground="{StaticResource TextTertiaryBrush}"/>
+                                            <Run Text="  ·  Source-available" loc:Loc.Key="About_LicSourceAvailable" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
                                         </TextBlock>
                                         <TextBlock FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" TextWrapping="Wrap"
-                                                   Text="Upscaler redirection layer enabling DLSS, FSR, and XeSS across different GPU vendors. Downloaded from GitHub releases."/>
+                                                   Text="Upscaler redirection layer enabling DLSS, FSR, and XeSS across different GPU vendors. Downloaded from GitHub releases." loc:Loc.Key="About_OptiScalerDesc"/>
                                         <HyperlinkButton NavigateUri="https://github.com/optiscaler/OptiScaler" Padding="0,2,0,0" FontSize="11">
                                             <TextBlock Foreground="{StaticResource AccentTealDimBrush}" Text="github.com/optiscaler/OptiScaler"/>
                                         </HyperlinkButton>
@@ -2861,11 +2862,11 @@
                                     <StackPanel Spacing="3">
                                         <TextBlock FontSize="12">
                                             <Run Text="DXVK" FontWeight="SemiBold" Foreground="{StaticResource TextSecondaryBrush}"/>
-                                            <Run Text=" by doitsujin &amp; contributors" Foreground="{StaticResource TextTertiaryBrush}"/>
-                                            <Run Text="  ·  Zlib Licence" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
+                                            <Run Text=" by doitsujin &amp; contributors" loc:Loc.Key="About_ByDoitsujin" Foreground="{StaticResource TextTertiaryBrush}"/>
+                                            <Run Text="  ·  Zlib Licence" loc:Loc.Key="About_LicZlib" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
                                         </TextBlock>
                                         <TextBlock FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" TextWrapping="Wrap"
-                                                   Text="DirectX-to-Vulkan translation layer for DX8/DX9/DX10 games. Includes Lilium HDR fork by EndlesslyFlowering for scRGB HDR output."/>
+                                                   Text="DirectX-to-Vulkan translation layer for DX8/DX9/DX10 games. Includes Lilium HDR fork by EndlesslyFlowering for scRGB HDR output." loc:Loc.Key="About_DxvkDesc"/>
                                         <HyperlinkButton NavigateUri="https://github.com/doitsujin/dxvk" Padding="0,2,0,0" FontSize="11">
                                             <TextBlock Foreground="{StaticResource AccentTealDimBrush}" Text="github.com/doitsujin/dxvk  ·  github.com/EndlesslyFlowering/dxvk"/>
                                         </HyperlinkButton>
@@ -2877,11 +2878,11 @@
                                     <StackPanel Spacing="3">
                                         <TextBlock FontSize="12">
                                             <Run Text="NvAPIWrapper.Net" FontWeight="SemiBold" Foreground="{StaticResource TextSecondaryBrush}"/>
-                                            <Run Text=" by falahati" Foreground="{StaticResource TextTertiaryBrush}"/>
-                                            <Run Text="  ·  MIT Licence" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
+                                            <Run Text=" by falahati" loc:Loc.Key="About_ByFalahati" Foreground="{StaticResource TextTertiaryBrush}"/>
+                                            <Run Text="  ·  MIT Licence" loc:Loc.Key="About_LicMit" Foreground="{StaticResource InlineDescriptionBrush}" FontSize="11"/>
                                         </TextBlock>
                                         <TextBlock FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" TextWrapping="Wrap"
-                                                   Text=".NET wrapper for NVIDIA's NvAPI used for all driver profile management — DLSS presets, render scale, ReBAR, VSync, Smooth Motion, and more."/>
+                                                   Text=".NET wrapper for NVIDIA's NvAPI used for all driver profile management — DLSS presets, render scale, ReBAR, VSync, Smooth Motion, and more." loc:Loc.Key="About_NvApiWrapperDesc"/>
                                         <HyperlinkButton NavigateUri="https://github.com/falahati/NvAPIWrapper" Padding="0,2,0,0" FontSize="11">
                                             <TextBlock Foreground="{StaticResource AccentTealDimBrush}" Text="github.com/falahati/NvAPIWrapper"/>
                                         </HyperlinkButton>
@@ -2893,10 +2894,10 @@
                                     <StackPanel Spacing="3">
                                         <TextBlock FontSize="12">
                                             <Run Text="UI Design" FontWeight="SemiBold" Foreground="{StaticResource AccentGreenBrush}"/>
-                                            <Run Text=" by Lazorr" Foreground="{StaticResource TextTertiaryBrush}"/>
+                                            <Run Text=" by Lazorr" loc:Loc.Key="About_ByLazorr" Foreground="{StaticResource TextTertiaryBrush}"/>
                                         </TextBlock>
                                         <TextBlock FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" TextWrapping="Wrap"
-                                                   Text="Somehow I have become a UI guy in multiple aspects of life lol."/>
+                                                   Text="Somehow I have become a UI guy in multiple aspects of life lol." loc:Loc.Key="About_LazorrDesc"/>
                                         <HyperlinkButton NavigateUri="https://github.com/lazorr410" Padding="0,2,0,0" FontSize="11">
                                             <TextBlock Foreground="{StaticResource AccentTealDimBrush}" Text="https://github.com/lazorr410"/>
                                         </HyperlinkButton>
@@ -2909,10 +2910,10 @@
                                     <StackPanel Spacing="3">
                                         <TextBlock FontSize="12">
                                             <Run Text="Universal UE DOF Fix" FontWeight="SemiBold" Foreground="{StaticResource AccentGreenBrush}"/>
-                                            <Run Text=" by Lazorr" Foreground="{StaticResource TextTertiaryBrush}"/>
+                                            <Run Text=" by Lazorr" loc:Loc.Key="About_ByLazorr" Foreground="{StaticResource TextTertiaryBrush}"/>
                                         </TextBlock>
                                         <TextBlock FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" TextWrapping="Wrap"
-                                                   Text="Fixes depth-of-field stepping and tiling artifacts in Unreal Engine 5 games."/>
+                                                   Text="Fixes depth-of-field stepping and tiling artifacts in Unreal Engine 5 games." loc:Loc.Key="About_UeDofFixDesc"/>
                                         <HyperlinkButton NavigateUri="https://github.com/RankFTW/rhi-repo/releases" Padding="0,2,0,0" FontSize="11">
                                             <TextBlock Foreground="{StaticResource AccentTealDimBrush}" Text="github.com/RankFTW/rhi-repo"/>
                                         </HyperlinkButton>
@@ -2924,10 +2925,10 @@
                                     <StackPanel Spacing="3">
                                         <TextBlock FontSize="12">
                                             <Run Text="RHI" FontWeight="SemiBold" Foreground="{StaticResource AccentGreenBrush}"/>
-                                            <Run Text=" by RankFTW" Foreground="{StaticResource TextTertiaryBrush}"/>
+                                            <Run Text=" by RankFTW" loc:Loc.Key="About_ByRankFtw" Foreground="{StaticResource TextTertiaryBrush}"/>
                                         </TextBlock>
                                         <TextBlock FontSize="11" Foreground="{StaticResource InlineDescriptionBrush}" TextWrapping="Wrap"
-                                                   Text="Unofficial companion app. Not affiliated with RenoDX, Crosire, or pmnoxx."/>
+                                                   Text="Unofficial companion app. Not affiliated with RenoDX, Crosire, or pmnoxx." loc:Loc.Key="About_RhiDesc"/>
                                         <HyperlinkButton NavigateUri="https://github.com/RankFTW" Padding="0,2,0,0" FontSize="11">
                                             <TextBlock Foreground="{StaticResource AccentTealDimBrush}" Text="github.com/RankFTW"/>
                                         </HyperlinkButton>
@@ -3002,7 +3003,7 @@
                 <Border Grid.Row="0" Padding="24,12,24,10" Background="Transparent"
                         BorderBrush="{StaticResource BorderSubtleBrush}" BorderThickness="0,0,0,1">
                     <StackPanel Orientation="Horizontal" Spacing="12" VerticalAlignment="Center">
-                        <Button Content="← Back to Games"
+                        <Button Content="← Back to Games" loc:Loc.Key="Settings_BackToGames"
                                 Click="FaqBack_Click"
                                 Background="{StaticResource SurfaceOverlayBrush}" Foreground="{StaticResource TextSecondaryBrush}"
                                 BorderBrush="{StaticResource BorderDefaultBrush}" BorderThickness="1"
@@ -3040,7 +3041,7 @@
                 <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"
                            FontSize="10" Foreground="{StaticResource AccentAmberDimBrush}"
                            TextTrimming="CharacterEllipsis" MaxLines="1"
-                           Text="⚠ ReShade, OptiScaler, and DLSS/Streamline modifications may trigger anti-cheat in online/multiplayer games"/>
+                           Text="⚠ ReShade, OptiScaler, and DLSS/Streamline modifications may trigger anti-cheat in online/multiplayer games" loc:Loc.Key="Dialog_WarningAntiCheat"/>
                 <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right"
                             VerticalAlignment="Center" Spacing="8">
                     <TextBlock x:Name="StatusBarVersionText" x:FieldModifier="internal"

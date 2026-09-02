@@ -8,6 +8,7 @@ using System.Text.RegularExpressions;
 using System.Text.Json;
 using RenoDXCommander.Models;
 using RenoDXCommander.Services;
+using RenoDXCommander.Localization;
 
 namespace RenoDXCommander.ViewModels;
 
@@ -705,8 +706,8 @@ public partial class MainViewModel
 
             var offlineMode = wikiFetchFailed;
             StatusText    = offlineMode
-                ? $"{detectedGames.Count} games detected · offline mode (mod info unavailable)"
-                : $"{detectedGames.Count} games detected · {InstalledCount} mods installed";
+                ? Localizer.Format("Status_DetectionOffline", detectedGames.Count)
+                : Localizer.Format("Status_DetectionOnline", detectedGames.Count, InstalledCount);
             SubStatusText = "";
         }
         catch (Exception ex)

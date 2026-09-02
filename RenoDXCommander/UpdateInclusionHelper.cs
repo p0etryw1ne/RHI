@@ -50,7 +50,7 @@ public static class UpdateInclusionHelper
             });
             summaryTb.Inlines.Add(new Microsoft.UI.Xaml.Documents.Run
             {
-                Text = isOn ? "On" : "Off",
+                Text = Localizer.Get(isOn ? "Common_On" : "Common_Off"),
                 Foreground = UIFactory.Brush(isOn ? ResourceKeys.AccentGreenBrush : ResourceKeys.AccentRedBrush),
             });
             if (i < items.Count - 1)

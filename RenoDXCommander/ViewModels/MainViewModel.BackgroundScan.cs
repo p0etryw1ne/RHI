@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Text.Json;
 using RenoDXCommander.Models;
 using RenoDXCommander.Services;
+using RenoDXCommander.Localization;
 
 namespace RenoDXCommander.ViewModels;
 
@@ -341,8 +342,8 @@ public partial class MainViewModel
             DispatcherQueue?.TryEnqueue(() =>
             {
                 StatusText = offlineMode
-                    ? $"{detectedGames.Count} games detected · offline mode (mod info unavailable)"
-                    : $"{detectedGames.Count} games detected · {InstalledCount} mods installed";
+                    ? Localizer.Format("Status_DetectionOffline", detectedGames.Count)
+                    : Localizer.Format("Status_DetectionOnline", detectedGames.Count, InstalledCount);
                 SubStatusText = "";
 
                 // Re-scroll to selected game after merge (cards may have shifted)

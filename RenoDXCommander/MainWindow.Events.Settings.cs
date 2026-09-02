@@ -1575,7 +1575,7 @@ public sealed partial class MainWindow
 
     private void AboutButton_Click(object sender, RoutedEventArgs e)
     {
-        AboutVersionText.Text = $"v{CrashReporter.AppVersion}  ·  Simplified PC Gaming by RankFTW";
+        AboutVersionText.Text = $"v{CrashReporter.AppVersion}  ·  {Localizer.Get("About_ByRankFtw")}";
         ViewModel.NavigateToAboutCommand.Execute(null);
     }
 

@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Documents;
 using Microsoft.UI.Xaml.Media;
 
@@ -151,11 +152,40 @@ public static class Loc
                 foreach (var item in items.Items)
                     if (item is DependencyObject i1) Collect(i1);
                 break;
+            case TextBlock textBlock:
+                foreach (var inline in textBlock.Inlines)
+                    if (inline is DependencyObject di) Collect(di);
+                break;
+            case MenuFlyout menuFlyout:
+                foreach (var item in menuFlyout.Items)
+                    if (item is DependencyObject i2) Collect(i2);
+                break;
+            case MenuFlyoutSubItem sub:
+                foreach (var item in sub.Items)
+                    if (item is DependencyObject i3) Collect(i3);
+                break;
+            case Flyout flyout:
+                if (flyout.Content is DependencyObject dc) Collect(dc);
+                break;
             default:
                 var count = VisualTreeHelper.GetChildrenCount(node);
                 for (int i = 0; i < count; i++)
                     Collect(VisualTreeHelper.GetChild(node, i));
                 break;
+        }
+
+        // Popups / flyouts are NOT part of the visual tree until opened.
+        // Walk attached popup roots so their (collapsed) content still gets
+        // localized when the flyout is first shown.
+        if (node is FrameworkElement fe)
+        {
+            var attached = FlyoutBase.GetAttachedFlyout(fe);
+            if (attached is DependencyObject ad && ad != node) Collect(ad);
+        }
+        if (node is Button btn)
+        {
+            var fly = btn.Flyout;
+            if (fly is DependencyObject fd && fd != node) Collect(fd);
         }
     }
 

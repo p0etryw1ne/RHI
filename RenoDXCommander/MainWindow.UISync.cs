@@ -7,6 +7,7 @@ using Microsoft.UI.Xaml.Media;
 using RenoDXCommander.Models;
 using RenoDXCommander.Services;
 using RenoDXCommander.ViewModels;
+using RenoDXCommander.Localization;
 using Windows.Storage.Pickers;
 using WinRT.Interop;
 
@@ -57,10 +58,10 @@ public sealed partial class MainWindow
                         + (string.IsNullOrEmpty(ViewModel.SubStatusText) ? "" : $"  —  {ViewModel.SubStatusText}");
                     break;
                 case nameof(ViewModel.InstalledCount):
-                    InstalledCountText.Text = $"{ViewModel.InstalledCount} installed";
+                    InstalledCountText.Text = Localizer.Format("Status_InstalledCount", ViewModel.InstalledCount);
                     break;
                 case nameof(ViewModel.TotalGames):
-                    GameCountText.Text = $"{ViewModel.TotalGames} shown";
+                    GameCountText.Text = Localizer.Format("Status_ShownCount", ViewModel.TotalGames);
                     if (ViewModel.CurrentViewLayout == ViewLayout.Compact
                         && ViewModel.SelectedGame is { } compactCard)
                     {
@@ -70,7 +71,7 @@ public sealed partial class MainWindow
                     break;
                 case nameof(ViewModel.HiddenCount):
                     HiddenCountText.Text = ViewModel.HiddenCount > 0
-                        ? $"· {ViewModel.HiddenCount} hidden" : "";
+                        ? Localizer.Format("Status_HiddenCount", ViewModel.HiddenCount) : "";
                     break;
                 case nameof(ViewModel.FilterMode):
                     RefreshFilterButtonStyles();
